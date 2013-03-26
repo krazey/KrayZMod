@@ -260,6 +260,11 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		if ((s_player_packtent < 0) and (player distance cursorTarget < 3)) then {
 			s_player_packtent = player addAction [localize "str_actions_self_07", "\z\addons\dayz_code\actions\tent_pack.sqf",cursorTarget, 0, false, true, "",""];
 		};
+	} else {
+		player removeAction s_player_packtent;
+		s_player_packtent = -1;
+	};
+	
 	//halo jump add
     if ( (cursorTarget isKindOf "Air") and (getDammage cursorTarget < 0.95) ) then {
         _vehicle = cursorTarget;
@@ -272,10 +277,6 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
             s_halo_action = _vehicle addAction [("<t color=""#FF9800"">" + ("HALO Jump") + "</t>"),"\z\addons\dayz_code\actions\haloInit.sqf",[],2,false,true,"","(_this in _target) && (getPosATL player select 2) > 10"];
         };
     };
-	} else {
-		player removeAction s_player_packtent;
-		s_player_packtent = -1;
-	};
 
 	//Allow owner to unlock vault
 	if(cursorTarget isKindOf "VaultStorageLocked" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and !UnlockInprogress) then {

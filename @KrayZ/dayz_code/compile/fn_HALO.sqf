@@ -1,4 +1,18 @@
 scriptName "modules_e\Functions\objects\fn_HALO.sqf";
+/*
+	File: fn_HALO.sqf
+	Author: Karel Moricky
+
+	Description:
+	High Altitude Low Opening
+
+	Parameter(s):
+	_this:	ARRAY	- starts HALO jump directly
+		OBJECT	- waits until unit in array is out of vehicle
+
+	Returns:
+	Nothing
+*/
 
 sleep 0.01;
 
@@ -69,7 +83,7 @@ if (typename _this == typename objnull) then {
 		bis_fnc_halo_soundLoop = time;
 		playsound "BIS_HALO_Flapping";
 
-		bis_fnc_halo_action = _unit addaction [localize "STR_HALO_OPEN_CHUTE","krazey\heli\fn_HALO.sqf",[],1,true,true,"Eject"];
+		bis_fnc_halo_action = _unit addaction [localize "STR_HALO_OPEN_CHUTE","\z\addons\dayz_code\compile\fn_HALO.sqf",[],1,true,true,"Eject"];
 
 		bis_fnc_halo_keydown = {
 			_key = _this select 1;
