@@ -260,6 +260,18 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		if ((s_player_packtent < 0) and (player distance cursorTarget < 3)) then {
 			s_player_packtent = player addAction [localize "str_actions_self_07", "\z\addons\dayz_code\actions\tent_pack.sqf",cursorTarget, 0, false, true, "",""];
 		};
+	//halo jump add
+    if ( (cursorTarget isKindOf "Air") and (getDammage cursorTarget < 0.95) ) then {
+        _vehicle = cursorTarget;
+        _HALO_ActionAdded = _vehicle getVariable["HALO_ActionAdded",false];
+ 
+        if( !_HALO_ActionAdded ) then {
+            _vehicle setVariable ["HALO_ActionAdded", true];
+ 
+            // HALO Jump
+            s_halo_action = _vehicle addAction [("<t color=""#FF9800"">" + ("HALO Jump") + "</t>"),"\z\addons\dayz_code\actions\haloInit.sqf",[],2,false,true,"","(_this in _target) && (getPosATL player select 2) > 10"];
+        };
+    };
 	} else {
 		player removeAction s_player_packtent;
 		s_player_packtent = -1;

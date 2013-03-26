@@ -98,6 +98,9 @@ if (!isDedicated) then {
 	player_rmvflashfromsh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\unshoulder.sqf";
 	player_rmvflashfromsh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\unshoulder2.sqf";
 	
+	//halo jump add
+	bis_fnc_halo =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_HALO.sqf";
+	
 	//ui
 	player_selectSlot =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\ui_selectSlot.sqf";
 	player_gearSync	=			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_gearSync.sqf";
