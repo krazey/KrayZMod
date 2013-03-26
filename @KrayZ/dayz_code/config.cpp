@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "1.9.2.6";
+		version = "1.9.3.0";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -352,6 +352,18 @@ class CfgSurvival {
 			sex = "female";
 			playerModel = "SurvivorWpink_DZ";
 		};
+		class Skin_SurvivorWcombat_DZ: Default {
+			sex = "female";
+			playerModel = "SurvivorWcombat_DZ";
+		};
+		class Skin_SurvivorWdesert_DZ: Default {
+			sex = "female";
+			playerModel = "SurvivorWdesert_DZ";
+		};
+		class Skin_SurvivorWurban_DZ: Default {
+			sex = "female";
+			playerModel = "SurvivorWurban_DZ";
+		}; 
 		class Skin_SurvivorW3_DZ: Default {
 			sex = "female";
 			playerModel = "SurvivorW3_DZ";
@@ -462,6 +474,7 @@ class CfgBuildingLoot {
 			{ "Skin_Rocker2_DZ","magazine" },
 			{ "Skin_SurvivorW3_DZ","magazine" },
 			{ "Skin_SurvivorWpink_DZ","magazine" },
+			{ "Skin_SurvivorWurban_DZ","magazine" }, 
 	};
 		itemChance[] =	{
 			0.01,
@@ -495,11 +508,12 @@ class CfgBuildingLoot {
 			0.03,
 			0.01,
 			0.02,
-			0.03,
 			0.02,
 			0.02,
-			0.05,
-			0.01,
+			0.02,
+			0.02,
+			0.02,
+			0.02,
 		};		
 	};
 	class Office: Residential {
@@ -966,6 +980,8 @@ class HeliCrash_No50s: Default {
 			{ "Skin_CZ_Special_Forces_GL_DES_EP1_DZ","magazine" },
 			{ "Skin_TK_INS_Soldier_EP1_DZ","magazine" },
 			{ "Skin_TK_INS_Warlord_EP1","magazine" },
+			{ "Skin_SurvivorWcombat_DZ","magazine" },
+			{ "Skin_SurvivorWdesert_DZ","magazine" }, 
 	};
 		itemChance[] =	{
 			0.10,
@@ -1029,6 +1045,8 @@ class HeliCrash_No50s: Default {
 			0.01,
 			0.03,
 			0.01,
+			0.02,
+			0.03,
 		};
 	};
 	class Hunting: Default {
@@ -2317,7 +2335,7 @@ class HeliCrash_No50s: Default {
 			{-0.566406,-3.44775,-4.14959},
 			{-2.00146,1.43604,-4.14959}};
 	};
-	class Land_garaz_bez_tanku: Industrial
+	class LAND_garaz_bez_tanku: Industrial 
 	{
 		lootPos[] = {
 			{-5.896,3.05811,3.41651},
@@ -2456,4 +2474,52 @@ class HeliCrash_No50s: Default {
 			{-1.84766,3.92969,-1.80313},
 			{-1.85254,0.222656,-1.80321}};
 	};
+	// Proving grounds PMC
+	class Land_GeneralStore_01a_PMC : Supermarket
+	{
+		lootPos[] = {{-8.28796,-0.435303,-1.20155},
+			{-4.33252,5.51575,-1.20155},
+			{1.05743,5.22791,-1.20155},
+			{7.36511,2.40076,-1.20155},
+			{13.2913,4.79199,-1.20155},
+			{3.06958,7.47021,-1.20155},
+			{7.43213,-0.266724,-1.20155},
+			{13.5172,-1.04089,-1.20155},
+			{10.0657,-1.31946,-1.20155},
+			{3.42236,-3.46387,-1.20155},
+			{-1.89722,-2.65051,-1.20155},
+			{-7.28711,-1.95728,-1.20155}};
+	};
+	class Land_ruin_01_PMC : Residential
+	{
+		lootPos[] = {
+			{-2.57568,2.16443,-1.76358},
+			{-2.64172,-2.50488,-1.76358},
+			{0.851563,1.67505,-1.76358}};
+	};
+	class Land_Ruin_Cowshed_a_PMC : Residential
+	{
+		lootPos[] = {
+			{-3.573,2.80774,-2.31227},
+			{8.85077,-2.67871,-2.46388},
+			{-2.83069,-5.90613,-2.46388},
+			{8.89893,-5.66711,-2.46388}};
+	};
+	class Land_Ruin_Cowshed_b_PMC : Residential
+	{
+		lootPos[] = {
+			{10.4032,2.35046,-3.14048},
+			{2.99207,-3.36682,-3.13994}};
+	};
+	class Land_Ruin_Cowshed_c_PMC : Residential
+	{
+			lootPos[] = {{5.05737,2.52881,-3.09486}};
+	};
+	class Land_FuelStation_Build_PMC : Residential
+	{
+		lootPos[] = {
+			{-1.29761,-0.527832,-1.336},
+			{-1.51141,1.30359,-1.33611},
+			{2.23376,0.0710449,-1.33611}};
+	}; 
 };

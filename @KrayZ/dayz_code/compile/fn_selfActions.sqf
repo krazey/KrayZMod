@@ -53,7 +53,12 @@ if (_canPickLight and !dayz_hasLight and !_isPZombie) then {
 	s_player_removeflare = -1;
 };
 
-// hint str(typeOf cursorTarget);
+if(DZEdebug) then {
+	hint str(typeOf cursorTarget);
+	if (s_player_debuglootpos < 0) then {
+		s_player_debuglootpos = player addAction ["Save to arma2.rpt", "\z\addons\dayz_code\actions\debug\Make_lootPos.sqf", ["save"], 99, false, true, "",""];
+	}; 
+}; 
 
 if(_isPZombie) then {
 	//_state = animationState player;
@@ -87,8 +92,15 @@ if(_isPZombie) then {
 	};
 };
 
+// Increase distance only if AIR OR SHIP
+_allowedDistance = 4;
+_isAir = cursorTarget isKindOf "Air";
+_isShip = cursorTarget isKindOf "Ship";
+if(_isAir or _isShip) then {
+	_allowedDistance = 6;
+}; 
 
-if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cursorTarget < 5)) then {	//Has some kind of target
+if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cursorTarget < _allowedDistance)) then {  //Has some kind of target
 	_isHarvested = cursorTarget getVariable["meatHarvested",false];
 	_isVehicle = cursorTarget isKindOf "AllVehicles";
 	_isVehicletype = typeOf cursorTarget in ["ATV_US_EP1","ATV_CZ_EP1"];
