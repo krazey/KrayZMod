@@ -715,6 +715,20 @@ class Citizen1;	// External class reference
 		canHideBodies = 1;
 	};
 
+	class Admin_DZ : Soldier_Crew_PMC {
+		displayName = "$STR_CHAR_2";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		model = "\dayz\characters\GER_rifleman_wdl";
+		portrait = "\Ca\characters_E\data\portraits\ger_soldier_CA";
+		magazines[] = {};
+		backpack = "";
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
+	};
+
 	class BAF_Soldier_Officer_W;
 	class Rocket_DZ: BAF_Soldier_Officer_W {
 		displayName = "Officer";

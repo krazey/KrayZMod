@@ -2,7 +2,7 @@
 * Crafting by [VB]AWOL
 * 	usage: spawn player_craftitem;
 */
-private ["_onLadder","_canDo","_selectedRecipeOutput","_proceed","_itemIn","_countIn","_missing","_missingQty","_qty","_itemOut","_countOut","_started","_finished","_animState","_isMedic","_removed","_tobe_removed_total","_textCreate","_text","_id","_textMissing","_selectedRecipeInput"];
+private ["_onLadder","_canDo","_selectedRecipeOutput","_proceed","_itemIn","_countIn","_missing","_missingQty","_qty","_itemOut","_countOut","_started","_finished","_animState","_isMedic","_removed","_tobe_removed_total","_textCreate","_id","_textMissing","_selectedRecipeInput","_num_removed","_removed_total","_temp_removed_array","_isFireNear"];
 
 if(TradeInprogress) exitWith { cutText ["Crafting already in progress." , "PLAIN DOWN"]; };
 TradeInprogress = true;
@@ -65,11 +65,19 @@ TradeInprogress = true;
 // _recipe_FoodBeefBakedBeans = [["FoodbeefRaw",1],["FoodCanBakedBeans",1]];
 // ItemSalt
 
+// temp array of removed parts 
+_temp_removed_array = [];
+
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf and !r_player_unconscious and !_onLadder);
 
 // reqire fire target
-if (inflamed cursorTarget and _canDo) then {
+// TODO: add requirements to config. example: fire nearby, specific toolbelt items like toolbox.
+_isFireNear = {inflamed _x} count (position player nearObjects 2);
+
+diag_log format["Checking for fire: %1", _isFireNear];
+
+if (_isFireNear >= 1 and _canDo) then {
 	
 	// Moved all recipes input and outputs to configs
 
@@ -132,32 +140,34 @@ if (inflamed cursorTarget and _canDo) then {
 
 		if (_finished) then {
 
-			_removed = 0; // count total of removed items
+			_removed_total = 0; // count total of removed items
 			_tobe_removed_total = 0; // count total of all to be removed items
 			// Take items
 			{
+				_removed = 0;
 				_itemIn = _x select 0;
 				_countIn = _x select 1;
-				diag_log format["Recipe Finish: %1 %2", _itemIn,_countIn];
+				// diag_log format["Recipe Finish: %1 %2", _itemIn,_countIn];
 				_tobe_removed_total = _tobe_removed_total + _countIn;
 
 				{					
 					if( (_removed < _countIn) && ((_x == _itemIn) || configName(inheritsFrom(configFile >> "cfgMagazines" >> _x)) == _itemIn)) then {
-					
-						// diag_log format["removing: %1 kindOf: %2", _x, _itemIn];
-					
-						// player removeMagazine _x;
-						_removed = _removed + ([player,_x] call BIS_fnc_invRemove);
+						_num_removed = ([player,_x] call BIS_fnc_invRemove);
+						_removed = _removed + _num_removed;
+						_removed_total = _removed_total + _num_removed;
+						if(_num_removed >= 1) then {
+							_temp_removed_array set [count _temp_removed_array,_x];
+						};
 					};
 				
 				} forEach magazines player;
 			
 			} forEach _selectedRecipeInput;
 		
-			diag_log format["removing: %1 kindOf: %2", _removed, _tobe_removed_total];
+			diag_log format["removed: %1 of: %2", _removed, _tobe_removed_total];
 
 			// Only proceed if all parts were removed successfully
-			if(_removed == _tobe_removed_total) then {
+			if(_removed_total == _tobe_removed_total) then {
 
 				// Put items
 				{
@@ -178,7 +188,10 @@ if (inflamed cursorTarget and _canDo) then {
 				} forEach _selectedRecipeOutput;
 
 			} else {
-				cutText [format["Missing Parts after first check Item: %1 / %2",_removed,_tobe_removed_total], "PLAIN DOWN"];
+				// Refund parts since we failed 
+				{player addMagazine _x;} forEach _temp_removed_array;
+				
+				cutText [format["Missing Parts after first check Item: %1 / %2",_removed_total,_tobe_removed_total], "PLAIN DOWN"];
 			};
 
 		} else {
@@ -193,7 +206,7 @@ if (inflamed cursorTarget and _canDo) then {
 		cutText [format["Missing %1 more of %2",_missingQty, _textMissing], "PLAIN DOWN"];
 	};
 } else {
-	cutText ["You need to be looking at a fire to craft.", "PLAIN DOWN"];
+	cutText ["Crafting needs a fire within 2 meters.", "PLAIN DOWN"];
 };
 
 TradeInprogress = false;

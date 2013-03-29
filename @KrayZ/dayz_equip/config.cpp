@@ -1058,6 +1058,12 @@ class CfgMagazines
 			};
 		};
 	};
+	class Skin_Admin_DZ: SkinBase
+	{
+		scope = 2;
+		displayName = "Admin Camo Uniform";
+		descriptionShort = "Admin Camo Uniform";
+	};
 	class Skin_Sniper1_DZ: SkinBase
 	{
 		scope = 2;
@@ -1308,6 +1314,13 @@ class CfgMagazines
 				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "WoodGate_DZ";
+			};
+			class Crafting
+			{
+				text = "Craft Arrows";
+				script = "spawn player_craftItem;";
+				output[] = {{"WoodenArrow",3}};
+				input[] = {{"PartWoodPile",1},{"ItemTrashRazor",1}}; 
 			};
 		};
 	};
