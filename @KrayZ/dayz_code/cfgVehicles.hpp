@@ -715,11 +715,11 @@ class Citizen1;	// External class reference
 		canHideBodies = 1;
 	};
 
-	class Admin_DZ : Soldier_Crew_PMC {
-		displayName = "$STR_CHAR_2";
+	class Admin_DZ : Bandit1_DZ {
+		displayName = "Admin";
 		side = 1;
 		weapons[] = {"Throw","Put"};
-		model = "\dayz\characters\GER_rifleman_wdl";
+		model = "\ksk_mod\GER_rifleman_wdl";
 		portrait = "\Ca\characters_E\data\portraits\ger_soldier_CA";
 		magazines[] = {};
 		backpack = "";
@@ -965,7 +965,7 @@ class Citizen1;	// External class reference
 		displayName = "Survivor";
 		side = 1;
 		weapons[] = {"Throw","Put"};
-		model = "\dayz\characters\GER_rifleman_light_wdl";
+		model = "\ksk_mod\GER_rifleman_light_wdl";
 		backpack = "";
 		magazines[] = {};
 		respawnWeapons[] = {"Throw","Put"};
@@ -1066,7 +1066,7 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_US_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model= "\dayz\characters\backpack_ger_wdl.p3d";
+		model= "\ksk_mod\backpack_ger_wdl.p3d";
 		transportMaxWeapons = 6;
 		transportMaxMagazines = 30;
 	};

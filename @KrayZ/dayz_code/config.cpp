@@ -20,7 +20,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"dayz_equip","dayz_weapons","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT","ksk_mod"};
+		requiredAddons[] = {"dayz_equip","dayz_weapons","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
 	};
 	class DZ_DebriefingRemoved
 	{
@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "1.9.4.0";
+		version = "1.9.4.4";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -280,10 +280,6 @@ class CfgSurvival {
 			sex = "male";
 			playerModel = "Survivor2_DZ";
 		};
-		class Skin_Admin_DZ {
-			sex = "male";
-			playerModel = "Admin_DZ";
-		};
 		class Skin_Survivor2_DZ: Default {
 			sex = "male";
 			playerModel = "Survivor2_DZ";
@@ -339,6 +335,10 @@ class CfgSurvival {
 		class Skin_Bandit1_DZ: Default {
 			sex = "male";
 			playerModel = "Bandit1_DZ";
+		};
+		class Skin_Admin_DZ: Default {
+			sex = "male";
+			playerModel = "Admin_DZ";
 		};
 		class Skin_BanditW1_DZ: Default {
 			sex = "female";
