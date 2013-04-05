@@ -1064,6 +1064,12 @@ class CfgMagazines
 		displayName = "$STR_EQUIP_NAME_43";
 		descriptionShort = "$STR_EQUIP_DESC_43";
 	};
+	class Skin_Sniper2_DZ: SkinBase
+	{
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_57";
+		descriptionShort = "$STR_EQUIP_DESC_57";
+	};
 	class Skin_Rocket_DZ: SkinBase
 	{
 		scope = 2;
@@ -1093,12 +1099,6 @@ class CfgMagazines
 		scope = 2;
 		displayName = "Terrorist Uniform";
 		descriptionShort = "Terrorist Uniform";
-	};
-	class Skin_GUE_Commander_DZ: SkinBase
-	{
-		scope = 2;
-		displayName = "Rebel Uniform";
-		descriptionShort = "Rebel Uniform";
 	};
 	class Skin_Functionary1_EP1_DZ: SkinBase
 	{
@@ -1220,14 +1220,31 @@ class CfgMagazines
 		displayName = "Team Leader";
 		descriptionShort = "Team Leader";
 	};
-	
-	
-	
 	class Skin_Camo1_DZ: SkinBase
 	{
 		scope = 2;
 		displayName = "$STR_EQUIP_NAME_44";
 		descriptionShort = "$STR_EQUIP_DESC_44";
+	};
+	class Skin_Camo2_DZ : SkinBase {
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_58";
+		descriptionShort = "$STR_EQUIP_DESC_58";
+	};
+	class Skin_Camo3_DZ : SkinBase {
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_59";
+		descriptionShort = "$STR_EQUIP_DESC_59";
+	};
+	class Skin_Camo4_DZ : SkinBase {
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_60";
+		descriptionShort = "$STR_EQUIP_DESC_60";
+	};
+	class Skin_Camo5_DZ : SkinBase {
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_61";
+		descriptionShort = "$STR_EQUIP_DESC_61";
 	};
 	class Skin_Survivor2_DZ: SkinBase
 	{
@@ -1240,6 +1257,27 @@ class CfgMagazines
 		scope = 2;
 		displayName = "$STR_EQUIP_NAME_46";
 		descriptionShort = "$STR_EQUIP_DESC_46";
+	};
+	class Skin_Net_DZ : SkinBase {
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_56";
+		descriptionShort = "$STR_EQUIP_DESC_56";
+		
+		class ItemActions {
+			class Crafting1 {
+				text = "Camo Net";
+				script = "spawn player_craftItem1;";
+				input[] = {{"Skin_Net_DZ",3},{"PartWoodPile",1}};
+				output[] = {{"ItemCamoNet",1}};
+			};
+			
+			class Crafting2 {
+				text = "Watch Tower";
+				script = "spawn player_craftItem2;";
+				input[] = {{"Skin_Net_DZ",4},{"ItemHBarrier",2}};
+				output[] = {{"ItemWatchTower",1}};
+			};
+		};
 	};
 	class ItemBandage: CA_Magazine
 	{
@@ -1288,6 +1326,51 @@ class CfgMagazines
 		model = "\dayz_equip\models\genericparts.p3d";
 		picture = "\dayz_equip\textures\equip_genericparts_ca.paa";
 		descriptionShort = "$STR_EQUIP_DESC_10";
+
+		class ItemActions {
+			class Crafting1 {
+				text = "Sandbag Nest";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
+				output[] = {{"ItemSandBagNest",1}};
+			};
+			class Crafting2 {
+				text = "HBarrier";
+				script = "spawn player_craftItem2;";
+				input[] = {{"ItemWire",2},{"PartGeneric",2}};
+				output[] = {{"ItemHBarrier",1}};
+			};
+			class Crafting3 {
+				text = "Gate";
+				script = "spawn player_craftItem3;";
+				input[] = {{"ItemWire",1},{"PartGeneric",2}};
+				output[] = {{"ItemGate",1}};
+			};
+			class Crafting4 {
+				text = "Scaffolding";
+				script = "spawn player_craftItem4;";
+				input[] = {{"PartWoodPile",3},{"PartGeneric",3}};
+				output[] = {{"ItemScaffolding",1}};
+			};
+			class Crafting5 {
+				text = "Small Ladder";
+				script = "spawn player_craftItem5;";
+				input[] = {{"PartGeneric",2}};
+				output[] = {{"ItemLadderSmall",1}};
+			};
+			class Crafting6 {
+				text = "Large Ladder";
+				script = "spawn player_craftItem6;";
+				input[] = {{"PartGeneric",4}};
+				output[] = {{"ItemLadderLarge",1}};
+			};
+			class Crafting7 {
+				text = "Deer Stand";
+				script = "spawn player_craftItem7;";
+				input[] = {{"PartWoodPile",5},{"PartGeneric",1}};
+				output[] = {{"ItemDeerStand",1}};
+			};
+		};
 	};
 	class PartEngine: CA_Magazine
 	{
@@ -1321,7 +1404,36 @@ class CfgMagazines
 				script = "spawn player_craftItem;";
 				output[] = {{"WoodenArrow",3}};
 				input[] = {{"PartWoodPile",1},{"ItemTrashRazor",1}};
-				
+			};
+			class Crafting1 {
+				text = "Sandbag Nest";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
+				output[] = {{"ItemSandBagNest",1}};
+			};
+			class Crafting2 {
+				text = "Camo Net";
+				script = "spawn player_craftItem2;";
+				input[] = {{"Skin_Net_DZ",3},{"PartWoodPile",1}};
+				output[] = {{"ItemCamoNet",1}};
+			};
+			class Crafting3 {
+				text = "Fortified Round Fence";
+				script = "spawn player_craftItem3;";
+				input[] = {{"ItemSandbagRound",2},{"PartWoodPile",1}};
+				output[] = {{"ItemFortSandbagRound",1}};
+			};
+			class Crafting4 {
+				text = "Deer Stand";
+				script = "spawn player_craftItem4;";
+				input[] = {{"PartWoodPile",5},{"PartGeneric",1}};
+				output[] = {{"ItemDeerStand",1}};
+			};
+			class Crafting5 {
+				text = "Scaffolding";
+				script = "spawn player_craftItem5;";
+				input[] = {{"PartWoodPile",3},{"PartGeneric",3}};
+				output[] = {{"ItemScaffolding",1}};
 			};
 		};
 	};
@@ -1985,13 +2097,81 @@ class CfgMagazines
 			{
 				text = "$STR_ACTIONS_BUILD";
 				script = "spawn player_build;";
-				require[] = {"ItemEtool"};
+				require = "ItemToolbox";
 				create = "Sandbag1_DZ";
+			};
+			class Crafting1 {
+				text = "Sandbag Nest";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
+				output[] = {"ItemSandBagNest",1};
+			};
+			class Crafting2 {
+				text = "Round Sandbag Fence";
+				script = "spawn player_craftItem2;";
+				input[] = {{"ItemSandbag",2}};
+				output[] = {{"ItemSandbagRound",1}};
 			};
 		};
 	};
 
-
+	class ItemSandbagRound : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 2);
+		displayName = "Round Bag Fence";
+		model = "\dayz_equip\models\sandbags.p3d";
+		picture = "\dayz_equip\textures\equip_sandbag_ca.paa";
+		descriptionShort = "";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				require = "ItemToolbox";
+				create = "Sandbag2_DZ";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemSandbagRound",1}};
+				output[] = {{"ItemSandbag",2}};
+			};
+			class Crafting2 {
+				text = "Fortified Round Fence";
+				script = "spawn player_craftItem2;";
+				input[] = {{"ItemSandbagRound",2},{"PartWoodPile",1}};
+				output[] = {{"ItemFortSandbagRound",1}};
+			};
+		};
+	};
+	
+	class ItemFortSandbagRound : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 6);
+		displayName = "Fortified Round Bag Fence";
+		model = "\dayz_equip\models\sandbags.p3d";
+		picture = "\dayz_equip\textures\equip_sandbag_ca.paa";
+		descriptionShort = "";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "Sandbag3_DZ";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemFortSandbagRound",1}};
+				output[] = {{"ItemSandbagRound",2},{"PartWoodPile",1}};
+			};
+		};
+	};
 
 	class ItemTankTrap: CA_Magazine
 	{
@@ -2008,7 +2188,7 @@ class CfgMagazines
 			{
 				text = "$STR_ACTIONS_BUILD";
 				script = "spawn player_build;";
-				require[] = {"ItemToolbox"};
+				require = "ItemToolbox";
 				create = "Hedgehog_DZ";
 			};
 		};
@@ -2028,11 +2208,292 @@ class CfgMagazines
 			{
 				text = "$STR_ACTIONS_BUILD";
 				script = "spawn player_build;";
-				require[] = {"ItemToolbox"};
+				require = "ItemToolbox";
 				create = "Wire_cat1";
+			};
+			class Crafting1 {
+				text = "HBarrier";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemWire",2},{"PartGeneric",2}};
+				output[] = {"ItemHBarrier"};
+			};
+			class Crafting2 {
+				text = "Wire (CAT2)";
+				script = "spawn player_craftItem2;";
+				input[] = {{"ItemWire",3}};
+				output[] = {{"ItemWire2",1}};
+			};
+			class Crafting3 {
+				text = "Gate";
+				script = "spawn player_craftItem3;";
+				input[] = {{"ItemWire"},{"PartGeneric",2}};
+				output[] = {{"ItemGate",1}};
 			};
 		};
 	};
+
+	class ItemWire2 : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 2);
+		displayName = "$STR_EQUIP_NAME_124";
+		model = "\dayz_equip\models\Fence_wire_kit.p3d";
+		picture = "\dayz_equip\textures\equip_fencewire_kit_CA.paa";
+		descriptionShort = "$STR_EQUIP_DESC_124";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "Wire2";
+			};
+
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemWire2",1}};
+				output[] = {{"ItemWire",3}};
+			};
+		};
+	};
+	
+	class ItemCamoNet : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 4);
+		displayName = "$STR_EQUIP_NAME_119";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "$STR_EQUIP_DESC_119";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "CamoNet";
+			};
+
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemCamoNet",1}};
+				output[] = {{"Skin_Net_DZ",3},{"PartWoodPile",1}};
+			};
+		};
+	};
+	
+	class ItemSandBagNest : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 6);
+		displayName = "$STR_EQUIP_NAME_120";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "$STR_EQUIP_DESC_120";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "SandBagNest";
+			};
+
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemSandBagNest",1}};
+				output[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
+			};
+		};
+	};
+	
+	class ItemWatchTower : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 8);
+		displayName = "$STR_EQUIP_NAME_121";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "$STR_EQUIP_DESC_121";
+
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "WatchTower";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemWatchTower",1}};
+				output[] = {{"Skin_Net_DZ",4},{"ItemHBarrier",2}};
+			};
+		};
+	};
+	
+	class ItemDeerStand : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 8);
+		displayName = "Deer Stand";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "";
+
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "DeerStand";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemDeerStand",1}};
+				output[] = {{"PartWoodPile",5},{"PartGeneric",1}};
+			};
+		};
+	};
+	
+	class ItemHBarrier : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 4);
+		displayName = "$STR_EQUIP_NAME_122";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "$STR_EQUIP_DESC_122";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "HBarrier";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemHBarrier",1}};
+				output[] = {{"ItemWire",2},{"PartGeneric",2}};
+			};
+		};
+	};
+	class ItemGate : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 4);
+		displayName = "Gate";
+		model = "\dayz_equip\models\Fence_wire_kit.p3d";
+		picture = "\dayz_equip\textures\equip_fencewire_kit_CA.paa";
+		descriptionShort = "";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "Gate1_DZ";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemGate",1}};
+				output[] = {{"ItemWire",1},{"PartGeneric",2}};
+			};
+		};
+	};
+	
+	class ItemScaffolding : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 8);
+		displayName = "Scaffolding";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "Scaffolding";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {"ItemScaffolding",1};
+				output[] = {{"PartWoodPile",3},{"PartGeneric",2}};
+			};
+		};
+	};
+	
+	class ItemLadderSmall : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 4);
+		displayName = "Small Ladder";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				require = "ItemToolbox";
+				create = "LadderSmall";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				input[] = {{"ItemLadderSmall",1}};
+				output[] = {{"PartGeneric",2}};
+			};
+		};
+	};
+	
+	class ItemLadderLarge : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = (256 * 8);
+		displayName = "Large Ladder";
+		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		descriptionShort = "";
+		
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build2;";
+				require = "ItemToolbox";
+				create = "LadderLarge";
+			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_deconstruct;";
+				input[] = {{"ItemLadderLarge",1}};
+				output[] = {{"PartGeneric",4}};
+			};
+		};
+	};
+
 	class FoodSteakRaw: CA_Magazine
 	{
 		scope = 2;
@@ -2114,6 +2575,111 @@ class CfgVehicles
 	class NonStrategic;
 	class BuiltItems: NonStrategic{};
 	class TrapItems: NonStrategic{};
+
+	class HouseBase;				// External class reference
+	
+	class Constuctables : HouseBase {
+		class DestructionEffects;	// External class reference
+	};
+
+	class CamoNet: Constuctables
+	{
+		model = "\Ca\misc3\CamoNetB_EAST";
+		displayName = "Camo Net";
+		destrType = "DestructTent";
+		icon = "\Ca\misc3\data\Icons\icon_camoNetBig_ca.paa";
+		mapSize = 18;
+		scope = 2;
+		armor = 3;
+		vehicleClass = "Military";
+		inventoryItem = "ItemCamoNet";
+	};
+	class DeerStand : Constuctables
+	{
+		scope = 2;
+		vehicleClass = "Misc";
+		armor = 500;
+		model = "\Ca\Structures\Misc\Misc_DeerStand\misc_deerstand";
+		displayName = "Deer Stand";
+		ladders[] = {{"start1", "end1"}};
+		icon = "\Ca\Structures\Misc\Misc_DeerStand\data\icon\icon_deerstand_ca.paa";
+		mapSize = 3;
+		inventoryItem = "ItemDeerStand";
+	};
+	class WatchTower : Constuctables
+	{
+		model = "\Ca\misc3\fort_watchtower";
+		displayName = "Watch Tower";
+		icon = "\Ca\misc3\data\Icons\icon_fortWatchTower_ca.paa";
+		scope = 2;
+		armor = 150;
+		vehicleClass = "Fortifications";
+		ladders[] = {{"start1", "end1"}};
+		inventoryItem = "ItemWatchTower";
+	};
+	class SandBagNest : Constuctables
+	{
+		model = "\Ca\misc3\fortified_nest_small";
+		displayName = "Sand Bag Nest";
+		icon = "\Ca\misc3\data\Icons\icon_fortNestSmall_ca.paa";
+		mapSize = 5;
+		scope = 2;
+		armor = 500;
+		irTarget = false;
+		vehicleClass = "Fortifications";
+		GhostPreview = "Land_fortified_nest_smallPreview";
+		inventoryItem = "ItemSandBagNest";
+	};
+	class Wire2 : Constuctables
+	{
+		scope = 2;
+		animated = false;
+		vehicleClass = "Fortifications";
+		model = "\ca\misc\Fort_Razorwire";
+		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa";
+		accuracy = 0.3;	// accuracy needed to recognize type of this target
+		mapSize = 5.5;
+		displayName = "Wire (CAT2)";
+		destrType = "DestructTent";
+		armor = 100;
+		GhostPreview = "Fort_RazorWirePreview";
+		inventoryItem = "ItemWire2";
+	};
+	class HBarrier : Constuctables
+	{
+		scope = 2;
+		animated = false;
+		vehicleClass = "Fortifications";
+		typicalCargo[] = {};
+		irTarget = false;
+		mapSize = 7;
+		model = "\ca\misc2\HBarrier5.p3d";
+		icon = "\Ca\misc2\data\Icons\icon_hescoBarrier5_ca.paa";
+		displayName = "Hesco Barrier";
+		accuracy = 0.3;	// accuracy needed to recognize type of this target
+		transportAmmo = 0;
+		transportRepair = 0;
+		transportFuel = 0;
+		destrType = "DestructBuilding";
+		armor = 500;
+		coefInside = 0.5;
+		coefInsideHeur = 0.8;
+		cost = 0;
+		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
+		GhostPreview = "Land_HBarrier5Preview";
+		inventoryItem = "ItemHBarrier";
+	};
+	class Scaffolding : Constuctables
+	{
+		model = "\Ca\Structures\Misc\Misc_Scaffolding\Misc_Scaffolding";
+		displayName = "Scaffolding";
+		icon = "\Ca\Structures\Data\Icons\icon_scaffolding_ca.paa";
+		mapSize = 16;
+		scope = 2;
+		armor = 500;
+		vehicleClass = "Misc";
+		inventoryItem = "ItemScaffolding";
+	};
 	class Wire_cat1: BuiltItems
 	{
 		scope = 2;
@@ -2173,7 +2739,104 @@ class CfgVehicles
 		displayName = "Bag Fence";
 		vehicleClass = "Fortifications";
 	};
-
+	class Sandbag2_DZ : BuiltItems {
+		scope = 2;
+		destrType = "DestructNo";
+		cost = 100;
+		model = "\ca\misc2\BagFenceRound.p3d";
+		icon = "\Ca\misc3\data\Icons\icon_bagFenceRound_ca.paa";
+		mapSize = 2;
+		armor = 400;
+		displayName = "Round Bag Fence";
+		vehicleClass = "Fortifications";
+		inventoryItem = "ItemSandbagRound";
+	};
+	class Sandbag3_DZ : BuiltItems {
+		model = "\Ca\misc3\fort_bagfence_round";
+		displayName = "Fortified Round Bag Fence";
+		icon = "\Ca\misc3\data\Icons\icon_fortBagFenceRound_ca.paa";
+		mapSize = 3.2;
+		scope = 2;
+		armor = 150;
+		vehicleClass = "Fortifications";
+		inventoryItem = "ItemFortSandbagRound";
+	};
+	class LadderSmall : BuiltItems {
+		scope = 2;
+		displayName = "Small Ladder";
+		model = "\ca\misc\ladder_half.p3d";
+		mapSize = 0.6;
+		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
+		armor = 50;
+		ladders[] = {{"start", "end"}};
+		vehicleClass = "Misc";
+		inventoryItem = "ItemLadderSmall";
+	};
+	class LadderLarge : BuiltItems {
+		scope = 2;
+		displayName = "Large Ladder";
+		model = "\ca\misc\ladder.p3d";
+		mapSize = 0.6;
+		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
+		armor = 50;
+		ladders[] = {{"start", "end"}};
+		vehicleClass = "Misc";
+		inventoryItem = "ItemLadderLarge";
+	};
+	class Gate1_DZ : BuiltItems {
+		scope = 2;
+		animated = true;
+		typicalCargo[] = {};
+		irTarget = false;
+		accuracy = 0.3;	// accuracy needed to recognize type of this target
+		transportAmmo = 0;
+		transportRepair = 0;
+		transportFuel = 0;
+		armor = 500;
+		coefInside = 0.5;
+		coefInsideHeur = 0.8;
+		cost = 0;
+		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
+		GhostPreview = "Land_HBarrier_largePreview";
+		model = "\ca\misc2\BarbGate.p3d";
+		icon = "\Ca\misc2\data\Icons\icon_barGate2_ca.paa";
+		mapSize = 3;
+		displayName = "Gate";
+		destrType = "DestructTree";
+		vehicleClass = "Military";
+		inventoryItem = "ItemGate";
+		
+		class AnimationSources {
+			class Door01 {
+				animPeriod = 1;
+				initPhase = 0;
+			};
+		};
+		
+		class UserActions {
+			class OpenDoors1 {
+				displayNameDefault = "Open Gate";
+				displayName = "Open Gate";
+				position = "Door01_axis";
+				radius = 4;
+				onlyForPlayer = 1;
+				condition = "this animationPhase ""Door01"" < 0.5";
+				statement = "this animate [""Door01"", 1]";
+			};
+			
+			class CloseDoors1 {
+				displayNameDefault = "Close Gate";
+				displayName = "Close Gate";
+				position = "Door01_axis";
+				radius = 4;
+				onlyForPlayer = 1;
+				condition = "this animationPhase ""Door01"" >= 0.5";
+				statement = "this animate [""Door01"", 0]";
+			};
+		};
+		actionBegin1 = "OpenDoors1";
+		actionEnd1 = "OpenDoors1";
+	};
 	class Land_HBarrier1_DZ : BuiltItems { 
 		scope = 2; 
 		animated = 0; 

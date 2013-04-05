@@ -793,19 +793,6 @@ class Citizen1;	// External class reference
 		canHideBodies = 1;
 		canCarryBackPack = 1;
 	};
-	class GUE_Commander;
-	class GUE_Commander_DZ: GUE_Commander {
-		displayName = "Rebel";
-		side = 1;
-		weapons[] = {"Throw","Put"};
-		backpack = "";
-		magazines[] = {};
-		respawnWeapons[] = {"Throw","Put"};
-		respawnMagazines[] = {};
-		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
-		canHideBodies = 1;
-		canCarryBackPack = 1;
-	};
 	class Functionary1_EP1;
 	class Functionary1_EP1_DZ: Functionary1_EP1 {
 		displayName = "Business Suit";
@@ -960,12 +947,77 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
+	class GUE_Soldier_Scout;
+	class Sniper2_DZ: GUE_Soldier_Scout {
+		displayName = "Sniper";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		canCarryBackPack = 1;
+		backpack = "";
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
+	};
 	class BAF_Soldier_L_W;
 	class Camo1_DZ: BAF_Soldier_L_W {
 		displayName = "Survivor";
 		side = 1;
 		weapons[] = {"Throw","Put"};
 		model = "\ksk_mod\GER_rifleman_light_wdl";
+		backpack = "";
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
+	};	
+	class GUE_Commander;
+	class Camo2_DZ: GUE_Commander {
+		displayName = "Commander";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		canCarryBackPack = 1;
+		backpack = "";
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
+	};	
+	class GUE_Soldier_2;
+	class Camo3_DZ: GUE_Soldier_2 {
+		displayName = "Soldier";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		canCarryBackPack = 1;
+		backpack = "";
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
+	};	
+	class GUE_Soldier_AT;
+	class Camo4_DZ: GUE_Soldier_AT {
+		displayName = "Soldier";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		canCarryBackPack = 1;
+		backpack = "";
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
+	};	
+	class GUE_Soldier_MG;
+	class Camo5_DZ: GUE_Soldier_MG {
+		displayName = "Soldier";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		canCarryBackPack = 1;
 		backpack = "";
 		magazines[] = {};
 		respawnWeapons[] = {"Throw","Put"};
@@ -985,6 +1037,19 @@ class Citizen1;	// External class reference
 		model = "\ca\weapons_e\AmmoBoxes\backpack_us_assault_Coyote.p3d";
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 8;
+	};
+
+	class AGS_UN_Bag_EP1;
+	class Net_DZ: AGS_UN_Bag_EP1 {
+		displayName = "Netting Material";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		backpack = "";
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
 	};
 
 	class DZ_Assault_Pack_EP1: Bag_Base_EP1
@@ -1148,32 +1213,6 @@ class Citizen1;	// External class reference
 	  transportFuel = 0; 
 	  nameSound = "fuelstation"; 
 	};
-
-	// lingor
-	class Land_ibr_FuelStation_Feed : Strategic { 
-		model = "\ibr\lingor_fuel\ibr_FuelStation_Feed.p3d"; 
-		transportFuel = 0; 
-		nameSound = "fuelstation"; 
-	};
-	// lingor
-	class Land_fuelstation_army : Strategic { 
-		model = "\ibr\ibr_plants\fuelstation_army"; 
-		transportFuel = 0; 
-		nameSound = "fuelstation"; 
-	}
-	// Lingor hangars
-	class land_ibr_hangar : House { 
-		model = "\ibr\ibr_hangars\ibr_hangar"; 
-		scope = 2; 
-		vehicleClass = "ibr_hangars"; 
-		transportFuel = 0; 
-		transportRepair = 0; 
-		icon = "\ibr\ibr_hangars\icons\icon5.paa"; 
-		mapSize = 40; 
-		displayName = "House"; 
-		destrType = "DestructBuilding"; 
-		armor = 1200; 
-	};
 	
 	class Ship: AllVehicles 
 	{
@@ -1262,8 +1301,4 @@ class Citizen1;	// External class reference
 		transportMaxMagazines = 25;
         transportmaxbackpacks = 4;
 	};
-	
-
-	
-
 };	

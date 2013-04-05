@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "1.9.4.4";
+		version = "2.0.0";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -222,11 +222,10 @@ class RscStructuredTextGUI: RscStructuredText
 class CfgSurvival {
 	class Inventory {
 		class Default {
-			//weapons[] = {"Makarov"};
 			magazines[] = {"ItemBandage","ItemPainkiller"};
 			weapons[] = {"ItemFlashlight"};
 			backpackWeapon = "";
-			backpack = "DZ_Patrol_Pack_EP1";
+			backpack = "";
 		};
 	};
 	class Meat {
@@ -292,6 +291,22 @@ class CfgSurvival {
 			sex = "male";
 			playerModel = "Camo1_DZ";
 		};
+		class Skin_Camo2_DZ: Default {
+			sex = "male";
+			playerModel = "Camo2_DZ";
+		};
+		class Skin_Camo3_DZ: Default {
+			sex = "male";
+			playerModel = "Camo3_DZ";
+		};
+		class Skin_Camo4_DZ: Default {
+			sex = "male";
+			playerModel = "Camo4_DZ";
+		};
+		class Skin_Camo5_DZ: Default {
+			sex = "male";
+			playerModel = "Camo5_DZ";
+		};
 		class Skin_Rocket_DZ: Default {
 			sex = "male";
 			playerModel = "Rocket_DZ";
@@ -315,10 +330,6 @@ class CfgSurvival {
 		class Skin_Ins_Soldier_GL_DZ: Default {
 			sex = "male";
 			playerModel = "Ins_Soldier_GL_DZ";
-		};
-		class Skin_GUE_Commander_DZ: Default {
-			sex = "male";
-			playerModel = "GUE_Commander_DZ";
 		};
 		class Skin_Functionary1_EP1_DZ: Default {
 			sex = "male";
@@ -406,9 +417,6 @@ class CfgSurvival {
 			sex = "male";
 			playerModel = "TK_INS_Warlord_EP1_DZ";
 		};
-		
-
-
 	};
 };
 
@@ -468,9 +476,11 @@ class CfgBuildingLoot {
 			{ "Binocular","weapon" },
 			{ "PartWoodPile","magazine" },
 			{ "Skin_Camo1_DZ","magazine" },
+			{ "Skin_Camo2_DZ","magazine" },
 			{ "Skin_Sniper1_DZ","magazine" },
 			{ "WeaponHolder_MeleeCrowbar","object" },
 			{"MR43","weapon"},
+			{"MP5A5","weapon"},
 			{ "Skin_RU_Policeman_DZ","magazine" },
 			{ "Skin_Pilot_EP1_DZ","magazine" },
 			{ "Skin_Functionary1_EP1_DZ","magazine" },
@@ -478,46 +488,47 @@ class CfgBuildingLoot {
 			{ "Skin_Rocker2_DZ","magazine" },
 			{ "Skin_SurvivorW3_DZ","magazine" },
 			{ "Skin_SurvivorWpink_DZ","magazine" },
-			{ "Skin_SurvivorWurban_DZ","magazine" }, 
+			{ "Skin_SurvivorWurban_DZ","magazine" }
 	};
 		itemChance[] =	{
-			0.01,
-			0.005,
-			0.15,
-			0.05,
-			0.03,
-			0.13,
-			0.05,
-			0.03,
-			0.08,
-			0.06,
-			2,
-			0.06,
-			0.04,
-			0.05, //12
-			0.04, // 12-0
-			0.02, //16
-			0.02, //16
-			0.01, //18
-			0.01,
-			0.01,
-			0.03,
-			0.5,
-			0.01,
-			0.06,
-			0.06,
-			0.01,
-			0.01,
-			0.08,
-			0.03,
-			0.01,
-			0.02,
-			0.02,
-			0.02,
-			0.02,
-			0.02,
-			0.02,
-			0.02,
+			0.01, //Soda Mdew
+			0.005, //Soda Rbull
+			0.15, //Watch
+			0.05, //Compass
+			0.03, //Map
+			0.13, //Macarov
+			0.05, //1911
+			0.03, //Flashlight
+			0.08, //knife
+			0.06, //matchbox
+			2, //generic
+			0.06, //enfield
+			0.04, //revolver
+			0.05, //assaultpack (12)
+			0.04, //czechpack (12-0)
+			0.02, //alicepack (16)
+			0.02, //tk_assaultpack (16)
+			0.01, //acupack (18)
+			0.01, //winchester
+			0.01, //tent
+			0.03, //military
+			0.5, //trash
+			0.01, //crossbow
+			0.06, //binocular
+			0.06, //woodpile
+			0.01, //camo1
+			0.01, //camo2
+			0.01, //sniper1
+			0.08, //crowbar
+			0.03, //mr43
+			0.01, //mp5
+			0.02, //police
+			0.02, //functionary
+			0.02, //priest
+			0.02, //rocker2
+			0.02, //w3
+			0.02, //wpink
+			0.02 //wurban
 		};		
 	};
 	class Office: Residential {
@@ -546,25 +557,27 @@ class CfgBuildingLoot {
 			{ "ItemKnife","military" },
 			{ "ItemToolbox","weapon" },
 			{ "ItemWire","magazine" },
-			{"ItemTankTrap","magazine"}
+			{"ItemTankTrap","magazine"},
+			{"Skin_Net_DZ","magazine"}
 	};
 		itemChance[] =	{
-			0.01,
-			0.18,
-			0.29,
-			0.04,
-			0.04,
-			0.05,
-			0.02,
-			0.02,
-			0.04,
-			0.01,
-			0.04,
-			0.11,
-			0.07,
-			0.06,
-			0.01,
-			0.04
+			0.01, //generator
+			0.18, //generic
+			0.29, //trash
+			0.04, //military
+			0.04, //scrap
+			0.05, //wheel
+			0.02, //fueltank
+			0.02, //engine
+			0.04, //glass
+			0.01, //vrotor
+			0.04, //jerrycan
+			0.11, //hatchet
+			0.07, //knife
+			0.06, //toolbox
+			0.01, //wire
+			0.04, //tanktrap
+			0.01 //netting material
 		};
 	};
 	class Farm: Default {
@@ -586,22 +599,26 @@ class CfgBuildingLoot {
 			{"MR43","weapon"},
 			{"WeaponHolder_ItemMachete"},
 			{"Colt1911","weapon"},
-			{"revolver_EP1","weapon"}
+			{"revolver_EP1","weapon"},
+			{"Skin_Camo3_DZ","magazine"},
+			{"Skin_Camo2_DZ","magazine"}
 	};
 		itemChance[] =	{
-			0.06,
-			0.28,
-			0.01,
-			0.04,
-			0.03,
-			0.22,
-			0.03,
-			0.11,
-			0.17,
-			0.06,
-			0.03,
-			0.08,
-			0.08
+			0.06, //jerrycan
+			0.28, //generic
+			0.01, //cz550
+			0.04, //enfield
+			0.03, //winchester
+			0.22, //trash
+			0.03, //crossbow
+			0.11, //woodpile
+			0.17, //hatchet
+			0.06, //mr43
+			0.03, //machete
+			0.08, //1911
+			0.08, //revolver
+			0.01, //camo3
+			0.01 //camo2
 		};
 	};
 	class Supermarket: Default {
@@ -639,30 +656,30 @@ class CfgBuildingLoot {
 			{"MR43","weapon"}
 	};
 		itemChance[] =	{
-			0.15,
-			0.01,
-			0.05,
-			0.02,
-			0.02,
-			0.05,
-			0.02,
-			0.05,
-			0.05,
-			0.01,
-			0.01,
-			0.05, //12
-			0.04, // 12-0
-			0.02, //16
-			0.02, //16
-			0.01, //18
-			0.01,
-			0.01,
-			0.3,
-			0.15,
-			0.01,
-			0.05,
-			0.02,
-			0.01
+			0.15, //watch
+			0.01, //compass
+			0.05, //mao
+			0.02, //macarov
+			0.02, //1911
+			0.05, //flashlight
+			0.02, //knife
+			0.05, //matchbox
+			0.05, //generic
+			0.01, //enfield
+			0.01, //revolver
+			0.05, //assaultpack (12)
+			0.04, //czechpack (12-0)
+			0.02, //alicepack (16)
+			0.02, //tk_assaultpack (16)
+			0.01, //acupack (18)
+			0.01, //winchester
+			0.01, //itemtent
+			0.3, //food
+			0.15, //trash
+			0.01, //crossbow
+			0.05, //binocular
+			0.02, //woodpile
+			0.01 //mr43
 	};
 	};
 	class HeliCrash: Default {
@@ -700,7 +717,7 @@ class CfgBuildingLoot {
 			{ "Skin_Soldier1_DZ","magazine" },
 			{ "Skin_Soldier_TL_PMC_DZ","magazine" },
 			{ "Skin_Soldier_Sniper_PMC_DZ","magazine" },
-			{ "Skin_Soldier_Bodyguard_AA12_PMC_DZ","magazine" },
+			{ "Skin_Soldier_Bodyguard_AA12_PMC_DZ","magazine" }
 };
 		itemChance[] =	{
 			0.02,		//{"FN_FAL","weapon"},
@@ -802,9 +819,9 @@ class HeliCrash_No50s: Default {
 			{"MedBox0","object"}
 	};
 		itemChance[] =	{
-			0.2,
-			1,
-			0.2
+			0.2, //trash
+			1, //hospital loot
+			0.2 //medbox
 		};
 	};
 	class Military: Default {
@@ -859,57 +876,56 @@ class HeliCrash_No50s: Default {
 			//{"Body","object"},
 			{ "ItemEtool","weapon" },
 			{"ItemSandbag","magazine"},
-			{"Sa58P_EP1","weapon"},
-			{"Sa58V_EP1","weapon"},
-			{"BAF_L85A2_RIS_Holo","weapon"}
+			{"BAF_L85A2_RIS_Holo","weapon"},
+			{"Skin_Camo1_DZ","magazine"},
+			{"Skin_Camo4_DZ","magazine"}
 	};
 		itemChance[] =	{
-			0.05,
-			0.05,
-			0.01,
-			0.02,
-			0.15,
-			0.15,
-			0.15,
-			0.15,
-			0.15,
-			0.15,
-			0.15,
-			0.01,
-			0.08,
-			0.05,
-			0.05,
-			0.01,
-			0.10,
-			0.01,
-			0.02,
-			0.01,
-			0.05,
-			0.08,
-			0.10,
-			0.04,
-			0.02,
-			0.01,
-			0.06,
-			0.10,
-			0.10,
-			0.01,
-			0.05,
-			//Bags
-			0.08, //16
-			0.08, //16
-			0.06, //18
-			0.01, //24
+			0.05, //m9
+			0.05, //m16a2
+			0.01, //m16a2gl
+			0.02, //m9sd
+			0.10, //ak74
+			0.07, //scar cqc
+			0.05, //scar mk4cqt
+			0.05, //sa58v_rco
+			0.10, //sa58v
+			0.10, //sa58p
+			0.10, //aks gold
+			0.01, //m4aim
+			0.08, //ak74 kobra
+			0.05, //aku
+			0.05, //ak47
+			0.01, //m24
+			0.10, //m1024
+			0.01, //dmr
+			0.02, //m4a1
+			0.01, //m14
+			0.05, //uzi
+			0.08, //remington870 lamp
+			0.10, //g17
+			0.04, //mp5
+			0.02, //mp5sd
+			0.01, //m4a3 cco
+			0.06, //binocular
+			0.10, //military flashlight
+			0.10, //knife
+			0.01, //gps
+			0.05, //map
+			0.08, //alicepack (16)
+			0.08, //tk_assaultpack (16)
+			0.06, //acupack (18)
+			0.01, //civialpack (24)
 			0.01, //DZ_Backpack_EP1 24
-			0.10,
-			1.00,
-			2.50,
+			0.10, //medical
+			1.00, //generic
+			2.50, //military
 			//0.20,
-			0.05,
-			0.02,
-			0.03,
-			0.03,
-			0.01
+			0.05, //etool
+			0.02, //sandbag
+			0.01, //L85A2 holo
+			0.03,	//camo1
+			0.03	//camo4
 		};
 	};
 	class MilitarySpecial: Default {
@@ -924,7 +940,6 @@ class HeliCrash_No50s: Default {
 			{ "M16A2GL","weapon" },
 			{ "M249_DZ","weapon" },
 			{ "M9SD","weapon" },
-			//{"M136","weapon"},
 			{ "AK_74","weapon" },
 			{ "M4A1_Aim","weapon" },
 			{ "AKS_74_kobra","weapon" },
@@ -933,7 +948,6 @@ class HeliCrash_No50s: Default {
 			{ "M24","weapon" },
 			{ "SVD_CAMO","weapon" },
 			{ "M1014","weapon" },
-			{ "M107_DZ","weapon" },
 			{ "DMR","weapon" },
 			{ "M4A1","weapon" },
 			{ "M14_EP1","weapon" },
@@ -950,7 +964,7 @@ class HeliCrash_No50s: Default {
 			{ "AmmoBoxSmall_556","object" },
 			{ "AmmoBoxSmall_762","object" },
 
-			//{"NVGoggles","weapon"},
+			{"NVGoggles","weapon"},
 			{ "Binocular","weapon" },
 			{ "ItemFlashlightRed","military" },
 			{ "ItemKnife","military" },
@@ -968,7 +982,6 @@ class HeliCrash_No50s: Default {
 			{ "","generic" },
 			{ "","military" },
 			//{"Body","object"},
-			{"PipeBomb","magazine"},
 			{"Sa58V_RCO_EP1","weapon"},
 			{"Sa58V_CCO_EP1","weapon"},
 			{"G36_C_SD_camo","weapon"},
@@ -976,7 +989,6 @@ class HeliCrash_No50s: Default {
 			{"100Rnd_762x54_PK","magazine"},
 			{ "Skin_Soldier1_DZ","magazine" },
 			{ "Skin_Ins_Soldier_GL_DZ","magazine" },
-			{ "Skin_GUE_Commander_DZ","magazine" },
 			{ "Skin_Bandit1_DZ","magazine" },
 			{ "Skin_BanditW1_DZ","magazine" },
 			{ "Skin_BanditW2_DZ","magazine" },
@@ -986,71 +998,71 @@ class HeliCrash_No50s: Default {
 			{ "Skin_TK_INS_Warlord_EP1","magazine" },
 			{ "Skin_SurvivorWcombat_DZ","magazine" },
 			{ "Skin_SurvivorWdesert_DZ","magazine" }, 
+			{ "Skin_Sniper1_DZ","magazine" },
+			{ "Skin_Sniper2_DZ","magazine" }
 	};
 		itemChance[] =	{
-			0.10,
-			0.05,
-			0.01,
-			0.02,
-			//0.01, //m136
-			0.10,
-			0.02,
-			0.10,
-			0.10,
-			0.10,
-			0.01,
-			0.01,
-			0.20,
-			0.01,
-			0.02,
-			0.10,
-			0.03,
-			0.20,
-			0.10,
-			0.20,
-			0.01,
-			0.04,
-			0.05,
-			0.02,
-			0.01,
-			0.08,
-			0.04,
-			0.02,
-			//0.01, //NVGoggles
-			0.10,
-			0.05,
-			0.15,
+			0.10, //m16a2
+			0.05, //m16a2gl
+			0.01, //m249
+			0.02, //m9sd
+			0.10, //ak74
+			0.02, //m4a1aim
+			0.10, //ak74 kobra
+			0.10, //aku
+			0.10, //ak47
+			0.01, //m24
+			0.01, //svd camo
+			0.20, //m1014
+			0.02, //dmr
+			0.10, //m4a1
+			0.03, //m14
+			0.20, //uzi
+			0.10, //remington870 lamp
+			0.20, //g17
+			0.01, //m240
+			0.04, //m4a1aim sd
+			0.05, //16a4 acog
+			0.02, //m4a1 hws gl
+			0.01, //mk48
+			0.08, //m4a3 cco
+			0.04, //AmmoBoxSmall_556
+			0.02, //AmmoBoxSmall_762
+			0.01, //NVGoggles
+			0.10, //binocular
+			0.05, //military flashlight
+			0.15, //knife
 			0.01, //ItemGPS
-			0.03,
-			0.01,
+			0.03, //map
+			0.01, //rangefinder
 			//Bags
-			0.08, //16
-			0.08, //16
-			0.06, //18
-			0.01, //24
+			0.08, //alicepack (16)
+			0.08, //tk_assualtpack (16)
+			0.06, //acopack (18)
+			0.01, //civilpack (24)
 			0.01, //DZ_Backpack_EP1 24
-			0.30,
-			1.00,
+			0.30, //mediacla
+			1.00, //generic
 			5.00, //military
 			//0.20,
-			0.01, //PipeBomb
 			0.01, //Sa58V_RCO_EP1
 			0.01, //Sa58V_CCO_EP1
 			0.01, //{"G36_C_SD_camo","weapon"},
 			0.02, // M40A3
-			0.01,	//("100Rnd_762x54_PK","magazine"}
-			0.05,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.03,
-			0.01,
-			0.02,
-			0.03,
+			0.01, //("100Rnd_762x54_PK","magazine"}
+			0.05, //soldier1
+			0.01, //ins soldier
+			0.01, //bandit1
+			0.01, //banditw1
+			0.01, //banditw2
+			0.01, //drake light
+			0.01, //special forces cz
+			0.03, //ins soldier tk
+			0.01, //ins warlord tk
+			0.02, //wcombat
+			0.03, //wdesert
+			0.01, //ghillie1
+			0.03 //ghillie2
 		};
 	};
 	class Hunting: Default {
