@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.0.0";
+		version = "2.0.0.1";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -286,6 +286,10 @@ class CfgSurvival {
 		class Skin_Sniper1_DZ: Default {
 			sex = "male";
 			playerModel = "Sniper1_DZ";
+		};
+		class Skin_Sniper2_DZ: Default {
+			sex = "male";
+			playerModel = "Sniper2_DZ";
 		};
 		class Skin_Camo1_DZ: Default {
 			sex = "male";
