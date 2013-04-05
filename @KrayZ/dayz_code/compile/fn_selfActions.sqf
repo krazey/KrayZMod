@@ -273,8 +273,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
         if( !_HALO_ActionAdded ) then {
             _vehicle setVariable ["HALO_ActionAdded", true];
  
-            // HALO Jump
-            s_halo_action = _vehicle addAction [("<t color=""#FF9800"">" + ("HALO Jump") + "</t>"),"\z\addons\dayz_code\actions\haloInit.sqf",[],2,false,true,"","(_this in _target) && (getPosATL player select 2) > 10"];
+            s_halo_action = _vehicle addAction [("<t color=""#FF9800"">" + ("HALO Jump") + "</t>"),"\z\addons\dayz_code\actionsadd\haloInit.sqf",[],2,false,true,"","(_this in _target) && (getPosATL player select 2) > 10"];
         };
     };
 

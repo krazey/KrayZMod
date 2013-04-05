@@ -75,13 +75,13 @@ if (!isDedicated) then {
 	player_reloadMag =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_reloadMags.sqf";
 	player_loadCrate =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_loadCrate.sqf";
 	player_craftItem =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem.sqf";
-	player_craftItem1 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem1.sqf";
-	player_craftItem2 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem2.sqf";
-	player_craftItem3 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem3.sqf";
-	player_craftItem4 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem4.sqf";
-	player_craftItem5 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem5.sqf";
-	player_craftItem6 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem6.sqf";
-	player_craftItem7 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_craftItem7.sqf";
+	player_craftItem1 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_craftItem1.sqf";
+	player_craftItem2 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_craftItem2.sqf";
+	player_craftItem3 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_craftItem3.sqf";
+	player_craftItem4 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_craftItem4.sqf";
+	player_craftItem5 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_craftItem5.sqf";
+	player_craftItem6 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_craftItem6.sqf";
+	player_craftItem7 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_craftItem7.sqf";
 	player_tentPitch =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\tent_pitch.sqf";
 	player_vaultPitch =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\vault_pitch.sqf";
 	player_drink =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_drink.sqf";
@@ -91,8 +91,8 @@ if (!isDedicated) then {
 	player_makeFire =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_makefire.sqf";
 	player_chopWood =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_chopWood.sqf";
 	player_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build.sqf";
-	player_build2 =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build2.sqf";
-	object_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\object_build.sqf";
+	player_build2 =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_build2.sqf";
+	object_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\object_build.sqf";
 	player_wearClothes =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_wearClothes.sqf";
 	player_dropWeapon =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_dropWeapon.sqf";
 	player_setTrap =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_setTrap.sqf";
@@ -101,11 +101,11 @@ if (!isDedicated) then {
 	player_sleep = 				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_sleep.sqf";
 	
 	//add military flashlight to shoulder
-	player_addflashtosh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\shoulder.sqf";
-	player_addflashtosh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\shoulder2.sqf";
-	player_addflashtoshr =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\shoulderr.sqf";
-	player_rmvflashfromsh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\unshoulder.sqf";
-	player_rmvflashfromsh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\unshoulder2.sqf";
+	player_addflashtosh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulder.sqf";
+	player_addflashtosh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulder2.sqf";
+	player_addflashtoshr =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulderr.sqf";
+	player_rmvflashfromsh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder.sqf";
+	player_rmvflashfromsh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder2.sqf";
 	
 	//halo jump add
 	bis_fnc_halo =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_HALO.sqf";

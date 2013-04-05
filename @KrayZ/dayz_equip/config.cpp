@@ -836,6 +836,13 @@ class cfgWeapons
 class CfgMagazines
 {
 	class CA_Magazine;
+	class ACOG_DZ : CA_Magazine {
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "ACOG Scope";
+		descriptionShort = "Can be mounted on / to weapons.";
+	};
 	class 20Rnd_556x45_Stanag: CA_Magazine
 	{
 		scope = 2;
@@ -2104,7 +2111,7 @@ class CfgMagazines
 				text = "Sandbag Nest";
 				script = "spawn player_craftItem1;";
 				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
-				output[] = {"ItemSandBagNest",1};
+				output[] = {{"ItemSandBagNest",1}};
 			};
 			class Crafting2 {
 				text = "Round Sandbag Fence";

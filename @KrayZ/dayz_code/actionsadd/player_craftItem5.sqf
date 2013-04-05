@@ -7,64 +7,6 @@ private ["_onLadder","_canDo","_selectedRecipeOutput","_proceed","_itemIn","_cou
 if(TradeInprogress) exitWith { cutText ["Crafting already in progress." , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
-/* 
-== Canned Foods
-"FoodCanBakedBeans",
-"FoodCanSardines",
-"FoodCanFrankBeans",
-"FoodCanPasta",
-"FoodBioMeat"
-
-== Drinks
-"ItemSodaCoke",
-"ItemSodaPepsi",
-
-== Trash
-"TrashTinCan",
-"TrashJackDaniels",
-"ItemSodaEmpty",
-"ItemSodaCokeEmpty",
-"ItemSodaPepsiEmpty",
-
-== community stuff Trash
-"ItemSodaMdewEmpty",
-"ItemSodaMtngreenEmpty",
-"ItemSodaR4z0rEmpty",
-"ItemSodaClaysEmpty",
-"ItemSodaSmashtEmpty",.
-"ItemSodaDrwasteEmpty",.
-"ItemSodaLemonadeEmpty",.
-"ItemSodaLvgEmpty",.
-"ItemSodaMzlyEmpty",.
-"ItemSodaRabbitEmpty"
-
-== Raw Meats
-"FoodSteakRaw",
-"FoodmeatRaw",
-"FoodbeefRaw",
-"FoodmuttonRaw",
-"FoodchickenRaw",
-"FoodrabbitRaw",
-"FoodbaconRaw"
-
-== Cooked Meats
-"FoodSteakCooked",
-"FoodmeatCooked",
-"FoodbeefCooked",
-"FoodmuttonCooked",
-"FoodchickenCooked",
-"FoodrabbitCooked",
-"FoodbaconCooked"
-*/
-
-// Removed metals:
-// _recipe_ItemBronzeBar = [[["ItemBronzeBar",1] ],[["ItemCopperBar",3],["ItemTinBar",3]]];
-
-// New item ideas:
-// _recipe_FoodChickenNoodle = [["FoodchickenRaw",1],["FoodCanPasta",1],["ItemWaterbottle",1]];
-// _recipe_FoodBeefBakedBeans = [["FoodbeefRaw",1],["FoodCanBakedBeans",1]];
-// ItemSalt
-
 // temp array of removed parts 
 _temp_removed_array = [];
 

@@ -46,8 +46,8 @@ if (isServer) then {
 	player setVariable ["constructionObject", _object];
 	_object setVariable ["characterID",dayz_characterID,true];
 	//_keyEvents = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this spawn construction_key_override"];
-	_actionBuild = player addAction ["Complete Build", "\z\addons\dayz_code\actions\object_build.sqf", [_object, _item, _classname, _text, true], 1, true];
-	_actionCancel = player addAction ["Cancel Build", "\z\addons\dayz_code\actions\object_build.sqf", [_object, _item, _classname, _text, false], 1, true];
+	_actionBuild = player addAction ["Complete Build", "\z\addons\dayz_code\actionsadd\object_build.sqf", [_object, _item, _classname, _text, true], 1, true];
+	_actionCancel = player addAction ["Cancel Build", "\z\addons\dayz_code\actionsadd\object_build.sqf", [_object, _item, _classname, _text, false], 1, true];
 
 	while {!isNull (player getVariable "constructionObject")} do {
 		if (vehicle player != player) then {
@@ -55,7 +55,7 @@ if (isServer) then {
 		};
 		
 		if (speed player > 10 or speed player <= -8) then {
-			cutText ["You are moving too fast!", "PLAIN DOWN"];
+			cutText ["You are moving too fast! Push left Shift to walk slower.", "PLAIN DOWN"];
 			player playMove "amovpercmstpssurwnondnon";
 		};
 

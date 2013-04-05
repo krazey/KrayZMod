@@ -1,69 +1,11 @@
 /*
 * Crafting by [VB]AWOL
-* 	usage: spawn player_craftitem1;
+* 	usage: spawn player_craftitem2;
 */
 private ["_onLadder","_canDo","_selectedRecipeOutput","_proceed","_itemIn","_countIn","_missing","_missingQty","_qty","_itemOut","_countOut","_started","_finished","_animState","_isMedic","_removed","_tobe_removed_total","_textCreate","_id","_textMissing","_selectedRecipeInput","_num_removed","_removed_total","_temp_removed_array","_isFireNear"];
 
 if(TradeInprogress) exitWith { cutText ["Crafting already in progress." , "PLAIN DOWN"]; };
 TradeInprogress = true;
-
-/* 
-== Canned Foods
-"FoodCanBakedBeans",
-"FoodCanSardines",
-"FoodCanFrankBeans",
-"FoodCanPasta",
-"FoodBioMeat"
-
-== Drinks
-"ItemSodaCoke",
-"ItemSodaPepsi",
-
-== Trash
-"TrashTinCan",
-"TrashJackDaniels",
-"ItemSodaEmpty",
-"ItemSodaCokeEmpty",
-"ItemSodaPepsiEmpty",
-
-== community stuff Trash
-"ItemSodaMdewEmpty",
-"ItemSodaMtngreenEmpty",
-"ItemSodaR4z0rEmpty",
-"ItemSodaClaysEmpty",
-"ItemSodaSmashtEmpty",.
-"ItemSodaDrwasteEmpty",.
-"ItemSodaLemonadeEmpty",.
-"ItemSodaLvgEmpty",.
-"ItemSodaMzlyEmpty",.
-"ItemSodaRabbitEmpty"
-
-== Raw Meats
-"FoodSteakRaw",
-"FoodmeatRaw",
-"FoodbeefRaw",
-"FoodmuttonRaw",
-"FoodchickenRaw",
-"FoodrabbitRaw",
-"FoodbaconRaw"
-
-== Cooked Meats
-"FoodSteakCooked",
-"FoodmeatCooked",
-"FoodbeefCooked",
-"FoodmuttonCooked",
-"FoodchickenCooked",
-"FoodrabbitCooked",
-"FoodbaconCooked"
-*/
-
-// Removed metals:
-// _recipe_ItemBronzeBar = [[["ItemBronzeBar",1] ],[["ItemCopperBar",3],["ItemTinBar",3]]];
-
-// New item ideas:
-// _recipe_FoodChickenNoodle = [["FoodchickenRaw",1],["FoodCanPasta",1],["ItemWaterbottle",1]];
-// _recipe_FoodBeefBakedBeans = [["FoodbeefRaw",1],["FoodCanBakedBeans",1]];
-// ItemSalt
 
 // temp array of removed parts 
 _temp_removed_array = [];
@@ -81,8 +23,8 @@ if (_isFireNear >= 1 and _canDo) then {
 	
 	// Moved all recipes input and outputs to configs
 
-	_selectedRecipeOutput = getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Crafting1" >> "output");
-	_selectedRecipeInput = getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Crafting1" >> "input");
+	_selectedRecipeOutput = getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Crafting2" >> "output");
+	_selectedRecipeInput = getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Crafting2" >> "input");
 	
 	diag_log format["Selected Recipe Input: %1", _selectedRecipeInput];
 	diag_log format["Selected Recipe Output: %1", _selectedRecipeOutput];
