@@ -1374,7 +1374,7 @@ class CfgMagazines
 			class Crafting7 {
 				text = "Deer Stand";
 				script = "spawn player_craftItem7;";
-				input[] = {{"PartWoodPile",5},{"PartGeneric",1}};
+				input[] = {{"PartWoodPile",4},{"PartGeneric",1}};
 				output[] = {{"ItemDeerStand",1}};
 			};
 		};
@@ -1433,7 +1433,7 @@ class CfgMagazines
 			class Crafting4 {
 				text = "Deer Stand";
 				script = "spawn player_craftItem4;";
-				input[] = {{"PartWoodPile",5},{"PartGeneric",1}};
+				input[] = {{"PartWoodPile",4},{"PartGeneric",1}};
 				output[] = {{"ItemDeerStand",1}};
 			};
 			class Crafting5 {
@@ -2367,7 +2367,7 @@ class CfgMagazines
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
 				input[] = {{"ItemDeerStand",1}};
-				output[] = {{"PartWoodPile",5},{"PartGeneric",1}};
+				output[] = {{"PartWoodPile",4},{"PartGeneric",1}};
 			};
 		};
 	};
@@ -2812,9 +2812,10 @@ class CfgVehicles
 		destrType = "DestructTree";
 		vehicleClass = "Military";
 		inventoryItem = "ItemGate";
-		
+
 		class AnimationSources {
 			class Door01 {
+				source = "User"; 
 				animPeriod = 1;
 				initPhase = 0;
 			};
