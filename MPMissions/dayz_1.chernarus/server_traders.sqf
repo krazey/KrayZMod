@@ -88,7 +88,7 @@ menu_Doctor = [
 ];
 // Hero Traders
 menu_RU_Functionary1 = [
-	[["Clothes",53],["Weapons",186],["Vehicles",187]],
+	[["Clothes",53],["Weapons",186],["Vehicles",187],["Vaults",188]],
 	[],
 	"friendly"
 ];

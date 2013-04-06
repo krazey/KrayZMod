@@ -10,7 +10,7 @@ class Mission
 		"dayz_equip",
 		"dayz_vehicles",
 		"cacharacters_pmc",
-		"ca_modules_functions" 
+		"ca_modules_functions"
 	};
 	addOnsAuto[]=
 	{
@@ -22,7 +22,7 @@ class Mission
 	class Intel
 	{
 		briefingName="KrayZ";
-		briefingDescription="KrayZ based on DayZ";
+		briefingDescription="KrayZ based on DayZ, DayZ Epoch & DayZ+";
 		startWeather=0.067362607;
 		forecastWeather=0.52341133;
 		year=2008;
@@ -1804,7 +1804,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=7;
+		items=15;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1847,10 +1847,74 @@ class Mission
 			name="spawn4";
 			type="Empty";
 		};
+		class Item7
+		{
+			position[]={4069.8455,365.19922,11661.84};
+			name="Tradercitybash";
+			text="Trader City BASHNYA MOUNTAIN";
+			type="mil_circle";
+			colorName="ColorGreen";
+		};
+		class Item8
+		{
+			position[]={11469.787,317.32358,11356.751};
+			name="Tradercityklen";
+			text="Trader City KLEN MOUNTAIN";
+			type="mil_circle";
+			colorName="ColorGreen";
+		};
+		class Item9
+		{
+			position[]={9772.5752,1.8273382,1763.3428};
+			name="boatsnwholesale";
+			text="Wholesaler";
+			type="mil_dot";
+			colorName="ColorRed";
+		};
+		class Item10
+		{
+			position[]={6344.8501,304.9902,7807.3647};
+			name="Tradercitystary";
+			text="Trader City STARY SOBOR";
+			type="mil_circle";
+			colorName="ColorGreen";
+		};
+		class Item11
+		{
+			position[]={4394.2061,10.050329,2247.9697};
+			name="boatsnwholesale_1";
+			text="Wholesaler";
+			type="mil_dot";
+			colorName="ColorRed";
+		};
+		class Item12
+		{
+			position[]={13528.172,6.3179522,6331.1582};
+			name="boatsnwholesale_1_1";
+			text="Wholesaler";
+			type="mil_dot";
+			colorName="ColorRed";
+		};
+		class Item13
+		{
+			position[]={12466.402,159,12524.384};
+			name="Airplane Dealer";
+			text="Airplane Dealer";
+			type="mil_dot";
+			colorName="ColorBlue";
+		};
+		class Item14
+		{
+			position[]={13404.516,1.8943386,2836.1069};
+			name="Boat Dealer";
+			text="Boat Dealer";
+			type="mil_dot";
+			colorName="ColorOrange";
+		};
 	};
 	class Sensors
 	{
-		items=3;
+		items=6;
 		class Item0
 		{
 			position[]={4053.8501,364.76645,11668.645};
@@ -1892,11 +1956,59 @@ class Mission
 			age="UNKNOWN";
 			name="zonestary";
 			expCond="(player distance zonestary) < 50;";
-			expActiv="TitleText[""Now entering trader city at STARY SOBOR "",""PLAIN DOWN""]; placevault = false;";
+			expActiv="TitleText[""Now entering trader city at STARY SOBOR"",""PLAIN DOWN""]; placevault = false;";
 			expDesactiv="TitleText[""Now leaving trader city at STARY SOBOR"",""PLAIN DOWN""]; placevault = true;";
 			class Effects
 			{
 				soundDet="arabian_market_1";
+			};
+		};
+		class Item3
+		{
+			position[]={4069.7114,365.18692,11661.725};
+			a=140;
+			b=140;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Basis_West";
+			name="Basis_West";
+			expActiv="if (playerSide == WEST) then {[Basis_West] execVM ""safezone.sqf""};";
+			class Effects
+			{
+			};
+		};
+		class Item4
+		{
+			position[]={11463.747,317.3078,11349.89};
+			a=140;
+			b=140;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Basis_East";
+			name="Basis_East";
+			expActiv="if (playerSide == WEST) then {[Basis_East] execVM ""safezone.sqf""};";
+			class Effects
+			{
+			};
+		};
+		class Item5
+		{
+			position[]={6344.8081,304.99023,7806.7598};
+			a=140;
+			b=140;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Basis_South";
+			name="Basis_South";
+			expActiv="if (playerSide == WEST) then {[Basis_South] execVM ""safezone.sqf""};";
+			class Effects
+			{
 			};
 		};
 	};

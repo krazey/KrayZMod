@@ -73,3 +73,12 @@ if (!isDedicated) then {
 	[] execVM "krazey\refuel\fuelactions.sqf";
 	_void = [] execVM "R3F_Realism\R3F_Realism_Init.sqf";
 };
+
+// UPSMON
+call compile preprocessFileLineNumbers "addons\UPSMON\scripts\Init_UPSMON.sqf";
+
+// SHK 
+call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
+
+// run SAR_AI
+[] execVM "addons\SARGE\SAR_AI_init.sqf";
