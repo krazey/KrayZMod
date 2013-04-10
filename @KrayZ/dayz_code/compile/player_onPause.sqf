@@ -40,6 +40,14 @@ private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_isDead"];
 					//cutText ["Cannot Abort while in combat!", "PLAIN DOWN"];
 					cutText [format[localize "str_abort_playerincombat",_text], "PLAIN DOWN"];					
 				};
+				if (("ItemFlashlightReduse" in items player)) exitWith {
+					_btnAbort ctrlEnable false;
+					cutText ["Cannot Abort while using Flashlight on Shoulder.", "PLAIN DOWN"];
+				};
+				if (("ItemFlashlightReduse2" in items player)) exitWith {
+					_btnAbort ctrlEnable false;
+					cutText ["Cannot Abort while using Flashlight on Shoulder.", "PLAIN DOWN"];
+				};
 				default {
 					_btnAbort ctrlEnable true;
 					cutText ["", "PLAIN DOWN"];				

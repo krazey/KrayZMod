@@ -624,6 +624,12 @@ class cfgWeapons
 		model = "\dayz_equip\models\toolbox.p3d";
 		picture = "\dayz_equip\textures\equip_toolbox_ca.paa";
 		descriptionShort = "$STR_EQUIP_DESC_2";
+		class ItemActions {
+			class RmvSight {
+				text = "Dismantle sight";
+				script = "spawn player_weapon_rmvsight;";
+			};
+		};
 	};
 	class ItemEtool: ItemCore
 	{
@@ -836,13 +842,72 @@ class cfgWeapons
 class CfgMagazines
 {
 	class CA_Magazine;
-	class ACOG_DZ : CA_Magazine {
+	// TiMz - Weapon items: reddot, acog, holo & sniper
+	class RedDot_DZ : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Red Dot Scope";
+		picture = "\dayz_equip\weaponvisuals\reddot.paa";
+		descriptionShort = "Can be mounted on / to weapons.";
+		class ItemActions {
+			class AddSight {
+				text = "Assemble sight";
+				script = "spawn player_weapon_addsight;";
+				require = "ItemToolbox";
+			};
+		};
+	};
+	class ACOG_DZ : CA_Magazine
+	{
 		scope = 2;
 		count = 1;
 		type = 256;
 		displayName = "ACOG Scope";
+		picture = "\dayz_equip\weaponvisuals\acog.paa";
 		descriptionShort = "Can be mounted on / to weapons.";
+		class ItemActions {
+			class AddSight {
+				text = "Assemble sight";
+				script = "spawn player_weapon_addsight;";
+				require = "ItemToolbox";
+			};
+		};
 	};
+	class Holo_DZ : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Holo Scope";
+		picture = "\dayz_equip\weaponvisuals\holo.paa";
+		descriptionShort = "Can be mounted on / to weapons.";
+		class ItemActions {
+			class AddSight {
+				text = "Assemble sight";
+				script = "spawn player_weapon_addsight;";
+				require = "ItemToolbox";
+			};
+		};
+	};
+	class Sniper_DZ : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Sniper Scope";
+		picture = "\dayz_equip\weaponvisuals\sniper.paa";
+		descriptionShort = "Can be mounted on / to weapons.";
+		class ItemActions {
+			class AddSight {
+				text = "Assemble sight";
+				script = "spawn player_weapon_addsight;";
+				require = "ItemToolbox";
+			};
+		};
+	};
+	// END - TiMz - Weapon items
 	class 20Rnd_556x45_Stanag: CA_Magazine
 	{
 		scope = 2;

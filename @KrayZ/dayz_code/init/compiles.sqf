@@ -107,6 +107,10 @@ if (!isDedicated) then {
 	player_rmvflashfromsh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder.sqf";
 	player_rmvflashfromsh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder2.sqf";
 	
+	//assemble & disassemble sights from weapons
+	player_weapon_addsight =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_addsight.sqf";
+	player_weapon_rmvsight =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvsight.sqf";
+	
 	//halo jump add
 	bis_fnc_halo =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_HALO.sqf";
 	
