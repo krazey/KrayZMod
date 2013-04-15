@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.0.1.0";
+		version = "2.1.0.0";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -479,20 +479,11 @@ class CfgBuildingLoot {
 			{"Crossbow_DZ","weapon"},
 			{ "Binocular","weapon" },
 			{ "PartWoodPile","magazine" },
-			{ "Skin_Camo1_DZ","magazine" },
-			{ "Skin_Camo2_DZ","magazine" },
-			{ "Skin_Sniper1_DZ","magazine" },
+			{ "","clothes" },
+			{ "","specialclothes" }, 
 			{ "WeaponHolder_MeleeCrowbar","object" },
 			{"MR43","weapon"},
-			{"MP5A5","weapon"},
-			{ "Skin_RU_Policeman_DZ","magazine" },
-			{ "Skin_Pilot_EP1_DZ","magazine" },
-			{ "Skin_Functionary1_EP1_DZ","magazine" },
-			{ "Skin_Priest_DZ","magazine" },
-			{ "Skin_Rocker2_DZ","magazine" },
-			{ "Skin_SurvivorW3_DZ","magazine" },
-			{ "Skin_SurvivorWpink_DZ","magazine" },
-			{ "Skin_SurvivorWurban_DZ","magazine" }
+			{"MP5A5","weapon"}
 	};
 		itemChance[] =	{
 			0.01, //Soda Mdew
@@ -505,7 +496,7 @@ class CfgBuildingLoot {
 			0.03, //Flashlight
 			0.08, //knife
 			0.06, //matchbox
-			2, //generic
+			1, //generic
 			0.06, //enfield
 			0.04, //revolver
 			0.05, //assaultpack (12)
@@ -520,19 +511,11 @@ class CfgBuildingLoot {
 			0.01, //crossbow
 			0.06, //binocular
 			0.06, //woodpile
-			0.01, //camo1
-			0.01, //camo2
-			0.01, //sniper1
+			0.01, //clothes
+			0.03, //specialclothes
 			0.08, //crowbar
 			0.03, //mr43
-			0.01, //mp5
-			0.02, //police
-			0.02, //functionary
-			0.02, //priest
-			0.02, //rocker2
-			0.02, //w3
-			0.02, //wpink
-			0.02 //wurban
+			0.01 //mp5
 		};		
 	};
 	class Office: Residential {
@@ -653,6 +636,7 @@ class CfgBuildingLoot {
 			{ "Winchester1866","weapon" },
 			{ "WeaponHolder_ItemTent","object" },
 			{ "","food" },
+			{ "","communityfood" },
 			{ "","trash" },
 			{"Crossbow_DZ","weapon"},
 			{ "Binocular","weapon" },
@@ -678,7 +662,8 @@ class CfgBuildingLoot {
 			0.01, //acupack (18)
 			0.01, //winchester
 			0.01, //itemtent
-			0.3, //food
+			0.20, //food
+			0.20, //communityfood
 			0.15, //trash
 			0.01, //crossbow
 			0.05, //binocular
@@ -709,19 +694,13 @@ class CfgBuildingLoot {
 			{ "NVGoggles","weapon" },
 			{ "AmmoBoxSmall_556","object" },
 			{ "AmmoBoxSmall_762","object" },
-			{ "Skin_Camo1_DZ","magazine" },
-			{ "Skin_Sniper1_DZ","magazine" },
+			{ "","militaryclothes" },
 			{"G36C","weapon"},
 			{"G36C_camo","weapon"},
 			//{"G36_C_SD_camo","weapon"},
 			{"G36A_camo","weapon"},
 			{"G36K_camo","weapon"},
-			{"100Rnd_762x54_PK","magazine"},
-			{ "Skin_Rocket_DZ","magazine" },
-			{ "Skin_Soldier1_DZ","magazine" },
-			{ "Skin_Soldier_TL_PMC_DZ","magazine" },
-			{ "Skin_Soldier_Sniper_PMC_DZ","magazine" },
-			{ "Skin_Soldier_Bodyguard_AA12_PMC_DZ","magazine" }
+			{"100Rnd_762x54_PK","magazine"}
 };
 		itemChance[] =	{
 			0.02,		//{"FN_FAL","weapon"},
@@ -740,19 +719,13 @@ class CfgBuildingLoot {
 			0.02,		//{"NVGoggles","weapon"}
 			0.1,	//AmmoBoxSmall_556
 			0.1,	//AmmoBoxSmall_762
-			0.08,	//Skin_Camo1_DZ
-			0.05,	//Skin_Sniper1_DZ
+			0.08,	//militaryclothes
 			0.03,	//G36C"
 			0.02,	//G36C_camo
 			//0.01,	//G36_C_SD_camo
 			0.02,	//G36A_camo
 			0.02,	//G36K_camo
-			0.01,	//("100Rnd_762x54_PK","magazine"}
-			0.01,
-			0.05,
-			0.02, // Skin_Soldier_TL_PMC_DZ
-			0.02, // Skin_Soldier_Sniper_PMC_DZ
-			0.02, // Skin_Soldier_Bodyguard_AA12_PMC_DZ
+			0.01	//("100Rnd_762x54_PK","magazine"}
 	};
 	};
 class HeliCrash_No50s: Default {
@@ -776,8 +749,7 @@ class HeliCrash_No50s: Default {
 			{"NVGoggles","weapon"},
 			{"AmmoBoxSmall_556","object"},
 			{"AmmoBoxSmall_762","object"},
-			{"Skin_Camo1_DZ","magazine"},
-			{"Skin_Sniper1_DZ","magazine"},
+			{ "","militaryclothes" },
 			{"G36C","weapon"},
 			{"G36C_camo","weapon"},
 			{"G36_C_SD_camo","weapon"},
@@ -800,8 +772,7 @@ class HeliCrash_No50s: Default {
 			0.02,		//{"NVGoggles","weapon"}
 			0.1,	//AmmoBoxSmall_556
 			0.1,	//AmmoBoxSmall_762
-			0.08,	//Skin_Camo1_DZ
-			0.05,	//Skin_Sniper1_DZ
+			0.08,	//militaryclothes
 			0.03,	//G36C"
 			0.02,	//G36C_camo
 			0.01,	//G36_C_SD_camo
@@ -991,19 +962,7 @@ class HeliCrash_No50s: Default {
 			{"G36_C_SD_camo","weapon"},
 			{"M40A3","weapon"},
 			{"100Rnd_762x54_PK","magazine"},
-			{ "Skin_Soldier1_DZ","magazine" },
-			{ "Skin_Ins_Soldier_GL_DZ","magazine" },
-			{ "Skin_Bandit1_DZ","magazine" },
-			{ "Skin_BanditW1_DZ","magazine" },
-			{ "Skin_BanditW2_DZ","magazine" },
-			{ "Skin_Drake_Light_DZ","magazine" },
-			{ "Skin_CZ_Special_Forces_GL_DES_EP1_DZ","magazine" },
-			{ "Skin_TK_INS_Soldier_EP1_DZ","magazine" },
-			{ "Skin_TK_INS_Warlord_EP1","magazine" },
-			{ "Skin_SurvivorWcombat_DZ","magazine" },
-			{ "Skin_SurvivorWdesert_DZ","magazine" }, 
-			{ "Skin_Sniper1_DZ","magazine" },
-			{ "Skin_Sniper2_DZ","magazine" }
+			{ "","militaryclothes" }
 	};
 		itemChance[] =	{
 			0.10, //m16a2
@@ -1054,19 +1013,7 @@ class HeliCrash_No50s: Default {
 			0.01, //{"G36_C_SD_camo","weapon"},
 			0.02, // M40A3
 			0.01, //("100Rnd_762x54_PK","magazine"}
-			0.05, //soldier1
-			0.01, //ins soldier
-			0.01, //bandit1
-			0.01, //banditw1
-			0.01, //banditw2
-			0.01, //drake light
-			0.01, //special forces cz
-			0.03, //ins soldier tk
-			0.01, //ins warlord tk
-			0.02, //wcombat
-			0.03, //wdesert
-			0.01, //ghillie1
-			0.03 //ghillie2
+			0.05, //militaryclothes
 		};
 	};
 	class Hunting: Default {
@@ -1709,6 +1656,7 @@ class HeliCrash_No50s: Default {
 			{ "ItemToolbox","weapon" },
 			{ "","generic" },
 			{ "","food" },
+			{ "","communityfood" },
 			{ "WeaponHolder_PartGeneric","object" },
 			{ "WeaponHolder_PartWheel","object" },
 			{ "WeaponHolder_PartFueltank","object" },
@@ -1716,7 +1664,7 @@ class HeliCrash_No50s: Default {
 			{ "WeaponHolder_PartGlass","object" },
 			{ "WeaponHolder_PartVRotor","object" },
 			{ "WeaponHolder_ItemJerrycan","object" }};
-			itemChance[] = {0.15,0.01,0.05,0.02,0.02,0.05,0.05,0.05,0.02,0.15,0.05,0.06,0.05,0.03,0.01,0.07,0.01,0.03};
+			itemChance[] = {0.15,0.01,0.05,0.02,0.02,0.05,0.05,0.05,0.02,0.15,0.05,0.05,0.06,0.05,0.03,0.01,0.07,0.01,0.03};
 	};
 
 	class Land_House_C_1_EP1: Residential

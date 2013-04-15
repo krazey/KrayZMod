@@ -105,11 +105,22 @@ if (!isDedicated) then {
 	player_addflashtosh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulder2.sqf";
 	player_addflashtoshr =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulderr.sqf";
 	player_rmvflashfromsh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder.sqf";
-	player_rmvflashfromsh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder2.sqf";
+	player_rmvflashfromsh2 =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder2.sqf";
 	
 	//assemble & disassemble sights from weapons
-	player_weapon_addsight =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_addsight.sqf";
-	player_weapon_rmvsight =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvsight.sqf";
+	player_weapon_acog =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_acog.sqf";
+	player_weapon_holo =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_holo.sqf";
+	player_weapon_reddot =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_reddot.sqf";
+	player_weapon_scope =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_scope.sqf";
+	player_weapon_launcher =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_launcher.sqf";
+	player_weapon_suppressor =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_suppressor.sqf";
+	
+	player_weapon_rmvacog =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvacog.sqf";
+	player_weapon_rmvholo =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvholo.sqf";
+	player_weapon_rmvreddot =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvreddot.sqf";
+	player_weapon_rmvscope =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvscope.sqf";
+	player_weapon_rmvlauncher =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvlauncher.sqf";
+	player_weapon_rmvsuppress =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvsuppress.sqf";
 	
 	//halo jump add
 	bis_fnc_halo =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_HALO.sqf";
@@ -160,7 +171,7 @@ if (!isDedicated) then {
 
 			diag_log "DEBUG: loadscreen guard ended with timeout.";
 			disableUserInput false;
-			1 cutText ["Something went wrong! disconnect and try again!", "PLAIN"];
+			1 cutText ["Something went wrong! Disconnect and try again! If you see this the 2nd time, please stay and wait some more seconds.", "PLAIN"];
 			player enableSimulation false;
 		} else { diag_log "DEBUG: loadscreen guard ended."; };
 	}; 

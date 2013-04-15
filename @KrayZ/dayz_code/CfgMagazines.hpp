@@ -14,6 +14,7 @@ class CfgMagazines {
 			class Pitch {
 				text = $STR_PITCH_TENT;
 				script = "spawn player_tentPitch;";
+				create = "TentStorage"; 
 			};
 		};
 	};
@@ -167,7 +168,6 @@ class CfgMagazines {
 		model = "\dayz_equip\models\soda_mdew_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
-
 	class ItemSodaMtngreen : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_0;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_0;
@@ -179,7 +179,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mtngreen_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-
 	class ItemSodaR4z0r : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_1;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_1;
@@ -191,7 +190,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_r4z0r_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-
 	class ItemSodaClays : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_2;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_2;
@@ -203,7 +201,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_clays_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-
 	class ItemSodaSmasht : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_3;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_3;
@@ -215,7 +212,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_smasht_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-
 	class ItemSodaDrwaste : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_4;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_4;
@@ -227,7 +223,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_drwaste_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-/*
 	class ItemSodaFranka : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_5;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_5;
@@ -239,7 +234,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_franka_clean_empty_ca";
 		//ammo = "SodaCanMtngreen";
 	};
-*/
 	class ItemSodaLemonade : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_6;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_6;
@@ -251,7 +245,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lemonade_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-/*
 	class ItemSodaLirik : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_7;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_7;
@@ -263,7 +256,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lirik_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-*/
 	class ItemSodaLvg : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_8;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_8;
@@ -287,7 +279,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mzly_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-/*
 	class ItemSodaPeppsy : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_10;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_10;
@@ -299,7 +290,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_peppsy_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-*/
 	class ItemSodaRabbit : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_11;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_11;
@@ -312,7 +302,6 @@ class CfgMagazines {
 		//ammo = "SodaCanMtngreen";
 
 	};
-/*
 	class ItemSodaSacrite : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_12;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_12;
@@ -324,7 +313,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_sacrite_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
 	};
-*/
 	class FoodEdible;
 	class FoodmeatRaw : FoodEdible {
 		scope = public;
@@ -405,7 +393,7 @@ class CfgMagazines {
 		descriptionShort = $STR_FOODCOOKED_EQUIP_CODE_DESC_6;
 		bloodRegen = 600;
 	};
-	
+	/*
 	class AngelCookies : FoodEdible {
 		scope = public;
 		count = 1;
@@ -415,6 +403,7 @@ class CfgMagazines {
 		descriptionShort = $STR_FOODCOOKED_EQUIP_CODE_DESC_5;
 		bloodRegen = 100;
 	};
+	*/
 	class FoodMRE : FoodEdible {
 		scope = public;
 		count = 1;

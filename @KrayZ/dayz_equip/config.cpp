@@ -610,7 +610,7 @@ class cfgWeapons
 		displayName = "Use";
 		canDrop = 0;
 		muzzles[] = {"this"};
-		magazines[] = {"FoodBioMeat","ItemZombieParts","ItemBandage","ItemHeatPack","PartWoodPile","PartFueltank","PartWheel","PartGeneric","PartEngine","PartVRotor","PartGlass","ItemWaterbottle","ItemWaterbottleUnfilled","ItemEpinephrine","ItemGoldBar","ItemSilverBar","ItemCopperBar","ItemMorphine","ItemBloodbag","ItemAntibiotic","ItemPainkiller","ItemJerrycan","ItemOilBarrel","ItemGenerator","ItemTent","ItemSandbag","ItemTankTrap","ItemWire","FoodSteakRaw","TrashTinCan","ItemSodaCoke","ItemSodaPepsi","ItemSodaMdew","ItemSodaMdew","FoodEdible","FoodSteakCooked","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta"};
+		magazines[] = {"FoodBioMeat","ItemZombieParts","ItemBandage","ItemHeatPack","PartWoodPile","PartFueltank","PartWheel","PartGeneric","PartEngine","PartVRotor","PartGlass","ItemWaterbottle","ItemWaterbottleUnfilled","ItemEpinephrine","ItemGoldBar","ItemSilverBar","ItemCopperBar","ItemMorphine","ItemBloodbag","ItemAntibiotic","ItemPainkiller","ItemJerrycan","ItemOilBarrel","ItemGenerator","ItemTent","ItemSandbag","ItemSandbagRound","ItemFortSandbagRound","ItemTankTrap","ItemWire","ItemWire2","ItemCamoNet","ItemSandBagNest","ItemWatchTower","ItemDeerStand","ItemHBarrier","ItemGate","ItemScaffolding","ItemLadderSmall","ItemLadderLarge","FoodSteakRaw","TrashTinCan","ItemSodaCoke","ItemSodaPepsi","ItemSodaMdew","ItemSodaMdew","FoodEdible","FoodSteakCooked","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta"};
 		modes[] = {"this"};
 		useAction = 0;
 		useActionTitle = "";
@@ -625,9 +625,29 @@ class cfgWeapons
 		picture = "\dayz_equip\textures\equip_toolbox_ca.paa";
 		descriptionShort = "$STR_EQUIP_DESC_2";
 		class ItemActions {
-			class RmvSight {
-				text = "Dismantle sight";
-				script = "spawn player_weapon_rmvsight;";
+			class RmvReddot {
+				text = "Dismantle Red Dot";
+				script = "spawn player_weapon_rmvreddot;";
+			};
+			class RmvHoloScope {
+				text = "Dismantle Holo Scope";
+				script = "spawn player_weapon_rmvholo;";
+			};
+			class RmvAcogScope {
+				text = "Dismantle Acog Scope";
+				script = "spawn player_weapon_rmvacog;";
+			};
+			class RmvScope {
+				text = "Dismantle Scope";
+				script = "spawn player_weapon_rmvscope;";
+			};
+			class RmvLauncher {
+				text = "Dismantle Launcher";
+				script = "spawn player_weapon_rmvlauncher;";
+			};
+			class RmvSupress {
+				text = "Dismantle Surpressor";
+				script = "spawn player_weapon_rmvsuppress;";
 			};
 		};
 	};
@@ -852,9 +872,9 @@ class CfgMagazines
 		picture = "\dayz_equip\weaponvisuals\reddot.paa";
 		descriptionShort = "Can be mounted on / to weapons.";
 		class ItemActions {
-			class AddSight {
-				text = "Assemble sight";
-				script = "spawn player_weapon_addsight;";
+			class AddReddot {
+				text = "Assemble Red Dot Scope";
+				script = "spawn player_weapon_reddot;";
 				require = "ItemToolbox";
 			};
 		};
@@ -868,9 +888,9 @@ class CfgMagazines
 		picture = "\dayz_equip\weaponvisuals\acog.paa";
 		descriptionShort = "Can be mounted on / to weapons.";
 		class ItemActions {
-			class AddSight {
-				text = "Assemble sight";
-				script = "spawn player_weapon_addsight;";
+			class AddAcog {
+				text = "Assemble ACOG Scope";
+				script = "spawn player_weapon_acog;";
 				require = "ItemToolbox";
 			};
 		};
@@ -884,9 +904,9 @@ class CfgMagazines
 		picture = "\dayz_equip\weaponvisuals\holo.paa";
 		descriptionShort = "Can be mounted on / to weapons.";
 		class ItemActions {
-			class AddSight {
-				text = "Assemble sight";
-				script = "spawn player_weapon_addsight;";
+			class AddHolo {
+				text = "Assemble Holo Scope";
+				script = "spawn player_weapon_holo;";
 				require = "ItemToolbox";
 			};
 		};
@@ -900,9 +920,41 @@ class CfgMagazines
 		picture = "\dayz_equip\weaponvisuals\sniper.paa";
 		descriptionShort = "Can be mounted on / to weapons.";
 		class ItemActions {
-			class AddSight {
-				text = "Assemble sight";
-				script = "spawn player_weapon_addsight;";
+			class AddSniper {
+				text = "Assemble Sniper Scope";
+				script = "spawn player_weapon_scope;";
+				require = "ItemToolbox";
+			};
+		};
+	};
+	class Launcher_DZ : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Grenade Launcher";
+		picture = "\dayz_equip\weaponvisuals\launcher.paa";
+		descriptionShort = "Can be mounted on / to weapons.";
+		class ItemActions {
+			class AddSniper {
+				text = "Assemble Grenade Launcher";
+				script = "spawn player_weapon_launcher;";
+				require = "ItemToolbox";
+			};
+		};
+	};
+	class Suppressor_DZ : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Suppressor";
+		picture = "\dayz_equip\weaponvisuals\suppressor.paa";
+		descriptionShort = "Can be mounted on / to weapons.";
+		class ItemActions {
+			class AddSniper {
+				text = "Assemble Suppressor";
+				script = "spawn player_weapon_suppressor;";
 				require = "ItemToolbox";
 			};
 		};
@@ -2151,6 +2203,7 @@ class CfgMagazines
 			{
 				text = "$STR_PITCH_TENT";
 				script = "spawn player_tentPitch;";
+				create = "TentStorage"; 
 			};
 		};
 	};
@@ -2709,6 +2762,7 @@ class CfgVehicles
 		vehicleClass = "Fortifications";
 		model = "\ca\misc\Fort_Razorwire";
 		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa";
+		offset[] = {0,1.5,0.5}; 
 		accuracy = 0.3;	// accuracy needed to recognize type of this target
 		mapSize = 5.5;
 		displayName = "Wire (CAT2)";
@@ -2776,6 +2830,7 @@ class CfgVehicles
 		scope = 2;
 		destrType = "DestructNo";
 		cost = 100;
+		offset[] = {0,1.5,0.5};
 		model = "\ca\misc\jezek_kov";
 		icon = "\ca\data\data\Unknown_object.paa";
 		mapSize = 2;
@@ -2791,6 +2846,7 @@ class CfgVehicles
 	  vehicleClass = "Fortifications"; 
 	  model = "\ca\misc\Fort_Razorwire"; 
 	  icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa"; 
+	  offset[] = {0,1,5,0.5}; 
 	  accuracy = 0.3; 
 	  mapSize = 5.5; 
 	  displayName = "Wire"; 
@@ -2806,6 +2862,7 @@ class CfgVehicles
 		cost = 100;
 		model = "\ca\misc2\BagFenceLong.p3d";
 		icon = "\Ca\misc3\data\Icons\icon_fortBagFenceLong_ca.paa";
+		offset[] = {0,1,5,0.5}; 
 		mapSize = 2;
 		armor = 400;
 		displayName = "Bag Fence";
@@ -2933,17 +2990,20 @@ class CfgVehicles
 		GhostPreview = "Land_HBarrier1Preview"; 
 	};
 
-	class WoodGate_DZ: BuiltItems
+	class Land_kulna;
+	class WoodGate_DZ: Land_kulna
 	{
 		scope = 2;
-		destrType = "DestructTree"; 
+		destrType = "DestructBuilding"; 
 		cost = 100;
-		model = "\ca\structures\Wall\Gate_wood2_5";
-		icon = "\ca\data\data\Unknown_object.paa";
-		mapSize = 2;
-		armor = 50;
-		displayName = "Locked Wood Gate";
+		offset[] = {0,2.5,1};
+		//model = "\ca\structures\Wall\Gate_wood2_5";
+		//icon = "\ca\data\data\Unknown_object.paa";
+		//mapSize = 2;
+		armor = 100;
+		displayName = "Wooden Shack";
 		vehicleClass = "Fortifications";
+		/*
 		class AnimationSources
 		{
 			class DoorR { 
@@ -2952,6 +3012,7 @@ class CfgVehicles
 			  initPhase = 0; 
 			}
 		}
+		*/
 	};
 	class BearTrap_DZ: TrapItems
 	{
@@ -3043,6 +3104,16 @@ class CfgVehicles
 		class eventHandlers
 		{
 			init = "[(_this select 0),'cfgWeapons','ItemHatchet'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
+		};
+	};
+	class WeaponHolder_ItemMachete: WeaponHolderBase
+	{
+		scope = 2;
+		displayName = "Machete";
+		model="\z\addons\dayz_communityassets\models\machete.p3d";
+		class eventHandlers
+		{
+			init = "[(_this select 0),'cfgWeapons','ItemMachete'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 		};
 	};
 	class WeaponHolder_MeleeCrowbar: WeaponHolderBase
@@ -3213,6 +3284,16 @@ class CfgVehicles
 		class eventHandlers
 		{
 			init = "[(_this select 0),'cfgMagazines','ItemOilBarrel'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
+		};
+	};
+	class WeaponHolder_ItemJerrycanEmpty: WeaponHolderBase
+	{
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_39";
+		model = "\dayz_equip\proxy\jerrycan.p3d";
+		class eventHandlers
+		{
+			init = "[(_this select 0),'cfgMagazines','ItemJerrycanEmpty'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 		};
 	};
 	class WeaponHolder_ItemJerrycan: WeaponHolderBase
