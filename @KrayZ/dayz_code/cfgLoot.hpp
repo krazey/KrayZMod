@@ -456,7 +456,7 @@ class CfgLoot {
 			"Skin_BanditW1_DZ",
 			"Skin_BanditW2_DZ",
 			"Skin_TK_INS_Soldier_EP1_DZ",
-			"Skin_TK_INS_Warlord_EP1",
+			"Skin_TK_INS_Warlord_EP1_DZ",
 			"Skin_SurvivorWcombat_DZ",
 			"Skin_SurvivorWdesert_DZ",
 		},

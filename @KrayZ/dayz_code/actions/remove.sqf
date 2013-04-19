@@ -2,7 +2,7 @@
 delete object from db with extra waiting by [VB]AWOL
 parameters: _obj
 */
-private ["_obj","_objectID","_objectUID","_started","_finished","_animState","_isMedic","_isOk","_proceed","_counter","_limit","_id","_objType"];
+private ["_obj","_objectID","_objectUID","_started","_finished","_animState","_isMedic","_isOk","_proceed","_counter","_limit","_id","_objType","_sfx","_dis","_itemOut","_countOut","_textCreate","_selectedRemoveOutput"];
 _obj = _this select 3;
 _objectID 	= _obj getVariable ["ObjectID","0"];
 _objectUID	= _obj getVariable ["ObjectUID","0"];
@@ -10,23 +10,12 @@ _objectUID	= _obj getVariable ["ObjectUID","0"];
 _isOk = true;
 _proceed = false;
 _objType = typeOf _obj;
+
 _limit = 5;
 
-switch(true)do{ 
-	case (_objType == "WoodGate_DZ"): { 
-		_limit = 5;
-	}; 
-	case (_objType == "Land_HBarrier1_DZ"): { 
-		_limit = 20;
-	}; 
-	case (_objType == "Sandbag1_DZ"): { 
-		_limit = 10;
-	}; 
-	case (_objType == "Hedgehog_DZ"): { 
-		_limit = 10;
-	}; 
-}; 
-
+if(isNumber (configFile >> "CfgVehicles" >> _objType >> "constructioncount")) then {
+	_limit = getNumber(configFile >> "CfgVehicles" >> _objType >> "constructioncount");
+};
 
 cutText [format["Starting de-construction of %1.",_objType], "PLAIN DOWN"];
 
@@ -93,6 +82,24 @@ if (_proceed) then {
 	publicVariableServer "dayzDeleteObj";
 
 	deleteVehicle _obj;
+
+	// give refund items
+	_selectedRemoveOutput = getArray (configFile >> "CfgVehicles" >> _objType >> "removeoutput");
+	if((count _selectedRemoveOutput) > 0) then {
+		// Put items
+		{
+			_itemOut = _x select 0;
+			_countOut = _x select 1;
+			diag_log format["Removal Output: %1 %2", _itemOut,_countOut];
+		
+			for "_x" from 1 to _countOut do {
+				player addMagazine _itemOut;
+			};
+				
+		} forEach _selectedRemoveOutput;
+		cutText ["De-constructed parts are now in your inventory.", "PLAIN DOWN"];
+	};
+
 } else {
 	r_interrupt = false;
 	[objNull, player, rSwitchMove,""] call RE;

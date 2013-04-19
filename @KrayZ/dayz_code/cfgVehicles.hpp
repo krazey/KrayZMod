@@ -1301,4 +1301,56 @@ class Citizen1;	// External class reference
 		transportMaxMagazines = 25;
         transportmaxbackpacks = 4;
 	};
+	class KamazRefuel;
+	class KamazRefuel_DZ: KamazRefuel
+	{
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		transportFuel = 0;
+		fuelCapacity = 10000;
+	};
+	class UralRefuel_TK_EP1;
+	class UralRefuel_TK_EP1_DZ: UralRefuel_TK_EP1
+	{
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		transportFuel = 0;
+		fuelCapacity = 10000;
+	};
+	class MtvrRefuel_DES_EP1;
+	class MtvrRefuel_DES_EP1_DZ: MtvrRefuel_DES_EP1
+	{
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		transportFuel = 0;
+		fuelCapacity = 10000;
+	};
+	class V3S_Refuel_TK_GUE_EP1;
+	class V3S_Refuel_TK_GUE_EP1_DZ: V3S_Refuel_TK_GUE_EP1
+	{
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		transportFuel = 0;
+		fuelCapacity = 10000;
+	};
 };	

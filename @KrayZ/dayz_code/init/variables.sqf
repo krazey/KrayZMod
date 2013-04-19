@@ -238,6 +238,7 @@ dayz_resetSelfActions = {
 	s_player_callzombies = 	-1;
 	s_player_debuglootpos =   -1;
 	s_player_pzombiesattack = 	-1;
+	s_player_pzombiesvision =	-1; 
 	s_player_pzombiesfeed = 	-1;
 	s_player_removeflare = 	-1;
 	s_player_painkiller =	-1;
@@ -417,12 +418,22 @@ if(isNil "DZEdebug") then {
 }; 
 
 if(isNil "dayz_tameDogs") then {
-	dayz_tameDogs = false;
+	dayz_tameDogs = true;
 };
 
 if(isNil "dayz_paraSpawn") then {
 	dayz_paraSpawn = false;
 }; 
+
+if(isNil "dayz_oldrefuel") then {
+	dayz_oldrefuel = false;
+};
+
+// update objects
+dayz_updateObjects = ["Car", "Helicopter", "Motorcycle", "Ship", "TentStorage", "VaultStorage","M240Nest_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ"];
+dayz_disallowedVault = ["TentStorage", "BuiltItems"];
+dayz_reveal = ["AllVehicles","WeaponHolder","TentStorage","VaultStorage","VaultStorageLocked","BuiltItems"];
+dayz_allowedObjects = ["TentStorage","TentStorageDomed","VaultStorageLocked","Hedgehog_DZ","Sandbag1_DZ","Sandbag2_DZ","Sandbag3_DZ","TrapBear","Fort_RazorWire","WoodGate_DZ","Land_HBarrier1_DZ","Wire2","CamoNet","SandBagNest","WatchTower","DeerStand","HBarrier","Gate1_DZ","Scaffolding","LadderSmall","LadderLarge","Wire_cat1","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ"];
 
 dayz_spawnPos = getPosATL player;
 

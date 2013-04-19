@@ -32,15 +32,43 @@ class CfgMagazines {
 			class Build {
 				text = "Build Sandbag";
 				script = "spawn player_build;";
-				require = "ItemEtool";
+				requiretools[] = {"ItemEtool"};
 				create = "Sandbag1_DZ";
 			};
 			class Crafting
 			{
 				text = "Craft Large Sandbag";
 				script = "spawn player_craftItem;";
+				neednearby[] = {};
+				requiretools[] = {"ItemEtool","ItemToolbox"};
 				output[] = {{"ItemSandbagLarge",1}};
 				input[] = {{"ItemSandbag",3},{"ItemWire",1},{"ItemTankTrap",1}};
+			};
+			class Crafting1
+			{
+				text = "Craft M240 Nest";
+				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemEtool","ItemToolbox","M240_DZ"};
+				output[] = {{"m240_nest_kit",1}};
+				input[] = {{"ItemSandbag",4},{"ItemCanvas",1},{"PartWoodPlywood",4},{"PartWoodLumber",3}};
+				consumeweapons[] = {"M240_DZ"};
+			}; 
+			class Crafting2 {
+				text = "Sandbag Nest";
+				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
+				output[] = {{"ItemSandBagNest",1}};
+			};
+			class Crafting3 {
+				text = "Round Sandbag Fence";
+				script = "spawn player_craftItem3;";
+				neednearby[] = {};
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				input[] = {{"ItemSandbag",2}};
+				output[] = {{"ItemSandbagRound",1}};
 			};
 		};
 	};
@@ -58,7 +86,7 @@ class CfgMagazines {
 			class Build {
 				text = "Build H-barrier cube";
 				script = "spawn player_build;";
-				require = "ItemEtool";
+				requiretools[] = {"ItemEtool"};
 				create = "Land_HBarrier1_DZ";
 			};
 		};
@@ -77,7 +105,7 @@ class CfgMagazines {
 			class Build {
 				text = $STR_ACTIONS_BUILD;
 				script = "spawn player_build;";
-				require = "ItemToolbox";
+				requiretools[] = {"ItemEtool"};
 				create = "Hedgehog_DZ";
 			};
 		};
@@ -96,7 +124,7 @@ class CfgMagazines {
 			class Build {
 				text = "Place Trap";
 				script = "spawn player_setTrap;";
-				require = "ItemToolbox";
+				requiretools[] = {"ItemEtool"};
 				create = "BearTrap_DZ";
 			};
 		};
@@ -115,7 +143,7 @@ class CfgMagazines {
 			class Build {
 				text = $STR_ACTIONS_BUILD;
 				script = "spawn player_build;";
-				require = "ItemToolbox";
+				requiretools[] = {"ItemEtool"};
 				create = "Fort_RazorWire";
 			};
 		};

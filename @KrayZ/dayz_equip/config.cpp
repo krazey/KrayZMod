@@ -1391,6 +1391,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Camo Net";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"Skin_Net_DZ",3},{"PartWoodPile",1}};
 				output[] = {{"ItemCamoNet",1}};
 			};
@@ -1398,6 +1400,8 @@ class CfgMagazines
 			class Crafting2 {
 				text = "Watch Tower";
 				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"Skin_Net_DZ",4},{"ItemHBarrier",2}};
 				output[] = {{"ItemWatchTower",1}};
 			};
@@ -1455,44 +1459,133 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Sandbag Nest";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};  
 				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
 				output[] = {{"ItemSandBagNest",1}};
 			};
 			class Crafting2 {
 				text = "HBarrier";
 				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};  
 				input[] = {{"ItemWire",2},{"PartGeneric",2}};
 				output[] = {{"ItemHBarrier",1}};
 			};
 			class Crafting3 {
 				text = "Gate";
 				script = "spawn player_craftItem3;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemWire",1},{"PartGeneric",2}};
 				output[] = {{"ItemGate",1}};
 			};
 			class Crafting4 {
 				text = "Scaffolding";
 				script = "spawn player_craftItem4;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};  
 				input[] = {{"PartWoodPile",3},{"PartGeneric",3}};
 				output[] = {{"ItemScaffolding",1}};
 			};
 			class Crafting5 {
 				text = "Small Ladder";
 				script = "spawn player_craftItem5;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"PartGeneric",2}};
 				output[] = {{"ItemLadderSmall",1}};
 			};
 			class Crafting6 {
 				text = "Large Ladder";
 				script = "spawn player_craftItem6;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"PartGeneric",4}};
 				output[] = {{"ItemLadderLarge",1}};
 			};
 			class Crafting7 {
 				text = "Deer Stand";
 				script = "spawn player_craftItem7;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"PartWoodPile",4},{"PartGeneric",1}};
 				output[] = {{"ItemDeerStand",1}};
+			};
+		};
+	};
+	class ItemCorrugated : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Corrugated Fence";
+		model = "\dayz_equip\models\genericparts.p3d";
+		picture = "\dayz_equip\textures\equip_genericparts_ca.paa";
+		descriptionShort = "Corrugated Fence";
+		class ItemActions {
+			class Build {
+				text = "Build Corrugated Fence";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "Fence_corrugated_DZ";
+			};
+			class Crafting
+			{
+				text = "Craft Wooden Shed";
+				script = "spawn player_craftItem;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox","ItemCrowbar"};
+				output[] = {{"wooden_shed_kit",1}};
+				input[] = {{"ItemCorrugated",2},{"PartWoodPlywood",5},{"PartWoodLumber",5}};
+			};
+			class Crafting1
+			{
+				text = "Craft Outhouse";
+				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox","ItemCrowbar"};
+				output[] = {{"outhouse_kit",1}};
+				input[] = {{"ItemCorrugated",1},{"PartWoodPlywood",5},{"PartWoodLumber",3},{"ItemTrashToiletpaper",1}};
+			};
+			class Crafting2
+			{
+				text = "Craft Storage Shed";
+				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox","ItemCrowbar"};
+				output[] = {{"storage_shed_kit",1}};
+				input[] = {{"ItemCorrugated",5},{"PartWoodPlywood",2},{"PartWoodLumber",5}};
+			};
+		};
+	};
+	class ItemPole: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Metal Pole";
+		model = "\dayz_equip\models\genericparts.p3d";
+		picture = "\dayz_equip\textures\equip_genericparts_ca.paa";
+		descriptionShort = "Metal Pole";
+		class ItemActions {
+			class Crafting
+			{
+				text = "Craft Corrugated Fence";
+				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox","ItemCrowbar"};
+				output[] = {{"ItemCorrugated",1}};
+				input[] = {{"ItemPole",2},{"PartGeneric",4},{"PartWoodLumber",2}};
+			};
+			class Crafting1
+			{
+				text = "Craft Rusty Gate";
+				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox","ItemCrowbar"};
+				output[] = {{"rusty_gate_kit",1}};
+				input[] = {{"ItemPole",6},{"PartGeneric",3},{"ItemTankTrap",1}};
 			};
 		};
 	};
@@ -1526,36 +1619,48 @@ class CfgMagazines
 			{
 				text = "Craft Arrows";
 				script = "spawn player_craftItem;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"WoodenArrow",3}};
 				input[] = {{"PartWoodPile",1},{"ItemTrashRazor",1}};
 			};
 			class Crafting1 {
 				text = "Sandbag Nest";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};  
 				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
 				output[] = {{"ItemSandBagNest",1}};
 			};
 			class Crafting2 {
 				text = "Camo Net";
 				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"Skin_Net_DZ",3},{"PartWoodPile",1}};
 				output[] = {{"ItemCamoNet",1}};
 			};
 			class Crafting3 {
 				text = "Fortified Round Fence";
 				script = "spawn player_craftItem3;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemSandbagRound",2},{"PartWoodPile",1}};
 				output[] = {{"ItemFortSandbagRound",1}};
 			};
 			class Crafting4 {
 				text = "Deer Stand";
 				script = "spawn player_craftItem4;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};  
 				input[] = {{"PartWoodPile",4},{"PartGeneric",1}};
 				output[] = {{"ItemDeerStand",1}};
 			};
 			class Crafting5 {
 				text = "Scaffolding";
 				script = "spawn player_craftItem5;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"PartWoodPile",3},{"PartGeneric",3}};
 				output[] = {{"ItemScaffolding",1}};
 			};
@@ -1698,6 +1803,8 @@ class CfgMagazines
 			{
 				text = "Smelt 10oz bar";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemGoldBar10oz",1}};
 				input[] = {{"ItemGoldBar",10}};
 				
@@ -1719,6 +1826,8 @@ class CfgMagazines
 			{
 				text = "Smelt 1oz bars";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemGoldBar",10}};
 				input[] = {{"ItemGoldBar10oz",1}};
 			};
@@ -1739,6 +1848,8 @@ class CfgMagazines
 			{
 				text = "Smelt 10oz bar";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemSilverBar10oz",1}};
 				input[] = {{"ItemSilverBar",10}};
 			};
@@ -1760,6 +1871,8 @@ class CfgMagazines
 			{
 				text = "Smelt 1oz bars";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemSilverBar",10}};
 				input[] = {{"ItemSilverBar10oz",1}};
 			};
@@ -1780,6 +1893,8 @@ class CfgMagazines
 			{
 				text = "Smelt 10oz bar";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemCopperBar10oz",1}};
 				input[] = {{"ItemCopperBar",10}};
 			};
@@ -1801,6 +1916,8 @@ class CfgMagazines
 			{
 				text = "Smelt 1oz bars";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemCopperBar",10}};
 				input[] = {{"ItemCopperBar10oz",1}};
 			};
@@ -1843,6 +1960,8 @@ class CfgMagazines
 			{
 				text = "Smelt 1oz bars";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemAluminumBar",10}};
 				input[] = {{"ItemAluminumBar10oz",1}};
 			};
@@ -1874,6 +1993,8 @@ class CfgMagazines
 			{
 				text = "Smelt 1oz bars";
 				script = "spawn player_craftItem;";
+				neednearby[] = {"fire"};
+				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemTinBar",10}};
 				input[] = {{"ItemTinBar10oz",1}};
 			};
@@ -1994,6 +2115,27 @@ class CfgMagazines
 		picture = "\dayz_equip\textures\equip_oil_drum_model_ca.paa";
 		descriptionShort = "210 litres of Oil in a Barrel";
 	};
+	class ItemFuelBarrel: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		fuelQuantity = 210;
+		type = "(256 * 6)";
+		displayName = "Fuel Barrel";
+		model = "\dayz_equip\models\oil_drum_model.p3d";
+		picture = "\dayz_equip\textures\equip_oil_drum_model_ca.paa";
+		descriptionShort = "210 litres of fuel in a Barrel";
+	};
+	class ItemFuelBarrelEmpty: ItemFuelBarrel
+	{
+		scope = 2;
+		count = 1;
+		fuelQuantity = 0;
+		type = "(256 * 6)";
+		displayName = "Fuel Barrel (Empty)";
+		picture = "\dayz_equip\textures\equip_oil_drum_model_ca.paa";
+		descriptionShort = "210 litres of fuel in a Barrel (Empty)";
+	}; 
 	class ItemJerrycan: CA_Magazine
 	{
 		scope = 2;
@@ -2040,14 +2182,14 @@ class CfgMagazines
 	};
 	class bulk_DZ_Backpack_EP1: bulk
 	{
-		descriptionShort = "12 x DZ_Backpack_EP1";
+		descriptionShort = "4 x DZ_Backpack_EP1";
 		class ItemActions
 		{
 			class CreateMags
 			{
 				text = "Open %1";
 				script = "spawn player_loadCrate;";
-				output[] = {"DZ_Backpack_EP1",12,"backpack"};
+				output[] = {"DZ_Backpack_EP1",4,"backpack"};
 				// types magazine, weapon, backpack
 			};
 		};
@@ -2157,7 +2299,187 @@ class CfgMagazines
 		};
 	};
 	
-	
+	// BUILDING KITS
+	class 30m_plot_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "30 Meter Plot";
+		descriptionShort = "30 Meter Plot";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "Plastic_Pole_EP1_DZ";
+			};
+		};
+	};
+	class wooden_shed_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Nice Wooden Shed";
+		descriptionShort = "Nice Wooden Shed";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "Wooden_shed_DZ";
+			};
+		};
+	};
+	class wood_shack_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Wood Shack";
+		descriptionShort = "Wood Shack";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "WoodShack_DZ";
+			};
+		};
+	};
+	class m240_nest_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "M240 Nest";
+		descriptionShort = "M240 Nest";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "M240Nest_DZ";
+			};
+		};
+	};
+	class sun_shade_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Canvas Sun Shade";
+		descriptionShort = "Canvas Sun Shade";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "CanvasHut_DZ";
+			};
+		};
+	};
+	class park_bench_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Wood Bench";
+		descriptionShort = "Wood Bench";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "ParkBench_DZ";
+			};
+		};
+	};
+	class rusty_gate_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Rusty Gate";
+		descriptionShort = "Rusty Gate";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "MetalGate_DZ";
+			};
+		};
+	};
+	class outhouse_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Outhouse";
+		descriptionShort = "Outhouse";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "OutHouse_DZ";
+			};
+		};
+	};
+	class storage_shed_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Storage Shed";
+		descriptionShort = "Storage Shed";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemEtool","ItemToolbox"};
+				create = "StorageShed_DZ";
+			};
+		};
+	};
 	
 	class ItemGenerator: CA_Magazine
 	{
@@ -2207,38 +2529,6 @@ class CfgMagazines
 			};
 		};
 	};
-	class ItemSandbag: CA_Magazine
-	{
-		scope = 2;
-		count = 1;
-		type = 256;
-		displayName = "$STR_EQUIP_NAME_21";
-		model = "\dayz_equip\models\sandbags.p3d";
-		picture = "\dayz_equip\textures\equip_sandbag_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_21";
-		class ItemActions
-		{
-			class Build
-			{
-				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
-				require = "ItemToolbox";
-				create = "Sandbag1_DZ";
-			};
-			class Crafting1 {
-				text = "Sandbag Nest";
-				script = "spawn player_craftItem1;";
-				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
-				output[] = {{"ItemSandBagNest",1}};
-			};
-			class Crafting2 {
-				text = "Round Sandbag Fence";
-				script = "spawn player_craftItem2;";
-				input[] = {{"ItemSandbag",2}};
-				output[] = {{"ItemSandbagRound",1}};
-			};
-		};
-	};
 
 	class ItemSandbagRound : CA_Magazine
 	{
@@ -2260,12 +2550,16 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemSandbagRound",1}};
 				output[] = {{"ItemSandbag",2}};
 			};
 			class Crafting2 {
 				text = "Fortified Round Fence";
 				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemSandbagRound",2},{"PartWoodPile",1}};
 				output[] = {{"ItemFortSandbagRound",1}};
 			};
@@ -2292,6 +2586,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemFortSandbagRound",1}};
 				output[] = {{"ItemSandbagRound",2},{"PartWoodPile",1}};
 			};
@@ -2339,18 +2635,24 @@ class CfgMagazines
 			class Crafting1 {
 				text = "HBarrier";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemWire",2},{"PartGeneric",2}};
 				output[] = {"ItemHBarrier"};
 			};
 			class Crafting2 {
 				text = "Wire (CAT2)";
 				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemWire",3}};
 				output[] = {{"ItemWire2",1}};
 			};
 			class Crafting3 {
 				text = "Gate";
 				script = "spawn player_craftItem3;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemWire"},{"PartGeneric",2}};
 				output[] = {{"ItemGate",1}};
 			};
@@ -2378,6 +2680,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemWire2",1}};
 				output[] = {{"ItemWire",3}};
 			};
@@ -2405,6 +2709,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemCamoNet",1}};
 				output[] = {{"Skin_Net_DZ",3},{"PartWoodPile",1}};
 			};
@@ -2432,6 +2738,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemSandBagNest",1}};
 				output[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
 			};
@@ -2458,6 +2766,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemWatchTower",1}};
 				output[] = {{"Skin_Net_DZ",4},{"ItemHBarrier",2}};
 			};
@@ -2484,6 +2794,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemDeerStand",1}};
 				output[] = {{"PartWoodPile",4},{"PartGeneric",1}};
 			};
@@ -2510,6 +2822,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemHBarrier",1}};
 				output[] = {{"ItemWire",2},{"PartGeneric",2}};
 			};
@@ -2535,6 +2849,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemGate",1}};
 				output[] = {{"ItemWire",1},{"PartGeneric",2}};
 			};
@@ -2561,6 +2877,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {"ItemScaffolding",1};
 				output[] = {{"PartWoodPile",3},{"PartGeneric",2}};
 			};
@@ -2587,6 +2905,8 @@ class CfgMagazines
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemLadderSmall",1}};
 				output[] = {{"PartGeneric",2}};
 			};
@@ -2837,6 +3157,7 @@ class CfgVehicles
 		armor = 400;
 		displayName = "Hedgehog (Steel)";
 		vehicleClass = "Fortifications";
+		constructioncount = 10;
 	};
 
 
@@ -2846,7 +3167,7 @@ class CfgVehicles
 	  vehicleClass = "Fortifications"; 
 	  model = "\ca\misc\Fort_Razorwire"; 
 	  icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa"; 
-	  offset[] = {0,1,5,0.5}; 
+	  offset[] = {0,1.5,0.5}; 
 	  accuracy = 0.3; 
 	  mapSize = 5.5; 
 	  displayName = "Wire"; 
@@ -2862,11 +3183,12 @@ class CfgVehicles
 		cost = 100;
 		model = "\ca\misc2\BagFenceLong.p3d";
 		icon = "\Ca\misc3\data\Icons\icon_fortBagFenceLong_ca.paa";
-		offset[] = {0,1,5,0.5}; 
+		offset[] = {0,1.5,0.5}; 
 		mapSize = 2;
 		armor = 400;
 		displayName = "Bag Fence";
 		vehicleClass = "Fortifications";
+		constructioncount = 10; 
 	};
 	class Sandbag2_DZ : BuiltItems {
 		scope = 2;
@@ -2971,7 +3293,8 @@ class CfgVehicles
 		scope = 2; 
 		animated = 0; 
 		vehicleClass = "Fortifications"; 
-		typicalCargo[] = {}; 
+		typicalCargo[] = {};
+		offset[] = {0,1.5,0.5};
 		irTarget = 0; 
 		accuracy = 0.3; 
 		transportAmmo = 0; 
@@ -2988,22 +3311,139 @@ class CfgVehicles
 		mapSize = 2; 
 		displayName = "H-barrier cube"; 
 		GhostPreview = "Land_HBarrier1Preview"; 
+		constructioncount = 20; 
 	};
 
-	class Land_kulna;
-	class WoodGate_DZ: Land_kulna
+	// PLAYER BUILDINGS
+	class Plastic_Pole_EP1;
+	class Plastic_Pole_EP1_DZ: Plastic_Pole_EP1
 	{
 		scope = 2;
-		destrType = "DestructBuilding"; 
-		cost = 100;
+		// destrType = "DestructNo"; 
+		offset[] = {0,2.5,0};
+		displayName = "30m Plot Pole";
+		vehicleClass = "Fortifications";
+	};
+	class USMC_WarfareBMGNest_M240;
+	class M240Nest_DZ: USMC_WarfareBMGNest_M240
+	{
+		scope = 2;
+		offset[] = {0,3.5,0};
+		displayName = "M240 Nest";
+		vehicleClass = "Fortifications";
+		transportMaxMagazines = 25;
+		transportMaxWeapons = 4;
+		transportMaxBackpacks = 1;
+		constructioncount = 20;
+	};
+	class Land_covering_hut_EP1;
+	class CanvasHut_DZ: Land_covering_hut_EP1
+	{
+		scope = 2;
 		offset[] = {0,2.5,1};
-		//model = "\ca\structures\Wall\Gate_wood2_5";
-		//icon = "\ca\data\data\Unknown_object.paa";
-		//mapSize = 2;
-		armor = 100;
+		displayName = "Canvas Hut";
+		vehicleClass = "Fortifications";
+	};
+	class Park_bench1;
+	class ParkBench_DZ: Park_bench1
+	{
+		scope = 2;
+		offset[] = {0,1.5,0.5};
+		displayName = "Wood Bench";
+		vehicleClass = "Fortifications";
+	};
+	class Land_Wall_Gate_Ind1_L;
+	class MetalGate_DZ: Land_Wall_Gate_Ind1_L
+	{
+		scope = 2;
+		offset[] = {0,2.5,1};
+		displayName = "Rusty Gate";
+		vehicleClass = "Fortifications";
+	};
+	class Land_KBud;
+	class OutHouse_DZ: Land_KBud
+	{
+		scope = 2;
+		offset[] = {0,2.5,1};
+		displayName = "Outhouse";
+		vehicleClass = "Fortifications";
+		transportMaxMagazines = 4;
+		transportMaxWeapons = 1;
+		transportMaxBackpacks = 1;
+		constructioncount = 10;
+		class transportmagazines
+		{
+			class _xx_ItemTrashToiletpaper
+			{
+				magazine = "ItemTrashToiletpaper";
+				count = 1;
+			};
+		};
+	};
+	class Land_Shed_M01;
+	class StorageShed_DZ: Land_Shed_M01
+	{
+		scope = 2;
+		offset[] = {0,2.5,1};
+		displayName = "Storage Shed";
+		vehicleClass = "Fortifications";
+		transportMaxMagazines = 400;
+		transportMaxWeapons = 40;
+		transportMaxBackpacks = 20;
+		constructioncount = 20;
+	};
+	class Fence_corrugated_plate;
+	class Fence_corrugated_DZ: Fence_corrugated_plate
+	{
+		scope = 2;
+		offset[] = {0,2.5,1};
+		removeoutput[] = {{"ItemPole",2},{"PartGeneric",4},{"PartWoodLumber",2}};
+		displayName = "Corrugated Fence";
+		vehicleClass = "Fortifications";
+		
+	};
+	class Land_kulna;
+	class WoodShack_DZ: Land_kulna
+	{
+		scope = 2;
+		//destrType = "DestructBuilding"; 
+		//cost = 100;
+		offset[] = {0,2.5,1.3};
+		//armor = 200;
 		displayName = "Wooden Shack";
 		vehicleClass = "Fortifications";
-		/*
+		transportMaxMagazines = 100;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 5;
+		constructioncount = 20;
+	};
+	class Land_Shed_wooden;
+	class Wooden_shed_DZ: Land_Shed_wooden
+	{
+		scope = 2;
+		//destrType = "DestructBuilding"; 
+		//cost = 100;
+		offset[] = {0,2.5,1};
+		//armor = 100;
+		displayName = "Wooden Shed";
+		vehicleClass = "Fortifications";
+		transportMaxMagazines = 200;
+		transportMaxWeapons = 20;
+		transportMaxBackpacks = 10;
+	};
+	class WoodGate_DZ: BuiltItems
+	{
+		scope = 2;
+		destrType = "DestructTree"; 
+		//cost = 100;
+		offset[] = {0,1.5,0.5};
+		model = "\ca\structures\Wall\Gate_wood2_5";
+		icon = "\ca\data\data\Unknown_object.paa";
+		mapSize = 2;
+		// armor = 100;
+		displayName = "Wood Panel";
+		vehicleClass = "Fortifications";
+		
 		class AnimationSources
 		{
 			class DoorR { 
@@ -3012,7 +3452,7 @@ class CfgVehicles
 			  initPhase = 0; 
 			}
 		}
-		*/
+		
 	};
 	class BearTrap_DZ: TrapItems
 	{
@@ -3284,6 +3724,16 @@ class CfgVehicles
 		class eventHandlers
 		{
 			init = "[(_this select 0),'cfgMagazines','ItemOilBarrel'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
+		};
+	};
+	class WeaponHolder_ItemFuelBarrel: WeaponHolderBase
+	{
+		scope = 2;
+		displayName = "Fuel Barrel";
+		model = "\dayz_equip\proxy\oil_drum_model.p3d";
+		class eventHandlers
+		{
+			init = "[(_this select 0),'cfgMagazines','ItemFuelBarrel'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 		};
 	};
 	class WeaponHolder_ItemJerrycanEmpty: WeaponHolderBase

@@ -27,13 +27,13 @@ SAR_dynamic_spawning = true;
 
 // maximum number of groups / grid
 SAR_max_grps_bandits = 1;
-SAR_max_grps_soldiers = 4;
+SAR_max_grps_soldiers = 3;
 SAR_max_grps_survivors = 4;
 
 // chance for a group to spawn (1-100)
-SAR_chance_bandits = 5;
-SAR_chance_soldiers = 30;
-SAR_chance_survivors = 50;
+SAR_chance_bandits = 1;
+SAR_chance_soldiers = 10;
+SAR_chance_survivors = 20;
 
 // maximum size of group (including Leader)
 SAR_max_grpsize_bandits = 3;
@@ -61,10 +61,10 @@ SAR_AI_STEAL_VEHICLE = true;
 // -----------------------------------------------
 
 // Humanity Value that gets substracted for a survivor or soldier AI kill
-SAR_surv_kill_value = 2500;
+SAR_surv_kill_value = 250;
 
 // Humanity Value that gets ADDED for a bandit AI kill
-SAR_band_kill_value = 500;
+SAR_band_kill_value = 250;
 
 // the humanity value below which a player will be considered hostile
 SAR_HUMANITY_HOSTILE_LIMIT = -2500;
