@@ -20,7 +20,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"dayz_equip","dayz_weapons","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
+		requiredAddons[] = {"dayz_equip","dayz_weapons","dayz_sfx","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
 	};
 	class DZ_DebriefingRemoved
 	{
@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.1.0.7";
+		version = "2.1.0.8";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -530,6 +530,7 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		itemType[] = {
 			{ "WeaponHolder_ItemGenerator","object" },
+			{ "WeaponHolder_ItemFuelBarrel","object" },
 			{ "","generic" },
 			{ "","trash" },
 			{ "","military" },
@@ -548,7 +549,8 @@ class CfgBuildingLoot {
 			{"Skin_Net_DZ","magazine"}
 	};
 		itemChance[] =	{
-			0.01, //generator
+			0.005, //generator
+			0.005, //fuelbarrel
 			0.18, //generic
 			0.29, //trash
 			0.04, //military
@@ -575,6 +577,7 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		itemType[] = {
 			{"WeaponHolder_ItemJerrycan","object"},
+			{ "WeaponHolder_ItemFuelBarrel","object" },
 			{"","generic"},
 			{"huntingrifle","weapon"},
 			{"LeeEnfield","weapon"},
@@ -592,6 +595,7 @@ class CfgBuildingLoot {
 	};
 		itemChance[] =	{
 			0.06, //jerrycan
+			0.005, //fuelbarrel
 			0.28, //generic
 			0.01, //cz550
 			0.04, //enfield
@@ -632,6 +636,8 @@ class CfgBuildingLoot {
 			{"DZ_ALICE_Pack_EP1","object"}, // 16
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
+			{"DZ_CompactPack_EP1","object"}, // 18-1
+			{"DZ_TerminalPack_EP1","object"}, // 12-1
 			
 			{ "Winchester1866","weapon" },
 			{ "WeaponHolder_ItemTent","object" },
@@ -660,6 +666,8 @@ class CfgBuildingLoot {
 			0.02, //alicepack (16)
 			0.02, //tk_assaultpack (16)
 			0.01, //acupack (18)
+			0.01, //compactpack (18-1)
+			0.01, //terminalpack (12-1)
 			0.01, //winchester
 			0.01, //itemtent
 			0.20, //food
@@ -842,7 +850,8 @@ class HeliCrash_No50s: Default {
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
 			{"DZ_CivilBackpack_EP1","object"}, // 24
-			{"DZ_Backpack_EP1","object"}, // 24
+			{"DZ_Backpack_EP1","object"}, // 30
+			{"DZ_LargeGunBag_EP1","object"}, // 45
 			
 			//Normal
 			{ "","medical" },
@@ -891,7 +900,8 @@ class HeliCrash_No50s: Default {
 			0.08, //tk_assaultpack (16)
 			0.06, //acupack (18)
 			0.01, //civialpack (24)
-			0.01, //DZ_Backpack_EP1 24
+			0.01, //DZ_Backpack_EP1 (30)
+			0.005, //DZ_LargeGunBag_EP1 (45)
 			0.10, //medical
 			1.00, //generic
 			2.50, //military

@@ -42,7 +42,7 @@ dayz_spaceInterrupt = {
 	if (_dikCode in (actionKeys "GetOver")) then {
 		if (!r_fracture_legs and (time - dayz_lastCheckBit > 4)) then {
 			_inBuilding = [player] call fnc_isInsideBuilding;
-			_nearbyObjects = nearestObjects[getPosATL player, ["TentStorage", "Hedgehog_DZ", "Sandbag1_DZ","TrapBear","Wire_cat1"], 8];
+			_nearbyObjects = nearestObjects[getPosATL player, ["TentStorage","Hedgehog_DZ","Sandbag1_DZ","Sandbag2_DZ","Sandbag3_DZ","TrapBear","Wire_cat1","Gate1_DZ","Land_HBarrier1_DZ","Land_HBarrier1_DZ","HBarrier","SandBagNest","M240Nest_DZ"], 8];
 			if (!_inBuilding and (count _nearbyObjects == 0)) then {
 				dayz_lastCheckBit = time;
 				call player_CombatRoll;

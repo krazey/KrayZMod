@@ -44,27 +44,17 @@ class CfgMagazines {
 				output[] = {{"ItemSandbagLarge",1}};
 				input[] = {{"ItemSandbag",3},{"ItemWire",1},{"ItemTankTrap",1}};
 			};
-			class Crafting1
-			{
-				text = "Craft M240 Nest";
-				script = "spawn player_craftItem1;";
-				neednearby[] = {};
-				requiretools[] = {"ItemEtool","ItemToolbox","M240_DZ"};
-				output[] = {{"m240_nest_kit",1}};
-				input[] = {{"ItemSandbag",4},{"ItemCanvas",1},{"PartWoodPlywood",4},{"PartWoodLumber",3}};
-				consumeweapons[] = {"M240_DZ"};
-			}; 
-			class Crafting2 {
+			class Crafting1 {
 				text = "Sandbag Nest";
-				script = "spawn player_craftItem2;";
+				script = "spawn player_craftItem1;";
 				neednearby[] = {};
 				requiretools[] = {"ItemEtool","ItemToolbox"};
 				input[] = {{"ItemSandbag",2},{"PartWoodPile",2},{"PartGeneric",1}};
 				output[] = {{"ItemSandBagNest",1}};
 			};
-			class Crafting3 {
+			class Crafting2 {
 				text = "Round Sandbag Fence";
-				script = "spawn player_craftItem3;";
+				script = "spawn player_craftItem2;";
 				neednearby[] = {};
 				requiretools[] = {"ItemEtool","ItemToolbox"};
 				input[] = {{"ItemSandbag",2}};

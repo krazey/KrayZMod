@@ -1456,14 +1456,6 @@ class CfgMagazines
 		descriptionShort = "$STR_EQUIP_DESC_10";
 
 		class ItemActions {
-			class Crafting {
-				text = "Metal Pole";
-				script = "spawn player_craftItem;";
-				neednearby[] = {};
-				requiretools[] = {"ItemToolbox"};  
-				input[] = {{"PartGeneric",4}};
-				output[] = {{"ItemPole",1}};
-			};
 			class Crafting1 {
 				text = "Sandbag Nest";
 				script = "spawn player_craftItem1;";
@@ -1563,7 +1555,7 @@ class CfgMagazines
 				neednearby[] = {};
 				requiretools[] = {"ItemToolbox","ItemCrowbar"};
 				output[] = {{"storage_shed_kit",1}};
-				input[] = {{"ItemCorrugated",4},{"PartWoodPile",3}};
+				input[] = {{"ItemCorrugated",5},{"PartWoodPile",5}};
 			};
 		};
 	};
@@ -1584,7 +1576,7 @@ class CfgMagazines
 				neednearby[] = {"fire"};
 				requiretools[] = {"ItemToolbox","ItemCrowbar"};
 				output[] = {{"ItemCorrugated",1}};
-				input[] = {{"ItemPole",1},{"PartGeneric",4},{"PartWoodPile",2}};
+				input[] = {{"ItemPole",2},{"PartGeneric",4},{"PartWoodPile",2}};
 			};
 			class Crafting1
 			{
@@ -1593,16 +1585,7 @@ class CfgMagazines
 				neednearby[] = {};
 				requiretools[] = {"ItemToolbox","ItemCrowbar"};
 				output[] = {{"rusty_gate_kit",1}};
-				input[] = {{"ItemPole",2},{"PartGeneric",3},{"ItemTankTrap",1}};
-			};
-			class Crafting2
-			{
-				text = "30m Plot";
-				script = "spawn player_craftItem2;";
-				neednearby[] = {};
-				requiretools[] = {"ItemToolbox"};
-				output[] = {{"30m_plot_kit",1}};
-				input[] = {{"ItemPole",1},{"ItemGoldBar10oz",1}};
+				input[] = {{"ItemPole",6},{"PartGeneric",3},{"ItemTankTrap",1}};
 			};
 		};
 	};
@@ -1847,15 +1830,6 @@ class CfgMagazines
 				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemGoldBar",10}};
 				input[] = {{"ItemGoldBar10oz",1}};
-			};
-			class Crafting1
-			{
-				text = "30m Plot";
-				script = "spawn player_craftItem1;";
-				neednearby[] = {};
-				requiretools[] = {"ItemToolbox"};
-				output[] = {{"30m_plot_kit",1}};
-				input[] = {{"ItemPole",1},{"ItemGoldBar10oz",1}};
 			};
 		};
 	};
@@ -2344,14 +2318,6 @@ class CfgMagazines
 				requiretools[] = {"ItemEtool","ItemToolbox"};
 				create = "Plastic_Pole_EP1_DZ";
 			};
-			class Crafting1 {
-				text = "Deconstruct";
-				script = "spawn player_craftItem1;";
-				neednearby[] = {};
-				requiretools[] = {"ItemToolbox"}; 
-				input[] = {{"30m_plot_kit",1}};
-				output[] = {{"ItemPole",1},{"ItemGoldBar10oz",1}};
-			};
 		};
 	};
 	class wooden_shed_kit: CA_Magazine
@@ -2540,7 +2506,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = "(256 * 6)";
+		type = "(256 * 12)";
 		displayName = "Safe";
 		model = "\dayz_equip\models\safe1_onside.p3d";
 		picture = "\dayz_equip\textures\equip_safe_ca.paa";
@@ -2558,7 +2524,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = "(256 * 2)";
+		type = "(256 * 3)";
 		displayName = "$STR_EQUIP_NAME_20";
 		model = "\dayz_equip\models\tentbag_gear.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_ca.paa";
@@ -2623,7 +2589,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "Sandbag3_DZ";
 			};
@@ -2716,7 +2682,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "Wire2";
 			};
@@ -2736,7 +2702,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 3);
+		type = (256 * 4);
 		displayName = "$STR_EQUIP_NAME_119";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2745,7 +2711,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "CamoNet";
 			};
@@ -2774,10 +2740,11 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "SandBagNest";
 			};
+
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
@@ -2786,15 +2753,6 @@ class CfgMagazines
 				input[] = {{"ItemSandBagNest",1}};
 				output[] = {{"ItemSandbag",2},{"PartWoodPile",3},{"PartGeneric",1}};
 			};
-			class Crafting2 {
-				text = "Craft M240 Nest";
-				script = "spawn player_craftItem2;";
-				neednearby[] = {};
-				requiretools[] = {"ItemEtool","ItemToolbox","M240_DZ"};
-				output[] = {{"m240_nest_kit",1}};
-				input[] = {{"ItemSandBagNest",1}};
-				consumeweapons[] = {"M240_DZ"};
-			}; 
 		};
 	};
 	
@@ -2811,7 +2769,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "WatchTower";
 			};
@@ -2839,7 +2797,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "DeerStand";
 			};
@@ -2858,7 +2816,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 3);
+		type = (256 * 4);
 		displayName = "$STR_EQUIP_NAME_122";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2867,7 +2825,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "HBarrier";
 			};
@@ -2885,7 +2843,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 3);
+		type = (256 * 4);
 		displayName = "Gate";
 		model = "\dayz_equip\models\Fence_wire_kit.p3d";
 		picture = "\dayz_equip\textures\equip_gate.paa";
@@ -2894,7 +2852,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "Gate1_DZ";
 			};
@@ -2922,7 +2880,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "Scaffolding";
 			};
@@ -2941,7 +2899,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 3);
+		type = (256 * 4);
 		displayName = "Small Ladder";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2969,7 +2927,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 6);
+		type = (256 * 8);
 		displayName = "Large Ladder";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2978,7 +2936,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
+				script = "spawn player_build2;";
 				require = "ItemToolbox";
 				create = "LadderLarge";
 			};
@@ -3081,161 +3039,121 @@ class CfgVehicles
 
 	class CamoNet: Constuctables
 	{
-		scope = 2;
-		destrType = "DestructTent";
-		cost = 100;
-		vehicleClass = "Military";
-		offset[] = {0,1.10,0.5};
 		model = "\Ca\misc3\CamoNetB_EAST";
+		displayName = "Camo Net";
+		destrType = "DestructTent";
 		icon = "\Ca\misc3\data\Icons\icon_camoNetBig_ca.paa";
 		mapSize = 18;
-		armor = 20;
-		displayName = "Camo Net";
-		constructioncount = 5;
-		removeoutput[] = {{"ItemCamoNet",1}};
+		scope = 2;
+		armor = 3;
+		vehicleClass = "Military";
+		inventoryItem = "ItemCamoNet";
 	};
 	class DeerStand : Constuctables
 	{
 		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
 		vehicleClass = "Misc";
-		offset[] = {0,5,0.5};
-		model = "\Ca\Structures\Misc\Misc_DeerStand\misc_deerstand";
-		icon = "\Ca\Structures\Misc\Misc_DeerStand\data\icon\icon_deerstand_ca.paa";
-		ladders[] = {{"start1", "end1"}};
-		mapSize = 3;
 		armor = 500;
+		model = "\Ca\Structures\Misc\Misc_DeerStand\misc_deerstand";
 		displayName = "Deer Stand";
-		constructioncount = 10;
-		removeoutput[] = {{"ItemDeerStand",1}};
+		ladders[] = {{"start1", "end1"}};
+		icon = "\Ca\Structures\Misc\Misc_DeerStand\data\icon\icon_deerstand_ca.paa";
+		mapSize = 3;
+		inventoryItem = "ItemDeerStand";
 	};
 	class WatchTower : Constuctables
 	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		vehicleClass = "Fortifications";
-		offset[] = {0,5,0.5};
 		model = "\Ca\misc3\fort_watchtower";
-		icon = "\Ca\misc3\data\Icons\icon_fortWatchTower_ca.paa";
-		armor = 500;
 		displayName = "Watch Tower";
-		constructioncount = 10;
+		icon = "\Ca\misc3\data\Icons\icon_fortWatchTower_ca.paa";
+		scope = 2;
+		armor = 150;
+		vehicleClass = "Fortifications";
 		ladders[] = {{"start1", "end1"}};
-		removeoutput[] = {{"ItemWatchTower",1}};
+		inventoryItem = "ItemWatchTower";
 	};
 	class SandBagNest : Constuctables
 	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		vehicleClass = "Fortifications";
-		offset[] = {0,4,0.5};
 		model = "\Ca\misc3\fortified_nest_small";
+		displayName = "Sand Bag Nest";
 		icon = "\Ca\misc3\data\Icons\icon_fortNestSmall_ca.paa";
 		mapSize = 5;
+		scope = 2;
 		armor = 500;
-		displayName = "Sand Bag Nest";
-		constructioncount = 5;
 		irTarget = false;
-		removeoutput[] = {{"ItemSandBagNest",1}};
+		vehicleClass = "Fortifications";
+		GhostPreview = "Land_fortified_nest_smallPreview";
+		inventoryItem = "ItemSandBagNest";
+	};
+	class Wire2 : Constuctables
+	{
+		scope = 2;
+		animated = false;
+		vehicleClass = "Fortifications";
+		model = "\ca\misc\Fort_Razorwire";
+		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa";
+		offset[] = {0,1.5,0.5}; 
+		accuracy = 0.3;	// accuracy needed to recognize type of this target
+		mapSize = 5.5;
+		displayName = "Wire (CAT2)";
+		destrType = "DestructTent";
+		armor = 100;
+		GhostPreview = "Fort_RazorWirePreview";
+		inventoryItem = "ItemWire2";
 	};
 	class HBarrier : Constuctables
 	{
 		scope = 2;
-		destrType = "DestructBuilding";
 		animated = false;
-		cost = 0;
 		vehicleClass = "Fortifications";
-		offset[] = {0,3,0.5};
 		typicalCargo[] = {};
 		irTarget = false;
+		mapSize = 7;
 		model = "\ca\misc2\HBarrier5.p3d";
 		icon = "\Ca\misc2\data\Icons\icon_hescoBarrier5_ca.paa";
-		mapSize = 7;
-		armor = 500;
 		displayName = "Hesco Barrier";
-		constructioncount = 5;
 		accuracy = 0.3;	// accuracy needed to recognize type of this target
 		transportAmmo = 0;
 		transportRepair = 0;
 		transportFuel = 0;
+		destrType = "DestructBuilding";
+		armor = 500;
 		coefInside = 0.5;
 		coefInsideHeur = 0.8;
+		cost = 0;
 		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
-		removeoutput[] = {{"ItemHBarrier",1}};
+		GhostPreview = "Land_HBarrier5Preview";
+		inventoryItem = "ItemHBarrier";
 	};
 	class Scaffolding : Constuctables
 	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		vehicleClass = "Misc";
-		offset[] = {2,1.5,0.5};
 		model = "\Ca\Structures\Misc\Misc_Scaffolding\Misc_Scaffolding";
+		displayName = "Scaffolding";
 		icon = "\Ca\Structures\Data\Icons\icon_scaffolding_ca.paa";
 		mapSize = 16;
+		scope = 2;
 		armor = 500;
-		displayName = "Scaffolding";
-		constructioncount = 10;
-		removeoutput[] = {{"ItemScaffolding",1}};
+		vehicleClass = "Misc";
+		inventoryItem = "ItemScaffolding";
 	};
-	class Fort_RazorWire : BuiltItems
-	{ 
-		scope = 2; 
-		animated = 0; 
-		vehicleClass = "Fortifications"; 
-		model = "\dayz_equip\models\wire_cat1.p3d"; 
-		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa"; 
-		offset[] = {0,1.5,0.5}; 
-		accuracy = 0.3; 
-		mapSize = 5.5; 
-		displayName = "Wire"; 
-		destrType = "DestructTent"; 
-		armor = 100; 
-		constructioncount = 1;
-		removeoutput[] = {{"ItemWire",1}};
-	}
-	/*class Wire_cat1: BuiltItems
+	class Wire_cat1: BuiltItems
 	{
 		scope = 2;
-		destrType = "DestructTent";
-		cost = 100;
 		animated = 0;
 		vehicleClass = "Fortifications";
-		offset[] = {0,1.5,0.5};
-		model = "\dayz_equip\models\wire_cat1.p3d";
 		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa";
 		accuracy = 0.3;
 		mapSize = 5.5;
-		armor = 100;
 		displayName = "Wire (CAT1)";
-		constructioncount = 2;
-		removeoutput[] = {{"ItemWire",1}};
+		model = "\dayz_equip\models\wire_cat1.p3d";
+		destrType = "DestructTent";
+		armor = 100;
+		GhostPreview = "Fort_RazorWirePreview";
 	};
 	class Wire_cat2: Wire_cat1
 	{
 		displayName = "Wire (CAT2)";
 		model = "\dayz_equip\models\wire_cat2.p3d";
-		removeoutput[] = {{"ItemWire2",1}};
-	};*/
-	class Wire2 : Constuctables
-	{
-		scope = 2;
-		destrType = "DestructTent";
-		cost = 100
-		animated = 0;
-		vehicleClass = "Fortifications";
-		offset[] = {0,1.5,0.5};
-		model = "\ca\misc\Fort_Razorwire";
-		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa";
-		accuracy = 0.3;
-		mapSize = 5.5;
-		armor = 100;
-		displayName = "Wire (CAT2)";
-		constructioncount = 3;
-		removeoutput[] = {{"ItemWire2",1}};
 	};
 	class Hedgehog_DZ: BuiltItems
 	{
@@ -3267,6 +3185,20 @@ class CfgVehicles
 		constructioncount = 5;
 		removeoutput[] = {{"ItemGenerator",1}}; 
 	};
+	class Fort_RazorWire : BuiltItems { 
+	  scope = 2; 
+	  animated = 0; 
+	  vehicleClass = "Fortifications"; 
+	  model = "\ca\misc\Fort_Razorwire"; 
+	  icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa"; 
+	  offset[] = {0,1.5,0.5}; 
+	  accuracy = 0.3; 
+	  mapSize = 5.5; 
+	  displayName = "Wire"; 
+	  destrType = "DestructTent"; 
+	  armor = 100; 
+	  GhostPreview = "Fort_RazorWirePreview"; 
+	}
 	class Sandbag1_DZ: BuiltItems
 	{
 		scope = 2;
@@ -3282,8 +3214,7 @@ class CfgVehicles
 		constructioncount = 5;
 		removeoutput[] = {{"ItemSandbag",1}};
 	};
-	class Sandbag2_DZ : BuiltItems
-	{
+	class Sandbag2_DZ : BuiltItems {
 		scope = 2;
 		destrType = "DestructNo";
 		cost = 100;
@@ -3298,62 +3229,48 @@ class CfgVehicles
 		vehicleClass = "Fortifications";
 		removeoutput[] = {{"ItemSandbagRound",1}};
 	};
-	class Sandbag3_DZ : BuiltItems
-	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
+	class Sandbag3_DZ : BuiltItems {
 		model = "\Ca\misc3\fort_bagfence_round";
-		icon = "\Ca\misc3\data\Icons\icon_fortBagFenceRound_ca.paa";
-		offset[] = {0,1.5,0.5}; 
-		mapSize = 3.2;
-		armor = 150;
 		displayName = "Fortified Round Bag Fence";
-		constructioncount = 5;
+		icon = "\Ca\misc3\data\Icons\icon_fortBagFenceRound_ca.paa";
+		mapSize = 3.2;
+		scope = 2;
+		armor = 150;
 		vehicleClass = "Fortifications";
-		removeoutput[] = {{"ItemFortSandbagRound",1}};
+		inventoryItem = "ItemFortSandbagRound";
 	};
-	class LadderSmall : BuiltItems
-	{
+	class LadderSmall : BuiltItems {
 		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		model = "\ca\misc\ladder_half.p3d";
-		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
-		offset[] = {0,1.5,0.5};
-		mapSize = 0.6;
-		armor = 50;
 		displayName = "Small Ladder";
-		ladders[] = {{"start", "end"}};
-		vehicleClass = "Misc";
-		removeoutput[] = {{"ItemLadderSmall",1}};
-	};
-	class LadderLarge : BuiltItems
-	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		model = "\ca\misc\ladder.p3d";
-		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
-		offset[] = {0,1.5,0.5};
+		model = "\ca\misc\ladder_half.p3d";
 		mapSize = 0.6;
+		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
 		armor = 50;
-		displayName = "Large Ladder";
 		ladders[] = {{"start", "end"}};
 		vehicleClass = "Misc";
-		removeoutput[] = {{"ItemLadderLarge",1}};
+		inventoryItem = "ItemLadderSmall";
 	};
-	class Gate1_DZ : BuiltItems
-	{
+	class LadderLarge : BuiltItems {
 		scope = 2;
-		destrType = "DestructTree";
+		displayName = "Large Ladder";
+		model = "\ca\misc\ladder.p3d";
+		mapSize = 0.6;
+		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
+		armor = 50;
+		ladders[] = {{"start", "end"}};
+		vehicleClass = "Misc";
+		inventoryItem = "ItemLadderLarge";
+	};
+	class Gate1_DZ : BuiltItems {
+		scope = 2;
 		animated = true;
 		typicalCargo[] = {};
 		irTarget = false;
-		accuracy = 0.3;
+		accuracy = 0.3;	// accuracy needed to recognize type of this target
 		transportAmmo = 0;
 		transportRepair = 0;
 		transportFuel = 0;
+		armor = 500;
 		coefInside = 0.5;
 		coefInsideHeur = 0.8;
 		cost = 0;
@@ -3361,12 +3278,11 @@ class CfgVehicles
 		GhostPreview = "Land_HBarrier_largePreview";
 		model = "\ca\misc2\BarbGate.p3d";
 		icon = "\Ca\misc2\data\Icons\icon_barGate2_ca.paa";
-		offset[] = {0,1.5,0.5};
 		mapSize = 3;
-		armor = 500;
 		displayName = "Gate";
+		destrType = "DestructTree";
 		vehicleClass = "Military";
-		removeoutput[] = {{"ItemGate",1}};
+		inventoryItem = "ItemGate";
 
 		class AnimationSources {
 			class Door01 {
@@ -3436,6 +3352,9 @@ class CfgVehicles
 		displayName = "30m Plot Pole";
 		vehicleClass = "Fortifications";
 	};
+
+
+
 	class USMC_WarfareBMGNest_M240;
 	class M240Nest_DZ: USMC_WarfareBMGNest_M240
 	{
@@ -3448,6 +3367,7 @@ class CfgVehicles
 		transportMaxBackpacks = 1;
 		constructioncount = 10;
 		removeoutput[] = {{"m240_nest_kit",1}};
+		
 	};
 	class Land_covering_hut_EP1;
 	class CanvasHut_DZ: Land_covering_hut_EP1

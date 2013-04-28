@@ -54,7 +54,7 @@ SAR_FIX_VEHICLE_ISSUE = false;
 SAR_AI_disable_UPSMON_AI = false;
 
 // enable / disable AI stealing vehicles - if you enable this, be sure to check KRON_UPS_searchVehicledist value below
-SAR_AI_STEAL_VEHICLE = true;
+SAR_AI_STEAL_VEHICLE = false;
 
 // -----------------------------------------------
 // Humanity values 
@@ -74,7 +74,7 @@ SAR_HUMANITY_HOSTILE_LIMIT = -2500;
 // -----------------------------------------------
 
 // Log AI kills
-SAR_log_AI_kills = true;
+SAR_log_AI_kills = false;
 
 // -----------------------------------------------
 // Special health values for specific units

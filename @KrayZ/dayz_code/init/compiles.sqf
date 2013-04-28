@@ -91,8 +91,6 @@ if (!isDedicated) then {
 	player_makeFire =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_makefire.sqf";
 	player_chopWood =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_chopWood.sqf";
 	player_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build.sqf";
-	player_build2 =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_build2.sqf";
-	object_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\object_build.sqf";
 	player_wearClothes =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_wearClothes.sqf";
 	player_dropWeapon =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_dropWeapon.sqf";
 	player_setTrap =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_setTrap.sqf";
@@ -275,7 +273,7 @@ if (!isDedicated) then {
 			};
 			if (!r_fracture_legs and (time - dayz_lastCheckBit > 4)) then {
 				_inBuilding = [player] call fnc_isInsideBuilding;
-				_nearbyObjects = nearestObjects[getPosATL player, ["TentStorage", "Hedgehog_DZ", "Sandbag1_DZ","TrapBear","Wire_cat1"], 8];
+				_nearbyObjects = nearestObjects[getPosATL player, ["TentStorage","Hedgehog_DZ","Sandbag1_DZ","Sandbag2_DZ","Sandbag3_DZ","TrapBear","Wire_cat1","Gate1_DZ","Land_HBarrier1_DZ","Land_HBarrier1_DZ","HBarrier","SandBagNest","M240Nest_DZ"], 8];
 				if (!_inBuilding and (count _nearbyObjects == 0)) then {
 					dayz_lastCheckBit = time;
 					call player_CombatRoll;

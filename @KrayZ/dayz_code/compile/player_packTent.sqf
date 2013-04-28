@@ -33,7 +33,7 @@ if(_ownerID == dayz_characterID) then {
 	_location = _pos;
 
 	//place tent (local)
-	//_bag = createVehicle ["WeaponHolder_ItemTent",_pos,[], 0, "CAN_COLLIDE"];
+	_bag = createVehicle ["WeaponHolder_ItemTent",_pos,[], 0, "CAN_COLLIDE"];
 	_object = createVehicle [_classname, _location, [], 0, "CAN_COLLIDE"];
 	_object setdir _dir;
 	player reveal _object;
