@@ -1,864 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 3.97
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
-
-//Class dayz_equip : config.bin{
-class CfgPatches
-{
-	class dayz_equip
-	{
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {};
-	};
-};
-class CfgVehicleClasses
-{
-	class Survival
-	{
-		displayName = "Survival";
-	};
-};
-class RscStandardDisplay
-{
-	access = 0;
-	movingEnable = 1;
-	enableSimulation = 1;
-	enableDisplay = 1;
-};
-class RscObject
-{
-	access = 0;
-	type = 80;
-	scale = 1;
-	direction[] = {0,0,1};
-	up[] = {0,1,0};
-};
-class RscPicture
-{
-	access = 0;
-	type = 0;
-	idc = -1;
-	colorBackground[] = {0,0,0,0};
-	colorText[] = {1,1,1,1};
-	font = "TahomaB";
-	sizeEx = 0;
-	lineSpacing = 0;
-	text = "";
-	style = "0x30 + 0x100";
-	x = 0;
-	y = 0;
-	w = 0.2;
-	h = 0.15;
-};
-class RscButton
-{
-	access = 0;
-	text = "";
-	colorText[] = {0.543,0.5742,0.4102,1};
-	colorDisabled[] = {0.4,0.4,0.4,1};
-	colorBackground[] = {1,0.537,0,0.5};
-	colorBackgroundDisabled[] = {0.95,0.95,0.95,1};
-	colorBackgroundActive[] = {1,0.537,0,1};
-	colorFocused[] = {1,0.537,0,1};
-	colorShadow[] = {0.023529,0,0.0313725,1};
-	colorBorder[] = {0.023529,0,0.0313725,1};
-	soundEnter[] = {"\ca\ui\data\sound\mouse2",0.09,1};
-	soundPush[] = {"\ca\ui\data\sound\new1",0.09,1};
-	soundClick[] = {"\ca\ui\data\sound\mouse3",0.07,1};
-	soundEscape[] = {"\ca\ui\data\sound\mouse1",0.09,1};
-	type = 1;
-	style = "0x02 + 0x100";
-	x = 0;
-	y = 0;
-	w = 0.095589;
-	h = 0.039216;
-	font = "Zeppelin32";
-	sizeEx = 0.03921;
-	offsetX = 0.003;
-	offsetY = 0.003;
-	offsetPressedX = 0.002;
-	offsetPressedY = 0.002;
-	borderSize = 0;
-};
-class RscButtonPhone: RscButton
-{
-	colorText[] = {0.543,0.5742,0.4102,0};
-	colorDisabled[] = {0.4,0.4,0.4,0};
-	colorBackground[] = {1,0.537,0,0};
-	colorBackgroundDisabled[] = {0.95,0.95,0.95,0};
-	colorBackgroundActive[] = {1,0.537,0,0};
-	colorFocused[] = {1,0.537,0,0};
-	colorShadow[] = {0.023529,0,0.0313725,0};
-	colorBorder[] = {0.023529,0,0.0313725,0};
-	soundEnter[] = {"",0.09,1};
-	soundPush[] = {"",0.09,1};
-	soundClick[] = {"",0.07,1};
-	soundEscape[] = {"",0.09,1};
-};
-class RscPhonePicture: RscStandardDisplay
-{
-	class controlsBackground
-	{
-		class RscPicture_1200: RscPicture
-		{
-			idc = 1200;
-			text = "mphone_CA.paa";
-			x = 0.2;
-			y = 0.09;
-			w = 0.6;
-			h = 0.8;
-		};
-	};
-	class controls
-	{
-		class RscButton_1600: RscButtonPhone
-		{
-			idc = 1600;
-			text = "send";
-			x = 0.402736;
-			y = 0.597677;
-			w = 0.0620061;
-			h = 0.0620061;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_1.wav",0.09,1};
-		};
-		class RscButton_1601: RscButtonPhone
-		{
-			idc = 1601;
-			text = "end";
-			x = 0.528875;
-			y = 0.597677;
-			w = 0.0620061;
-			h = 0.0620061;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_0.wav",0.09,1};
-		};
-		class RscButton_1602: RscButtonPhone
-		{
-			idc = 1602;
-			text = "1";
-			x = 0.399696;
-			y = 0.669873;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_1.wav",0.09,1};
-		};
-		class RscButton_1603: RscButtonPhone
-		{
-			idc = 1603;
-			text = "2";
-			x = 0.472644;
-			y = 0.671996;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_2.wav",0.09,1};
-		};
-		class RscButton_1604: RscButtonPhone
-		{
-			idc = 1604;
-			text = "3";
-			x = 0.539514;
-			y = 0.671996;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_3.wav",0.09,1};
-		};
-		class RscButton_1605: RscButtonPhone
-		{
-			idc = 1605;
-			text = "4";
-			x = 0.404255;
-			y = 0.714465;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_4.wav",0.09,1};
-		};
-		class RscButton_1606: RscButtonPhone
-		{
-			idc = 1606;
-			text = "5";
-			x = 0.472644;
-			y = 0.716588;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_5.wav",0.09,1};
-		};
-		class RscButton_1607: RscButtonPhone
-		{
-			idc = 1607;
-			text = "6";
-			x = 0.534954;
-			y = 0.716588;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_6.wav",0.09,1};
-		};
-		class RscButton_1608: RscButtonPhone
-		{
-			idc = 1608;
-			text = "7";
-			x = 0.407295;
-			y = 0.759056;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_7.wav",0.09,1};
-		};
-		class RscButton_1609: RscButtonPhone
-		{
-			idc = 1609;
-			text = "8";
-			x = 0.472644;
-			y = 0.76118;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_8.wav",0.09,1};
-		};
-		class RscButton_1610: RscButtonPhone
-		{
-			idc = 1610;
-			text = "9";
-			x = 0.531915;
-			y = 0.76118;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_9.wav",0.09,1};
-		};
-		class RscButton_1611: RscButtonPhone
-		{
-			idc = 1611;
-			text = "*";
-			x = 0.416413;
-			y = 0.801525;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_star.wav",0.09,1};
-		};
-		class RscButton_1612: RscButtonPhone
-		{
-			idc = 1612;
-			text = "0";
-			x = 0.471125;
-			y = 0.805771;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_0.wav",0.09,1};
-		};
-		class RscButton_1613: RscButtonPhone
-		{
-			idc = 1613;
-			text = "#";
-			x = 0.525836;
-			y = 0.803648;
-			w = 0.0528875;
-			h = 0.0386486;
-			soundClick[] = {"\dayz_sfx\action\cell\dtmf_hash.wav",0.09,1};
-		};
-		class RscButton_1614: RscButtonPhone
-		{
-			idc = 1614;
-			text = "Screen";
-			x = 0.416413;
-			y = 0.260054;
-			w = 0.168389;
-			h = 0.299601;
-		};
-	};
-};
-class CfgCloudlets
-{
-	class Default;
-	class BottleGlassShards: Default
-	{
-		interval = 0.001;
-		circleRadius = 0;
-		circleVelocity[] = {0,0,0};
-		particleShape = "\ca\Data\ParticleEffects\Universal\GlassShards";
-		particleFSNtieth = 1;
-		particleFSIndex = 0;
-		particleFSFrameCount = 1;
-		particleFSLoop = 0;
-		angleVar = 1;
-		animationName = "";
-		particleType = "SpaceObject";
-		timerPeriod = 3;
-		lifeTime = 2;
-		moveVelocity[] = {0,1,0};
-		rotationVelocity = 2;
-		weight = 10;
-		volume = 1;
-		rubbing = 0;
-		size[] = {"0.05"};
-		sizeCoef = 1;
-		color[] = {
-			{ 1,1,1,1 }};
-		colorCoef[] = {1,1,1,1};
-		animationSpeed[] = {1000};
-		animationSpeedCoef = 1;
-		randomDirectionPeriod = 0;
-		randomDirectionIntensity = 0;
-		onTimerScript = "";
-		beforeDestroyScript = "";
-		lifeTimeVar = 0.5;
-		position[] = {0,0,0};
-		positionVar[] = {0.02,0.02,0.02};
-		moveVelocityVar[] = {0.2,1,0.2};
-		rotationVelocityVar = 1;
-		sizeVar = 0.04;
-		colorVar[] = {0.1,0.1,0.1,0};
-		randomDirectionPeriodVar = 0;
-		randomDirectionIntensityVar = 0;
-	};
-	class BottleGlassShards2: Default
-	{
-		interval = 0.001;
-		circleRadius = 0;
-		circleVelocity[] = {0,0,0};
-		particleShape = "\ca\Data\ParticleEffects\Universal\GlassShards";
-		particleFSNtieth = 1;
-		particleFSIndex = 0;
-		particleFSFrameCount = 1;
-		particleFSLoop = 0;
-		angleVar = 1;
-		animationName = "";
-		particleType = "SpaceObject";
-		timerPeriod = 3;
-		lifeTime = 2;
-		moveVelocity[] = {0,2,0};
-		rotationVelocity = 2;
-		weight = 10;
-		volume = 1;
-		rubbing = 0;
-		size[] = {"0.05"};
-		sizeCoef = 1;
-		color[] = {
-			{ 1,1,1,1 }};
-		colorCoef[] = {1,1,1,1};
-		animationSpeed[] = {1000};
-		animationSpeedCoef = 1;
-		randomDirectionPeriod = 1;
-		randomDirectionIntensity = 1;
-		onTimerScript = "";
-		beforeDestroyScript = "";
-		lifeTimeVar = 0.5;
-		position[] = {0,0.4,0};
-		positionVar[] = {0.04,0.04,0.04};
-		moveVelocityVar[] = {0.2,3,0.2};
-		rotationVelocityVar = 0;
-		sizeVar = 0.04;
-		colorVar[] = {0.1,0.1,0.1,0};
-		randomDirectionPeriodVar = 1;
-		randomDirectionIntensityVar = 1;
-	};
-	class BottleGlassDust: Default
-	{
-		interval = 0.005;
-		circleRadius = 0;
-		circleVelocity[] = {0,0,0};
-		particleShape = "\ca\Data\ParticleEffects\Universal\Universal";
-		particleFSNtieth = 16;
-		particleFSIndex = 12;
-		particleFSFrameCount = 8;
-		particleFSLoop = 0;
-		angleVar = 1;
-		animationName = "";
-		particleType = "Billboard";
-		timerPeriod = 3;
-		lifeTime = 0.7;
-		moveVelocity[] = {0,0.7,0};
-		rotationVelocity = 2;
-		weight = 1.275;
-		volume = 1;
-		rubbing = 0;
-		size[] = {0.05,0.15};
-		sizeCoef = 1;
-		color[] = {
-			{ 0.5,0.5,0.5,0.1 },
-			{ 0.5,0.5,0.5,0 }};
-		colorCoef[] = {1,1,1,1};
-		animationSpeed[] = {1000};
-		animationSpeedCoef = 1;
-		randomDirectionPeriod = 0;
-		randomDirectionIntensity = 0;
-		onTimerScript = "";
-		beforeDestroyScript = "";
-		lifeTimeVar = 0.1;
-		position[] = {0,0.4,0};
-		positionVar[] = {0.02,0.02,0.02};
-		moveVelocityVar[] = {0.2,0.5,0.2};
-		rotationVelocityVar = 0;
-		sizeVar = 0.04;
-		colorVar[] = {0.1,0.1,0.1,0};
-		randomDirectionPeriodVar = 0;
-		randomDirectionIntensityVar = 0;
-	};
-};
-class GlassSmash
-{
-	class BottleGlassShards
-	{
-		simulation = "particles";
-		type = "BottleGlassShards";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-	class BottleGlassShards2
-	{
-		simulation = "particles";
-		type = "BottleGlassShards2";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-	class BottleGlassDust
-	{
-		simulation = "particles";
-		type = "BottleGlassDust";
-		position[] = {0,0,0};
-		intensity = 1;
-		interval = 1;
-		lifeTime = 1;
-	};
-};
-class RscPhoneDisplay
-{
-	access = 0;
-	idd = 12;
-	enableSimulation = 1;
-	enableDisplay = 1;
-	movingEnable = 0;
-	class controlsBackground{};
-	class controls
-	{
-		class RscButton_1600: RscButton
-		{
-			idc = 1600;
-			text = "1";
-			x = 0.379939;
-			y = 0.714465;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1601: RscButton
-		{
-			idc = 1601;
-			text = "4";
-			x = 0.381459;
-			y = 0.771797;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1602: RscButton
-		{
-			idc = 1602;
-			text = "7";
-			x = 0.387538;
-			y = 0.829129;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1603: RscButton
-		{
-			idc = 1603;
-			text = "*";
-			x = 0.396657;
-			y = 0.884338;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1604: RscButton
-		{
-			idc = 1604;
-			text = "3";
-			x = 0.553192;
-			y = 0.718711;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1605: RscButton
-		{
-			idc = 1605;
-			text = "6";
-			x = 0.551672;
-			y = 0.778167;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1606: RscButton
-		{
-			idc = 1606;
-			text = "9";
-			x = 0.544073;
-			y = 0.831252;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1607: RscButton
-		{
-			idc = 1607;
-			text = "#";
-			x = 0.539514;
-			y = 0.884338;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1608: RscButton
-		{
-			idc = 1608;
-			text = "0";
-			x = 0.468085;
-			y = 0.880091;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1609: RscButton
-		{
-			idc = 1609;
-			text = "8";
-			x = 0.468085;
-			y = 0.829129;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1610: RscButton
-		{
-			idc = 1610;
-			text = "5";
-			x = 0.468085;
-			y = 0.778167;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1611: RscButton
-		{
-			idc = 1611;
-			text = "2";
-			x = 0.468085;
-			y = 0.725082;
-			w = 0.0635259;
-			h = 0.0469146;
-		};
-		class RscButton_1612: RscButton
-		{
-			idc = 1612;
-			text = "send";
-			x = 0.378419;
-			y = 0.631652;
-			w = 0.0802433;
-			h = 0.0702721;
-		};
-		class RscButton_1613: RscButton
-		{
-			idc = 1613;
-			text = "end";
-			x = 0.541034;
-			y = 0.633775;
-			w = 0.0802433;
-			h = 0.0702721;
-		};
-		class RscButton_1614: RscButton
-		{
-			idc = 1614;
-			text = "Screen";
-			x = 0.392097;
-			y = 0.206969;
-			w = 0.215502;
-			h = 0.382414;
-		};
-	};
-	class objects
-	{
-		class GPS: RscObject
-		{
-			idc = 106;
-			type = 82;
-			inBack = 0;
-			enableZoom = 0;
-			moving = 0;
-			scale = 1.5;
-			position[] = {0,0,0.25};
-			direction[] = {0,1,7.2};
-			up[] = {0,0,-1};
-			zoomDuration = 1;
-			waitForLoad = 0;
-			onMouseButtonClick = "_this call usePhone;";
-			onObjectMoved = "_this call movePhone;";
-			model = "\dayz_equip\models\phone.p3d";
-			x = 0.22;
-			xBack = 0.72;
-			y = 0.925;
-			yBack = 0.5;
-			z = 0.22;
-			zBack = 0.12;
-		};
-	};
-};
-class cfgWeapons
-{
-	class Default;
-	class ItemCore;
-	class Loot: Default
-	{
-		scope = 2;
-		value = 0;
-		type = 0;
-		displayName = "Use";
-		canDrop = 0;
-		muzzles[] = {"this"};
-		magazines[] = {"FoodBioMeat","ItemZombieParts","ItemBandage","ItemHeatPack","PartWoodPile","PartFueltank","PartWheel","PartGeneric","PartEngine","PartVRotor","PartGlass","ItemWaterbottle","ItemWaterbottleUnfilled","ItemEpinephrine","ItemGoldBar","ItemSilverBar","ItemCopperBar","ItemMorphine","ItemBloodbag","ItemAntibiotic","ItemPainkiller","ItemJerrycan","ItemOilBarrel","ItemGenerator","ItemTent","ItemSandbag","ItemSandbagRound","ItemFortSandbagRound","ItemTankTrap","ItemWire","ItemWire2","ItemCamoNet","ItemSandBagNest","ItemWatchTower","ItemDeerStand","ItemHBarrier","ItemGate","ItemScaffolding","ItemLadderSmall","ItemLadderLarge","FoodSteakRaw","TrashTinCan","ItemSodaCoke","ItemSodaPepsi","ItemSodaMdew","ItemSodaMdew","FoodEdible","FoodSteakCooked","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta"};
-		modes[] = {"this"};
-		useAction = 0;
-		useActionTitle = "";
-		enableAttack = 0;
-		showToPlayer = 0;
-	};
-	class ItemToolbox: ItemCore
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_2";
-		model = "\dayz_equip\models\toolbox.p3d";
-		picture = "\dayz_equip\textures\equip_toolbox_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_2";
-		class ItemActions {
-			class RmvReddot {
-				text = "Dismantle Red Dot";
-				script = "spawn player_weapon_rmvreddot;";
-			};
-			class RmvHoloScope {
-				text = "Dismantle Holo Scope";
-				script = "spawn player_weapon_rmvholo;";
-			};
-			class RmvAcogScope {
-				text = "Dismantle Acog Scope";
-				script = "spawn player_weapon_rmvacog;";
-			};
-			class RmvScope {
-				text = "Dismantle Scope";
-				script = "spawn player_weapon_rmvscope;";
-			};
-			class RmvLauncher {
-				text = "Dismantle Launcher";
-				script = "spawn player_weapon_rmvlauncher;";
-			};
-			class RmvSupress {
-				text = "Dismantle Surpressor";
-				script = "spawn player_weapon_rmvsuppress;";
-			};
-		};
-	};
-	class ItemEtool: ItemCore
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_1";
-		model = "\dayz_equip\models\etool.p3d";
-		picture = "\dayz_equip\textures\equip_etool_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_1";
-	};
-	class ItemMatchbox: ItemCore
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_3";
-		model = "\dayz_equip\models\matchbox_gear.p3d";
-		picture = "\dayz_equip\textures\equip_matchbox_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_3";
-		class ItemActions
-		{
-			class Use
-			{
-				text = "$STR_ACTIONS_LIGHTFIRE";
-				script = "spawn player_makeFire;";
-				use[] = {"PartWoodPile"};
-			};
-		};
-	};
-	class ItemHatchet: ItemCore
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_41";
-		model = "\dayz_equip\models\hatchet.p3d";
-		picture = "\dayz_equip\textures\equip_hatchet_CA.paa";
-		descriptionShort = "$STR_EQUIP_DESC_41";
-		class ItemActions
-		{
-			class Use
-			{
-				text = "$STR_ACTIONS_CHOPWOOD";
-				script = "spawn player_chopWood;";
-			};
-			class Toolbelt
-			{
-				text = "Remove from Toolbelt";
-				script = "spawn player_addToolbelt;";
-				use[] = {"ItemHatchet"};
-				output[] = {"MeleeHatchet"};
-			};
-		};
-	};
-	class ItemKnife: ItemCore
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_4";
-		model = "\dayz_equip\models\knife_gear.p3d";
-		picture = "\dayz_equip\textures\equip_knife_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_4";
-	};
-	class ItemFlashlight: ItemCore
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_5";
-		model = "\dayz_equip\models\flashlight.p3d";
-		picture = "\dayz_equip\textures\equip_flashlight_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_5";
-		class ItemActions
-		{
-			class Toolbelt
-			{
-				text = "Remove from toolbelt";
-				script = "spawn player_addToolbelt;";
-				use[] = {"ItemFlashlight"};
-				output[] = {"MeleeFlashlight"};
-			};
-			class Use {
-				text = "Place at shoulder";
-				script = "spawn player_addflashtosh2;";
-			};
-		};
-	};
-	class ItemFlashlightReduse2: ItemFlashlight {
-		scope = 2;
-		displayName = "Flashlight (at shoulder)";
-
-		class ItemActions {
-
-			class Use {
-				text = "Remove from shoulder";
-				script = "spawn player_rmvflashfromsh2;";
-			};
-		};
-	};
-	class Pistol;
-	class MeleeFlashlight: Pistol
-	{
-		scope = 2;
-		canDrop = 0;
-		model = "\dayz_equip\models\flashlight.p3d";
-		modelOptics = "-";
-		picture = "\dayz_equip\textures\equip_flashlight_ca.paa";
-		magazines[] = {};
-		displayName = "$STR_EQUIP_NAME_5";
-		begin1[] = {};
-		begin2[] = {};
-		soundBegin[] = {"begin1",0.5,"begin2",0.5};
-		reloadMagazineSound[] = {};
-		recoil = "recoil_single_pistol_2outof3";
-		recoilProne = "recoil_single_pistol_prone_2outof3";
-		distanceZoomMin = 50;
-		distanceZoomMax = 50;
-		class Library
-		{
-			libTextDesc = "A flashlight (or torch in British English) is a hand-held portable electric-powered light source. Usually the light source is a small incandescent light bulb or light-emitting diode (LED).";
-		};
-		descriptionShort = "$STR_EQUIP_DESC_5";
-		autoFire = 0;
-		class FlashLight
-		{
-			color[] = {0.900000, 0.900000, 0.700000, 0.900000};
-			ambient[] = {0.100000, 0.100000, 0.100000, 1};
-			position = "flash dir";
-			direction = "flash";
-			angle = 30;
-			scale[] = {1, 1, 0.500000};
-			brightness = 0.100000;
-		};
-		class ItemActions
-		{
-			class Toolbelt
-			{
-				text = "Add to toolbelt";
-				script = "spawn player_addToolbelt;";
-				use[] = {"MeleeFlashlight"};
-				output[] = {"ItemFlashlight"};
-			};
-		};
-		minRange = 0;
-		minRangeProbab = 0.100000;
-		midRange = 30;
-		midRangeProbab = 0.300000;
-		maxRange = 50;
-		maxRangeProbab = 0.040000;
-	};
-	class MeleeFlashlightRed: MeleeFlashlight
-	{
-		model = "\dayz_equip\models\flashlight_mil.p3d";
-		picture = "\dayz_equip\textures\equip_flashlight_mil_ca.paa";
-		displayName = "$STR_EQUIP_NAME_6";
-		descriptionShort = "$STR_EQUIP_DESC_6";
-		class FlashLight
-		{
-			color[] = {0.900000, 0.000000, 0.000000, 0.900000};
-			ambient[] = {0.100000, 0.000000, 0.000000, 1};
-			position = "flash dir";
-			direction = "flash";
-			angle = 30;
-			scale[] = {1, 1, 0.500000};
-			brightness = 0.080000;
-		};
-		class ItemActions
-		{
-			class Toolbelt
-			{
-				text = "Add to toolbelt";
-				script = "spawn player_addToolbelt;";
-				use[] = {"MeleeFlashlightRed"};
-				output[] = {"ItemFlashlightRed"};
-			};
-		};
-	};
-	class ItemFlashlightRed: ItemCore
-	{
-		scope = 2;
-		model = "\dayz_equip\models\flashlight_mil.p3d";
-		picture = "\dayz_equip\textures\equip_flashlight_mil_ca.paa";
-		displayName = "$STR_EQUIP_NAME_6";
-		descriptionShort = "$STR_EQUIP_DESC_6";
-		class ItemActions
-		{
-			class Toolbelt
-			{
-				text = "Remove from toolbelt";
-				script = "spawn player_addToolbelt;";
-				use[] = {"ItemFlashlightRed"};
-				output[] = {"MeleeFlashlightRed"};
-			};
-			class Use {
-				text = "Place at shoulder";
-				script = "spawn player_addflashtosh;";
-			};
-
-			class Use2 {
-				text = "Place at shoulder (red filter)";
-				script = "spawn player_addflashtoshr;";
-			};
-		};
-	};
-	class ItemFlashlightReduse: ItemFlashlightRed {
-		scope = 2;
-		displayName = "Army flashlight (at shoulder)";
-
-		class ItemActions {
-
-			class Use {
-				text = "Remove from shoulder";
-				script = "spawn player_rmvflashfromsh;";
-			};
-		};
-	};
-};
 class CfgMagazines
 {
 	class CA_Magazine;
@@ -1456,6 +595,14 @@ class CfgMagazines
 		descriptionShort = "$STR_EQUIP_DESC_10";
 
 		class ItemActions {
+			class Crafting {
+				text = "Metal Pole";
+				script = "spawn player_craftItem;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};  
+				input[] = {{"PartGeneric",4}};
+				output[] = {{"ItemPole",1}};
+			};
 			class Crafting1 {
 				text = "Sandbag Nest";
 				script = "spawn player_craftItem1;";
@@ -1555,7 +702,7 @@ class CfgMagazines
 				neednearby[] = {};
 				requiretools[] = {"ItemToolbox","ItemCrowbar"};
 				output[] = {{"storage_shed_kit",1}};
-				input[] = {{"ItemCorrugated",5},{"PartWoodPile",5}};
+				input[] = {{"ItemCorrugated",4},{"PartWoodPile",3}};
 			};
 		};
 	};
@@ -1576,7 +723,7 @@ class CfgMagazines
 				neednearby[] = {"fire"};
 				requiretools[] = {"ItemToolbox","ItemCrowbar"};
 				output[] = {{"ItemCorrugated",1}};
-				input[] = {{"ItemPole",2},{"PartGeneric",4},{"PartWoodPile",2}};
+				input[] = {{"ItemPole",1},{"PartGeneric",4},{"PartWoodPile",2}};
 			};
 			class Crafting1
 			{
@@ -1585,7 +732,16 @@ class CfgMagazines
 				neednearby[] = {};
 				requiretools[] = {"ItemToolbox","ItemCrowbar"};
 				output[] = {{"rusty_gate_kit",1}};
-				input[] = {{"ItemPole",6},{"PartGeneric",3},{"ItemTankTrap",1}};
+				input[] = {{"ItemPole",2},{"PartGeneric",3},{"ItemTankTrap",1}};
+			};
+			class Crafting2
+			{
+				text = "30m Plot";
+				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};
+				output[] = {{"30m_plot_kit",1}};
+				input[] = {{"ItemPole",1},{"ItemGoldBar10oz",1}};
 			};
 		};
 	};
@@ -1830,6 +986,15 @@ class CfgMagazines
 				requiretools[] = {"ItemToolbox"}; 
 				output[] = {{"ItemGoldBar",10}};
 				input[] = {{"ItemGoldBar10oz",1}};
+			};
+			class Crafting1
+			{
+				text = "30m Plot";
+				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"};
+				output[] = {{"30m_plot_kit",1}};
+				input[] = {{"ItemPole",1},{"ItemGoldBar10oz",1}};
 			};
 		};
 	};
@@ -2318,6 +1483,14 @@ class CfgMagazines
 				requiretools[] = {"ItemEtool","ItemToolbox"};
 				create = "Plastic_Pole_EP1_DZ";
 			};
+			class Crafting1 {
+				text = "Deconstruct";
+				script = "spawn player_craftItem1;";
+				neednearby[] = {};
+				requiretools[] = {"ItemToolbox"}; 
+				input[] = {{"30m_plot_kit",1}};
+				output[] = {{"ItemPole",1},{"ItemGoldBar10oz",1}};
+			};
 		};
 	};
 	class wooden_shed_kit: CA_Magazine
@@ -2506,7 +1679,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = "(256 * 12)";
+		type = "(256 * 6)";
 		displayName = "Safe";
 		model = "\dayz_equip\models\safe1_onside.p3d";
 		picture = "\dayz_equip\textures\equip_safe_ca.paa";
@@ -2524,7 +1697,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = "(256 * 3)";
+		type = "(256 * 2)";
 		displayName = "$STR_EQUIP_NAME_20";
 		model = "\dayz_equip\models\tentbag_gear.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_ca.paa";
@@ -2589,7 +1762,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "Sandbag3_DZ";
 			};
@@ -2682,7 +1855,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "Wire2";
 			};
@@ -2702,7 +1875,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 4);
+		type = (256 * 3);
 		displayName = "$STR_EQUIP_NAME_119";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2711,7 +1884,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "CamoNet";
 			};
@@ -2740,11 +1913,10 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "SandBagNest";
 			};
-
 			class Crafting1 {
 				text = "Deconstruct";
 				script = "spawn player_craftItem1;";
@@ -2753,6 +1925,15 @@ class CfgMagazines
 				input[] = {{"ItemSandBagNest",1}};
 				output[] = {{"ItemSandbag",2},{"PartWoodPile",3},{"PartGeneric",1}};
 			};
+			class Crafting2 {
+				text = "Craft M240 Nest";
+				script = "spawn player_craftItem2;";
+				neednearby[] = {};
+				requiretools[] = {"ItemEtool","ItemToolbox","M240_DZ"};
+				output[] = {{"m240_nest_kit",1}};
+				input[] = {{"ItemSandBagNest",1}};
+				consumeweapons[] = {"M240_DZ"};
+			}; 
 		};
 	};
 	
@@ -2769,7 +1950,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "WatchTower";
 			};
@@ -2797,7 +1978,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "DeerStand";
 			};
@@ -2816,7 +1997,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 4);
+		type = (256 * 3);
 		displayName = "$STR_EQUIP_NAME_122";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2825,7 +2006,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "HBarrier";
 			};
@@ -2843,7 +2024,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 4);
+		type = (256 * 3);
 		displayName = "Gate";
 		model = "\dayz_equip\models\Fence_wire_kit.p3d";
 		picture = "\dayz_equip\textures\equip_gate.paa";
@@ -2852,7 +2033,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "Gate1_DZ";
 			};
@@ -2880,7 +2061,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "Scaffolding";
 			};
@@ -2899,7 +2080,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 4);
+		type = (256 * 3);
 		displayName = "Small Ladder";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2927,7 +2108,7 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		type = (256 * 8);
+		type = (256 * 6);
 		displayName = "Large Ladder";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
 		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
@@ -2936,7 +2117,7 @@ class CfgMagazines
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build2;";
+				script = "spawn player_build;";
 				require = "ItemToolbox";
 				create = "LadderLarge";
 			};
@@ -3025,981 +2206,3 @@ class CfgMagazines
 		descriptionShort = "$STR_EQUIP_DESC_29";
 	};
 };
-class CfgVehicles
-{
-	class NonStrategic;
-	class BuiltItems: NonStrategic{};
-	class TrapItems: NonStrategic{};
-
-	class HouseBase;				// External class reference
-	
-	class Constuctables : HouseBase {
-		class DestructionEffects;	// External class reference
-	};
-
-	class CamoNet: Constuctables
-	{
-		model = "\Ca\misc3\CamoNetB_EAST";
-		displayName = "Camo Net";
-		destrType = "DestructTent";
-		icon = "\Ca\misc3\data\Icons\icon_camoNetBig_ca.paa";
-		mapSize = 18;
-		scope = 2;
-		armor = 3;
-		vehicleClass = "Military";
-		inventoryItem = "ItemCamoNet";
-	};
-	class DeerStand : Constuctables
-	{
-		scope = 2;
-		vehicleClass = "Misc";
-		armor = 500;
-		model = "\Ca\Structures\Misc\Misc_DeerStand\misc_deerstand";
-		displayName = "Deer Stand";
-		ladders[] = {{"start1", "end1"}};
-		icon = "\Ca\Structures\Misc\Misc_DeerStand\data\icon\icon_deerstand_ca.paa";
-		mapSize = 3;
-		inventoryItem = "ItemDeerStand";
-	};
-	class WatchTower : Constuctables
-	{
-		model = "\Ca\misc3\fort_watchtower";
-		displayName = "Watch Tower";
-		icon = "\Ca\misc3\data\Icons\icon_fortWatchTower_ca.paa";
-		scope = 2;
-		armor = 150;
-		vehicleClass = "Fortifications";
-		ladders[] = {{"start1", "end1"}};
-		inventoryItem = "ItemWatchTower";
-	};
-	class SandBagNest : Constuctables
-	{
-		model = "\Ca\misc3\fortified_nest_small";
-		displayName = "Sand Bag Nest";
-		icon = "\Ca\misc3\data\Icons\icon_fortNestSmall_ca.paa";
-		mapSize = 5;
-		scope = 2;
-		armor = 500;
-		irTarget = false;
-		vehicleClass = "Fortifications";
-		GhostPreview = "Land_fortified_nest_smallPreview";
-		inventoryItem = "ItemSandBagNest";
-	};
-	class Wire2 : Constuctables
-	{
-		scope = 2;
-		animated = false;
-		vehicleClass = "Fortifications";
-		model = "\ca\misc\Fort_Razorwire";
-		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa";
-		offset[] = {0,1.5,0.5}; 
-		accuracy = 0.3;	// accuracy needed to recognize type of this target
-		mapSize = 5.5;
-		displayName = "Wire (CAT2)";
-		destrType = "DestructTent";
-		armor = 100;
-		GhostPreview = "Fort_RazorWirePreview";
-		inventoryItem = "ItemWire2";
-	};
-	class HBarrier : Constuctables
-	{
-		scope = 2;
-		animated = false;
-		vehicleClass = "Fortifications";
-		typicalCargo[] = {};
-		irTarget = false;
-		mapSize = 7;
-		model = "\ca\misc2\HBarrier5.p3d";
-		icon = "\Ca\misc2\data\Icons\icon_hescoBarrier5_ca.paa";
-		displayName = "Hesco Barrier";
-		accuracy = 0.3;	// accuracy needed to recognize type of this target
-		transportAmmo = 0;
-		transportRepair = 0;
-		transportFuel = 0;
-		destrType = "DestructBuilding";
-		armor = 500;
-		coefInside = 0.5;
-		coefInsideHeur = 0.8;
-		cost = 0;
-		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
-		GhostPreview = "Land_HBarrier5Preview";
-		inventoryItem = "ItemHBarrier";
-	};
-	class Scaffolding : Constuctables
-	{
-		model = "\Ca\Structures\Misc\Misc_Scaffolding\Misc_Scaffolding";
-		displayName = "Scaffolding";
-		icon = "\Ca\Structures\Data\Icons\icon_scaffolding_ca.paa";
-		mapSize = 16;
-		scope = 2;
-		armor = 500;
-		vehicleClass = "Misc";
-		inventoryItem = "ItemScaffolding";
-	};
-	class Wire_cat1: BuiltItems
-	{
-		scope = 2;
-		animated = 0;
-		vehicleClass = "Fortifications";
-		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa";
-		accuracy = 0.3;
-		mapSize = 5.5;
-		displayName = "Wire (CAT1)";
-		model = "\dayz_equip\models\wire_cat1.p3d";
-		destrType = "DestructTent";
-		armor = 100;
-		GhostPreview = "Fort_RazorWirePreview";
-	};
-	class Wire_cat2: Wire_cat1
-	{
-		displayName = "Wire (CAT2)";
-		model = "\dayz_equip\models\wire_cat2.p3d";
-	};
-	class Hedgehog_DZ: BuiltItems
-	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		offset[] = {0,1.5,0.5};
-		model = "\ca\misc\jezek_kov";
-		icon = "\ca\data\data\Unknown_object.paa";
-		mapSize = 2;
-		armor = 400;
-		displayName = "Hedgehog (Steel)";
-		vehicleClass = "Fortifications";
-		constructioncount = 5;
-		removeoutput[] = {{"ItemTankTrap",1}};
-	};
-	class Generator_DZ: BuiltItems
-	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		offset[] = {0,1.5,0};
-		model = "\dayz_equip\models\generator.p3d";
-		icon = "\ca\data\data\Unknown_object.paa";
-		mapSize = 2;
-		armor = 400;
-		displayName = "Generator";
-		vehicleClass = "Fortifications";
-		constructioncount = 5;
-		removeoutput[] = {{"ItemGenerator",1}}; 
-	};
-	class Fort_RazorWire : BuiltItems { 
-	  scope = 2; 
-	  animated = 0; 
-	  vehicleClass = "Fortifications"; 
-	  model = "\ca\misc\Fort_Razorwire"; 
-	  icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa"; 
-	  offset[] = {0,1.5,0.5}; 
-	  accuracy = 0.3; 
-	  mapSize = 5.5; 
-	  displayName = "Wire"; 
-	  destrType = "DestructTent"; 
-	  armor = 100; 
-	  GhostPreview = "Fort_RazorWirePreview"; 
-	}
-	class Sandbag1_DZ: BuiltItems
-	{
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		model = "\ca\misc2\BagFenceLong.p3d";
-		icon = "\Ca\misc3\data\Icons\icon_fortBagFenceLong_ca.paa";
-		offset[] = {0,1.5,0.5}; 
-		mapSize = 2;
-		armor = 400;
-		displayName = "Bag Fence";
-		vehicleClass = "Fortifications";
-		constructioncount = 5;
-		removeoutput[] = {{"ItemSandbag",1}};
-	};
-	class Sandbag2_DZ : BuiltItems {
-		scope = 2;
-		destrType = "DestructNo";
-		cost = 100;
-		model = "\ca\misc2\BagFenceRound.p3d";
-		icon = "\Ca\misc3\data\Icons\icon_bagFenceRound_ca.paa";
-		offset[] = {0,1.5,0.5}; 
-		mapSize = 2;
-		armor = 400;
-		displayName = "Round Bag Fence";
-		GhostPreview = "Sandbag2Preview"; 
-		constructioncount = 5;
-		vehicleClass = "Fortifications";
-		removeoutput[] = {{"ItemSandbagRound",1}};
-	};
-	class Sandbag3_DZ : BuiltItems {
-		model = "\Ca\misc3\fort_bagfence_round";
-		displayName = "Fortified Round Bag Fence";
-		icon = "\Ca\misc3\data\Icons\icon_fortBagFenceRound_ca.paa";
-		mapSize = 3.2;
-		scope = 2;
-		armor = 150;
-		vehicleClass = "Fortifications";
-		inventoryItem = "ItemFortSandbagRound";
-	};
-	class LadderSmall : BuiltItems {
-		scope = 2;
-		displayName = "Small Ladder";
-		model = "\ca\misc\ladder_half.p3d";
-		mapSize = 0.6;
-		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
-		armor = 50;
-		ladders[] = {{"start", "end"}};
-		vehicleClass = "Misc";
-		inventoryItem = "ItemLadderSmall";
-	};
-	class LadderLarge : BuiltItems {
-		scope = 2;
-		displayName = "Large Ladder";
-		model = "\ca\misc\ladder.p3d";
-		mapSize = 0.6;
-		icon = "\Ca\misc\data\icons\i_ladder_CA.paa";
-		armor = 50;
-		ladders[] = {{"start", "end"}};
-		vehicleClass = "Misc";
-		inventoryItem = "ItemLadderLarge";
-	};
-	class Gate1_DZ : BuiltItems {
-		scope = 2;
-		animated = true;
-		typicalCargo[] = {};
-		irTarget = false;
-		accuracy = 0.3;	// accuracy needed to recognize type of this target
-		transportAmmo = 0;
-		transportRepair = 0;
-		transportFuel = 0;
-		armor = 500;
-		coefInside = 0.5;
-		coefInsideHeur = 0.8;
-		cost = 0;
-		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
-		GhostPreview = "Land_HBarrier_largePreview";
-		model = "\ca\misc2\BarbGate.p3d";
-		icon = "\Ca\misc2\data\Icons\icon_barGate2_ca.paa";
-		mapSize = 3;
-		displayName = "Gate";
-		destrType = "DestructTree";
-		vehicleClass = "Military";
-		inventoryItem = "ItemGate";
-
-		class AnimationSources {
-			class Door01 {
-				source = "User"; 
-				animPeriod = 1;
-				initPhase = 0;
-			};
-		};
-		
-		class UserActions {
-			class OpenDoors1 {
-				displayNameDefault = "Open Gate";
-				displayName = "Open Gate";
-				position = "Door01_axis";
-				radius = 4;
-				onlyForPlayer = 1;
-				condition = "this animationPhase ""Door01"" < 0.5";
-				statement = "this animate [""Door01"", 1]";
-			};
-			
-			class CloseDoors1 {
-				displayNameDefault = "Close Gate";
-				displayName = "Close Gate";
-				position = "Door01_axis";
-				radius = 4;
-				onlyForPlayer = 1;
-				condition = "this animationPhase ""Door01"" >= 0.5";
-				statement = "this animate [""Door01"", 0]";
-			};
-		};
-		actionBegin1 = "OpenDoors1";
-		actionEnd1 = "OpenDoors1";
-	};
-	class Land_HBarrier1_DZ : BuiltItems { 
-		scope = 2; 
-		animated = 0; 
-		vehicleClass = "Fortifications"; 
-		typicalCargo[] = {};
-		offset[] = {0,1.5,0.5};
-		irTarget = 0; 
-		accuracy = 0.3; 
-		transportAmmo = 0; 
-		transportRepair = 0; 
-		transportFuel = 0; 
-		destrType = "DestructBuilding"; 
-		armor = 500; 
-		coefInside = 0.5; 
-		coefInsideHeur = 0.8; 
-		cost = 0; 
-		picture = "\CA\ui\data\icon_wf_barriers_ca.paa"; 
-		model = "\ca\misc2\HBarrier1.p3d"; 
-		icon = "\Ca\misc2\data\Icons\icon_hescoBarrier1_ca.paa"; 
-		mapSize = 2; 
-		displayName = "H-barrier cube"; 
-		GhostPreview = "Land_HBarrier1Preview"; 
-		constructioncount = 10;
-		removeoutput[] = {{"ItemSandbagLarge",1}};
-	};
-
-	// PLAYER BUILDINGS
-	class Plastic_Pole_EP1;
-	class Plastic_Pole_EP1_DZ: Plastic_Pole_EP1
-	{
-		scope = 2;
-		// destrType = "DestructNo"; 
-		offset[] = {0,2.5,0};
-		displayName = "30m Plot Pole";
-		vehicleClass = "Fortifications";
-	};
-
-
-
-	class USMC_WarfareBMGNest_M240;
-	class M240Nest_DZ: USMC_WarfareBMGNest_M240
-	{
-		scope = 2;
-		offset[] = {0,3.5,0};
-		displayName = "M240 Nest";
-		vehicleClass = "Fortifications";
-		transportMaxMagazines = 25;
-		transportMaxWeapons = 4;
-		transportMaxBackpacks = 1;
-		constructioncount = 10;
-		removeoutput[] = {{"m240_nest_kit",1}};
-		
-	};
-	class Land_covering_hut_EP1;
-	class CanvasHut_DZ: Land_covering_hut_EP1
-	{
-		scope = 2;
-		offset[] = {0,2.5,1};
-		displayName = "Canvas Hut";
-		vehicleClass = "Fortifications";
-	};
-	class Park_bench1;
-	class ParkBench_DZ: Park_bench1
-	{
-		scope = 2;
-		offset[] = {0,1.5,0.5};
-		displayName = "Wood Bench";
-		vehicleClass = "Fortifications";
-	};
-	class Land_Wall_Gate_Ind1_L;
-	class MetalGate_DZ: Land_Wall_Gate_Ind1_L
-	{
-		scope = 2;
-		offset[] = {0,2.5,1};
-		displayName = "Rusty Gate";
-		vehicleClass = "Fortifications";
-		removeoutput[] = {{"rusty_gate_kit",1}};
-	};
-	class Land_KBud;
-	class OutHouse_DZ: Land_KBud
-	{
-		scope = 2;
-		offset[] = {0,2.5,1};
-		displayName = "Outhouse";
-		vehicleClass = "Fortifications";
-		transportMaxMagazines = 4;
-		transportMaxWeapons = 1;
-		transportMaxBackpacks = 1;
-		constructioncount = 5;
-		class transportmagazines
-		{
-			class _xx_ItemTrashToiletpaper
-			{
-				magazine = "ItemTrashToiletpaper";
-				count = 1;
-			};
-		};
-	};
-	class Land_Shed_M01;
-	class StorageShed_DZ: Land_Shed_M01
-	{
-		scope = 2;
-		offset[] = {0,2.5,1};
-		displayName = "Storage Shed";
-		vehicleClass = "Fortifications";
-		transportMaxMagazines = 400;
-		transportMaxWeapons = 40;
-		transportMaxBackpacks = 20;
-		constructioncount = 10;
-	};
-	class Fence_corrugated_plate;
-	class Fence_corrugated_DZ: Fence_corrugated_plate
-	{
-		scope = 2;
-		offset[] = {0,2.5,1};
-		removeoutput[] = {{"ItemCorrugated",1}};
-		displayName = "Corrugated Fence";
-		vehicleClass = "Fortifications";
-		
-	};
-	class Land_kulna;
-	class WoodShack_DZ: Land_kulna
-	{
-		scope = 2;
-		//destrType = "DestructBuilding"; 
-		//cost = 100;
-		offset[] = {0,2.5,1.3};
-		//armor = 200;
-		displayName = "Wooden Shack";
-		vehicleClass = "Fortifications";
-		transportMaxMagazines = 100;
-		transportMaxWeapons = 10;
-		transportMaxBackpacks = 5;
-		constructioncount = 10;
-	};
-	class Land_Shed_wooden;
-	class Wooden_shed_DZ: Land_Shed_wooden
-	{
-		scope = 2;
-		//destrType = "DestructBuilding"; 
-		//cost = 100;
-		offset[] = {0,2.5,1};
-		//armor = 100;
-		displayName = "Wooden Shed";
-		vehicleClass = "Fortifications";
-		transportMaxMagazines = 200;
-		transportMaxWeapons = 20;
-		transportMaxBackpacks = 10;
-	};
-	class WoodGate_DZ: BuiltItems
-	{
-		scope = 2;
-		destrType = "DestructTree"; 
-		//cost = 100;
-		offset[] = {0,1.5,0.5};
-		model = "\ca\structures\Wall\Gate_wood2_5";
-		icon = "\ca\data\data\Unknown_object.paa";
-		mapSize = 2;
-		// armor = 100;
-		displayName = "Wood Panel";
-		vehicleClass = "Fortifications";
-		
-		class AnimationSources
-		{
-			class DoorR { 
-			  source = "User"; 
-			  animPeriod = 1; 
-			  initPhase = 0; 
-			}
-		}
-	};
-	class BearTrap_DZ: TrapItems
-	{
-		scope = 2;
-		destrType = "DestructNo";
-		displayName = "Bear Trap";
-		model = "\dayz_equip\models\bear_trap.p3d";
-		class Eventhandlers
-		{
-			init = "_this execFSM '\z\addons\dayz_code\system\trap_monitor.fsm';";
-		};
-		class AnimationSources
-		{
-			class LeftShutter
-			{
-				source = "user";
-				animPeriod = 0.1;
-				initPhase = 1;
-			};
-			class RightShutter
-			{
-				source = "user";
-				animPeriod = 0.1;
-				initPhase = 1;
-			};
-		};
-		class UserActions
-		{
-			class OpenTrap
-			{
-				position = "";
-				displayName = "Reset Trap";
-				radius = 1.5;
-				onlyForPlayer = 0;
-				condition = "this animationPhase 'LeftShutter' == 1";
-				statement = "this animate ['LeftShutter', 0];this animate ['RightShutter', 0];";
-			};
-			class CloseTrap
-			{
-				position = "";
-				displayName = "Activate Trap";
-				radius = 1.5;
-				onlyForPlayer = 0;
-				condition = "this animationPhase 'LeftShutter' == 0";
-				statement = "this animate ['LeftShutter', 1];this animate ['RightShutter', 1];";
-			};
-			class CollectTrap
-			{
-				position = "";
-				displayName = "Take Trap";
-				radius = 1.5;
-				onlyForPlayer = 0;
-				condition = "this animationPhase 'LeftShutter' == 1";
-				statement = "[0,0,0,['cfgMagazines','TrapBear',this]] call object_pickup;";
-			};
-		};
-	};
-	class ReammoBox;
-	class WeaponHolderBase: ReammoBox
-	{
-		scope = 0;
-		accuracy = 1000;
-		vehicleClass = "Survival";
-		displayName = "Weapon";
-		memoryPointSupply = "collect";
-		supplyRadius = 3;
-		transportMaxWeapons = 0;
-		transportMaxMagazines = 0;
-		transportMaxBackpacks = 0;
-		transportAmmo = 0;
-		transportRepair = 0;
-		transportFuel = 0;
-	};
-	class WeaponHolder_Colt1911: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_WPN_HOLDR_1";
-		model = "\dayz_equip\proxy\Colt1911.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','Colt1911'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemHatchet: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_41";
-		model = "\dayz_equip\models\hatchet.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','ItemHatchet'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemMachete: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "Machete";
-		model="\z\addons\dayz_communityassets\models\machete.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','ItemMachete'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_MeleeCrowbar: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "Crowbar";
-		model = "\dayz_equip\models\crowbar.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','MeleeCrowbar'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_huntingrifle: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_WPN_HOLDR_2";
-		model = "\dayz_equip\proxy\huntingrifle.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','huntingrifle'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_M4A1: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_WPN_HOLDR_3";
-		model = "\dayz_equip\proxy\M4A1.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','M4A1'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemTent: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_20";
-		model = "\dayz_equip\proxy\tentbag.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemTent'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemVault: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "Safe";
-		model = "\dayz_equip\models\safe1.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemVault'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemFlashlight: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_5";
-		model = "\dayz_equip\proxy\flashlight.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','ItemFlashlight'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemFlashlightRed: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_6";
-		model = "\dayz_equip\proxy\flashlight_mil.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','ItemFlashlightRed'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemWaterbottle: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_12";
-		model = "\dayz_equip\proxy\waterbottle.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemWaterbottleUnfilled'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemGenerator: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_31";
-		model = "\dayz_equip\models\generator.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemGenerator'] execVM '\z\addons\dayz_code\init\object_generator.sqf';";
-		};
-	};
-	class WeaponHolder_ItemToolbox: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_2";
-		model = "\dayz_equip\proxy\toolbox.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgWeapons','ItemToolbox'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_PartFueltank: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_8";
-		model = "\dayz_equip\proxy\fueltank.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','PartFueltank'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_PartWheel: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_9";
-		model = "\dayz_equip\proxy\wheel.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','PartWheel'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_PartGeneric: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_10";
-		model = "\dayz_equip\proxy\genericparts.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','PartGeneric'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_PartVRotor: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_32";
-		model = "\dayz_equip\proxy\vrotor.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','PartVRotor'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_PartEngine: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_11";
-		model = "\dayz_equip\proxy\engine.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','PartEngine'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_PartGlass: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_30";
-		model = "\dayz_equip\proxy\carglass.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','PartGlass'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemOilBarrel: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "Oil Barrel";
-		model = "\dayz_equip\proxy\oil_drum_model.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemOilBarrel'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemFuelBarrel: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "Fuel Barrel";
-		model = "\dayz_equip\proxy\oil_drum_model.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemFuelBarrel'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemJerrycanEmpty: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_39";
-		model = "\dayz_equip\proxy\jerrycan.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemJerrycanEmpty'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemJerrycan: WeaponHolderBase
-	{
-		scope = 2;
-		displayName = "$STR_EQUIP_NAME_19";
-		model = "\dayz_equip\proxy\jerrycan.p3d";
-		class eventHandlers
-		{
-			init = "[(_this select 0),'cfgMagazines','ItemJerrycan'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
-		};
-	};
-	class WeaponHolder_ItemJerrycanSide: WeaponHolder_ItemJerrycan
-	{
-		model = "\dayz_equip\proxy\jerrycan_side.p3d";
-	};
-	class Land_A_tent;
-	class ACamp;
-	class TentStorage: Land_A_tent
-	{
-		vehicleClass = "Survival";
-		transportMaxMagazines = 50;
-		transportMaxWeapons = 10;
-		transportMaxBackpacks = 5;
-	};
-	class VaultStorage: Land_A_tent
-	{
-		vehicleClass = "Survival";
-		displayName = "Safe";
-		model = "\dayz_equip\models\safe1.p3d";
-		destrType = "DestructNo";
-		armor = 800;
-		transportMaxMagazines = 200;
-		transportMaxWeapons = 20;
-		transportMaxBackpacks = 10;
-	};	
-	class VaultStorageLocked: Land_A_tent
-	{
-		vehicleClass = "Survival";
-		displayName = "Locked Safe";
-		model = "\dayz_equip\models\safe1.p3d";
-		destrType = "DestructNo";
-		armor = 800;
-		transportMaxMagazines = 0;
-		transportMaxWeapons = 0;
-		transportMaxBackpacks = 0;
-	};
-	
-	class CardboardBox: ReammoBox
-	{
-		accuracy = 1000;
-		vehicleClass = "Survival";
-	};
-	class FoodBox0: CardboardBox
-	{
-		scope = 2;
-		displayName = "$STR_DAYZ_OBJ_1";
-		model = "\dayz_equip\models\cardboard_box.p3d";
-		class TransportWeapons
-		{
-			class _xx_ItemMatchbox
-			{
-				weapon = "ItemMatchbox";
-				count = 3;
-			};
-			class _xx_ItemFlashlight
-			{
-				weapon = "ItemFlashlight";
-				count = 3;
-			};
-			class _xx_ItemKnife
-			{
-				weapon = "ItemKnife";
-				count = 3;
-			};
-		};
-		class transportmagazines
-		{
-			class _xx_FoodCanBakedBeans
-			{
-				magazine = "FoodCanBakedBeans";
-				count = 6;
-			};
-			class _xx_FoodCanSardines
-			{
-				magazine = "FoodCanSardines";
-				count = 6;
-			};
-			class _xx_FoodCanFrankBeans
-			{
-				magazine = "FoodCanFrankBeans";
-				count = 6;
-			};
-			class _xx_FoodCanPasta
-			{
-				magazine = "FoodCanPasta";
-				count = 6;
-			};
-		};
-	};
-	class FoodBox1: FoodBox0{};
-	class FoodBox2: FoodBox0{};
-	class MedBox0: CardboardBox
-	{
-		scope = 2;
-		displayName = "$STR_DAYZ_OBJ_2";
-		model = "\dayz_equip\models\cardboard_box_med.p3d";
-		class transportmagazines
-		{
-			class _xx_ItemBandage
-			{
-				magazine = "ItemBandage";
-				count = 10;
-			};
-			class _xx_ItemEpinephrine
-			{
-				magazine = "ItemEpinephrine";
-				count = 5;
-			};
-			class _xx_ItemMorphine
-			{
-				magazine = "ItemMorphine";
-				count = 5;
-			};
-			class _xx_ItemBloodbag
-			{
-				magazine = "ItemBloodbag";
-				count = 5;
-			};
-			class _xx_ItemPainkiller
-			{
-				magazine = "ItemPainkiller";
-				count = 5;
-			};
-		};
-	};
-	class AmmoBoxSmall: ReammoBox
-	{
-		scope = 2;
-		vehicleClass = "Survival";
-		displayName = "Ammo Small";
-		model = "\ca\weapons\AmmoBoxes\Proxy_UsBasicAmmoBoxSmall.p3d";
-	};
-	class Land_Fire;
-	class Land_Fire_DZ: Land_Fire
-	{
-		transportMaxMagazines = 8;
-		transportMaxWeapons = 1;
-		transportMaxBackpacks = 1;
-		class TransportMagazines
-		{
-			class _xx_PartWoodPile
-			{
-				magazine = "PartWoodPile";
-				count = "1";
-			};
-		};
-		class Eventhandlers
-		{
-			init = "_this call eh_localCleanup;";
-		};
-	};
-	class AmmoBoxMedium: ReammoBox
-	{
-		scope = 2;
-		vehicleClass = "Survival";
-		displayName = "Ammo Medium";
-		model = "\ca\weapons\AmmoBoxes\Proxy_UsBasicAmmoBoxBig.p3d";
-	};
-	class AmmoBoxBig: ReammoBox
-	{
-		scope = 2;
-		vehicleClass = "Survival";
-		displayName = "Ammo Medium";
-		model = "\ca\weapons\AmmoBoxes\Proxy_UsBasicAmmoBox.p3d";
-	};
-	class AmmoBoxSmall_556: AmmoBoxSmall
-	{
-		displayName = "Ammo 5.56";
-		class transportmagazines
-		{
-			class _xx_30Rnd_556x45_Stanag
-			{
-				magazine = "30Rnd_556x45_Stanag";
-				count = 20;
-			};
-			class _xx_30Rnd_556x45_StanagSD
-			{
-				magazine = "30Rnd_556x45_StanagSD";
-				count = 10;
-			};
-		};
-	};
-	class AmmoBoxSmall_762: AmmoBoxSmall
-	{
-		displayName = "Ammo 7.62";
-		class transportmagazines
-		{
-			class _xx_20Rnd_762x51_DMR
-			{
-				magazine = "20Rnd_762x51_DMR";
-				count = 10;
-			};
-			class _xx_5Rnd_762x51_M24
-			{
-				magazine = "5Rnd_762x51_M24";
-				count = 10;
-			};
-			class _xx_10Rnd_762x54_SVD
-			{
-				magazine = "10Rnd_762x54_SVD";
-				count = 10;
-			};
-		};
-	};
-};
-class CfgSounds
-{
-	class trap_bear_0
-	{
-		name = "";
-		sound[] = {"\dayz_equip\sound\trap_bear_0",1,1,60};
-		titles[] = {};
-	};
-};
-//};

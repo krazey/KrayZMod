@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.1.0.8";
+		version = "2.1.0.9";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld

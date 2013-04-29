@@ -347,7 +347,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_lockvault = -1;
 	};
 
-	//Allow owner to de-construct buildings
+	//Allow owner to de-construct buildings (hbarrier only)
 
     //Player Deaths
 	if(cursorTarget isKindOf "Info_Board_EP1" and _canDo) then {
@@ -623,7 +623,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	player removeAction s_player_followdog;
 	s_player_followdog = -1;
     
-    	// vault
+    // vault
 	player removeAction s_player_unlockvault;
 	s_player_unlockvault = -1;
 	player removeAction s_player_packvault;
