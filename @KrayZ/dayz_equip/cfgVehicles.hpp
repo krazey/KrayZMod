@@ -72,16 +72,41 @@ class CfgVehicles
 		irTarget = false;
 		removeoutput[] = {{"ItemSandBagNest",1}};
 	};
+	class HBarrier_Cube : Constuctables
+	{ 
+		scope = 2;
+		destrType = "DestructBuilding";
+		animated = 0;
+		cost = 0;
+		vehicleClass = "Fortifications";
+		offset[] = {0,1.5,0.5};
+		typicalCargo[] = {};
+		irTarget = 0;
+		model = "\ca\misc2\HBarrier1.p3d";
+		icon = "\Ca\misc2\data\Icons\icon_hescoBarrier1_ca.paa";
+		mapSize = 2;
+		armor = 500;
+		displayName = "Hesco Barrier cube";
+		constructioncount = 2;
+		accuracy = 0.3; // accuracy needed to recognize type of this target
+		transportAmmo = 0;
+		transportRepair = 0;
+		transportFuel = 0;
+		coefInside = 0.5;
+		coefInsideHeur = 0.8;
+		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
+		removeoutput[] = {{"ItemHBarrierCube",1}};
+	};
 	class HBarrier : Constuctables
 	{
 		scope = 2;
 		destrType = "DestructBuilding";
-		animated = false;
+		animated = 0;
 		cost = 0;
 		vehicleClass = "Fortifications";
 		offset[] = {0,3,0.5};
 		typicalCargo[] = {};
-		irTarget = false;
+		irTarget = 0;
 		model = "\ca\misc2\HBarrier5.p3d";
 		icon = "\Ca\misc2\data\Icons\icon_hescoBarrier5_ca.paa";
 		mapSize = 7;
@@ -112,23 +137,7 @@ class CfgVehicles
 		constructioncount = 10;
 		removeoutput[] = {{"ItemScaffolding",1}};
 	};
-	class Fort_RazorWire : BuiltItems
-	{ 
-		scope = 2; 
-		animated = 0; 
-		vehicleClass = "Fortifications"; 
-		model = "\dayz_equip\models\wire_cat1.p3d"; 
-		icon = "\Ca\misc\data\icons\I_drutkolczasty_CA.paa"; 
-		offset[] = {0,1.5,0.5}; 
-		accuracy = 0.3; 
-		mapSize = 5.5; 
-		displayName = "Wire"; 
-		destrType = "DestructTent"; 
-		armor = 100; 
-		constructioncount = 1;
-		removeoutput[] = {{"ItemWire",1}};
-	}
-	/*class Wire_cat1: BuiltItems
+	class Wire_cat1: BuiltItems
 	{
 		scope = 2;
 		destrType = "DestructTent";
@@ -145,13 +154,7 @@ class CfgVehicles
 		constructioncount = 2;
 		removeoutput[] = {{"ItemWire",1}};
 	};
-	class Wire_cat2: Wire_cat1
-	{
-		displayName = "Wire (CAT2)";
-		model = "\dayz_equip\models\wire_cat2.p3d";
-		removeoutput[] = {{"ItemWire2",1}};
-	};*/
-	class Wire2 : Constuctables
+	class Wire_cat2 : BuiltItems
 	{
 		scope = 2;
 		destrType = "DestructTent";
@@ -331,32 +334,6 @@ class CfgVehicles
 		actionBegin1 = "OpenDoors1";
 		actionEnd1 = "OpenDoors1";
 	};
-	class Land_HBarrier1_DZ : BuiltItems { 
-		scope = 2; 
-		animated = 0; 
-		vehicleClass = "Fortifications"; 
-		typicalCargo[] = {};
-		offset[] = {0,1.5,0.5};
-		irTarget = 0; 
-		accuracy = 0.3; 
-		transportAmmo = 0; 
-		transportRepair = 0; 
-		transportFuel = 0; 
-		destrType = "DestructBuilding"; 
-		armor = 500; 
-		coefInside = 0.5; 
-		coefInsideHeur = 0.8; 
-		cost = 0; 
-		picture = "\CA\ui\data\icon_wf_barriers_ca.paa"; 
-		model = "\ca\misc2\HBarrier1.p3d"; 
-		icon = "\Ca\misc2\data\Icons\icon_hescoBarrier1_ca.paa"; 
-		mapSize = 2; 
-		displayName = "H-barrier cube"; 
-		GhostPreview = "Land_HBarrier1Preview"; 
-		constructioncount = 10;
-		removeoutput[] = {{"ItemSandbagLarge",1}};
-	};
-
 	// PLAYER BUILDINGS
 	class Plastic_Pole_EP1;
 	class Plastic_Pole_EP1_DZ: Plastic_Pole_EP1

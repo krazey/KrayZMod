@@ -17,7 +17,7 @@ if(player getVariable["combattimeout", 0] >= time) exitWith {TradeInprogress = f
 
 _item =			_this;
 _classname = 	getText (configFile >> "CfgMagazines" >> _item >> "ItemActions" >> "Build" >> "create");
-_require =  getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Build" >> "require");
+_require =  getArray (configFile >> "cfgMagazines" >> _this >> "ItemActions" >> "Build" >> "requiretools");
 
 _text = 		getText (configFile >> "CfgVehicles" >> _classname >> "displayName");
 _offset = 	getArray (configFile >> "CfgVehicles" >> _classname >> "offset");

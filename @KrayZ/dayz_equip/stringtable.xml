@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="DayZ">
   <Package name="equipment">
 			<Key ID="STR_EQUIP_NAME_1">
@@ -668,12 +668,24 @@
 				<Russian>Watch Tower. Used for lookout and providing cover.</Russian>
 			</Key>
 			<Key ID="STR_EQUIP_NAME_122">						
+				<Original>H-Barrier cube</Original>						
+				<English>H-Barrier cube</English>						
+				<German>H-Barrier cube</German>
+				<Russian>H-Barrier cube</Russian>
+			</Key>						
+			<Key ID="STR_EQUIP_DESC_122">						
+				<Original>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</Original>						
+				<English>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</English>						
+				<German>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</German>
+				<Russian>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</Russian>
+			</Key>	
+			<Key ID="STR_EQUIP_NAME_123">						
 				<Original>H-Barrier</Original>						
 				<English>H-Barrier</English>						
 				<German>H-Barrier</German>
 				<Russian>H-Barrier</Russian>
 			</Key>						
-			<Key ID="STR_EQUIP_DESC_122">						
+			<Key ID="STR_EQUIP_DESC_123">						
 				<Original>H-Barrier. Used for providing cover.</Original>						
 				<English>H-Barrier. Used for providing cover.</English>						
 				<German>H-Barrier. Used for providing cover.</German>

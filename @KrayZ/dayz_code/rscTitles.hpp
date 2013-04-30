@@ -137,7 +137,7 @@ class RscDisplayMain : RscStandardDisplay
 		class DAYZ_Version : CA_Version
 		{
 			idc = -1;
-			text = "KrayZ 2.1.0.9 (based on DayZ, DayZ Epoch, DayZ+)";
+			text = "KrayZ 2.1.1.0 (based on DayZ, DayZ Epoch, DayZ+)";
 			y = "(SafeZoneH + SafeZoneY) - (1 - 0.95)";
 		};
 		delete CA_TitleMainMenu;
