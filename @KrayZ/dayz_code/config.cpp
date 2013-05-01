@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.1.1.0";
+		version = "2.111";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -282,6 +282,10 @@ class CfgSurvival {
 		class Skin_Survivor2_DZ: Default {
 			sex = "male";
 			playerModel = "Survivor2_DZ";
+		};
+		class Skin_Survivor3_DZ: Default {
+			sex = "male";
+			playerModel = "Survivor3_DZ";
 		};
 		class Skin_Sniper1_DZ: Default {
 			sex = "male";
@@ -690,8 +694,8 @@ class CfgBuildingLoot {
 			{ "bizon_silenced","weapon" },
 			{ "M14_EP1","weapon" },
 			{ "FN_FAL_ANPVS4","weapon" },
-			{ "M107_DZ","weapon" },
-			{ "BAF_AS50_scoped","weapon" },
+			//{ "M107_DZ","weapon" },
+			//{ "BAF_AS50_scoped","weapon" },
 			{ "Mk_48_DZ","weapon" },
 			{ "M249_DZ","weapon" },
 			{"BAF_L85A2_RIS_SUSAT","weapon"},
@@ -715,8 +719,8 @@ class CfgBuildingLoot {
 			0.05,		//{"bizon_silenced","weapon"},
 			0.05,		//{"M14_EP1","weapon"},
 			0.02,		//{"FN_FAL_ANPVS4","weapon"},
-			0.02,		//{"m107","weapon"},
-			0.01,		//{"BAF_AS50_scoped","weapon"},
+			//0.02,		//{"m107","weapon"},
+			//0.01,		//{"BAF_AS50_scoped","weapon"},
 			0.03,		//{"Mk_48_DZ","weapon"},
 			0.05,		//{"M249_DZ","weapon"},
 			0.01,		//{"BAF_L85A2_RIS_SUSAT","weapon"},
@@ -728,7 +732,7 @@ class CfgBuildingLoot {
 			0.1,	//AmmoBoxSmall_556
 			0.1,	//AmmoBoxSmall_762
 			0.08,	//militaryclothes
-			0.03,	//G36C"
+			0.03,	//G36C
 			0.02,	//G36C_camo
 			//0.01,	//G36_C_SD_camo
 			0.02,	//G36A_camo

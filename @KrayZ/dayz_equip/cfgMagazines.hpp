@@ -515,6 +515,12 @@ class CfgMagazines
 		displayName = "$STR_EQUIP_NAME_45";
 		descriptionShort = "$STR_EQUIP_DESC_45";
 	};
+	class Skin_Survivor3_DZ: SkinBase
+	{
+		scope = 2;
+		displayName = "Hero Clothing";
+		descriptionShort = "Hero Clothing";
+	};
 	class Skin_Soldier1_DZ: SkinBase
 	{
 		scope = 2;
@@ -1883,7 +1889,7 @@ class CfgMagazines
 				neednearby[] = {};
 				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"PartGeneric",2},{"ItemTankTrap",4}};
-				output[] = {{"ItemLadderSmall",1}};
+				output[] = {{"ItemLadderLarge",1}};
 			};
 			class Crafting4
 			{
@@ -2237,8 +2243,8 @@ class CfgMagazines
 				script = "spawn player_craftItem;";
 				neednearby[] = {};
 				requiretools[] = {"ItemToolbox"}; 
-				input[] = {{"PartGeneric",1},{"ItemTankTrap",2}};
-				output[] = {{"PartGeneric",1},};
+				input[] = {{"ItemLadderSmall",1}};
+				output[] = {{"PartGeneric",1},{"ItemTankTrap",2}};
 			};
 		};
 	};

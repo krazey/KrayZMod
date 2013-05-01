@@ -74,7 +74,7 @@ SAR_HUMANITY_HOSTILE_LIMIT = -2500;
 // -----------------------------------------------
 
 // Log AI kills
-SAR_log_AI_kills = false;
+SAR_log_AI_kills = true;
 
 // -----------------------------------------------
 // Special health values for specific units

@@ -232,8 +232,8 @@ class CfgWeight
 		{
 			weight = 5.7;
 		};
-		 
-		 
+		
+		
 		
 		class M16A4_GL
 		{
@@ -307,12 +307,13 @@ class CfgWeight
 		{
 			weight = 14;
 		};
-		
 		class G36a
 		{
 			weight = 3.6;
 		};
 		
+
+
 		class G36C
 		{
 			weight = 2.8;
@@ -342,7 +343,9 @@ class CfgWeight
 		{
 			weight = 13;
 		};
-		  
+		
+
+
 		class M240_DZ
 		{
 			weight = 13;
@@ -626,6 +629,7 @@ class CfgWeight
 		};
 	};
 	
+
 	
 	class Magazines
 	{
@@ -890,6 +894,8 @@ class CfgWeight
 			weight = 0.4;
 		};
 		
+
+
 		class 10x_303
 		{
 			weight = 0.15;
@@ -1035,6 +1041,8 @@ class CfgWeight
 			weight = 0.005;
 		};
 		
+
+
 		class ItemPainkiller
 		{
 			weight = 0.1;
@@ -1056,6 +1064,7 @@ class CfgWeight
 			weight = 0.1;
 		};
 		
+
 		
 		class ItemAntibiotic
 		{
@@ -1120,8 +1129,6 @@ class CfgWeight
 		{
 			weight = 0.003;
 		};
-
-
 
 
 
@@ -1193,8 +1200,8 @@ class CfgWeight
 		{
 			weight = 0.1;
 		};
-		 
-		 
+		
+		
 
 		class Crossbow  
 		{
@@ -1230,7 +1237,12 @@ class CfgWeight
 		};
 		
 		
+
 		class Skin_Survivor2_DZ   
+		{
+			weight = 1;
+		};
+		class Skin_Survivor3_DZ
 		{
 			weight = 1;
 		};
@@ -1346,7 +1358,13 @@ class CfgWeight
 		{
 			weight = 1;
 		};
+		class Skin_Net_DZ
+		{
+			weight = 2;
+		};
 		
+
+
 		class HandRoadFlare 
 		{
 			weight = 0.1;
@@ -1439,6 +1457,10 @@ class CfgWeight
 		{
 			weight = 2.5;
 		};
+		class ItemWire2 
+		{
+			weight = 7.5;
+		};
 		class ItemGoldBar  
 		{
 			weight = 0.02;
@@ -1516,14 +1538,88 @@ class CfgWeight
 		{
 			weight = 5;
 		};
+
+
+
 		class ItemSandbag 
 		{
 			weight = 10;
 		};
-		class ItemSandbagLarge 
+		class ItemSandbagRound
 		{
-			weight = 50;
+			weight = 15;
 		};
+		class ItemFortSandbagRound
+		{
+			weight = 25;
+		};
+		class ItemHBarrier_Cube 
+		{
+			weight = 25;
+		};
+		class ItemHBarrier 
+		{
+			weight = 100;
+		};
+		class ItemWatchTower
+		{
+			weight = 200;
+		};
+		class ItemCamoNet
+		{
+			weight = 11;
+		};
+		class ItemSandBagNest
+		{
+			weight = 35;
+		};
+		class ItemDeerStand
+		{
+			weight = 15;
+		};
+		class ItemGate
+		{
+			weight = 10;
+		};
+		class ItemScaffolding
+		{
+			weight = 18;
+		};
+		class ItemLadderSmall
+		{
+			weight = 10;
+		};
+		class ItemLadderLarge
+		{
+			weight = 20;
+		};
+		class ItemPole
+		{
+			weight = 10;
+		};
+		class ItemCorrugated
+		{
+			weight = 20;
+		};
+		class m240_nest_kit
+		{
+			weight = 45;
+		};
+		class rusty_gate_kit
+		{
+			weight = 25;
+		};
+		class outhouse_kit
+		{
+			weight = 35;
+		};
+		class storage_shed_kit
+		{
+			weight = 75;
+		};
+
+
+
 		class ItemWaterbottleUnfilled 
 		{
 			weight = 0.05;
