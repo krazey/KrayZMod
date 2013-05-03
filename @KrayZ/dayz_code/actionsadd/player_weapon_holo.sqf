@@ -7,8 +7,8 @@ disableserialization;
 _weaponAss = false;
 
 // Weapon database
-_wwHolo = ["SCAR_L_STD_HOLO","M4A1_HWS_GL_camo"];
-_wwdHolo = ["SCAR_L_CQC","M4A1_HWS_GL"];
+_wwHolo = ["SCAR_L_STD_HOLO","M4A1_HWS_GL_camo","R3F_Famas_F1_EOT","R3F_Famas_F1_EOT_DES","R3F_Famas_G2_EOT","R3F_Famas_G2_EOT_DES"];
+_wwdHolo = ["SCAR_L_CQC","M4A1_HWS_GL","R3F_Famas_F1","R3F_Famas_F1_DES","R3F_Famas_G2","R3F_Famas_G2_DES"];
 
 if (!("ItemToolbox" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a holo scope to your weapon.", "PLAIN DOWN"];

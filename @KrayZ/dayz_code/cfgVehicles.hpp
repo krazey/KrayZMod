@@ -1,3 +1,13 @@
+class cfgNonAIVehicles {
+	/*extern*/ class ProxyGoggles;
+	/*extern*/ class ProxyBysta;
+
+	class ProxyPVS15_Rabinex: ProxyGoggles {
+		scope = 2;
+		model = "\SBE_SOTG\PVS15_Rabinex.p3d";
+	};
+};
+
 class CfgVehicles {
 class Citizen1;	// External class reference
 	class zZombie_Base : Citizen1 {
@@ -727,6 +737,54 @@ class Citizen1;	// External class reference
 		respawnMagazines[] = {};
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
+	};
+
+	class FR_TL;
+	class SOTG_DZ : FR_TL {
+		displayName = "SOTG";
+		side = 1;
+		weapons[] = {"Throw","Put"};
+		model = "\SBE_SOTG\SOTG_secco2.p3d";
+		magazines[] = {};
+		backpack = "";
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 1;
+		hiddenSelections[] = {"_middlearm", "_lowerroll", "_middleroll"};
+
+		class HitHead {
+			armor = 1.600000;
+			material = -1;
+			name = "head_hit";
+			passThrough = 1;
+		};
+
+		class HitBody {
+			armor = 3.200000;
+			material = -1;
+			name = "body";
+			passThrough = 1;
+		};
+
+		class HitHands {
+			armor = 1.200000;
+			material = -1;
+			name = "hands";
+			passThrough = 1;
+		};
+
+		class HitLegs {
+			armor = 1.200000;
+			material = -1;
+			name = "legs";
+			passThrough = 1;
+		};
+
+		class Wounds {
+			tex[] = {};
+			mat[] = {"SBE_SOTG\data\body.rvmat", "SBE_SOTG\data\body_wound1.rvmat", "SBE_SOTG\data\body_wound2.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_white.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_white_wounds.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_white_wounds2.rvmat", "ca\characters\heads\male\defaulthead\data\hhl.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_wounds.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_wounds2.rvmat"};
+		};
 	};
 
 	class BAF_Soldier_Officer_W;

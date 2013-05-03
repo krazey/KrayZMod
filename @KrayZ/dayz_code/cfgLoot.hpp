@@ -239,6 +239,23 @@ class CfgLoot {
 	};
 	military[] = {
 		{
+			//r3f armes
+			"R3F_25Rnd_556x45_FAMAS",
+			"R3F_25Rnd_556x45_TRACER_FAMAS",
+			"R3F_25Rnd_556x45_SD_FAMAS",
+			"R3F_30Rnd_556x45_SD_FAMAS",
+			"R3F_30Rnd_556x45_FAMAS",
+			"R3F_30Rnd_556x45_TRACER_FAMAS",
+			"R3F_10Rnd_762x51_FRF2",
+			"R3F_10Rnd_762x51_SD_FRF2",
+			"R3F_7Rnd_127x99_PGM",
+			"R3F_7Rnd_127x99_PEI_PGM",
+			"R3F_200Rnd_556x45_MINIMI",
+			"R3F_20Rnd_762x51_HK417",
+			"R3F_20Rnd_762x51_TRACER_HK417",
+			"R3F_20Rnd_762x51_SD_HK417",
+			//end of r3f armes
+
 			"TrashTinCan",
 			"ItemSodaEmpty",
 			"ItemSodaCoke",
@@ -255,7 +272,7 @@ class CfgLoot {
 			"30Rnd_762x39_AK47",
 			"30Rnd_545x39_AK",
 			"5Rnd_762x51_M24",
-			"10Rnd_127x99_m107",
+			//"10Rnd_127x99_m107",
 			"8Rnd_B_Beneli_74Slug",
 			"1Rnd_HE_M203",
 			"FlareWhite_M203",
@@ -268,8 +285,8 @@ class CfgLoot {
 			"SmokeShellGreen",
 			"8Rnd_B_Beneli_Pellets",
 			"30Rnd_556x45_StanagSD",
-			"30Rnd_9x19_MP5",
-			"30Rnd_9x19_MP5SD",
+			//"30Rnd_9x19_MP5",
+			//"30Rnd_9x19_MP5SD",
 			"100Rnd_762x51_M240",
 			"HandChemGreen",
 			"HandChemBlue",
@@ -278,43 +295,60 @@ class CfgLoot {
 			"FoodMRE"
 		},
 		{
-			0.18,
-			0.09,
-			0.01,
-			0.01,
-			0.04,
-			0.04,
-			0.04,
-			0.01,
-			0.04,
-			0.04,
-			0.05,
-			0.01,
-			0.02,
-			0.04,
-			0.04,
-			0.01,
-			0.01,
-			0.04,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.04,
-			0.02,
-			0.02,
-			0.04,
-			0.01,
-			0.02,
-			0.01,
-			0.01,
-			0.02,
-			0.02,
-			0.02,
-			0.04,
-			0.03
+			//r3f armes
+			0.04, //"R3F_25Rnd_556x45_FAMAS",
+			0.04, //"R3F_25Rnd_556x45_TRACER_FAMAS",
+			0.01, //"R3F_25Rnd_556x45_SD_FAMAS",
+			0.01, //"R3F_30Rnd_556x45_SD_FAMAS",
+			0.04, //"R3F_30Rnd_556x45_FAMAS",
+			0.04, //"R3F_30Rnd_556x45_TRACER_FAMAS",
+			0.01, //"R3F_10Rnd_762x51_FRF2",
+			0.01, //"R3F_10Rnd_762x51_SD_FRF2",
+			0.01, //"R3F_7Rnd_127x99_PGM",
+			0.01, //"R3F_7Rnd_127x99_PEI_PGM",
+			0.01, //"R3F_200Rnd_556x45_MINIMI",
+			0.04, //"R3F_20Rnd_762x51_HK417",
+			0.04, //"R3F_20Rnd_762x51_TRACER_HK417",
+			0.01, //"R3F_20Rnd_762x51_SD_HK417",
+			//end of r3f armes
+
+			0.12, //trashtincan
+			0.09, //sodaempty
+			0.01, //sodacoke
+			0.01, //sodapepsi
+			0.04, //bandage
+			0.04, //antibiotic
+			0.04, //painkiller
+			0.01, //morphine
+			0.04, //30rnd stanag
+			0.04, //20rnd dmr
+			0.05, //17rnd glock17
+			0.01, //15rnd m9sd
+			0.02, //15rnd m9
+			0.04, //30rnd ak47
+			0.04, //30rnd ak
+			0.01, //5rnd m24
+			//0.01, //10rnd m107
+			0.04, //8rnd slug
+			0.01, //1rnd he m203
+			0.01, //flarewhite m203
+			0.01, //flaregreen m203
+			0.01, //1rnd smoke m203
+			0.01, //200rnd m249
+			0.01, //grenade
+			0.04, //smoke
+			0.02, //smokered
+			0.02, //smokegreen
+			0.04, //8rnd pellets
+			0.01, //30rnd stanagSD
+			//0.02, //30rnd mp5
+			//0.01, //30rnd mp5sd
+			0.01, //100rnd m240
+			0.02, //chemgreen
+			0.02, //chemblue
+			0.02, //chemred
+			0.04, //heatpack
+			0.03 //foodMRE
 		}
 	};
 	policeman[] = {

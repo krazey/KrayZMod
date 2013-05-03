@@ -393,6 +393,12 @@ class CfgMagazines
 		displayName = "Admin Outfit";
 		descriptionShort = "Admin Outfit";
 	};
+	class Skin_SOTG_DZ: SkinBase
+	{
+		scope = 2;
+		displayName = "SOTG Outfit";
+		descriptionShort = "SOTG Outfit";
+	};
 	class Skin_BanditW1_DZ: SkinBase
 	{
 		scope = 2;

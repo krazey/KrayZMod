@@ -7,8 +7,8 @@ disableserialization;
 _weaponAss = false;
 
 // Weapon database
-_wwRedDot = ["AKS_74_kobra","Sa58V_CCO_EP1","M4A1_Aim","M14_EP1","M16A4"];
-_wwdRedDot = ["AKS_74","Sa58V_EP1","M4A1","DMR","M16A2"];
+_wwRedDot = ["AKS_74_kobra","Sa58V_CCO_EP1","M4A1_Aim","M14_EP1","M16A4","R3F_Famas_G2_AIM_HG","R3F_Famas_G2_AIM_HG_DES","R3F_Famas_F1_AIM","R3F_Famas_F1_AIM_DES","R3F_Famas_surb_AIM_HG","R3F_Famas_surb_AIM_HG_DES"];
+_wwdRedDot = ["AKS_74","Sa58V_EP1","M4A1","DMR","M16A2","R3F_Famas_G2","R3F_Famas_G2_DES","R3F_Famas_F1","R3F_Famas_F1_DES","R3F_Famas_surb","R3F_Famas_surb_DES"];
 
 if (!("ItemToolbox" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a red dot to your weapon.", "PLAIN DOWN"];
