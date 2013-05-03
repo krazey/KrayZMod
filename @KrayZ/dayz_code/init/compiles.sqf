@@ -266,6 +266,7 @@ if (!isDedicated) then {
 		private ["_dikCode", "_handled"];
 		_dikCode = 	_this select 1;
 		_handled = false;
+		/*
 		if (_dikCode in (actionKeys "GetOver")) then {
 			
 			if (player isKindOf  "PZombie_VB") exitWith {
@@ -280,6 +281,7 @@ if (!isDedicated) then {
 				};
 			};
 		};
+		*/
 		//if (_dikCode == 57) then {_handled = true}; // space
 		//if (_dikCode in actionKeys 'MoveForward' or _dikCode in actionKeys 'MoveBack') then {r_interrupt = true};
 		if (_dikCode == 210) then //SCROLL LOCK
@@ -323,6 +325,7 @@ if (!isDedicated) then {
 		_handled
 	};
 	
+	/*
 	player_CombatRoll = {
 		DoRE = ({isPlayer _x} count (player nearEntities ["AllVehicles",100]) > 1);
 		if (canRoll && animationState player in ["amovpercmrunslowwrfldf","amovpercmrunsraswrfldf","amovpercmevaslowwrfldf","amovpercmevasraswrfldf"]) then {
@@ -341,6 +344,7 @@ if (!isDedicated) then {
 			_handled = true;
 		};
 	};
+	*/
 	
 	player_serverModelChange = {
 		private["_object","_model"];

@@ -7,8 +7,8 @@ disableserialization;
 _weaponAss = false;
 
 // Weapon database
-_wwRedDot = ["AKS_74_kobra","Sa58V_CCO_EP1","M4A1_Aim","M14_EP1","M16A4","R3F_Famas_G2_AIM_HG","R3F_Famas_G2_AIM_HG_DES","R3F_Famas_F1_AIM","R3F_Famas_F1_AIM_DES","R3F_Famas_surb_AIM_HG","R3F_Famas_surb_AIM_HG_DES"];
-_wwdRedDot = ["AKS_74","Sa58V_EP1","M4A1","DMR","M16A2","R3F_Famas_G2","R3F_Famas_G2_DES","R3F_Famas_F1","R3F_Famas_F1_DES","R3F_Famas_surb","R3F_Famas_surb_DES"];
+_wwRedDot = ["AKS_74_kobra","Sa58V_CCO_EP1","M4A1_Aim","M14_EP1","M16A4","R3F_Famas_G2_AIM_HG","R3F_Famas_G2_AIM_HG_DES","R3F_Famas_F1_AIM","R3F_Famas_F1_AIM_DES","R3F_Famas_surb_AIM_HG","R3F_Famas_surb_AIM_HG_DES","R3F_Famas_F1_AIM","R3F_Famas_F1_AIM_DES","R3F_Famas_G2_AIM_HG","R3F_Famas_G2_AIM_HG_DES","R3F_Famas_surb_AIM_SD","R3F_Famas_surb_AIM_SD_DES","R3F_HK417M_AIM","R3F_HK417M_AIM_DES"];
+_wwdRedDot = ["AKS_74","Sa58V_EP1","M4A1","DMR","M16A2","R3F_Famas_G2","R3F_Famas_G2_DES","R3F_Famas_F1","R3F_Famas_F1_DES","R3F_Famas_surb","R3F_Famas_surb_DES","R3F_Famas_F1_EOT","R3F_Famas_F1_EOT_DES","R3F_Famas_G2_EOT","R3F_Famas_G2_EOT_DES","R3F_Famas_surb_EOT_SD","R3F_Famas_surb_EOT_SD_DES","R3F_HK417S_EOT_HG","R3F_HK417S_EOT_HG_DES"];
 
 if (!("ItemToolbox" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a red dot to your weapon.", "PLAIN DOWN"];
@@ -33,6 +33,15 @@ if(!TradeInprogress) then {
 
 				if(_qtyRedDot > 0) then {
 					player removeMagazine "RedDot_DZ";
+					
+					if(_x == "R3F_Famas_F1_EOT") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_F1_EOT_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_EOT") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_EOT_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_EOT_SD") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_EOT_SD_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_EOT_HG") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_EOT_HG_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
 
 					for "_i" from 0 to 1 do
 					{

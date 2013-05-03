@@ -7,8 +7,8 @@ disableserialization;
 _weaponAss = false;
 
 // Weapon database
-_wwHolo = ["SCAR_L_STD_HOLO","M4A1_HWS_GL_camo","R3F_Famas_F1_EOT","R3F_Famas_F1_EOT_DES","R3F_Famas_G2_EOT","R3F_Famas_G2_EOT_DES"];
-_wwdHolo = ["SCAR_L_CQC","M4A1_HWS_GL","R3F_Famas_F1","R3F_Famas_F1_DES","R3F_Famas_G2","R3F_Famas_G2_DES"];
+_wwHolo = ["SCAR_L_STD_HOLO","M4A1_HWS_GL_camo","R3F_Famas_F1_EOT","R3F_Famas_F1_EOT_DES","R3F_Famas_G2_EOT","R3F_Famas_G2_EOT_DES","R3F_Famas_F1_EOT","R3F_Famas_F1_EOT_DES","R3F_Famas_G2_EOT","R3F_Famas_G2_EOT_DES","R3F_Famas_surb_EOT_SD","R3F_Famas_surb_EOT_SD_DES","R3F_HK417S_EOT_HG","R3F_HK417S_EOT_HG_DES"];
+_wwdHolo = ["SCAR_L_CQC","M4A1_HWS_GL","R3F_Famas_F1","R3F_Famas_F1_DES","R3F_Famas_G2","R3F_Famas_G2_DES","R3F_Famas_F1_AIM","R3F_Famas_F1_AIM_DES","R3F_Famas_G2_AIM","R3F_Famas_G2_AIM_DES","R3F_Famas_surb_AIM_SD","R3F_Famas_surb_AIM_SD_DES","R3F_HK417M_AIM","R3F_HK417M_AIM_DES"];
 
 if (!("ItemToolbox" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a holo scope to your weapon.", "PLAIN DOWN"];
@@ -33,6 +33,15 @@ if(!TradeInprogress) then {
 
 				if(_qtyHolo > 0) then {
 					player removeMagazine "Holo_DZ";
+					
+					if(_x == "R3F_Famas_F1_AIM") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_F1_AIM_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_AIM") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_AIM_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_AIM_SD") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_AIM_SD_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_AIM_HG") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_AIM_HG_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
 
 					for "_i" from 0 to 1 do
 					{

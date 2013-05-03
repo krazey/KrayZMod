@@ -20,7 +20,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"r3f_armes","dayz_equip","dayz_weapons","dayz_sfx","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
+		requiredAddons[] = {"smk_anims","r3f_armes","dayz_equip","dayz_weapons","dayz_sfx","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
 	};
 	class DZ_DebriefingRemoved
 	{
@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.113";
+		version = "2.114";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -461,7 +461,6 @@ class CfgBuildingLoot {
 		lootPos[] = {};
 		itemType[] = {
 			{ "ItemSodaMdew","magazine" },
-			{ "ItemSodaRbull","magazine" },
 			{ "ItemWatch","generic" },
 			{ "ItemCompass","generic" },
 			{ "ItemMap","weapon" },
@@ -495,7 +494,6 @@ class CfgBuildingLoot {
 	};
 		itemChance[] =	{
 			0.01, //Soda Mdew
-			0.005, //Soda Rbull
 			0.15, //Watch
 			0.05, //Compass
 			0.03, //Map

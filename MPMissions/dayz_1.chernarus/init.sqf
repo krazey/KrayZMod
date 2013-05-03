@@ -82,3 +82,6 @@ call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
 
 // run SAR_AI
 [] execVM "addons\SARGE\SAR_AI_init.sqf";
+
+//  Dynamic Weather Effects Script
+[] execVM "Scripts\DRN\DynamicWeatherEffects\DynamicWeatherEffects.sqf";
