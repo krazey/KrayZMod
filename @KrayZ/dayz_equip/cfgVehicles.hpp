@@ -158,7 +158,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		destrType = "DestructTent";
-		cost = 100
+		cost = 100;
 		animated = 0;
 		vehicleClass = "Fortifications";
 		offset[] = {0,1.5,0.5};

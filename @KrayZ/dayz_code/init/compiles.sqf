@@ -120,6 +120,9 @@ if (!isDedicated) then {
 	player_weapon_rmvlauncher =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvlauncher.sqf";
 	player_weapon_rmvsuppress =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvsuppress.sqf";
 	
+	//remove hbbarrier (owner only)
+	player_rmvhbarrier =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_rmvhbarrier.sqf";
+	
 	//halo jump add
 	bis_fnc_halo =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_HALO.sqf";
 	

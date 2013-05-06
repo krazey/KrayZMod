@@ -697,7 +697,7 @@ class CfgMagazines
 		type = 256;
 		displayName = "Corrugated Fence";
 		model = "\dayz_equip\models\genericparts.p3d";
-		picture = "\dayz_equip\textures\equip_genericparts_ca.paa";
+		picture = "\dayz_equip\texturesadd\corrugated_fence.paa";
 		descriptionShort = "Corrugated Fence";
 		class ItemActions {
 			class Build
@@ -743,7 +743,7 @@ class CfgMagazines
 		type = 256;
 		displayName = "Metal Pole";
 		model = "\dayz_equip\models\genericparts.p3d";
-		picture = "\dayz_equip\textures\equip_genericparts_ca.paa";
+		picture = "\dayz_equip\texturesadd\metal_pole.paa";
 		descriptionShort = "Metal Pole";
 		class ItemActions {
 			class Crafting
@@ -1627,7 +1627,7 @@ class CfgMagazines
 		displayName = "Rusty Gate";
 		descriptionShort = "Rusty Gate";
 		model = "\dayz_equip\models\supply_crate.p3d";
-		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		picture = "\dayz_equip\texturesadd\rusty_gate.paa";
 		class ItemActions
 		{
 			class Build
@@ -1667,7 +1667,7 @@ class CfgMagazines
 		displayName = "Storage Shed";
 		descriptionShort = "Storage Shed";
 		model = "\dayz_equip\models\supply_crate.p3d";
-		picture = "\dayz_equip\textures\equip_storageshed.paa";
+		picture = "\dayz_equip\texturesadd\storage_shed.paa";
 		class ItemActions
 		{
 			class Build
@@ -1961,7 +1961,7 @@ class CfgMagazines
 		type = (256 * 2);
 		displayName = "$STR_EQUIP_NAME_124";
 		model = "\dayz_equip\models\Fence_wire_kit.p3d";
-		picture = "\dayz_equip\textures\equip_fencewire_kit2.paa";
+		picture = "\dayz_equip\texturesadd\wire_cat2.paa";
 		descriptionShort = "$STR_EQUIP_DESC_124";
 		class ItemActions {
 			class Build
@@ -2054,7 +2054,7 @@ class CfgMagazines
 		type = (256 * 8);
 		displayName = "Deer Stand";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
-		picture = "\dayz_equip\textures\equip_deerstand.paa";
+		picture = "\dayz_equip\texturesadd\deerstand.paa";
 		descriptionShort = "";
 		class ItemActions {
 			class Build
@@ -2082,7 +2082,7 @@ class CfgMagazines
 		type = 256;
 		displayName = "$STR_EQUIP_NAME_122";
 		model = "\dayz_equip\models\sandbags.p3d";
-		picture = "\dayz_equip\textures\equip_sandbag_ca.paa";
+		picture = "\dayz_equip\texturesadd\hbarrier_cube.paa";
 		descriptionShort = "$STR_EQUIP_DESC_122";
 		class ItemActions {
 			class Build
@@ -2098,7 +2098,7 @@ class CfgMagazines
 				script = "spawn player_craftItem;";
 				neednearby[] = {};
 				requiretools[] = {"ItemEtool","ItemToolbox"};
-				input[] = {{"ItemHBarrierCube",4}};
+				input[] = {{"ItemHBarrierCube",5}};
 				output[] = {{"ItemHBarrier",1}};
 			};
 			class Crafting1
@@ -2119,7 +2119,7 @@ class CfgMagazines
 		type = (256 * 3);
 		displayName = "$STR_EQUIP_NAME_123";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
-		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		picture = "\dayz_equip\texturesadd\hbarrier.paa";
 		descriptionShort = "$STR_EQUIP_DESC_123";
 		class ItemActions {
 			class Build
@@ -2136,7 +2136,7 @@ class CfgMagazines
 				neednearby[] = {};
 				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"ItemHBarrier",1}};
-				output[] = {{"ItemHBarrierCube",4}};
+				output[] = {{"ItemHBarrierCube",5}};
 			};
 		};
 	};

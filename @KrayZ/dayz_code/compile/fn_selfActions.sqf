@@ -347,7 +347,16 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_lockvault = -1;
 	};
 
-	//Allow owner to de-construct buildings (hbarrier only)
+	//Allow owner to de-construct/pack buildings (hbarrier only)
+	if(cursorTarget isKindOf "HBarrier" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and (player distance cursorTarget < 3)) then {
+
+		if (s_player_rmvhbarrier < 0) then {
+			s_player_rmvhbarrier = player addAction ["<t color='#fff000'>Remove Hesco Barrier</t>", "\z\addons\dayz_code\actionsadd\hbarrier_remove.sqf",cursorTarget, 0, false, true, "",""];
+		};
+	} else {
+		player removeAction s_player_rmvhbarrier;
+		s_player_rmvhbarrier = -1;
+	};
 
     //Player Deaths
 	if(cursorTarget isKindOf "Info_Board_EP1" and _canDo) then {
@@ -634,6 +643,10 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_information = -1;
 	player removeAction s_player_fillgen;
 	s_player_fillgen = -1; 
+	
+	//hbarrier
+	player removeAction s_player_rmvhbarrier;
+	s_player_rmvhbarrier = -1;
 };
 
 
