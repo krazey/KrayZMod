@@ -1499,7 +1499,7 @@ class CfgMagazines
 		displayName = "30 Meter Plot";
 		descriptionShort = "30 Meter Plot";
 		model = "\dayz_equip\models\supply_crate.p3d";
-		picture = "\dayz_equip\textures\equip_30m_plot_kit.paa";
+		picture = "\dayz_equip\texturesadd\30m_plot.paa";
 		class ItemActions
 		{
 			class Build
@@ -1989,7 +1989,7 @@ class CfgMagazines
 		type = (256 * 3);
 		displayName = "$STR_EQUIP_NAME_119";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
-		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		picture = "\dayz_equip\texturesadd\camonet.paa";
 		descriptionShort = "$STR_EQUIP_DESC_119";
 		class ItemActions {
 			class Build
@@ -2016,7 +2016,7 @@ class CfgMagazines
 		type = (256 * 6);
 		displayName = "$STR_EQUIP_NAME_120";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
-		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		picture = "\dayz_equip\texturesadd\sandbagnest.paa";
 		descriptionShort = "$STR_EQUIP_DESC_120";
 		class ItemActions {
 			class Build
@@ -2147,7 +2147,7 @@ class CfgMagazines
 		type = (256 * 8);
 		displayName = "$STR_EQUIP_NAME_121";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
-		picture = "\dayz_equip\textures\equip_watchtower.paa";
+		picture = "\dayz_equip\texturesadd\watchtower.paa";
 		descriptionShort = "$STR_EQUIP_DESC_121";
 		class ItemActions {
 			class Build

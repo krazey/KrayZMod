@@ -33,15 +33,6 @@ if(!TradeInprogress) then {
 
 				if(_qtyRedDot > 0) then {
 					player removeMagazine "RedDot_DZ";
-					
-					if(_x == "R3F_Famas_F1_EOT") then {player addMagazine "Holo_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_F1_EOT_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_G2_EOT") then {player addMagazine "Holo_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_G2_EOT_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_surb_EOT_SD") then {player addMagazine "Holo_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_surb_EOT_SD_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
-					if(_x == "R3F_HK417S_EOT_HG") then {player addMagazine "Holo_DZ"; sleep 1;};
-					if(_x == "R3F_HK417S_EOT_HG_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
 
 					for "_i" from 0 to 1 do
 					{
@@ -55,6 +46,15 @@ if(!TradeInprogress) then {
 					_newWeapon =  _wwRedDot select _wwIndex;
 					player addWeapon _newWeapon;
 					_weaponAss = true;
+					
+					if(_x == "R3F_Famas_F1_EOT") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_F1_EOT_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_EOT") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_EOT_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_EOT_SD") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_EOT_SD_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_EOT_HG") then {player addMagazine "Holo_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_EOT_HG_DES") then {player addMagazine "Holo_DZ"; sleep 1;};
 				};
 			};
 

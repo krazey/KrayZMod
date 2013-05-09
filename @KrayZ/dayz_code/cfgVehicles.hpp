@@ -995,7 +995,7 @@ class Citizen1;	// External class reference
 	class BAF_Soldier_SniperH_W;
 	class Sniper1_DZ: BAF_Soldier_SniperH_W {
 		displayName = "Sniper";
-		hiddenSelectionsTextures[] = {"\dayz\textures\ghillie.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\add\ghillie.paa"};
 		side = 1;
 		weapons[] = {"Throw","Put"};
 		backpack = "";
@@ -1008,6 +1008,7 @@ class Citizen1;	// External class reference
 	class GUE_Soldier_Scout;
 	class Sniper2_DZ: GUE_Soldier_Scout {
 		displayName = "Sniper";
+		hiddenSelectionsTextures[] = {"\dayz\textures\add\ghillie_top_desert_co.paa"};
 		side = 1;
 		weapons[] = {"Throw","Put"};
 		canCarryBackPack = 1;

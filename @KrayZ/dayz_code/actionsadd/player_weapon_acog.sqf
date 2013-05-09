@@ -7,8 +7,8 @@ disableserialization;
 _weaponAss = false;
 
 // Weapon database
-_wwAcog = ["M16A4_ACG","SCAR_L_STD_Mk4CQT"];
-_wwdAcog = ["M16A2","SCAR_L_CQC"];
+_wwAcog = ["M16A4_ACG","SCAR_L_STD_Mk4CQT","M16A4_ACG_GL","R3F_Famas_G2_J4","R3F_Famas_G2_J4_DES"];
+_wwdAcog = ["M16A2","SCAR_L_CQC","M16A4_GL","R3F_Famas_G2","R3F_Famas_G2_DES"];
 
 if (!("ItemToolbox" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a acog scope to your weapon.", "PLAIN DOWN"];

@@ -51,7 +51,6 @@ class RscPicture
 	lineSpacing=0;
 	text="";
 };
-#include "addin\fx\descrExt.h"
 class RscLoadingText : RscText
 {
 	style = 2;

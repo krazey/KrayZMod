@@ -1164,7 +1164,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=70;
+		items=40;
 		class Item0
 		{
 			position[]={7035.9282,6,2871.4233};
@@ -1294,169 +1294,6 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={3364.8511,190.81436,3929.8733};
-			placement=100;
-			id=14;
-			side="EMPTY";
-			vehicle="Land_psi_bouda";
-			text="dog";
-			init="_nul = [this]execVM ""addin\dogInit.sqf""; _dogSound = createSoundSource [""Sound_LittleDog"", getPosATL this, [], 0];";
-		};
-		class Item15
-		{
-			position[]={7974.354,267.49841,13693.311};
-			id=15;
-			side="EMPTY";
-			vehicle="land_nav_pier_c_270";
-			text="cor3";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL this select 2)+40]; this setVectorUp [0, 0, 1];";
-		};
-		class Item16
-		{
-			position[]={7974.3579,267.29501,13623.012};
-			azimut=90;
-			id=16;
-			side="EMPTY";
-			vehicle="land_nav_pier_c_270";
-			text="cor4";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item17
-		{
-			position[]={7984.2456,268.39664,13653.235};
-			id=17;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal3";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item18
-		{
-			position[]={7984.2954,268.54312,13666.067};
-			id=18;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal5";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item19
-		{
-			position[]={7916.0552,266.09247,13613.377};
-			azimut=90;
-			id=19;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal8";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item20
-		{
-			position[]={7955.7368,266.74625,13613.332};
-			azimut=90;
-			id=20;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal12";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item21
-		{
-			position[]={7888.5708,266.8006,13623.396};
-			azimut=-180;
-			id=21;
-			side="EMPTY";
-			vehicle="land_nav_pier_c_270";
-			text="cor3_1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item22
-		{
-			position[]={7887.6064,266.93884,13693.135};
-			azimut=-90;
-			id=22;
-			side="EMPTY";
-			vehicle="land_nav_pier_c_270";
-			text="cor4_1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item23
-		{
-			position[]={7878.1802,267.96573,13663.207};
-			azimut=-180;
-			id=23;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal3_1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item24
-		{
-			position[]={7878.4688,267.8486,13653.148};
-			azimut=-180;
-			id=24;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal5_1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item25
-		{
-			position[]={7945.0449,266.64307,13702.819};
-			azimut=-90;
-			id=25;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal8_1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item26
-		{
-			position[]={7916.207,266.40704,13702.607};
-			azimut=-90;
-			id=26;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="wal11_1_2";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)]; this setVectorUp [0, 0, 1];";
-		};
-		class Item27
-		{
-			position[]={7906.0068,266.6593,13638.65};
-			id=27;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="ceil1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)+30]; this setVectorDirAndUp [[0, 1, 0],[-1, 0, 0]];";
-		};
-		class Item28
-		{
-			position[]={7905.8784,267.15543,13678.33};
-			id=28;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="ceil1_1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)+30]; this setVectorDirAndUp [[0, 1, 0],[-1, 0, 0]];";
-		};
-		class Item29
-		{
-			position[]={7953.9399,267.33884,13639.098};
-			id=29;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="ceil1_2";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)+30]; this setVectorDirAndUp [[0, -1, 0],[1, 0, 0]];";
-		};
-		class Item30
-		{
-			position[]={7953.9966,267.65247,13679.006};
-			id=30;
-			side="EMPTY";
-			vehicle="land_nav_pier_c";
-			text="ceil1_1_1";
-			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)+30]; this setVectorDirAndUp [[0, -1, 0],[1, 0, 0]];";
-		};
-		class Item31
-		{
 			position[]={7899.7695,266.63165,13633.854};
 			azimut=-179.72377;
 			id=31;
@@ -1465,7 +1302,7 @@ class Mission
 			text="inter_5";
 			init="this setVectorUp [0, 0, 1];";
 		};
-		class Item32
+		class Item15
 		{
 			position[]={7899.8281,266.92825,13644.813};
 			azimut=-359.41415;
@@ -1475,7 +1312,7 @@ class Mission
 			text="inter_1_1";
 			init="this setVectorUp [0, 0, 1];";
 		};
-		class Item33
+		class Item16
 		{
 			position[]={7968.4038,267.98199,13651.329};
 			azimut=-179.30342;
@@ -1485,7 +1322,7 @@ class Mission
 			text="inter_2_1";
 			init="this setVectorUp [0, 0, 1];";
 		};
-		class Item34
+		class Item17
 		{
 			position[]={7950.0874,267.50415,13681.487};
 			id=34;
@@ -1493,7 +1330,7 @@ class Mission
 			vehicle="Land_A_Office01";
 			text="inter_3_2";
 		};
-		class Item35
+		class Item18
 		{
 			position[]={7916.1685,267.06003,13681.529};
 			azimut=-180;
@@ -1502,7 +1339,7 @@ class Mission
 			vehicle="Land_A_Office01";
 			text="inter_4_1";
 		};
-		class Item36
+		class Item19
 		{
 			position[]={7970.0527,267.46811,13631.985};
 			azimut=-1169.8577;
@@ -1511,7 +1348,7 @@ class Mission
 			vehicle="Land_trafostanica_velka";text="inter1_4_2";
 			init="this setVectorUp [0, 0, 1];";
 		};
-		class Item37
+		class Item20
 		{
 			position[]={7894.1792,267.36996,13659.188};
 			azimut=-1169.275;
@@ -1520,7 +1357,7 @@ class Mission
 			vehicle="Land_Ind_Workshop01_L";text="inter1_6_1";
 			init="this setVectorUp [0, 0, 1];";
 		};
-		class Item38
+		class Item21
 		{
 			position[]={7949.3276,267.12967,13635.499};
 			azimut=-809.47778;
@@ -1529,7 +1366,7 @@ class Mission
 			vehicle="Land_Tovarna2";text="inter1_9_1";
 			init="this setVectorUp [0, 0, 1];";
 		};
-		class Item39
+		class Item22
 		{
 			position[]={7921.3525,267.22025,13659.15};
 			azimut=-90;
@@ -1538,7 +1375,7 @@ class Mission
 			vehicle="Land_A_Office01";
 			text="inter_3_1_1";
 		};
-		class Item40
+		class Item23
 		{
 			position[]={7930.0581,266.72617,13635.626};
 			azimut=-180;
@@ -1547,7 +1384,7 @@ class Mission
 			vehicle="Land_trafostanica_velka";text="inter1_4_1_1";
 			init="this setVectorUp [0, 0, 1];";
 		};
-		class Item41
+		class Item24
 		{
 			position[]={7947.8237,267.68091,13663.099};
 			azimut=-90;
@@ -1556,7 +1393,7 @@ class Mission
 			vehicle="Land_IndPipe2_big_18";
 			text="pip1";
 		};
-		class Item42
+		class Item25
 		{
 			position[]={7964.6675,268.05338,13668.577};
 			azimut=-270;
@@ -1565,7 +1402,7 @@ class Mission
 			vehicle="Land_IndPipe2_bigBuild2_L";
 			text="pip1_1";
 		};
-		class Item43
+		class Item26
 		{
 			position[]={7921.9683,266.52335,13632.517};
 			azimut=-270;
@@ -1574,7 +1411,7 @@ class Mission
 			vehicle="Land_IndPipe2_bigBuild1_R";
 			text="pip1_2";
 		};
-		class Item44
+		class Item27
 		{
 			position[]={7913.0386,266.49615,13634.311};
 			azimut=-270;
@@ -1583,7 +1420,7 @@ class Mission
 			vehicle="Land_IndPipe2_big_ground1";
 			text="pip1_3";
 		};
-		class Item45
+		class Item28
 		{
 			position[]={7937.2651,267.4762,13663.364};
 			azimut=-90;
@@ -1592,7 +1429,7 @@ class Mission
 			vehicle="Land_IndPipe2_big_ground2";
 			text="pip1_4";
 		};
-		class Item46
+		class Item29
 		{
 			position[]={11289.583,253.71249,5479.4429};
 			placement=70;
@@ -1600,9 +1437,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_psi_bouda";
 			text="dog_1";
-			init="_nul = [this]execVM ""addin\dogInit.sqf""; _dogSound = createSoundSource [""Sound_LittleDog"", getPosATL this, [], 0];";
 		};
-		class Item47
+		class Item30
 		{
 			position[]={10674.429,210.99001,8054.356};
 			placement=100;
@@ -1610,9 +1446,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_psi_bouda";
 			text="dog_2";
-			init="_nul = [this]execVM ""addin\dogInit.sqf""; _dogSound = createSoundSource [""Sound_LittleDog"", getPosATL this, [], 0];";
 		};
-		class Item48
+		class Item31
 		{
 			position[]={6554.0532,322.00757,6087.0918};
 			placement=70;
@@ -1620,9 +1455,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_psi_bouda";
 			text="dog_3";
-			init="_nul = [this]execVM ""addin\dogInit.sqf""; _dogSound = createSoundSource [""Sound_LittleDog"", getPosATL this, [], 0];";
 		};
-		class Item49
+		class Item32
 		{
 			position[]={5992.1475,266.90317,10345.947};
 			placement=100;
@@ -1630,9 +1464,8 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_psi_bouda";
 			text="dog_4";
-			init="_nul = [this]execVM ""addin\dogInit.sqf""; _dogSound = createSoundSource [""Sound_LittleDog"", getPosATL this, [], 0];";
 		};
-		class Item50
+		class Item33
 		{
 			position[]={7927.2036,269.99902,13652.239};id=66;
 			side="EMPTY";
@@ -1640,7 +1473,7 @@ class Mission
 			text="bold_1";
 			init="this setposASL [getPosASL this select 0,getPosASL this select 1,(getPosASL cor3 select 2)-25]; this setVectorUp [0, 0, -1];";
 		};
-		class Item51
+		class Item34
 		{
 			position[]={8056.3535,14.697248,3067.8779};
 			azimut=46.615993;
@@ -1649,103 +1482,7 @@ class Mission
 			vehicle="Land_Fort_Watchtower";
 			text="fort";
 		};
-		class Item52
-		{
-			position[]={8326.5879,266.23477,13294.87};
-			id=52;
-			side="EMPTY";
-			vehicle="Land_Misc_WaterStation";
-			text="entrance";
-			init="_nul = [this]execVM ""addin\entrance.sqf"";";
-		};
-		class Item53
-		{
-			position[]={7768.2466,0.89666796,2542.4558};
-			id=53;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy";
-		};
-		class Item54
-		{
-			position[]={7768.0405,0.88933253,2542.9207};
-			id=54;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_1";
-		};
-		class Item55
-		{
-			position[]={7768.3667,0.88530099,2543.604};
-			id=55;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_2";
-		};
-		class Item56
-		{
-			position[]={7768.9063,0.88724309,2543.937};
-			id=56;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_3";
-		};
-		class Item57
-		{
-			position[]={7769.4897,0.89136589,2543.9426};
-			id=57;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_4";
-		};
-		class Item58
-		{
-			position[]={7770.0454,0.89709884,2543.5767};
-			id=58;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_5";
-		};
-		class Item59
-		{
-			position[]={7770.2505,0.90463257,2542.8459};
-			id=59;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_6";
-		};
-		class Item60
-		{
-			position[]={7769.9487,0.91105407,2542.1958};
-			id=60;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_7";
-		};
-		class Item61
-		{
-			position[]={7769.3125,0.9111625,2541.9438};
-			id=61;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_8";
-		};
-		class Item62
-		{
-			position[]={7768.7222,0.90573227,2542.0559};
-			id=62;
-			side="EMPTY";
-			vehicle="BuoySmall";
-			text="Buoy_9";
-		};
-		class Item63
-		{
-			position[]={7769.1987,0.89544564,2543.1001};id=82;
-			side="EMPTY";
-			vehicle="BuoyBig";
-			text="bigBuoy";
-		};
-		class Item64
+		class Item35
 		{
 			position[]={3553.2688,12.956079,2471.1028};
 			azimut=249.88622;
@@ -1754,7 +1491,7 @@ class Mission
 			vehicle="Land_A_GeneralStore_01";
 			text="buil_1";
 		};
-		class Item65
+		class Item36
 		{
 			position[]={12474.112,162.18303,12539.219};
 			azimut=103.753;
@@ -1763,7 +1500,7 @@ class Mission
 			vehicle="Land_Mil_Barracks_i";
 			text="buil_1_1";
 		};
-		class Item66
+		class Item37
 		{
 			position[]={12488.194,162.0751,12534.226};
 			azimut=113.44302;
@@ -1772,7 +1509,7 @@ class Mission
 			vehicle="Land_Mil_Barracks_i";
 			text="buil_1_2";
 		};
-		class Item67
+		class Item38
 		{
 			position[]={11966.242,11.307501,3499.9578};
 			azimut=261.33936;
@@ -1781,7 +1518,7 @@ class Mission
 			vehicle="Land_A_GeneralStore_01a";
 			text="buil_1_3";
 		};
-		class Item68
+		class Item39
 		{
 			position[]={13416.342,11.900001,6154.5146};
 			azimut=-273.71976;
@@ -1790,16 +1527,6 @@ class Mission
 			vehicle="Land_A_GeneralStore_01";
 			text="buil_1_4";
 			init="this setposATL [getPosATL this select 0,getPosATL this select 1,(getPosATL this select 2)-0.5]; this setVectorUp [0, 0, 1];";
-		};
-		class Item69
-		{
-			position[]={10543.665,129.58195,9702.8877};
-			placement=70;
-			id=69;
-			side="EMPTY";
-			vehicle="Land_psi_bouda";
-			text="dog_5";
-			init="_nul = [this]execVM ""addin\dogInit.sqf""; _dogSound = createSoundSource [""Sound_LittleDog"", getPosATL this, [], 0];";
 		};
 	};
 	class Markers

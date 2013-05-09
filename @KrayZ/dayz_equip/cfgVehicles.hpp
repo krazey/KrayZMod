@@ -584,7 +584,7 @@ class CfgVehicles
 		model = "\dayz_equip\models\crowbar.p3d";
 		class eventHandlers
 		{
-			init = "[(_this select 0),'cfgWeapons','MeleeCrowbar'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
+			init = "[(_this select 0),'cfgWeapons','ItemCrowbar'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 		};
 	};
 	class WeaponHolder_huntingrifle: WeaponHolderBase

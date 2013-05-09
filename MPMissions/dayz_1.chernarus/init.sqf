@@ -16,6 +16,7 @@ player setVariable ["BIS_noCoreConversations", true];
 //disable radio messages to be heard and shown in the left lower corner of the screen
 enableRadio false;
 
+// DayZ Epoch config
 spawnShoremode = 1; // Default = 1 (on shore)
 spawnArea= 1500; // Default = 1500
 MaxHeliCrashes= 5; // Default = 5
@@ -56,7 +57,6 @@ if (isServer) then {
 	// Add trader citys
 	_nil = [] execVM "mission.sqf";
 	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
-	dogOwner = [];
 };
 
 if (!isDedicated) then {
@@ -66,13 +66,13 @@ if (!isDedicated) then {
 	dayz_loadScreenMsg = (localize "STR_AUTHENTICATING");
 	
 	//Run the player monitor
-	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death; _nul = [] execVM "addin\plrInit.sqf";}];
-	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
-	_nul = [] execVM "addin\plrInit.sqf";
+	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
+	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
+	_void = [] execVM "R3F_Realism\R3F_Realism_Init.sqf";
 	[] execVM "krazey\admins\functions.sqf";
 	[] execVM "krazey\refuel\fuelactions.sqf";
-	_void = [] execVM "R3F_Realism\R3F_Realism_Init.sqf";
 };
+
 
 // UPSMON
 call compile preprocessFileLineNumbers "addons\UPSMON\scripts\Init_UPSMON.sqf";

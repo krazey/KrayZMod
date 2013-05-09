@@ -75,36 +75,6 @@ if(_isPZombie) then {
 	
 		s_player_pzombiesvision = player addAction ["Vision", "\z\addons\dayz_code\actions\pzombie\pz_vision.sqf", [], 4, false, true, "nightVision", "_this == _target"];
 
-		player addAction ["Aperture + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_ap.sqf", [0.1], 0, false, true, "", "_this == _target"];
-		player addAction ["Aperture - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_ap.sqf", [-0.1], 0, false, true, "", "_this == _target"];
-
-		player addAction ["First R + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[0.1,0,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["First R - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[-0.1,0,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["First B + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[0,0.1,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["First B - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[0,-0.1,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["First G + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[0,0,0.1,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["First G - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[0,0,-0.1,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["First M + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[0,0,0,0.1]], 0, false, true, "", "", "_this == _target"];
-		player addAction ["First M - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV1",[0,0,0,-0.1]], 0, false, true, "", "", "_this == _target"];
-
-		player addAction ["Second R + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[0.1,0,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Second R - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[-0.1,0,0,0]], 0, false, true, "", "_this == _target"];		
-		player addAction ["Second B + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[0,0.1,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Second B - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[0,-0.1,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Second G + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[0,0,0.1,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Second G - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[0,0,-0.1,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Second M + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[0,0,0,0.1]], 0, false, true, "", "_this == _target"];
-		player addAction ["Second M - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV2",[0,0,0,-0.1]], 0, false, true, "", "_this == _target"];
-
-		player addAction ["Third R + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[0.1,0,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Third R - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[-0.1,0,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Third B + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[0,0.1,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Third B - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[0,-0.1,0,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Third G + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[0,0,0.1,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Third G - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[0,0,-0.1,0]], 0, false, true, "", "_this == _target"];
-		player addAction ["Third M + 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[0,0,0,0.1]], 0, false, true, "", "_this == _target"];
-		player addAction ["Third M - 0.1", "\z\addons\dayz_code\actions\pzombie\pz_vision_rbg1.sqf", ["NV3",[0,0,0,-0.1]], 0, false, true, "", "_this == _target"];
-
 	};
 	
 	if (!isNull cursorTarget and (player distance cursorTarget < 3)) then {	//Has some kind of target
@@ -150,7 +120,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	_isZombie = cursorTarget isKindOf "zZombie_base";
 	_isDestructable = cursorTarget isKindOf "BuiltItems";
 	_isWreck = typeOf cursorTarget in ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1","Rubbish2"];
-	_isRemovable = typeOf cursorTarget in ["Fence_corrugated_DZ"];
+	_isRemovable = typeOf cursorTarget in ["Fence_corrugated_DZ","ParkBench_DZ"];
 	_isDisallowRepair = typeOf cursorTarget in ["M240Nest_DZ"];
 	
 	_isTent = cursorTarget isKindOf "TentStorage";

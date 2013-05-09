@@ -81,7 +81,7 @@ SAR_log_AI_kills = true;
 // -----------------------------------------------
 
 // values: 0.1 - 1, 1 = no change, 0.5 = damage taken reduced by 50%, 0.1 = damage taken reduced by 90% -  EXPERIMENTAL
-SAR_leader_health_factor = 0.4;
+SAR_leader_health_factor = 1;
 
 // -----------------------------------------------
 // respawning of groups & vehicles that are dynamically spawned in the grid system

@@ -4,6 +4,19 @@
 "norrnRaDrag" addPublicVariableEventHandler {[_this select 1] spawn (compile preProcessFileLineNumbers "\z\addons\dayz_code\medical\publicEH\animDrag.sqf");};
 "norrnRnoAnim" addPublicVariableEventHandler {[_this select 1] spawn (compile preProcessFileLineNumbers "\z\addons\dayz_code\medical\publicEH\noAnim.sqf");};
 
+dayz_spaceInterrupt = {
+	private ["_dikCode", "_handled"];
+	_dikCode = _this select 1;
+	_handled = false;
+	if (_dikCode == 0x9D) then {
+		if (debugMonitor) then {
+			debugMonitor = false;
+			hintSilent "";
+		} else {[] spawn fnc_debug;};
+	};
+	_handled
+}; 
+
 fnc_debug = {
 	debugMonitor = true;
 	while {debugMonitor} do

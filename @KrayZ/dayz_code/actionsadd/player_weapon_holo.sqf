@@ -33,15 +33,6 @@ if(!TradeInprogress) then {
 
 				if(_qtyHolo > 0) then {
 					player removeMagazine "Holo_DZ";
-					
-					if(_x == "R3F_Famas_F1_AIM") then {player addMagazine "RedDot_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_F1_AIM_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_G2_AIM") then {player addMagazine "RedDot_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_G2_AIM_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_surb_AIM_SD") then {player addMagazine "RedDot_DZ"; sleep 1;};
-					if(_x == "R3F_Famas_surb_AIM_SD_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
-					if(_x == "R3F_HK417S_AIM_HG") then {player addMagazine "RedDot_DZ"; sleep 1;};
-					if(_x == "R3F_HK417S_AIM_HG_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
 
 					for "_i" from 0 to 1 do
 					{
@@ -55,6 +46,15 @@ if(!TradeInprogress) then {
 					_newWeapon =  _wwHolo select _wwIndex;
 					player addWeapon _newWeapon;
 					_weaponAss = true;
+					
+					if(_x == "R3F_Famas_F1_AIM") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_F1_AIM_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_AIM") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_G2_AIM_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_AIM_SD") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_Famas_surb_AIM_SD_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_AIM_HG") then {player addMagazine "RedDot_DZ"; sleep 1;};
+					if(_x == "R3F_HK417S_AIM_HG_DES") then {player addMagazine "RedDot_DZ"; sleep 1;};
 				};
 			};
 

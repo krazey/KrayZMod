@@ -1647,6 +1647,243 @@ class CfgWeight
 		
 		
 		
+		class R3F_Famas_F1
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_AIM
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_AIM_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_EOT
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_EOT_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_EOT_HG_SD
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_EOT_HG_SD_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_F1_J4_M203
+		{
+			weight = 5;
+		};
+		class R3F_Famas_F1_J4_M203_DES
+		{
+			weight = 5;
+		};
+		class R3F_Famas_F1_J4_M203_SD
+		{
+			weight = 5;
+		};
+		class R3F_Famas_F1_J4_M203_SD_DES
+		{
+			weight = 5;
+		};
+		class R3F_Famas_G2
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_EOT
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_EOT_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_J4
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_J4_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_J4_HG
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_J4_HG_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_AIM_HG
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_AIM_HG_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_G2_AIM_M203
+		{
+			weight = 5;
+		};
+		class R3F_Famas_G2_AIM_M203_DES
+		{
+			weight = 5;
+		};
+		class R3F_Famas_surb_AIM_HG
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb_AIM_HG_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb_AIM_SD
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb_AIM_SD_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb_EOT_SD
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb_EOT_SD_DES
+		{
+			weight = 4;
+		};
+		class R3F_Famas_surb_EOT_M203
+		{
+			weight = 5;
+		};
+		class R3F_Famas_surb_EOT_M203_DES
+		{
+			weight = 5;
+		};
+		class R3F_Famas_felin
+		{
+			weight = 6;
+		};
+		class R3F_Famas_felin_DES
+		{
+			weight = 6;
+		};
+		class R3F_FRF2_J8
+		{
+			weight = 6;
+		};
+		class R3F_FRF2_J8_DES
+		{
+			weight = 6;
+		};
+		class R3F_FRF2_J8_SD
+		{
+			weight = 6;
+		};
+		class R3F_FRF2_J8_SD_DES
+		{
+			weight = 6;
+		};
+		class R3F_PGM_Hecate_II
+		{
+			weight = 14;
+		};
+		class R3F_PGM_Hecate_II_MILDOT
+		{
+			weight = 14;
+		};
+		class R3F_PGM_Hecate_II_DES
+		{
+			weight = 14;
+		};
+		class R3F_PGM_Hecate_II_MILDOT_DES
+		{
+			weight = 14;
+		};
+		class R3F_PGM_Hecate_II_POLY
+		{
+			weight = 14;
+		};
+		class R3F_Minimi_EOT
+		{
+			weight = 14;
+		};
+		class R3F_Minimi_EOT_HG
+		{
+			weight = 14;
+		};
+		class R3F_Minimi_J4
+		{
+			weight = 14;
+		};
+		class R3F_Minimi_762_J4
+		{
+			weight = 14;
+		};
+		class R3F_Minimi_762_EOT_HG
+		{
+			weight = 14;
+		};
+		class R3F_Minimi_762_OB50
+		{
+			weight = 14;
+		};
+		class R3F_HK417L_NF
+		{
+			weight = 6;
+		};
+		class R3F_HK417M_AIM
+		{
+			weight = 5;
+		};
+		class R3F_HK417L_NF_DES
+		{
+			weight = 6;
+		};
+		class R3F_HK417M_AIM_DES
+		{
+			weight = 5;
+		};
+		class R3F_HK417S_EOT_HG
+		{
+			weight = 5;
+		};
+		class R3F_HK417S_EOT_HG_DES
+		{
+			weight = 5;
+		};
+		class R3F_HK417S_HG_SD
+		{
+			weight = 5;
+		};
+		class R3F_HK417S_HG_SD_DES
+		{
+			weight = 5;
+		};
+
 		
 	};
 };
