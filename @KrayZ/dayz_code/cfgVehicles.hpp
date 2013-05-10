@@ -1005,8 +1005,8 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-	class GUE_Soldier_Scout;
-	class Sniper2_DZ: GUE_Soldier_Scout {
+	class TK_Soldier_Sniper_EP1;
+	class Sniper2_DZ: TK_Soldier_Sniper_EP1 {
 		displayName = "Sniper";
 		hiddenSelectionsTextures[] = {"\dayz\textures\add\ghillie_top_desert_co.paa"};
 		side = 1;
