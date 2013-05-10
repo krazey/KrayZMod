@@ -127,7 +127,7 @@ class RscDisplayMain : RscStandardDisplay
 		};
 		class CA_ARMA2 : RscPicture
 		{
-			text = "z\addons\dayz_code\gui\dayz_logo_ca.paa";
+			text = "z\addons\dayz_code\gui\dayz_logo_mini_ca.paa";
 		};
 	};
 	
@@ -137,8 +137,8 @@ class RscDisplayMain : RscStandardDisplay
 		class DAYZ_Version : CA_Version
 		{
 			idc = -1;
-			text = "KrayZ 2.117 (based on DayZ, DayZ Epoch, DayZ+)";
-			y = "(SafeZoneH + SafeZoneY) - (1 - 0.95)";
+			text = "KrayZ 2.119 (based on DayZ, DayZ Epoch, DayZ+)";
+			y = "(SafeZoneH + SafeZoneY) - (1.06 - 0.95)";
 		};
 		delete CA_TitleMainMenu;
 		delete CA_SinglePlayer;

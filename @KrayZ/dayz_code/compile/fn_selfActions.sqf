@@ -327,6 +327,31 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		player removeAction s_player_rmvhbarrier;
 		s_player_rmvhbarrier = -1;
 	};
+	
+	//Allow owner to unlock gate
+	if(cursorTarget isKindOf "Gate_Locked_DZ" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and !UnlockInprogress) then {
+		if (s_player_unlockgate < 0  and (player distance cursorTarget < 3)) then {
+			s_player_unlockgate = player addAction ["Unlock Gate", "\z\addons\dayz_code\actionsadd\gate_unlock.sqf",cursorTarget, 0, false, true, "",""];
+		};
+	} else {
+		player removeAction s_player_unlockgate;
+		s_player_unlockgate = -1;
+	};
+	
+	//Allow owner to lock gate
+	if(cursorTarget isKindOf "Gate_DZ" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and !UnlockInprogress) then {
+		if (s_player_lockgate < 0) then {
+			s_player_lockgate = player addAction ["Lock Gate", "\z\addons\dayz_code\actionsadd\gate_lock.sqf",cursorTarget, 0, false, true, "",""];
+		};
+		if (s_player_deleteBuild < 0) then {
+			s_player_deleteBuild = player addAction [format[localize "str_actions_delete",_text], "\z\addons\dayz_code\actions\remove.sqf",cursorTarget, 1, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_lockgate;
+		s_player_lockgate = -1;
+		player removeAction s_player_deleteBuild;
+		s_player_deleteBuild = -1;
+	};
 
     //Player Deaths
 	if(cursorTarget isKindOf "Info_Board_EP1" and _canDo) then {
@@ -617,6 +642,12 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	//hbarrier
 	player removeAction s_player_rmvhbarrier;
 	s_player_rmvhbarrier = -1;
+	
+    //unlock & lock gate
+	player removeAction s_player_unlockgate;
+	s_player_unlockgate = -1;
+	player removeAction s_player_lockgate;
+	s_player_lockgate = -1;
 };
 
 

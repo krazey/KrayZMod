@@ -2,6 +2,7 @@ class CfgVehicles
 {
 	class NonStrategic;
 	class BuiltItems: NonStrategic{};
+	class BuiltItems2: NonStrategic{};
 	class TrapItems: NonStrategic{};
 
 	class HouseBase;				// External class reference
@@ -277,10 +278,10 @@ class CfgVehicles
 		vehicleClass = "Misc";
 		removeoutput[] = {{"ItemLadderLarge",1}};
 	};
-	class Gate1_DZ : BuiltItems
+	class Gate_DZ : BuiltItems2
 	{
 		scope = 2;
-		destrType = "DestructTree";
+		destrType = "DestructNo";
 		animated = true;
 		typicalCargo[] = {};
 		irTarget = false;
@@ -292,12 +293,11 @@ class CfgVehicles
 		coefInsideHeur = 0.8;
 		cost = 0;
 		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
-		GhostPreview = "Land_HBarrier_largePreview";
 		model = "\ca\misc2\BarbGate.p3d";
 		icon = "\Ca\misc2\data\Icons\icon_barGate2_ca.paa";
 		offset[] = {0,1.5,0.5};
 		mapSize = 3;
-		armor = 500;
+		armor = 800;
 		displayName = "Gate";
 		vehicleClass = "Military";
 		removeoutput[] = {{"ItemGate",1}};
@@ -333,6 +333,38 @@ class CfgVehicles
 		};
 		actionBegin1 = "OpenDoors1";
 		actionEnd1 = "OpenDoors1";
+	};
+	class Gate_Locked_DZ : BuiltItems2
+	{
+		scope = 2;
+		destrType = "DestructNo";
+		animated = true;
+		typicalCargo[] = {};
+		irTarget = false;
+		accuracy = 0.3;
+		transportAmmo = 0;
+		transportRepair = 0;
+		transportFuel = 0;
+		coefInside = 0.5;
+		coefInsideHeur = 0.8;
+		cost = 0;
+		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
+		model = "\ca\misc2\BarbGate.p3d";
+		icon = "\Ca\misc2\data\Icons\icon_barGate2_ca.paa";
+		offset[] = {0,1.5,0.5};
+		mapSize = 3;
+		armor = 800;
+		displayName = "Locked Gate";
+		vehicleClass = "Military";
+		removeoutput[] = {{"ItemGate",1}};
+
+		class AnimationSources {
+			class Door01 {
+				source = "User"; 
+				animPeriod = 1;
+				initPhase = 0;
+			};
+		};
 	};
 	// PLAYER BUILDINGS
 	class Plastic_Pole_EP1;

@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.117";
+		version = "2.119";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -574,7 +574,7 @@ class CfgBuildingLoot {
 			0.01, //wire
 			0.04, //tanktrap
 			0.01, //netting material
-			0.25 //sandbag
+			0.10 //sandbag
 		};
 	};
 	class Farm: Default {
@@ -619,7 +619,7 @@ class CfgBuildingLoot {
 			0.08, //revolver
 			0.01, //camo3
 			0.01, //camo2
-			0.25 //sandbag
+			0.10 //sandbag
 		};
 	};
 	class Supermarket: Default {
@@ -1043,7 +1043,7 @@ class HeliCrash_No50s: Default {
 			2.50, //military
 			//0.20,
 			0.05, //etool
-			0.50, //sandbag
+			0.10, //sandbag
 			//0.01, //L85A2 holo
 			0.03,	//camo1
 			0.03	//camo4

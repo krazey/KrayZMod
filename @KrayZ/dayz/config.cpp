@@ -62527,21 +62527,29 @@ class CfgMovesPlayerZombie: CfgMovesZombieBase
 class CfgFaces
 {
 	class Default;
-	class Man: Default
+	
+	class Man : Default
 	{
 		class Default;
-		class Zombie1: Default
-		{
+		
+		class Zombie1 : Default {
 			name = "Zombie 1";
-			texture = "\dayz\textures\faces\zombie_03_co.paa";
+			texture = "\dayz\textures\faces\zombie_01_co.paa";
 			identityTypes[] = {"Zombie1"};
 			disabled = 0;
 		};
-		class Zombie2: Default
-		{
+		
+		class Zombie2 : Default {
 			name = "Zombie 2";
-			texture = "\dayz\textures\faces\zombie_03_co.paa";
+			texture = "\dayz\textures\faces\zombie_02_co.paa";
 			identityTypes[] = {"Zombie2"};
+			disabled = 0;
+		};
+
+		class Zombie3 : Default {
+			name = "Zombie 3";
+			texture = "\dayz\textures\faces\zombie_03_co.paa";
+			identityTypes[] = {"Zombie3"};
 			disabled = 0;
 		};
 	};

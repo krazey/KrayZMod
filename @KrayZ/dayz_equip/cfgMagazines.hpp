@@ -2183,7 +2183,7 @@ class CfgMagazines
 				text = "$STR_ACTIONS_BUILD";
 				script = "spawn player_build;";
 				requiretools[] = {"ItemToolbox"};
-				create = "Gate1_DZ";
+				create = "Gate_Locked_DZ";
 			};
 			class Crafting1
 			{

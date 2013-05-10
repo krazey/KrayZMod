@@ -497,7 +497,7 @@ class CfgLoot {
 		{
 			0.01, //Skin_Ins_Soldier
 			0.05, //Skin_Bandit1
-			0.02, //Skin_Bandit2
+			0.01, //Skin_Bandit2
 			0.05, //Skin_BanditW1
 			0.03, //Skin_BanditW2
 			0.01, //Skin_TK_INS_Soldier

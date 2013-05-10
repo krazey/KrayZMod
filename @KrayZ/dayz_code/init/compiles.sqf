@@ -123,6 +123,10 @@ if (!isDedicated) then {
 	//remove hbbarrier (owner only)
 	player_rmvhbarrier =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_rmvhbarrier.sqf";
 	
+	//lock & unlock gate1
+	player_unlockGate =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_unlockGate.sqf";
+	player_lockGate =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_lockGate.sqf";
+	
 	//halo jump add
 	bis_fnc_halo =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_HALO.sqf";
 	
