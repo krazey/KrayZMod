@@ -387,11 +387,11 @@ class CfgMagazines
 		displayName = "Bandit Outfit";
 		descriptionShort = "Bandit Outfit";
 	};
-	class Skin_Admin_DZ: SkinBase
+	class Skin_Bandit2_DZ: SkinBase
 	{
 		scope = 2;
-		displayName = "Admin Outfit";
-		descriptionShort = "Admin Outfit";
+		displayName = "Bandit Outfit";
+		descriptionShort = "Bandit Outfit (5-color camo, woodland)";
 	};
 	class Skin_SOTG_DZ: SkinBase
 	{
@@ -1300,8 +1300,8 @@ class CfgMagazines
 	{
 		scope = 2;
 		count = 1;
-		// fuelQuantity = 20;
-		type = "(256 * 6)";
+		// fuelQuantity = 210;
+		type = 256;
 		displayName = "Oil Barrel";
 		model = "\dayz_equip\models\oil_drum_model.p3d";
 		picture = "\dayz_equip\textures\equip_oil_drum_model_ca.paa";
@@ -1320,12 +1320,10 @@ class CfgMagazines
 	};
 	class ItemFuelBarrelEmpty: ItemFuelBarrel
 	{
-		scope = 2;
-		count = 1;
 		fuelQuantity = 0;
 		type = "(256 * 6)";
 		displayName = "Fuel Barrel (Empty)";
-		picture = "\dayz_equip\textures\equip_oil_drum_model_ca.paa";
+		picture = "\dayz_equip\textures\equip_oil_drum_model_e_ca.paa";
 		descriptionShort = "210 litres of fuel in a Barrel (Empty)";
 	}; 
 	class ItemJerrycan: CA_Magazine
@@ -1516,6 +1514,26 @@ class CfgMagazines
 				requiretools[] = {"ItemToolbox"}; 
 				input[] = {{"30m_plot_kit",1}};
 				output[] = {{"ItemPole",1},{"ItemGoldBar10oz",1}};
+			};
+		};
+	};
+	class light_pole_kit: CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Light Pole";
+		descriptionShort = "Light Pole";
+		model = "\dayz_equip\models\supply_crate.p3d";
+		picture = "\dayz_equip\textures\equip_wooden_crate_ca.paa";
+		class ItemActions
+		{
+			class Build
+			{
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				require[] = {"ItemEtool","ItemToolbox"};
+				create = "LightPole_DZ";
 			};
 		};
 	};

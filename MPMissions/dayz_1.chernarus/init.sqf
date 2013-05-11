@@ -18,8 +18,8 @@ enableRadio false;
 
 // DayZ Epoch config
 spawnShoremode = 1; // Default = 1 (on shore)
-spawnArea= 1500; // Default = 1500
-MaxHeliCrashes= 5; // Default = 5
+spawnArea = 1500; // Default = 1500
+MaxHeliCrashes = 5; // Default = 5
 MaxVehicleLimit = 300; // Default = 50
 MaxDynamicDebris = 500; // Default = 100
 dayz_MapArea = 14000; // Default = 10000
@@ -69,7 +69,6 @@ if (!isDedicated) then {
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
 	_void = [] execVM "R3F_Realism\R3F_Realism_Init.sqf";
-	[] execVM "krazey\admins\functions.sqf";
 	[] execVM "krazey\refuel\fuelactions.sqf";
 };
 

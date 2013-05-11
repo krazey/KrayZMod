@@ -343,14 +343,14 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		if (s_player_lockgate < 0) then {
 			s_player_lockgate = player addAction ["Lock Gate", "\z\addons\dayz_code\actionsadd\gate_lock.sqf",cursorTarget, 0, false, true, "",""];
 		};
-		if (s_player_deleteBuild < 0) then {
-			s_player_deleteBuild = player addAction [format[localize "str_actions_delete",_text], "\z\addons\dayz_code\actions\remove.sqf",cursorTarget, 1, true, true, "", ""];
+		if (s_player_deleteGate < 0) then {
+			s_player_deleteGate = player addAction [format[localize "str_actions_delete",_text], "\z\addons\dayz_code\actions\remove.sqf",cursorTarget, 1, true, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_lockgate;
 		s_player_lockgate = -1;
-		player removeAction s_player_deleteBuild;
-		s_player_deleteBuild = -1;
+		player removeAction s_player_deleteGate;
+		s_player_deleteGate = -1;
 	};
 
     //Player Deaths
@@ -593,8 +593,12 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_flipveh = -1;
 	player removeAction s_player_sleep;
 	s_player_sleep = -1;
+	
 	player removeAction s_player_deleteBuild;
 	s_player_deleteBuild = -1;
+	player removeAction s_player_deleteGate;
+	s_player_deleteGate = -1;
+	
 	player removeAction s_player_butcher;
 	s_player_butcher = -1;
 	player removeAction s_player_cook;

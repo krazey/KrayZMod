@@ -1807,47 +1807,47 @@ class CfgWeight
 		{
 			weight = 6;
 		};
-		class R3F_PGM_Hecate_II
+		class R3F_PGM_Hecate_II_DZ
 		{
 			weight = 14;
 		};
-		class R3F_PGM_Hecate_II_MILDOT
+		class R3F_PGM_Hecate_II_MILDOT_DZ
 		{
 			weight = 14;
 		};
-		class R3F_PGM_Hecate_II_DES
+		class R3F_PGM_Hecate_II_DES_DZ
 		{
 			weight = 14;
 		};
-		class R3F_PGM_Hecate_II_MILDOT_DES
+		class R3F_PGM_Hecate_II_MILDOT_DES_DZ
 		{
 			weight = 14;
 		};
-		class R3F_PGM_Hecate_II_POLY
+		class R3F_PGM_Hecate_II_POLY_DZ
 		{
 			weight = 14;
 		};
-		class R3F_Minimi_EOT
+		class R3F_Minimi_EOT_DZ
 		{
 			weight = 14;
 		};
-		class R3F_Minimi_EOT_HG
+		class R3F_Minimi_EOT_HG_DZ
 		{
 			weight = 14;
 		};
-		class R3F_Minimi_J4
+		class R3F_Minimi_J4_DZ
 		{
 			weight = 14;
 		};
-		class R3F_Minimi_762_J4
+		class R3F_Minimi_762_J4_DZ
 		{
 			weight = 14;
 		};
-		class R3F_Minimi_762_EOT_HG
+		class R3F_Minimi_762_EOT_HG_DZ
 		{
 			weight = 14;
 		};
-		class R3F_Minimi_762_OB50
+		class R3F_Minimi_762_OB50_DZ
 		{
 			weight = 14;
 		};

@@ -7,7 +7,10 @@ class CfgVehicles
 
 	class HouseBase;				// External class reference
 	
-	class Constuctables : HouseBase {
+	class Constuctables: HouseBase {
+		class DestructionEffects;	// External class reference
+	};
+	class Constuctables2: HouseBase {
 		class DestructionEffects;	// External class reference
 	};
 
@@ -98,7 +101,7 @@ class CfgVehicles
 		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
 		removeoutput[] = {{"ItemHBarrierCube",1}};
 	};
-	class HBarrier : Constuctables
+	class HBarrier : Constuctables2
 	{
 		scope = 2;
 		destrType = "DestructBuilding";
@@ -315,9 +318,9 @@ class CfgVehicles
 				displayNameDefault = "Open Gate";
 				displayName = "Open Gate";
 				position = "Door01_axis";
-				radius = 4;
+				radius = 3;
 				onlyForPlayer = 1;
-				condition = "this animationPhase ""Door01"" < 0.5";
+				condition = "this animationPhase ""Door01"" < 0.3";
 				statement = "this animate [""Door01"", 1]";
 			};
 			
@@ -325,9 +328,9 @@ class CfgVehicles
 				displayNameDefault = "Close Gate";
 				displayName = "Close Gate";
 				position = "Door01_axis";
-				radius = 4;
+				radius = 3;
 				onlyForPlayer = 1;
-				condition = "this animationPhase ""Door01"" >= 0.5";
+				condition = "this animationPhase ""Door01"" >= 0.3";
 				statement = "this animate [""Door01"", 0]";
 			};
 		};
@@ -387,6 +390,8 @@ class CfgVehicles
 		transportMaxWeapons = 4;
 		transportMaxBackpacks = 1;
 		constructioncount = 10;
+		destrType = "DestructBuilding"; 
+		armor = 500;
 		removeoutput[] = {{"m240_nest_kit",1}};
 	};
 	class Land_covering_hut_EP1;
@@ -484,6 +489,15 @@ class CfgVehicles
 		transportMaxMagazines = 200;
 		transportMaxWeapons = 20;
 		transportMaxBackpacks = 10;
+	};
+	class ASC_EU_LHVOld;
+	class LightPole_DZ: ASC_EU_LHVOld
+	{
+		armor = 200;
+		scope = 2;
+		offset[] = {0,2.5,0};
+		displayName = "Light Pole";
+		vehicleClass = "Fortifications";
 	};
 	class WoodGate_DZ: BuiltItems
 	{

@@ -428,10 +428,8 @@ class FSM
        "" \n
        "_msg = [];" \n
        "" \n
-       "//[""dayzLogin"",[_playerUID,player]] call callRpcProcedure;" \n
-       "" \n
        "dayzLogin = [_playerUID,player];" \n
-       "publicVariableServer ""dayzLogin"";" \n
+       "publicVariable ""dayzLogin"";" \n
        "" \n
        "dayzPlayerLogin = [];" \n
        ""/*%FSM</STATEINIT""">*/;
@@ -445,7 +443,7 @@ class FSM
           to="Parse_Login";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"count (dayzPlayerLogin) > 0"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_msg = 		dayzPlayerLogin;"/*%FSM</ACTION""">*/;
+          action=/*%FSM<ACTION""">*/"_msg =         dayzPlayerLogin;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
       };
