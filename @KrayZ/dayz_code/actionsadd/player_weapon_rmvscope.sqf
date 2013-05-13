@@ -7,8 +7,8 @@ disableserialization;
 _weaponDis = false;
 
 // Weapon database
-_wwSniper = ["DMR","AKS_74_pso"];
-_wwdSniper = ["M14_EP1","AKS_74"];
+_wwSniper = ["DMR","AKS_74_pso","DMR_DZ"];
+_wwdSniper = ["M14_EP1","AKS_74","M14_EP1"];
 
 if(!TradeInprogress) then {
 	TradeInprogress = true;

@@ -294,7 +294,7 @@ class CfgVehicles
 		respawnMagazines[] = {};
 
 		faceType = "ZFaces";
-		identityTypes[] = {"Zombie1","Zombie2"};
+		identityTypes[] = {"Zombie1","Zombie2","Zombie3"};
 		extCameraPosition[] = {0,1.5,-9};
 		
 		canHideBodies = 0;
@@ -312,7 +312,7 @@ class CfgVehicles
 	{
 		model = "\ca\characters2\civil\Functionary\Functionary";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\ca\characters2\civil\functionary\data\functionary_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\clothes\functionary_co.paa"};
 		class Wounds
 		{
 			tex[] = {};
@@ -332,15 +332,15 @@ class CfgVehicles
 			tex[] = {};
 			mat[] = {"Ca\characters_E\Overall\Data\Overall.rvmat","Ca\characters_E\Overall\Data\W1_Overall.rvmat","Ca\characters_E\Overall\Data\W2_Overall.rvmat"};
 		};
-		hiddenSelectionsTextures[] = {"\Ca\characters_E\Overall\Data\Overall_4_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\clothes\Overall_4_co.paa"};
 	};
 	class pz_worker2: pz_worker1
 	{
-		hiddenSelectionsTextures[] = {"\Ca\characters_E\Overall\Data\Overall_3_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\clothes\Overall_3_co.paa"};
 	};
 	class pz_worker3: pz_worker1
 	{
-		hiddenSelectionsTextures[] = {"\Ca\characters_E\Overall\Data\Overall_2_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\clothes\Overall_2_co.paa"};
 	};
 
 	class pz_doctor: PZombie_VB
@@ -372,7 +372,7 @@ class CfgVehicles
 	{
 		model = "\ca\characters2\civil\Villager\Villager";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\ca\characters2\civil\villager\data\villager_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\clothes\villager_co.paa"};
 		class Wounds
 		{
 			tex[] = {};
@@ -381,11 +381,11 @@ class CfgVehicles
 	};
 	class pz_villager2: pz_villager1
 	{
-		hiddenSelectionsTextures[] = {"\ca\characters2\civil\villager\data\villager_v2_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\clothes\villager_v2_co.paa"};
 	};
 	class pz_villager3: pz_villager1
 	{
-		hiddenSelectionsTextures[] = {"\ca\characters2\civil\villager\data\villager_v3_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\clothes\villager_v3_co.paa"};
 	};
 	class pz_priest: PZombie_VB
 	{

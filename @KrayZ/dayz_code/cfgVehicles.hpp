@@ -1093,11 +1093,10 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_US_ASSAULT_COYOTE_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model = "\ca\weapons_e\AmmoBoxes\backpack_us_assault_Coyote.p3d";
+		model = "\dayz_equip\backpacks\backpack_us_assault_Coyote.p3d";
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 8;
 	};
-
 	class AGS_UN_Bag_EP1;
 	class Net_DZ: AGS_UN_Bag_EP1 {
 		displayName = "Netting Material";
@@ -1110,7 +1109,6 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-
 	class DZ_Assault_Pack_EP1: Bag_Base_EP1
 	{
 		scope = 2;
@@ -1122,7 +1120,6 @@ class Citizen1;	// External class reference
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 12;
 	};
-
 	class DZ_Czech_Vest_Puch: Bag_Base_EP1
 	{
 		displayname = "Czech Vest Pouch";
@@ -1134,7 +1131,6 @@ class Citizen1;	// External class reference
 		transportmaxmagazines = 12;
 		transportmaxweapons = 0;
 	};
-
 	class DZ_ALICE_Pack_EP1: Bag_Base_EP1
 	{
 		scope = 2;
@@ -1144,9 +1140,8 @@ class Citizen1;	// External class reference
 		mapsize = 2;
 		model = "\ca\weapons_e\AmmoBoxes\backpack_tk_alice.p3d";
 		transportMaxWeapons = 2;
-		transportMaxMagazines = 16;
+		transportMaxMagazines = 20;
 	};
-
 	class DZ_TK_Assault_Pack_EP1 : Bag_Base_BAF
 	{
 		scope = 2;
@@ -1154,7 +1149,7 @@ class Citizen1;	// External class reference
 		mapSize = 2;
 		picture = "\ca\weapons_e\data\icons\backpack_CIVIL_ASSAULT_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
-		model = "\ca\weapons_e\AmmoBoxes\backpack_civil_assault.p3d";
+		model = "\dayz_equip\backpacks\backpack_civil_assault.p3d";
 		transportMaxWeapons = 2;
 		transportMaxMagazines = 16;
 	};
@@ -1167,10 +1162,9 @@ class Citizen1;	// External class reference
 		model = "\ca\weapons_baf\Backpack_Small_BAF";\
 		picture = "\ca\weapons_baf\data\UI\backpack_BAF_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
-		transportMaxWeapons = 3;
-		transportMaxMagazines = 18;
+		transportMaxWeapons = 4;
+		transportMaxMagazines = 24;
 	};
-
 	class DZ_CivilBackpack_EP1: Bag_Base_EP1    
 	{
 		scope = 2;
@@ -1178,11 +1172,10 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_ACR_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model = "\ca\weapons_e\AmmoBoxes\backpack_acr.p3d";
+		model = "\dayz_equip\backpacks\backpack_acr.p3d";
 		transportMaxWeapons = 4;
 		transportMaxMagazines = 24;
 	};
-
 	class DZ_Backpack_EP1: Bag_Base_EP1
 	{
 		scope = 2;
@@ -1192,7 +1185,18 @@ class Citizen1;	// External class reference
 		mapsize = 2;
 		model= "\ksk_mod\backpack_ger_wdl.p3d";
 		transportMaxWeapons = 6;
-		transportMaxMagazines = 30;
+		transportMaxMagazines = 32;
+	};
+	class DZ_Backpack2_EP1: Bag_Base_EP1
+	{
+		scope = 2;
+		displayName = "Backpack (coyote)";
+		picture = "\ca\weapons_e\data\icons\backpack_US_CA.paa";
+		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
+		mapsize = 2;
+		model= "\dayz_equip\backpacks\backpack_us.p3d";
+		transportMaxWeapons = 5;
+		transportMaxMagazines = 28;
 	};
 	class DZ_LargeGunBag_EP1: Bag_Base_EP1
 	{

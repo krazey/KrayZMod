@@ -16,7 +16,10 @@ class CfgVehicles
 		magazines[] = {};
 		sensitivity = 4;
 		sensitivityEar = 2;
-		identityTypes[] = {"zombie1","zombie2"};
+
+		faceType = "ZFaces";
+		identityTypes[] = {"Zombie1","Zombie2","Zombie3"};
+
 		class TalkTopics{};
 		languages[] = {};
 		class Eventhandlers

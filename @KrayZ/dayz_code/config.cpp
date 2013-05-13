@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.119";
+		version = "2.121";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -478,6 +478,7 @@ class CfgBuildingLoot {
 			{"DZ_ALICE_Pack_EP1","object"}, // 16
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
+			{"DZ_Backpack2_EP1","object"},
 
 			{ "Winchester1866","weapon" },
 			{ "WeaponHolder_ItemTent","object" },
@@ -510,6 +511,7 @@ class CfgBuildingLoot {
 			0.02, //alicepack (16)
 			0.02, //tk_assaultpack (16)
 			0.01, //acupack (18)
+			0.01, //backpack2
 			0.01, //winchester
 			0.01, //tent
 			0.03, //military
@@ -646,6 +648,7 @@ class CfgBuildingLoot {
 			{"DZ_ALICE_Pack_EP1","object"}, // 16
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
+			{"DZ_Backpack_EP1","object"},
 			{"DZ_CompactPack_EP1","object"}, // 18-1
 			{"DZ_TerminalPack_EP1","object"}, // 12-1
 			
@@ -676,6 +679,7 @@ class CfgBuildingLoot {
 			0.02, //alicepack (16)
 			0.02, //tk_assaultpack (16)
 			0.01, //acupack (18)
+			0.005, //backpack2
 			0.01, //compactpack (18-1)
 			0.01, //terminalpack (12-1)
 			0.01, //winchester
@@ -722,7 +726,7 @@ class CfgBuildingLoot {
 			//{ "Mk_48_DZ","weapon" },
 			//{ "M249_DZ","weapon" },
 			//{"BAF_L85A2_RIS_SUSAT","weapon"},
-			{ "DMR","weapon" },
+			{ "DMR_DZ","weapon" },
 			{ "","military" },
 			{ "","medical" },
 			{ "MedBox0","object" },
@@ -811,7 +815,7 @@ class HeliCrash_No50s: Default {
 			//{"Mk_48_DZ","weapon"},
 			//{"M249_DZ","weapon"},
 			//{"BAF_L85A2_RIS_SUSAT","weapon"},
-			{"DMR","weapon"},
+			{"DMR_DZ","weapon"},
 			{"","military"},
 			{"","medical"},
 			{"MedBox0","object"},
@@ -938,7 +942,7 @@ class HeliCrash_No50s: Default {
 			{ "AK_47_M","weapon" },
 			{ "M24","weapon" },
 			{ "M1014","weapon" },
-			{ "DMR","weapon" },
+			{ "DMR_DZ","weapon" },
 			//{ "M4A1","weapon" },
 			{ "M14_EP1","weapon" },
 			//{ "UZI_EP1","weapon" },
@@ -973,24 +977,24 @@ class HeliCrash_No50s: Default {
 	};
 		itemChance[] =	{
 			//r3f armes weaponary
-			0.03, //"R3F_Famas_F1",
-			0.01, //"R3F_Famas_F1_AIM",
-			0.01, //"R3F_Famas_F1_EOT",
-			0.03, //"R3F_Famas_G2",
-			0.01, //"R3F_Famas_G2_EOT",
-			0.01, //"R3F_Famas_G2_J4",
-			0.01, //"R3F_Famas_G2_J4_HG",
-			0.01, //"R3F_Famas_G2_AIM_HG",
-			0.01, //"R3F_Famas_G2_AIM_M203",
-			0.01, //"R3F_Famas_surb_AIM_HG",
-			0.01, //"R3F_Famas_surb",
-			0.01, //"R3F_Famas_surb_EOT_M203",
-			0.01, //"R3F_HK417L_NF",
-			0.03, //"R3F_HK417M_AIM",
-			0.01, //"R3F_HK417S_EOT_HG",
-			0.01, //"R3F_HK417S_HG_SD",
-			0.01, //"R3F_FRF2_J8",
-			0.01, //"R3F_FRF2_J8_SD",
+			0.01, //"R3F_Famas_F1",
+			0.008, //"R3F_Famas_F1_AIM",
+			0.008, //"R3F_Famas_F1_EOT",
+			0.01, //"R3F_Famas_G2",
+			0.008, //"R3F_Famas_G2_EOT",
+			0.008, //"R3F_Famas_G2_J4",
+			0.008, //"R3F_Famas_G2_J4_HG",
+			0.008, //"R3F_Famas_G2_AIM_HG",
+			0.008, //"R3F_Famas_G2_AIM_M203",
+			0.008, //"R3F_Famas_surb_AIM_HG",
+			0.008, //"R3F_Famas_surb",
+			0.008, //"R3F_Famas_surb_EOT_M203",
+			0.008, //"R3F_HK417L_NF",
+			0.01, //"R3F_HK417M_AIM",
+			0.008, //"R3F_HK417S_EOT_HG",
+			0.008, //"R3F_HK417S_HG_SD",
+			0.008, //"R3F_FRF2_J8",
+			0.008, //"R3F_FRF2_J8_SD",
 			0.005, //"R3F_PGM_Hecate_II",
 			0.005, //"R3F_PGM_Hecate_II_MILDOT",
 			0.005, //"R3F_PGM_Hecate_II_POLY",
@@ -1059,48 +1063,27 @@ class HeliCrash_No50s: Default {
 		itemType[] = {
 			//r3f armes weaponary
 			{ "R3F_Famas_G2","weapon" },
-			{ "R3F_Famas_G2_DES","weapon" },
 			{ "R3F_Famas_G2_EOT","weapon" },
-			{ "R3F_Famas_G2_EOT_DES","weapon" },
 			{ "R3F_Famas_G2_J4","weapon" },
-			{ "R3F_Famas_G2_J4_DES","weapon" },
 			{ "R3F_Famas_G2_J4_HG","weapon" },
-			{ "R3F_Famas_G2_J4_HG_DES","weapon" },
 			{ "R3F_Famas_G2_AIM_HG","weapon" },
-			{ "R3F_Famas_G2_AIM_HG_DES","weapon" },
 			{ "R3F_Famas_G2_AIM_M203","weapon" },
-			{ "R3F_Famas_G2_AIM_M203_DES","weapon" },
 			{ "R3F_Famas_surb_AIM_HG","weapon" },
-			{ "R3F_Famas_surb_AIM_HG_DES","weapon" },
 			{ "R3F_Famas_surb","weapon" },
-			{ "R3F_Famas_surb_DES","weapon" },
 			{ "R3F_Famas_surb_EOT_M203","weapon" },
-			{ "R3F_Famas_surb_EOT_M203_DES","weapon" },
 			{ "R3F_HK417L_NF","weapon" },
 			{ "R3F_HK417M_AIM","weapon" },
-			{ "R3F_HK417L_NF_DES","weapon" },
-			{ "R3F_HK417M_AIM_DES","weapon" },
 			{ "R3F_HK417S_EOT_HG","weapon" },
-			{ "R3F_HK417S_EOT_HG_DES","weapon" },
 			{ "R3F_HK417S_HG_SD","weapon" },
-			{ "R3F_HK417S_HG_SD_DES","weapon" },
 			{ "R3F_FRF2_J8","weapon" },
-			{ "R3F_FRF2_J8_DES","weapon" },
 			{ "R3F_FRF2_J8_SD","weapon" },
-			{ "R3F_FRF2_J8_SD_DES","weapon" },
 			{ "R3F_PGM_Hecate_II_DZ","weapon" },
 			{ "R3F_PGM_Hecate_II_MILDOT_DZ","weapon" },
-			{ "R3F_PGM_Hecate_II_DES_DZ","weapon" },
-			{ "R3F_PGM_Hecate_II_MILDOT_DES_DZ","weapon" },
 			{ "R3F_PGM_Hecate_II_POLY_DZ","weapon" },
 			{ "R3F_Famas_surb_AIM_SD","weapon" },
-			{ "R3F_Famas_surb_AIM_SD_DES","weapon" },
 			{ "R3F_Famas_surb_EOT_SD","weapon" },
-			{ "R3F_Famas_surb_EOT_SD_DES","weapon" },
 			{ "R3F_Famas_F1_J4_M203_SD","weapon" },
-			{ "R3F_Famas_F1_J4_M203_SD_DES","weapon" },
 			{ "R3F_Famas_F1_EOT_HG_SD","weapon" },
-			{ "R3F_Famas_F1_EOT_HG_SD_DES","weapon" },
 
 			//{ "M16A2","weapon" },
 			//{ "M16A2GL","weapon" },
@@ -1114,7 +1097,7 @@ class HeliCrash_No50s: Default {
 			{ "M24","weapon" },
 			{ "SVD_CAMO","weapon" },
 			{ "M1014","weapon" },
-			{ "DMR","weapon" },
+			{ "DMR_DZ","weapon" },
 			//{ "M4A1","weapon" },
 			{ "M14_EP1","weapon" },
 			//{ "UZI_EP1","weapon" },
@@ -1158,48 +1141,27 @@ class HeliCrash_No50s: Default {
 		itemChance[] =	{
 			//r3f armes weaponary
 			0.03, //"R3F_Famas_G2",
-			0.01, //"R3F_Famas_G2_DES",
 			0.01, //"R3F_Famas_G2_EOT",
-			0.01, //"R3F_Famas_G2_EOT_DES",
 			0.01, //"R3F_Famas_G2_J4",
-			0.01, //"R3F_Famas_G2_J4_DES",
 			0.01, //"R3F_Famas_G2_J4_HG",
-			0.01, //"R3F_Famas_G2_J4_HG_DES",
 			0.01, //"R3F_Famas_G2_AIM_HG",
-			0.01, //"R3F_Famas_G2_AIM_HG_DES",
 			0.01, //"R3F_Famas_G2_AIM_M203",
-			0.01, //"R3F_Famas_G2_AIM_M203_DES",
 			0.01, //"R3F_Famas_surb_AIM_HG",
-			0.01, //"R3F_Famas_surb_AIM_HG_DES",
 			0.03, //"R3F_Famas_surb",
-			0.01, //"R3F_Famas_surb_DES",
 			0.01, //"R3F_Famas_surb_EOT_M203",
-			0.01, //"R3F_Famas_surb_EOT_M203_DES",
 			0.01, //"R3F_HK417L_NF",
 			0.01, //"R3F_HK417M_AIM",
-			0.01, //"R3F_HK417L_NF_DES",
-			0.01, //"R3F_HK417M_AIM_DES",
 			0.01, //"R3F_HK417S_EOT_HG",
-			0.01, //"R3F_HK417S_EOT_HG_DES",
 			0.01, //"R3F_HK417S_HG_SD",
-			0.01, //"R3F_HK417S_HG_SD_DES",
 			0.002, //"R3F_FRF2_J8",
-			0.001, //"R3F_FRF2_J8_DES",
 			0.001, //"R3F_FRF2_J8_SD",
-			0.001, //"R3F_FRF2_J8_SD_DES",
 			0.002, //"R3F_PGM_Hecate_II",
 			0.002, //"R3F_PGM_Hecate_II_MILDOT",
-			0.002, //"R3F_PGM_Hecate_II_DES",
-			0.002, //"R3F_PGM_Hecate_II_MILDOT_DES",
 			0.002, //"R3F_PGM_Hecate_II_POLY",
 			0.01, //"R3F_Famas_surb_AIM_SD",
-			0.005, //"R3F_Famas_surb_AIM_SD_DES",
 			0.005, //"R3F_Famas_surb_EOT_SD",
-			0.005, //"R3F_Famas_surb_EOT_SD_DES",
 			0.005, //"R3F_Famas_F1_J4_M203_SD",
-			0.005, //"R3F_Famas_F1_J4_M203_SD_DES",
 			0.005, //"R3F_Famas_F1_EOT_HG_SD",
-			0.005, //"R3F_Famas_F1_EOT_HG_SD_DES",
 
 			//0.10, //m16a2
 			//0.05, //m16a2gl

@@ -1,7 +1,22 @@
 class CfgMagazines
 {
 	class CA_Magazine;
-	// TiMz - Weapon items: reddot, acog, holo & sniper
+	class des_paint_kit : CA_Magazine
+	{
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "Desert Paint Kit";
+		picture = "\dayz_equip\weapons\SprayCan.paa";
+		descriptionShort = "Can be used for painting weapons, for: Famas, HK417, FRF2, PGM";
+		class ItemActions {
+			class AddDesert {
+				text = "Paint Weapon";
+				script = "spawn player_weapon_desert;";
+			};
+		};
+	};
+	// TiMz - Weapon items: reddot, acog, holo, sniper, launcher & suppressor
 	class RedDot_DZ : CA_Magazine
 	{
 		scope = 2;

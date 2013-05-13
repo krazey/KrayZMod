@@ -63,6 +63,7 @@ if(DZEdebug) then {
 if(_isPZombie) then {
 	//_state = animationState player;
 	//hint str(_state);
+	player_zombieCheck = {};
 	if (s_player_callzombies < 0) then {
 		s_player_callzombies = player addAction ["Raise Horde", "\z\addons\dayz_code\actions\call_zombies.sqf",player, 5, true, false, "",""];
 	};
@@ -72,9 +73,7 @@ if(_isPZombie) then {
 	};
 
 	if (s_player_pzombiesvision < 0) then {
-	
 		s_player_pzombiesvision = player addAction ["Vision", "\z\addons\dayz_code\actions\pzombie\pz_vision.sqf", [], 4, false, true, "nightVision", "_this == _target"];
-
 	};
 	
 	if (!isNull cursorTarget and (player distance cursorTarget < 3)) then {	//Has some kind of target

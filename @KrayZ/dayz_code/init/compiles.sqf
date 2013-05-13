@@ -120,6 +120,9 @@ if (!isDedicated) then {
 	player_weapon_rmvlauncher =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvlauncher.sqf";
 	player_weapon_rmvsuppress =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_rmvsuppress.sqf";
 	
+	//paint weapons
+	player_weapon_desert =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_desert.sqf";
+	
 	//remove hbbarrier (owner only)
 	player_rmvhbarrier =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_rmvhbarrier.sqf";
 	
@@ -176,7 +179,7 @@ if (!isDedicated) then {
 
 			diag_log "DEBUG: loadscreen guard ended with timeout.";
 			disableUserInput false;
-			1 cutText ["Something went wrong! Disconnect and try again! If you see this the 2nd time, please stay and wait some more seconds.", "PLAIN"];
+			//1 cutText ["Something went wrong! Disconnect and try again! If you see this the 2nd time, please stay and wait some more seconds.", "PLAIN"];
 			player enableSimulation false;
 		} else { diag_log "DEBUG: loadscreen guard ended."; };
 	}; 

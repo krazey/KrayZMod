@@ -169,7 +169,8 @@ class CfgLoot {
 			"HandChemGreen",
 			"HandChemBlue",
 			"HandChemRed",
-			"ItemHeatPack"
+			"ItemHeatPack",
+			"des_paint_kit"
 		},
 		{
 			0.06,
@@ -198,7 +199,8 @@ class CfgLoot {
 			0.01,
 			0.03,
 			0.03,
-			0.04
+			0.04,
+			0.02
 		}
 	};
 	medical[] = {
@@ -256,6 +258,8 @@ class CfgLoot {
 			"R3F_20Rnd_762x51_SD_HK417",
 			//end of r3f armes
 
+			"des_paint_kit",
+
 			"TrashTinCan",
 			"ItemSodaEmpty",
 			"ItemSodaCoke",
@@ -305,12 +309,14 @@ class CfgLoot {
 			0.01, //"R3F_10Rnd_762x51_FRF2",
 			0.01, //"R3F_10Rnd_762x51_SD_FRF2",
 			0.01, //"R3F_7Rnd_127x99_PGM",
-			0.01, //"R3F_7Rnd_127x99_PEI_PGM",
+			0.001, //"R3F_7Rnd_127x99_PEI_PGM",
 			0.01, //"R3F_200Rnd_556x45_MINIMI",
 			0.04, //"R3F_20Rnd_762x51_HK417",
 			0.04, //"R3F_20Rnd_762x51_TRACER_HK417",
 			0.01, //"R3F_20Rnd_762x51_SD_HK417",
 			//end of r3f armes
+
+			0.10, //des_paint_kit
 
 			0.12, //trashtincan
 			0.09, //sodaempty

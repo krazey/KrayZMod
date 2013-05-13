@@ -435,4 +435,10 @@ class cfgWeapons
 	{
 		type = "1";
 	};
+	class DMR;
+    class DMR_DZ: DMR
+    {
+        scope = 2;
+        model = "\dayz_equip\weapons\dmr\us_dmr";
+    };
 };
