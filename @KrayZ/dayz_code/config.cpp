@@ -40,7 +40,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.121";
+		version = "2.122";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -648,7 +648,7 @@ class CfgBuildingLoot {
 			{"DZ_ALICE_Pack_EP1","object"}, // 16
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
-			{"DZ_Backpack_EP1","object"},
+			{"DZ_Backpack2_EP1","object"},
 			{"DZ_CompactPack_EP1","object"}, // 18-1
 			{"DZ_TerminalPack_EP1","object"}, // 12-1
 			

@@ -239,7 +239,7 @@ class CfgVehicles
 					{ "\ca\sounds\Characters\Noises\Equipment\civil-equipment-sprint-08",0.0562341,1,20 } }};
 		};
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\ca\characters_e\woman\baker\data\baker_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz\textures\xxxxxxxxxxxxxxxxxxxbaker_co.paa"};
 	};
 	class BanditW1_DZ: SurvivorW2_DZ
 	{

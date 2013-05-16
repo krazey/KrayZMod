@@ -725,8 +725,8 @@ class Citizen1;	// External class reference
 		canHideBodies = 1;
 	};
 
-	class Admin_DZ : Bandit1_DZ {
-		displayName = "Admin";
+	class Bandit2_DZ : Bandit1_DZ {
+		displayName = "Bandit";
 		side = 1;
 		weapons[] = {"Throw","Put"};
 		model = "\ksk_mod\GER_rifleman_wdl";
@@ -1086,6 +1086,17 @@ class Citizen1;	// External class reference
 	};	
 	class Bag_Base_EP1;	
 	class Bag_Base_BAF;
+	class DZ_Vest_EP1: Bag_Base_EP1
+	{
+		scope = 2;
+		displayName = "Vest (SOTG)";
+		picture = "\dayz_equip\texturesadd\vest.paa";
+		//icon = "";
+		mapsize = 2;
+		//model = "";
+		transportMaxWeapons = 0;
+		transportMaxMagazines = 12;
+	};
 	class DZ_Patrol_Pack_EP1: Bag_Base_EP1
 	{
 		scope = 2;
@@ -1138,7 +1149,7 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_TK_ALICE_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model = "\ca\weapons_e\AmmoBoxes\backpack_tk_alice.p3d";
+		model = "\dayz_equip\backpacks\backpack_tk_alice.p3d";
 		transportMaxWeapons = 2;
 		transportMaxMagazines = 20;
 	};
@@ -1202,7 +1213,7 @@ class Citizen1;	// External class reference
 	{
 		scope = 2;
 		displayName = "Large Gunbag";
-		model = "\ca\weapons_e\AmmoBoxes\StaticX.p3d"; 
+		model = "\dayz_equip\backpacks\StaticX.p3d"; 
 		picture = "\ca\weapons_e\data\icons\staticX_CA.paa"; 
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa"; 
 		mapsize = 2;
@@ -1227,7 +1238,7 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_RPG_CA.paa"; 
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa"; 
 		mapsize = 2; 
-		model = "\ca\weapons_e\AmmoBoxes\backpack_rpg.p3d"; 
+		model = "\dayz_equip\backpacks\backpack_rpg.p3d"; 
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 18;
 	};

@@ -285,15 +285,13 @@ class FSM
            "	};" \n
            "	_temp = round(player getVariable [""temperature"",100]);" \n
            "	_currentState = [_currentWpn,_currentAnim,_temp];" \n
-           "	" \n
-           "	dayzCharDisco = [dayz_characterID,_playerPos,[weapons player,_magazineArray],[typeOf (unitbackpack player),getWeaponCargo (unitbackpack player),getMagazineCargo (unitbackpack player)],_medical,_currentState,_currentModel];" \n
-           "	//diag_log str(dayzCharDisco);	" \n
            "" \n
-           "	//publicVariableServer ""dayzCharSave"";" \n
-           "	publicVariableServer ""dayzCharDisco"";" \n
+           "  dayz_Magazines = _magazineArray;" \n
+           "  dayzPlayerSave = [player,dayz_Magazines,false,true];" \n
+           "" \n
+           "	publicVariable ""dayzPlayerSave"";" \n 
            "	if (isServer) then {" \n
-           "		//dayzCharSave call server_playerSync;" \n
-           "		dayzCharDisco call server_characterSync;" \n
+           "		dayzPlayerSave call server_playerSync;" \n 
            "	};" \n
            "	dayz_lastSave = time;" \n
            "	dayz_Magazines = [];" \n
@@ -330,7 +328,7 @@ class FSM
       name = "Collect";
       init = /*%FSM<STATEINIT""">*/"diag_log (""PLOGIN: Player Ready"");" \n
        "" \n
-       "dayz_loadScreenMsg = (localize ""Getting Player ID""); " \n
+       "dayz_loadScreenMsg = (localize ""str_player_13""); " \n
        "progressLoadingScreen 0.3;" \n
        "" \n
        "_playerUID = getPlayerUID player;"/*%FSM</STATEINIT""">*/;
@@ -433,7 +431,7 @@ class FSM
        "" \n
        "dayzLogin = [_playerUID,player];" \n
        "dayzPlayerLogin = [];" \n
-       "publicVariableServer ""dayzLogin"";" \n
+       "publicVariable ""dayzLogin"";" \n
        "if (isServer) then {" \n
        "	dayzLogin call server_playerLogin;" \n
        "};"/*%FSM</STATEINIT""">*/;
@@ -1169,7 +1167,7 @@ class FSM
        "//[""dayzLoginRecord"",[_playerUID,_charID,0]] call callRpcProcedure;" \n
        "" \n
        "dayzLoginRecord = [_playerUID,_charID,0];" \n
-       "publicVariableServer ""dayzLoginRecord"";" \n
+       "publicVariable ""dayzLoginRecord"";" \n
        ""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
