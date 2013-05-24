@@ -285,13 +285,15 @@ class FSM
            "	};" \n
            "	_temp = round(player getVariable [""temperature"",100]);" \n
            "	_currentState = [_currentWpn,_currentAnim,_temp];" \n
+           "	" \n
+           "	dayzCharDisco = [dayz_characterID,_playerPos,[weapons player,_magazineArray],[typeOf (unitbackpack player),getWeaponCargo (unitbackpack player),getMagazineCargo (unitbackpack player)],_medical,_currentState,_currentModel];" \n
+           "	//diag_log str(dayzCharDisco);	" \n
            "" \n
-           "  dayz_Magazines = _magazineArray;" \n
-           "  dayzPlayerSave = [player,dayz_Magazines,false,true];" \n
-           "" \n
-           "	publicVariable ""dayzPlayerSave"";" \n 
+           "	//publicVariableServer ""dayzCharSave"";" \n
+           "	publicVariableServer ""dayzCharDisco"";" \n
            "	if (isServer) then {" \n
-           "		dayzPlayerSave call server_playerSync;" \n 
+           "		//dayzCharSave call server_playerSync;" \n
+           "		dayzCharDisco call server_characterSync;" \n
            "	};" \n
            "	dayz_lastSave = time;" \n
            "	dayz_Magazines = [];" \n
@@ -328,7 +330,7 @@ class FSM
       name = "Collect";
       init = /*%FSM<STATEINIT""">*/"diag_log (""PLOGIN: Player Ready"");" \n
        "" \n
-       "dayz_loadScreenMsg = (localize ""str_player_13""); " \n
+       "dayz_loadScreenMsg = (localize ""Getting Player ID""); " \n
        "progressLoadingScreen 0.3;" \n
        "" \n
        "_playerUID = getPlayerUID player;"/*%FSM</STATEINIT""">*/;
@@ -431,7 +433,7 @@ class FSM
        "" \n
        "dayzLogin = [_playerUID,player];" \n
        "dayzPlayerLogin = [];" \n
-       "publicVariable ""dayzLogin"";" \n
+       "publicVariableServer ""dayzLogin"";" \n
        "if (isServer) then {" \n
        "	dayzLogin call server_playerLogin;" \n
        "};"/*%FSM</STATEINIT""">*/;
@@ -629,7 +631,10 @@ class FSM
        "			//Magazines" \n
        "			_countr = 0;" \n
        "			{" \n
-       "				if (_x == ""BoltSteel"") then { _x = ""WoodenArrow"" }; // Convert BoltSteel to WoodenArrow" \n
+	   "				if (_x == ""BoltSteel"") then { _x = ""WoodenArrow"" }; // Convert BoltSteel to WoodenArrow" \n
+       "				if (_x == ""BoltSteel_KR"") then { _x = ""WoodenArrow"" }; // Convert BoltSteel_KR to WoodenArrow" \n
+	   "				if (_x == ""ItemFlashlightReduse"") then { _x = ""ItemFlashlightRed_KR"" }; // Convert Shoulder-Flashlight to ItemFlashlight" \n
+	   "				if (_x == ""ItemFlashlightReduse2"") then { _x = ""ItemFlashlight_KR"" }; // Convert Shoulder-Flashlight to ItemFlashlight" \n
        "				dayz_myBackpack addMagazineCargoGlobal [_x,(_backpackMagQty select _countr)];" \n
        "				_countr = _countr + 1;" \n
        "			} forEach _backpackMagTypes;" \n
@@ -976,7 +981,7 @@ class FSM
        "	};" \n
        "};" \n
        "" \n
-       "if (player hasWeapon ""MeleeCrowbar"") then {" \n
+       "if (player hasWeapon ""MeleeCrowbar_KR"") then {" \n
        "	player addMagazine 'crowbar_swing';" \n
        "};" \n
        "if (player hasWeapon ""MeleeHatchet"") then {" \n
@@ -1167,7 +1172,7 @@ class FSM
        "//[""dayzLoginRecord"",[_playerUID,_charID,0]] call callRpcProcedure;" \n
        "" \n
        "dayzLoginRecord = [_playerUID,_charID,0];" \n
-       "publicVariable ""dayzLoginRecord"";" \n
+       "publicVariableServer ""dayzLoginRecord"";" \n
        ""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links

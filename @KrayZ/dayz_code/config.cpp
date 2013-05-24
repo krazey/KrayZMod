@@ -20,7 +20,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"smk_anims","r3f_armes","asc_eu_lights","dayz_equip","dayz_weapons","dayz_sfx","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
+		requiredAddons[] = {"smk_anims","r3f_armes","asc_eu_lights","ksk_mod","dayz_krayz","dayz_equip","dayz_weapons","dayz_sfx","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
 	};
 	class DZ_DebriefingRemoved
 	{
@@ -46,7 +46,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.122";
+		version = "2.123";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -104,16 +104,11 @@ class CfgAISkill {
 	spottime[] = {0, 0, 1, 1};
 };
 
-class CfgInGameUI
-{
-    class PeripheralVision
-    {
+class CfgInGameUI {
+    class PeripheralVision  {
         cueColor[] = {0,0,0,0};
     };
-
-	
-	class MPTable
-	{
+	class MPTable {
 		color[] = {0,0,0,0}; //{0.7,0.7,0.7,1};
 		colorTitleBg[] = {0,0,0,0}; //{0.1,0.15,0.15,1};
 		colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.9};
@@ -124,57 +119,48 @@ class CfgInGameUI
 		colorRes[] = {0,0,0,0}; //{0.7,0.7,0.95,1};
 		font = "EtelkaNarrowMediumPro";
 		size = "0"; //"( 21 / 408 )";
-		class Columns
-		{
-			class Order
-			{
+		class Columns {
+			class Order {
 				width = 0; //0.046;
 				colorBg[] = {0,0,0,0}; //{0.1,0.27,0.1,0.8};
 				doubleLine = 0;
 			};
-			class Player
-			{
+			class Player {
 				width = 0; //0.25;
 				colorBg[] = {0,0,0,0}; //{0.1,0.23,0.1,0.8};
 				doubleLine = 0;
 			};
-			class KillsInfantry
-			{
+			class KillsInfantry {
 				width = 0; //0.11;
 				doubleLine = 0;
 				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
 				picture = ""; //"\ca\ui\data\stats_infantry_ca.paa";
 			};
-			class KillsSoft
-			{
+			class KillsSoft {
 				width = 0; //0.1;
 				doubleLine = 0;
 				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
 				picture = ""; //"\ca\ui\data\stats_soft_ca.paa";
 			};
-			class KillsArmor
-			{
+			class KillsArmor {
 				width = 0; //0.11;
 				doubleLine = 0;
 				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
 				picture = ""; //"\ca\ui\data\stats_armored_ca.paa";
 			};
-			class KillsAir
-			{
+			class KillsAir {
 				width = 0; //0.1;
 				doubleLine = 0;
 				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
 				picture = ""; //"\ca\ui\data\stats_air_ca.paa";
 			};
-			class Killed
-			{
+			class Killed {
 				width = 0; //0.1;
 				doubleLine = 0;
 				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
 				picture = ""; //"\ca\ui\data\stats_killed_ca.paa";
 			};
-			class KillsTotal
-			{
+			class KillsTotal {
 				width = 0; //0.1;
 				doubleLine = 0;
 				colorBg[] = {0,0,0,0}; //{0.1,0.35,0.1,0.9};
@@ -183,9 +169,7 @@ class CfgInGameUI
 		};
 	};
 };
-
-class RscPictureGUI
-{
+class RscPictureGUI {
 	access = 0;
 	type = 0;
 	idc = -1;
@@ -201,19 +185,16 @@ class RscPictureGUI
 	w = 0.2;
 	h = 0.15;
 };
-
 class RscStructuredText {
 	class Attributes;
 };
-class RscStructuredTextGUI: RscStructuredText
-{
+class RscStructuredTextGUI: RscStructuredText {
 	colorBackground[] = {0,0,0,0};
 	colorText[] = {1,1,1,1};
-	class Attributes: Attributes
-	{
+	class Attributes: Attributes {
 		align = "center";
 		valign = "middle";
-};
+	};
 };
 //#include "CfgWorlds.hpp"
 #include "cfgMoves.hpp"
@@ -242,7 +223,7 @@ class CfgSurvival {
 	class Inventory {
 		class Default {
 			magazines[] = {"ItemBandage","ItemPainkiller"};
-			weapons[] = {"ItemFlashlight"};
+			weapons[] = {"ItemFlashlight_KR"};
 			backpackWeapon = "";
 			backpack = "DZ_Patrol_Pack_EP1";
 		};
@@ -283,7 +264,7 @@ class CfgSurvival {
 		};
 		class Cock: Hen{};
 		class DZ_Fin: Default {
-			yield = 0;
+			yield = 1;
 			rawfoodtype = "FoodSteakRaw";
 		};
 		class DZ_Pastor: DZ_Fin{};
@@ -390,9 +371,9 @@ class CfgSurvival {
 			sex = "female";
 			playerModel = "BanditW2_DZ";
 		};
-		class Skin_SurvivorW2_DZ: Default {
+		class Skin_SurvivorW2_KR: Default {
 			sex = "female";
-			playerModel = "SurvivorW2_DZ";
+			playerModel = "SurvivorW2_KR";
 		};
 		class Skin_SurvivorWpink_DZ: Default {
 			sex = "female";
@@ -456,7 +437,7 @@ class CfgBuildingLoot {
 		zombieChance = 0.2;
 		minRoaming = 0;
 		maxRoaming = 2;
-		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_suit1","z_suit2","z_worker1","z_worker2","z_worker3","z_villager1","z_villager2","z_villager3"};
+		zombieClass[] = {"zZombie_Base_KR","z_hunter_KR","z_teacher_KR","z_suit1_KR","z_suit2_KR","z_worker1_KR","z_worker2_KR","z_worker3_KR","z_villager1_KR","z_villager2_KR","z_villager3_KR"};
 		lootChance = 0;
 		lootPos[] = {};
 		itemType[] = {};
@@ -475,7 +456,7 @@ class CfgBuildingLoot {
 	class Residential: Default {
 		zombieChance = 0.3;
 		maxRoaming = 2;
-		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_villager1","z_villager2","z_villager3"};
+		zombieClass[] = {"zZombie_Base_KR","z_hunter_KR","z_teacher_KR","z_villager1_KR","z_villager2_KR","z_villager3_KR"};
 		lootChance = 0.4;
 		lootPos[] = {};
 		itemType[] = {
@@ -485,7 +466,7 @@ class CfgBuildingLoot {
 			{ "ItemMap","weapon" },
 			{ "Makarov","weapon" },
 			{ "Colt1911","weapon" },
-			{ "ItemFlashlight","generic" },
+			{ "ItemFlashlight_KR","generic" },
 			{ "ItemKnife","generic" },
 			{ "ItemMatchbox","generic" },
 			{ "","generic" },
@@ -494,7 +475,8 @@ class CfgBuildingLoot {
 
 			{"DZ_Assault_Pack_EP1","object"}, // 12
 			{"DZ_Czech_Vest_Puch","object"}, // 12-0
-			{"DZ_ALICE_Pack_EP1","object"}, // 16
+			{"DZ_ALICE_Pack_EP1","object"}, // 22
+			{"DZ_ALICE_Pack2_EP1","object"}, // 22
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
 			{"DZ_Backpack2_EP1","object"},
@@ -505,10 +487,10 @@ class CfgBuildingLoot {
 			{ "","trash" },
 			{"Crossbow_DZ","weapon"},
 			{ "Binocular","weapon" },
-			{ "PartWoodPile","magazine" },
+			{ "PartWoodPile_KR","magazine" },
 			{ "","clothes" },
 			{ "","specialclothes" }, 
-			{ "WeaponHolder_MeleeCrowbar","object" },
+			{ "WeaponHolder_MeleeCrowbar_KR","object" },
 			{"MR43","weapon"},
 			{"MP5A5","weapon"}
 	};
@@ -527,7 +509,8 @@ class CfgBuildingLoot {
 			0.04, //revolver
 			0.05, //assaultpack (12)
 			0.04, //czechpack (12-0)
-			0.02, //alicepack (16)
+			0.02, //alicepack (22)
+			0.02, //alicepack2 (22)
 			0.02, //tk_assaultpack (16)
 			0.01, //acupack (18)
 			0.01, //backpack2
@@ -547,11 +530,11 @@ class CfgBuildingLoot {
 	};
 	class Office: Residential {
 		maxRoaming = 3;
-		zombieClass[] = {"z_suit1","z_suit2"};
+		zombieClass[] = {"z_suit1_KR","z_suit2_KR"};
 	};
 	class Industrial: Default {
 		zombieChance = 0.4;
-		zombieClass[] = {"z_worker1","z_worker2","z_worker3"};
+		zombieClass[] = {"z_worker1_KR","z_worker2_KR","z_worker3_KR"};
 		maxRoaming = 2;
 		lootChance = 0.3;
 		lootPos[] = {};
@@ -561,7 +544,7 @@ class CfgBuildingLoot {
 			{ "","generic" },
 			{ "","trash" },
 			{ "","military" },
-			{ "WeaponHolder_PartGeneric","object" },
+			{ "WeaponHolder_PartGeneric_KR","object" },
 			{ "WeaponHolder_PartWheel","object" },
 			{ "WeaponHolder_PartFueltank","object" },
 			{ "WeaponHolder_PartEngine","object" },
@@ -569,12 +552,13 @@ class CfgBuildingLoot {
 			{ "WeaponHolder_PartVRotor","object" },
 			{ "WeaponHolder_ItemJerrycan","object" },
 			{ "WeaponHolder_ItemHatchet","object" },
+			{ "WeaponHolder_MeleeCrowbar_KR","object" },
 			{ "ItemKnife","military" },
 			{ "ItemToolbox","weapon" },
-			{ "ItemWire","magazine" },
-			{"ItemTankTrap","magazine"},
+			{ "ItemWire_KR","magazine" },
+			{"ItemTankTrap_KR","magazine"},
 			{"Skin_Net_DZ","magazine"},
-			{"ItemSandbag","magazine"}
+			{"ItemSandbag_KR","magazine"}
 	};
 		itemChance[] =	{
 			0.005, //generator
@@ -590,18 +574,19 @@ class CfgBuildingLoot {
 			0.01, //vrotor
 			0.04, //jerrycan
 			0.11, //hatchet
+			0.06, //crowbar
 			0.07, //knife
 			0.06, //toolbox
-			0.01, //wire
+			0.04, //wire
 			0.04, //tanktrap
 			0.01, //netting material
-			0.10 //sandbag
+			0.07 //sandbag
 		};
 	};
 	class Farm: Default {
 		zombieChance = 0.3;
 		maxRoaming = 3;
-		zombieClass[] = {"zZombie_Base","z_hunter","z_hunter","z_hunter","z_villager1","z_villager2","z_villager3"};
+		zombieClass[] = {"zZombie_Base_KR","z_hunter_KR","z_hunter_KR","z_hunter_KR","z_villager1_KR","z_villager2_KR","z_villager3_KR"};
 		lootChance = 0.5;
 		lootPos[] = {};
 		itemType[] = {
@@ -613,7 +598,7 @@ class CfgBuildingLoot {
 			{"Winchester1866","weapon"},
 			{"","trash"},
 			{"Crossbow_DZ","weapon"},
-			{"PartWoodPile","magazine"},
+			{"PartWoodPile_KR","magazine"},
 			{"WeaponHolder_ItemHatchet","object"},
 			{"MR43","weapon"},
 			{"WeaponHolder_ItemMachete"},
@@ -621,7 +606,7 @@ class CfgBuildingLoot {
 			{"revolver_EP1","weapon"},
 			{"Skin_Camo3_DZ","magazine"},
 			{"Skin_Camo2_DZ","magazine"},
-			{"ItemSandbag","magazine"}
+			{"ItemSandbag_KR","magazine"}
 	};
 		itemChance[] =	{
 			0.06, //jerrycan
@@ -640,7 +625,7 @@ class CfgBuildingLoot {
 			0.08, //revolver
 			0.01, //camo3
 			0.01, //camo2
-			0.10 //sandbag
+			0.07 //sandbag
 		};
 	};
 	class Supermarket: Default {
@@ -648,14 +633,14 @@ class CfgBuildingLoot {
 		minRoaming = 2;
 		maxRoaming = 6;
 		zombieChance = 0.3;
-		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
+		zombieClass[] = {"zZombie_Base_KR","zZombie_Base_KR","z_teacher_KR","z_suit1_KR","z_suit2_KR"};
 		itemType[] = {
 			{ "ItemWatch","generic" },
 			{ "ItemCompass","generic" },
 			{ "ItemMap","weapon" },
 			{ "Makarov","weapon" },
 			{ "Colt1911","weapon" },
-			{ "ItemFlashlight","generic" },
+			{ "ItemFlashlight_KR","generic" },
 			{ "ItemKnife","generic" },
 			{ "ItemMatchbox","generic" },
 			{ "","generic" },
@@ -664,7 +649,8 @@ class CfgBuildingLoot {
 					
 			{"DZ_Assault_Pack_EP1","object"}, // 12
 			{"DZ_Czech_Vest_Puch","object"}, // 12-0
-			{"DZ_ALICE_Pack_EP1","object"}, // 16
+			{"DZ_ALICE_Pack_EP1","object"}, // 22
+			{"DZ_ALICE_Pack2_EP1","object"}, // 22
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
 			{"DZ_Backpack2_EP1","object"},
@@ -678,7 +664,7 @@ class CfgBuildingLoot {
 			{ "","trash" },
 			{"Crossbow_DZ","weapon"},
 			{ "Binocular","weapon" },
-			{ "PartWoodPile","magazine" },
+			{ "PartWoodPile_KR","magazine" },
 			{"MR43","weapon"}
 	};
 		itemChance[] =	{
@@ -695,7 +681,8 @@ class CfgBuildingLoot {
 			0.01, //revolver
 			0.05, //assaultpack (12)
 			0.04, //czechpack (12-0)
-			0.02, //alicepack (16)
+			0.02, //alicepack (22)
+			0.02, //alicepack (22)
 			0.02, //tk_assaultpack (16)
 			0.01, //acupack (18)
 			0.005, //backpack2
@@ -715,7 +702,7 @@ class CfgBuildingLoot {
 	class HeliCrash: Default {
 		zombieChance = 0.4;
 		maxRoaming = 2;
-		zombieClass[] = {"z_soldier_pilot"};
+		zombieClass[] = {"z_soldier_pilot_KR"};
 		lootChance = 0.5;
 		lootPos[] = {};
 		itemType[] = {
@@ -806,7 +793,7 @@ class CfgBuildingLoot {
 class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		maxRoaming = 2;
-		zombieClass[] = {"z_soldier_pilot"};
+		zombieClass[] = {"z_soldier_pilot_KR"};
 		lootChance = 0.5;
 		lootPos[] = {};
 		itemType[] =	{
@@ -894,7 +881,7 @@ class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		minRoaming = 2;
 		maxRoaming = 6;
-		zombieClass[] = {"z_doctor","z_doctor","z_doctor"};
+		zombieClass[] = {"z_doctor_KR","z_doctor_KR","z_doctor_KR"};
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] = {
@@ -911,7 +898,7 @@ class HeliCrash_No50s: Default {
 	class Military: Default {
 		zombieChance = 0.3;
 		maxRoaming = 6;
-		zombieClass[] = {"z_soldier","z_soldier_heavy","z_policeman"};
+		zombieClass[] = {"z_soldier_KR","z_soldier_heavy_KR","z_policeman_KR"};
 		lootChance = 0.4;
 		lootPos[] = {};
 		itemType[] = {
@@ -971,12 +958,13 @@ class HeliCrash_No50s: Default {
 			//{ "MP5SD","weapon" },
 			//{ "M4A3_CCO_EP1","weapon" },
 			{ "Binocular","weapon" },
-			{ "ItemFlashlightRed","military" },
+			{ "ItemFlashlightRed_KR","military" },
 			{ "ItemKnife","military" },
 			{ "ItemGPS","weapon" },
 			{ "ItemMap","military" },
 			
-			{"DZ_ALICE_Pack_EP1","object"}, // 16
+			{"DZ_ALICE_Pack_EP1","object"}, // 22
+			{"DZ_ALICE_Pack2_EP1","object"}, // 22
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
 			{"DZ_CivilBackpack_EP1","object"}, // 24
@@ -989,7 +977,7 @@ class HeliCrash_No50s: Default {
 			{ "","military" },
 			//{"Body","object"},
 			{ "ItemEtool","weapon" },
-			{"ItemSandbag","magazine"},
+			{"ItemSandbag_KR","magazine"},
 			//{"BAF_L85A2_RIS_Holo","weapon"},
 			{"Skin_Camo1_DZ","magazine"},
 			{"Skin_Camo4_DZ","magazine"}
@@ -1055,7 +1043,8 @@ class HeliCrash_No50s: Default {
 			0.10, //knife
 			0.01, //gps
 			0.05, //map
-			0.08, //alicepack (16)
+			0.08, //alicepack (22)
+			0.08, //alicepack2 (22)
 			0.08, //tk_assaultpack (16)
 			0.06, //acupack (18)
 			0.01, //civialpack (24)
@@ -1066,7 +1055,7 @@ class HeliCrash_No50s: Default {
 			2.50, //military
 			//0.20,
 			0.05, //etool
-			0.10, //sandbag
+			0.07, //sandbag
 			//0.01, //L85A2 holo
 			0.03,	//camo1
 			0.03	//camo4
@@ -1076,7 +1065,7 @@ class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		minRoaming = 2;
 		maxRoaming = 6;
-		zombieClass[] = {"z_soldier_heavy"};
+		zombieClass[] = {"z_soldier_heavy_KR"};
 		lootChance = 0.4;
 		lootPos[] = {};
 		itemType[] = {
@@ -1134,13 +1123,14 @@ class HeliCrash_No50s: Default {
 
 			{"NVGoggles","weapon"},
 			{ "Binocular","weapon" },
-			{ "ItemFlashlightRed","military" },
+			{ "ItemFlashlightRed_KR","military" },
 			{ "ItemKnife","military" },
 			{ "ItemGPS","weapon" },
 			{ "ItemMap","military" },
 			{ "Binocular_Vector","military" },
 
-			{"DZ_ALICE_Pack_EP1","object"}, // 16
+			{"DZ_ALICE_Pack_EP1","object"}, // 22
+			{"DZ_ALICE_Pack2_EP1","object"}, // 22
 			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
 			{"DZ_British_ACU","object"}, // 18
 			{"DZ_CivilBackpack_EP1","object"}, // 24
@@ -1216,7 +1206,8 @@ class HeliCrash_No50s: Default {
 			0.03, //map
 			0.01, //rangefinder
 			//Bags
-			0.08, //alicepack (16)
+			0.08, //alicepack (22)
+			0.08, //alicepack2 (22)
 			0.08, //tk_assualtpack (16)
 			0.06, //acopack (18)
 			0.01, //civilpack (24)
@@ -1237,12 +1228,12 @@ class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		minRoaming = 1;
 		maxRoaming = 3;
-		zombieClass[] = {"z_hunter","z_hunter","z_hunter"};
+		zombieClass[] = {"z_hunter_KR","z_hunter_KR","z_hunter_KR"};
 		lootChance = 1;
 		lootPos[] = {};
 		itemType[] =	{
 			{"ItemMap","weapon"},
-			{"ItemFlashlight","generic"},
+			{"ItemFlashlight_KR","generic"},
 			{"ItemKnife","generic"},
 			{"ItemMatchbox","generic"},
 			{"Crossbow_DZ","weapon"},
@@ -1266,7 +1257,7 @@ class HeliCrash_No50s: Default {
 	class Church: Residential {
 		minRoaming = 1;
 		maxRoaming = 3;
-		zombieClass[] = {"z_priest","z_priest","z_priest"};
+		zombieClass[] = {"z_priest_KR","z_priest_KR","z_priest_KR"};
 	};
 	class Land_HouseV_1I4: Residential {
 		lootPos[] = {{-0.400146,-3.87695,-2.76879},{-3.67749,-2.52002,-2.76551},{-0.472168,3.19702,-2.72021}};
@@ -1302,7 +1293,7 @@ class HeliCrash_No50s: Default {
 	};
 	class Land_A_FuelStation_Build: Industrial {
 		lootChance = 0.5;
-		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
+		zombieClass[] = {"zZombie_Base_KR","zZombie_Base_KR","z_teacher_KR","z_suit1_KR","z_suit2_KR"};
 		lootPos[] = {{-1.31958,-0.655151,-1.57448},{1.82349,0.769653,-1.57458},{1.67871,-0.918701,-1.57458},{-1.23242,1.26794,-1.57458}};
 	};
 	class Land_A_GeneralStore_01a: Supermarket {
@@ -1388,7 +1379,7 @@ class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		minRoaming = 3;
 		maxRoaming = 9;
-		zombieClass[] = {"z_soldier","z_soldier_heavy","z_policeman"};
+		zombieClass[] = {"z_soldier_KR","z_soldier_heavy_KR","z_policeman_KR"};
 		lootChance = 0.4;
 		lootPos[] = {{-4.66113,-6.27173,-18.429},{3.31641,-5.77417,-18.429},{-0.20752,-6.48682,-18.429},{-9.72412,-4.88745,-3.78903},{-9.57813,3.55615,-3.78903},{-7.16797,11.0737,-3.78903},{5.07422,11.1838,-3.78903},{9.3208,5.38623,-3.78903},{9.65332,-4.82056,-3.78903},{3.23535,-0.105957,-0.169027},{4.85205,-3.69019,-0.169027},{-0.80127,-7.89087,-0.169027},{-4.4082,-4.91772,-0.169027},{-4.90771,-2.23169,-0.169027}};
 	};
@@ -1546,7 +1537,7 @@ class HeliCrash_No50s: Default {
 	class MASH_EP1: MASH{};
 		
 	class UH1Wreck_DZ: Military {
-		zombieClass[] = {"z_soldier_pilot","z_soldier_heavy"};
+		zombieClass[] = {"z_soldier_pilot_KR","z_soldier_heavy_KR"};
 		zombieChance = 0.3;
 		lootChance = 0.6;
 		minRoaming = 4;
@@ -1555,7 +1546,7 @@ class HeliCrash_No50s: Default {
 	};
 
 	class UH60Wreck_DZ: Military {
-		zombieClass[] = {"z_soldier_pilot","z_soldier_heavy"};
+		zombieClass[] = {"z_soldier_pilot_KR","z_soldier_heavy_KR"};
 		zombieChance = 0.3;
 		lootChance = 0.6;
 		minRoaming = 4;
@@ -1566,7 +1557,7 @@ class HeliCrash_No50s: Default {
 	class USMC_WarfareBFieldhHospital: MASH {
 		minRoaming = 1;
 		maxRoaming = 3;
-		zombieClass[] = {"z_soldier","z_soldier_heavy"};
+		zombieClass[] = {"z_soldier_KR","z_soldier_heavy_KR"};
 		lootPos[] = {{-3.52246,-5.03931,1.14726},{2.36621,-4.52295,1.14786},{1.39063,-0.423096,1.14746},{1.14258,5.00952,1.1478},{3.7124,1.89795,1.14788}};
 	}; // Qty: 1
 
@@ -1615,7 +1606,7 @@ class HeliCrash_No50s: Default {
 	class Land_HouseV2_03: HouseRoaming {}; // Qty: 8
 	class Land_Ind_Shed_01_end: HouseRoaming {}; // Qty: 266
 	class Land_A_statue01: HouseRoaming {
-		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2","z_soldier","z_soldier_heavy","z_policeman"};
+		zombieClass[] = {"zZombie_Base_KR","zZombie_Base_KR","z_teacher_KR","z_suit1_KR","z_suit2_KR","z_soldier","z_soldier_heavy","z_policeman_KR"};
 		minRoaming = 2;
 		maxRoaming = 8;
 	}; // Qty: 3
@@ -1645,13 +1636,13 @@ class HeliCrash_No50s: Default {
 	class Land_Ind_FuelStation_Build_EP1: Industrial
 	{
 		lootChance = 0.5;
-		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
+		zombieClass[] = {"zZombie_Base_KR","zZombie_Base_KR","z_teacher_KR","z_suit1_KR","z_suit2_KR"};
 		lootPos[] = {{-1.34521,1.40698,-1.33611},{2.27051,-0.949951,-1.33611},{-2.23193,-1.146,-1.33589},{-0.185059,0.775146,-1.33609}};
 	};
 	class Land_ibr_FuelStation_Build: Industrial
 	{
 		lootChance = 0.5;
-		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
+		zombieClass[] = {"zZombie_Base_KR","zZombie_Base_KR","z_teacher_KR","z_suit1_KR","z_suit2_KR"};
 		lootPos[] = {{-1.34521,1.40698,-1.33611},{2.27051,-0.949951,-1.33611},{-2.23193,-1.146,-1.33589},{-0.185059,0.775146,-1.33609}};
 	};
 	class Land_Mil_ControlTower_EP1: Military
@@ -1787,7 +1778,7 @@ class HeliCrash_No50s: Default {
 	};
 	class HMMWVWreck: Military
 	{
-		zombieClass[] = {"z_soldier_pilot","z_soldier_heavy"};
+		zombieClass[] = {"z_soldier_pilot_KR","z_soldier_heavy_KR"};
 		zombieChance = 0.3;
 		lootChance = 0;
 		minRoaming = 1;
@@ -1796,7 +1787,7 @@ class HeliCrash_No50s: Default {
 	};
 	class UralWreck: Military
 	{
-		zombieClass[] = {"z_soldier_pilot","z_soldier_heavy"};
+		zombieClass[] = {"z_soldier_pilot_KR","z_soldier_heavy_KR"};
 		zombieChance = 0.3;
 		lootChance = 0;
 		minRoaming = 1;
@@ -1805,7 +1796,7 @@ class HeliCrash_No50s: Default {
 	};
 	class SKODAWreck: Residential
 	{
-		zombieClass[] = {"zZombie_Base","z_hunter"};
+		zombieClass[] = {"zZombie_Base_KR_KR","z_hunter_KR_KR"};
 		zombieChance = 0.3;
 		lootChance = 0;
 		minRoaming = 1;
@@ -1814,7 +1805,7 @@ class HeliCrash_No50s: Default {
 	};
 	class UAZWreck: Residential
 	{
-		zombieClass[] = {"zZombie_Base","z_hunter"};
+		zombieClass[] = {"zZombie_Base_KR_KR","z_hunter_KR_KR"};
 		zombieChance = 0.3;
 		lootChance = 0;
 		minRoaming = 1;
@@ -1823,7 +1814,7 @@ class HeliCrash_No50s: Default {
 	};
 	class datsun01Wreck: Residential
 	{
-		zombieClass[] = {"zZombie_Base","z_hunter"};
+		zombieClass[] = {"zZombie_Base_KR_KR","z_hunter_KR_KR"};
 		zombieChance = 0.3;
 		lootChance = 0;
 		minRoaming = 1;
@@ -1832,7 +1823,7 @@ class HeliCrash_No50s: Default {
 	};
 	class hiluxWreck: Industrial
 	{
-		zombieClass[] = {"zZombie_Base","z_hunter"};
+		zombieClass[] = {"zZombie_Base_KR_KR","z_hunter_KR_KR"};
 		zombieChance = 0.3;
 		lootChance = 0;
 		minRoaming = 1;
@@ -1841,7 +1832,7 @@ class HeliCrash_No50s: Default {
 	};
 	class datsun02Wreck: Military
 	{
-		zombieClass[] = {"zZombie_Base","z_hunter"};
+		zombieClass[] = {"zZombie_Base_KR_KR","z_hunter_KR_KR"};
 		zombieChance = 0.3;
 		lootChance = 0;
 		minRoaming = 1;
@@ -1860,21 +1851,21 @@ class HeliCrash_No50s: Default {
 		minRoaming = 0;
 		maxRoaming = 2;
 		zombieChance = 0.3;
-		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2"};
+		zombieClass[] = {"zZombie_Base_KR","zZombie_Base_KR","z_teacher_KR","z_suit1_KR","z_suit2_KR"};
 		itemType[] = {
 			{ "ItemWatch","generic" },
 			{ "ItemCompass","generic" },
 			{ "ItemMap","weapon" },
 			{ "Makarov","weapon" },
 			{ "Colt1911","weapon" },
-			{ "ItemFlashlight","generic" },
+			{ "ItemFlashlight_KR","generic" },
 			{ "ItemKnife","generic" },
 			{ "ItemMatchbox","generic" },
 			{ "ItemToolbox","weapon" },
 			{ "","generic" },
 			{ "","food" },
 			{ "","communityfood" },
-			{ "WeaponHolder_PartGeneric","object" },
+			{ "WeaponHolder_PartGeneric_KR","object" },
 			{ "WeaponHolder_PartWheel","object" },
 			{ "WeaponHolder_PartFueltank","object" },
 			{ "WeaponHolder_PartEngine","object" },

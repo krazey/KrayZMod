@@ -10,12 +10,12 @@ _rnd = (round(random 9)) + 1;
 _move = "ZombieStandingAttack" + str(_rnd);
 player playMoveNow _move;
 
-_isZombie = _ent isKindOf "zZombie_base";
+_isZombie = _ent isKindOf "zZombie_base_KR";
 
 if(player distance _target < 5) then {
 
 	if (_ent isKindOf "Animal" or _isZombie) then {
-		_ent setDamage 1;
+		_ent setDamage 0.99;
 	} else {
 		//["usecBreakLegs",[_target,player]] call broadcastRpcCallAll;
 		usecBreakLegs = [_target,player];
@@ -26,7 +26,7 @@ if(player distance _target < 5) then {
 
 };
 
-sleep 1;
+sleep 0.5;
 
 player switchmove "";
 

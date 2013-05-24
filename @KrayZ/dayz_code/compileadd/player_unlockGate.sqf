@@ -16,7 +16,7 @@ UnlockInprogress = true;
 if (_ownerID == dayz_playerUID) then {
 	_alreadyPacking = _obj getVariable["packing",0];
 
-	if (_alreadyPacking == 1) exitWith {cutText ["That Safe is already being unlocked." , "PLAIN DOWN"]};
+	if (_alreadyPacking == 1) exitWith {cutText ["That Gate is already being unlocked." , "PLAIN DOWN"]};
 
 	_obj setVariable["packing",1];
 

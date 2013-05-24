@@ -1,5 +1,5 @@
 call gear_ui_init;
-player removeWeapon "ItemFlashlightRed";
+player removeWeapon "ItemFlashlightRed_KR";
 player addweapon "ItemFlashlightReduse";
 pzn_light = "pzn_NoSearchLight_t" createVehicle getpos player; 
 pzn_light attachto  [player, [.35,-.5,-1.2],"RightShoulder"];

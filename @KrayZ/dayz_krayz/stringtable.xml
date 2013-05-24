@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="DayZ">
+<Package name="equipment">
+	<Key ID="STR_EQUIP_DESC_61">
+      <Original>German woodland clothing (5-color camo). Can be unpacked and worn.</Original>
+      <English>German woodland clothing (5-color camo). Can be unpacked and worn.</English>
+      <German>German woodland clothing (5-color camo). Can be unpacked and worn.</German>
+      <Russian>German woodland clothing (5-color camo). Can be unpacked and worn.</Russian>
+    </Key>
+	<Key ID="STR_EQUIP_NAME_56">
+      <Original>Netting Material</Original>
+      <English>Netting Material</English>
+      <German>Netting Material</German>
+      <Russian>Netting Material</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_DESC_56">
+      <Original>Netting Material. Can be made into a camo net when used with 3 of them and a wood pile.</Original>
+      <English>Netting Material. Can be made into a camo net when used with 3 of them and a wood pile.</English>
+      <German>Netting Material. Can be made into a camo net when used with 3 of them and a wood pile.</German>
+      <Russian>Netting Material. Can be made into a camo net when used with 3 of them and wood pile.</Russian>
+    </Key>
+	<Key ID="STR_EQUIP_NAME_57">
+      <Original>Ragged Ghillie Suit</Original>
+      <English>Ragged Ghillie Suit</English>
+      <German>Ragged Ghillie-Anzug</German>
+      <Russian>Ragged Маскировочный костюм</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_DESC_57">
+      <Original>A Ragged Ghillie Suit. Can be unpacked and worn...just.</Original>
+      <English>A Ragged Ghillie Suit. Can be unpacked and worn...just.</English>
+      <German>A Ragged Ghillie Suit. Can be unpacked and worn...just.</German>
+      <Russian>A Ragged Ghillie Suit. Can be unpacked and worn...just.</Russian>
+    </Key>
+	<Key ID="STR_EQUIP_NAME_58">
+      <Original>Woodland Ranger Clothing</Original>
+      <English>Woodland Ranger Clothing</English>
+      <German>Woodland Ranger Clothing</German>
+      <Russian>Woodland Ranger Clothing</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_DESC_58">
+      <Original>A mixture of brown trousers with a camoflage t-shirt and hat. Can be unpacked and worn.</Original>
+      <English>A mixture of brown trousers with a camoflage t-shirt and hat. Can be unpacked and worn.</English>
+      <German>A mixture of brown trousers with a camoflage t-shirt and hat. Can be unpacked and worn.</German>
+      <Russian>A mixture of brown trousers with a camoflage t-shirt and hat. Can be unpacked and worn.</Russian>
+    </Key>
+	<Key ID="STR_EQUIP_NAME_59">
+      <Original>Woodland Bandit Clothing</Original>
+      <English>Woodland Bandit Clothing</English>
+      <German>Woodland Bandit Clothing</German>
+      <Russian>Woodland Bandit Clothing</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_DESC_59">
+      <Original>A mixture of jeans with a camoflage t-shirt hat. Can be unpacked and worn.</Original>
+      <English>A mixture of jeans with a camoflage t-shirt hat. Can be unpacked and worn.</English>
+      <German>A mixture of jeans with a camoflage t-shirt hat. Can be unpacked and worn.</German>
+      <Russian>A mixture of jeans with a camoflage t-shirt hat. Can be unpacked and worn.</Russian>
+    </Key>
+	<Key ID="STR_EQUIP_NAME_60">
+      <Original>Terrorist Clothing</Original>
+      <English>Terrorist Clothing</English>
+      <German>Terrorist Clothing</German>
+      <Russian>Terrorist Clothing</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_DESC_60">
+      <Original>A mixture of camoflage trousers with a camoflage long-sleeve shirt and a balaclava. Can be unpacked and worn.</Original>
+      <English>A mixture of camoflage trousers with a camoflage long-sleeve shirt and a balaclava. Can be unpacked and worn.</English>
+      <German>A mixture of camoflage trousers with a camoflage long-sleeve shirt and a balaclava. Can be unpacked and worn.</German>
+      <Russian>A mixture of camoflage trousers with a camoflage long-sleeve shirt and a balaclava. Can be unpacked and worn.</Russian>
+    </Key>
+	<Key ID="STR_EQUIP_NAME_61">
+      <Original>Urban Bandit Clothing</Original>
+      <English>Urban Bandit Clothing</English>
+      <German>Urban Bandit Clothing</German>
+      <Russian>Urban Bandit Clothing</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_DESC_61">
+      <Original>A mixture of jeans with a camoflage hoody. Can be unpacked and worn.</Original>
+      <English>A mixture of jeans with a camoflage hoody. Can be unpacked and worn.</English>
+      <German>A mixture of jeans with a camoflage hoody. Can be unpacked and worn.</German>
+      <Russian>A mixture of jeans with a camoflage hoody. Can be unpacked and worn.</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_NAME_119">        
+      <Original>Camo Net</Original>        
+      <English>Camo Net</English>        
+      <German>Camo Net</German>
+      <Russian>Camo Net</Russian>
+    </Key>        
+    <Key ID="STR_EQUIP_DESC_119">        
+      <Original>Small Camo Net. Used to cover vehicles and provide cover for them.</Original>        
+      <English>Small Camo Net. Used to cover vehicles and provide cover for them.</English>        
+      <German>Small Camo Net. Used to cover vehicles and provide cover for them.</German>
+      <Russian>Small Camo Net. Used to cover vehicles and provide cover for them.</Russian>
+    </Key>	
+    <Key ID="STR_EQUIP_NAME_120">        
+      <Original>Sandbag Nest</Original>        
+      <English>Sandbag Nest</English>        
+      <German>Sandbag Nest</German>
+      <Russian>Sandbag Nest</Russian>
+    </Key>        
+    <Key ID="STR_EQUIP_DESC_120">        
+      <Original>Fortified Sandbag Nest. Used to cover people and provide cover for them.</Original>        
+      <English>Fortified Sandbag Nest. Used to cover people and provide cover for them.</English>        
+      <German>Fortified Sandbag Nest. Used to cover people and provide cover for them.</German>
+      <Russian>Fortified Sandbag Nest. Used to cover people and provide cover for them.</Russian>
+    </Key>	
+    <Key ID="STR_EQUIP_NAME_121">        
+      <Original>Watch Tower</Original>        
+      <English>Watch Tower</English>        
+      <German>Watch Tower</German>
+      <Russian>Watch Tower</Russian>
+    </Key>        
+    <Key ID="STR_EQUIP_DESC_121">        
+      <Original>Watch Tower. Used for lookout and providing cover.</Original>        
+      <English>Watch Tower. Used for lookout and providing cover.</English>        
+      <German>Watch Tower. Used for lookout and providing cover.</German>
+      <Russian>Watch Tower. Used for lookout and providing cover.</Russian>
+    </Key>
+    <Key ID="STR_EQUIP_NAME_122">        
+      <Original>H-Barrier cube</Original>        
+      <English>H-Barrier cube</English>        
+      <German>H-Barrier cube</German>
+      <Russian>H-Barrier cube</Russian>
+    </Key>        
+    <Key ID="STR_EQUIP_DESC_122">        
+      <Original>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</Original>        
+      <English>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</English>        
+      <German>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</German>
+      <Russian>H-Barrier cube. Sacks made of hessian and wire that can be filled with sand or soil and used for military fortification.</Russian>
+    </Key>	
+    <Key ID="STR_EQUIP_NAME_123">        
+      <Original>H-Barrier</Original>        
+      <English>H-Barrier</English>        
+      <German>H-Barrier</German>
+      <Russian>H-Barrier</Russian>
+    </Key>        
+    <Key ID="STR_EQUIP_DESC_123">        
+      <Original>H-Barrier. Used for providing cover.</Original>        
+      <English>H-Barrier. Used for providing cover.</English>        
+      <German>H-Barrier. Used for providing cover.</German>
+      <Russian>H-Barrier. Used for providing cover.</Russian>
+    </Key>	
+    <Key ID="STR_EQUIP_NAME_124">        
+      <Original>Wire Fencing Kit (CAT2)</Original>        
+      <English>Wire Fencing Kit (CAT2)</English>        
+      <German>Stacheldraht (CAT2)</German>
+      <Russian>Колючая проволока (CAT2)</Russian>
+    </Key>        
+    <Key ID="STR_EQUIP_DESC_124">        
+      <Original>Razor wire in large coils which can be expanded like a concertina with steel pickets to form military wire obstacles.</Original>        
+      <English>Razor wire in large coils which can be expanded like a concertina with steel pickets to form military wire obstacles.</English>        
+      <German>Gewickelter Stacheldraht, der akkordeonartig ausgeklappt und mit Stahlpgosten befestigt zum Errichten von Stacheldrahthindernissen verwendet werden kann.</German>
+      <Russian>Катушка острой колючей проволоки для сооружения заграждений.</Russian>
+    </Key>
+</Package>
+</Project>

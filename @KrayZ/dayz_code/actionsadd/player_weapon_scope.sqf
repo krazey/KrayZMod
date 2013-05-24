@@ -7,8 +7,8 @@ disableserialization;
 _weaponAss = false;
 
 // Weapon database
-_wwSniper = ["DMR","AKS_74_pso","DMR_DZ"];
-_wwdSniper = ["M14_EP1","AKS_74","M14_EP1"];
+_wwSniper = ["DMR_DZ","AKS_74_pso"];
+_wwdSniper = ["M14_EP1","AKS_74"];
 
 if (!("ItemToolbox" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a scope to your weapon.", "PLAIN DOWN"];

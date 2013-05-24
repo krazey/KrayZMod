@@ -7,7 +7,7 @@ _item = _this;
 call gear_ui_init;
 
 if (["forest",dayz_surfaceType] call fnc_inString) then {
-		_result = [player,"PartWoodPile"] call BIS_fnc_invAdd;
+		_result = [player,"PartWoodPile_KR"] call BIS_fnc_invAdd;
 		[player,"chopwood",0,false] call dayz_zombieSpeak;
 		if (_result) then {
 			cutText [localize "str_player_25", "PLAIN DOWN"];

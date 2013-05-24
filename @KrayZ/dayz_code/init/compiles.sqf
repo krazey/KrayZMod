@@ -91,6 +91,7 @@ if (!isDedicated) then {
 	player_makeFire =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_makefire.sqf";
 	player_chopWood =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_chopWood.sqf";
 	player_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build.sqf";
+	player_build_gate =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_build_gate.sqf";
 	player_wearClothes =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_wearClothes.sqf";
 	player_dropWeapon =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_dropWeapon.sqf";
 	player_setTrap =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_setTrap.sqf";
@@ -100,9 +101,10 @@ if (!isDedicated) then {
 	
 	//add military flashlight to shoulder
 	player_addflashtosh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulder.sqf";
-	player_addflashtosh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulder2.sqf";
 	player_addflashtoshr =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulderr.sqf";
 	player_rmvflashfromsh =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder.sqf";
+	//add flashlight to shoulder
+	player_addflashtosh2 =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\shoulder2.sqf";
 	player_rmvflashfromsh2 =	compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\unshoulder2.sqf";
 	
 	//assemble & disassemble sights from weapons
@@ -129,6 +131,9 @@ if (!isDedicated) then {
 	//lock & unlock gate1
 	player_unlockGate =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_unlockGate.sqf";
 	player_lockGate =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_lockGate.sqf";
+	//lock & unlock gate2
+	player_unlockGate2 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_unlockGate2.sqf";
+	player_lockGate2 =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_lockGate2.sqf";
 	
 	//halo jump add
 	bis_fnc_halo =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_HALO.sqf";

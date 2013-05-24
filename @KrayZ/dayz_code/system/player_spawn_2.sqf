@@ -66,7 +66,7 @@ while {true} do {
 	if (_timeOut > 150) then {
 		_timeOut = 0;
 		if (_humanity < 2500) then {
-			_humanity = _humanity + 150;
+			_humanity = _humanity + 25;
 			_humanity = _humanity min 2500;
 			player setVariable ["humanity",_humanity,true];
 		};
@@ -83,7 +83,7 @@ while {true} do {
 		if (_model == "SurvivorW1_DZ") then {
 			[dayz_playerUID,dayz_characterID,"BanditW2_DZ"] spawn player_humanityMorph;
 		};
-		if (_model == "SurvivorW2_DZ") then {
+		if (_model == "SurvivorW2_KR") then {
 			[dayz_playerUID,dayz_characterID,"BanditW2_DZ"] spawn player_humanityMorph;
 		};
 	};
@@ -93,10 +93,10 @@ while {true} do {
 			[dayz_playerUID,dayz_characterID,"Survivor2_DZ"] spawn player_humanityMorph;
 		};
 		if (_model == "BanditW1_DZ") then {
-			[dayz_playerUID,dayz_characterID,"SurvivorW2_DZ"] spawn player_humanityMorph;
+			[dayz_playerUID,dayz_characterID,"SurvivorW2_KR"] spawn player_humanityMorph;
 		};
 		if (_model == "BanditW2_DZ") then {
-			[dayz_playerUID,dayz_characterID,"SurvivorW2_DZ"] spawn player_humanityMorph;
+			[dayz_playerUID,dayz_characterID,"SurvivorW2_KR"] spawn player_humanityMorph;
 		};
 	};
 	if (_humanity > 5000) then {
@@ -317,7 +317,7 @@ while {true} do {
 	*/
 	"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [1, 1, 1, 0.0]];
 	"colorCorrections" ppEffectCommit 0;
-	sleep 2;
+	sleep 2.5;
 	
 	_myPos = player getVariable["lastPos",[]];
 	if (count _myPos > 0) then {

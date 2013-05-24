@@ -6,16 +6,16 @@ BanditW1_DZ = 	"BanditW1_DZ";
 BanditW2_DZ = 	"BanditW2_DZ";
 Survivor2_DZ = 	"Survivor2_DZ";
 Survivor3_DZ = 	"Survivor3_DZ";
-SurvivorW2_DZ = "SurvivorW2_DZ";
-SurvivorW3_DZ = "SurvivorW2_DZ";
+SurvivorW2_KR = "SurvivorW2_KR";
+SurvivorW3_DZ = "SurvivorW3_DZ";
 Sniper1_DZ = 	"Sniper1_DZ";
 Sniper2_DZ =	"Sniper2_DZ";
-Camo1_DZ = 		"Camo1_DZ";
+Camo1_KR = 		"Camo1_KR";
 Soldier1_DZ = 	"Soldier1_DZ";
 Rocket_DZ = 	"Rocket_DZ";
 
 // more models
-Admin_DZ = "Admin_DZ";
+Bandit2_DZ = "Bandit2_DZ";
 Rocker2_DZ = "Rocker2_DZ";
 Priest_DZ = "Priest_DZ";
 Functionary1_EP1_DZ = "Functionary1_EP1_DZ";
@@ -45,8 +45,8 @@ Net_DZ =		"Net_DZ";
 SOTG_DZ = "SOTG_DZ";
 
 
-AllPlayers = ["Survivor2_DZ","Survivor3_DZ","Admin_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_DZ","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_DZ","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ"];
-AllPlayersVehicles = ["Survivor2_DZ","Survivor3_DZ","Admin_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_DZ","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_DZ","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","AllVehicles"];
+AllPlayers = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_KR","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ"];
+AllPlayersVehicles = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_KR","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","AllVehicles"];
   
 PZombie_VB =	"PZombie_VB";
 
@@ -108,10 +108,10 @@ food_with_output=[
 ];
 
 food_output = [
-    "TrashTinCan",
-    "TrashTinCan",
-    "TrashTinCan",
-    "TrashTinCan",
+    "TrashTinCan_KR",
+    "TrashTinCan_KR",
+    "TrashTinCan_KR",
+    "TrashTinCan_KR",
 	"FoodCanGriffEmpty",
 	"FoodCanBadguyEmpty",
 	"FoodCanBoneboyEmpty",
@@ -143,7 +143,7 @@ drink_with_output = [
     "ItemSodaRabbit"
 ];
 drink_output = [
-    "ItemSodaEmpty", 
+    "ItemSodaEmpty_KR", 
     "ItemSodaCokeEmpty",
     "ItemSodaPepsiEmpty",
     "ItemSodaMdewEmpty",
@@ -158,7 +158,7 @@ drink_output = [
     "ItemSodaRabbitEmpty"
 ];
 boil_tin_cans = [
-    "TrashTinCan",
+    "TrashTinCan_KR",
 	"FoodCanGriffEmpty",
 	"FoodCanBadguyEmpty",
 	"FoodCanBoneboyEmpty",
@@ -171,7 +171,7 @@ boil_tin_cans = [
 	"FoodCanPowellEmpty",
 	"FoodCanTylersEmpty",
 	"FoodCanUnlabeledEmpty",
-    "ItemSodaEmpty", 
+    "ItemSodaEmpty_KR", 
     "ItemSodaCokeEmpty",
     "ItemSodaPepsiEmpty",
     "ItemSodaMdewEmpty",
@@ -186,6 +186,7 @@ boil_tin_cans = [
     "ItemSodaRabbitEmpty"
 ];
 
+dayz_combination = ""; 
 dayz_combatLog = "";
 canRoll = true;
 
@@ -279,6 +280,8 @@ s_player_repairActions = [];
 // Custom 
 s_player_madsci 		= 	[];
 s_player_parts 			= 	[];
+s_player_combi			=	[];
+s_player_gatecombi		=	[];
 
 //Initialize Medical Variables
 r_interrupt = 			false;
@@ -388,6 +391,8 @@ dayz_zombieTargetList = [
 dayzHit = [];
 dayzPublishObj = [];		//used for eventhandler to spawn a mirror of players tent
 dayzHideBody = objNull;
+dayz_selectedVault = objNull;
+dayz_selectedGate = objNull;
 
 dayzPublishVeh = [];		// for vehicle traders
 dayzTradeObject = [];		// For all traders increment qty
@@ -436,7 +441,7 @@ if(isNil "dayz_oldrefuel") then {
 dayz_updateObjects = ["Car","Helicopter","Motorcycle","Ship","TentStorage","VaultStorage","M240Nest_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ"];
 dayz_disallowedVault = ["TentStorage", "BuiltItems", "Constuctables"];
 dayz_reveal = ["AllVehicles","WeaponHolder","TentStorage","VaultStorage","VaultStorageLocked","BuiltItems","BuiltItems2","Constuctables"];
-dayz_allowedObjects = ["TentStorage","TentStorageDomed","VaultStorageLocked","Hedgehog_DZ","Sandbag1_DZ","Sandbag2_DZ","Sandbag3_DZ","TrapBear","WoodGate_DZ","CamoNet","SandBagNest","WatchTower","DeerStand","HBarrier_Cube","HBarrier","Gate_Locked_DZ","Scaffolding","LadderSmall","LadderLarge","Wire_cat1","Wire_cat2","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","LightPole_DZ"];
+dayz_allowedObjects = ["TentStorage","TentStorageDomed","VaultStorageLocked","Hedgehog_DZ","Sandbag1_DZ","Sandbag2_DZ","Sandbag3_DZ","TrapBear","WoodGate_DZ","CamoNet","SandBagNest","WatchTower","DeerStand","HBarrier_Cube","HBarrier","Gate_Locked_DZ","Gate2_Locked_DZ","Scaffolding","LadderSmall","LadderLarge","Wire_cat1","Wire_cat2","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","LightPole_DZ"];
 
 dayz_spawnPos = getPosATL player;
 

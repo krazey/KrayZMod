@@ -1,7 +1,6 @@
 class CfgMagazines {
 	class CA_Magazine;	// External class reference
-	class Quiver : CA_Magazine
-	{
+	class Quiver : CA_Magazine {
 		scope = public;
 		ammo = "WoodenArrow";
 		count = 6;
@@ -11,7 +10,6 @@ class CfgMagazines {
 		model = "\z\addons\dayz_communityassets\models\quiver";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_quiver_ca.paa";
 	};
-	
 	class WoodenArrow : CA_Magazine {
 		scope = public;
 		displayName = "Arrow"; //$STR_MAG_NAME_3;
@@ -21,7 +19,6 @@ class CfgMagazines {
 		count = 1;
 		initSpeed = 150;
 		descriptionShort = "Arrow made out of wood, used with the Crossbow."; //$STR_MAG_DESC_3;
-		
 		class ItemActions {
 			class ReloadMag {
 				text = "Combine into Quiver";
@@ -31,19 +28,17 @@ class CfgMagazines {
 			};
 		};
 	};
-	
-	class ItemSodaEmpty;//External class reference
+	class ItemSodaEmpty_KR;//External class reference
 	class ItemSodaCoke; //External class reference
-	
-	class ItemSodaCokeEmpty : ItemSodaEmpty{
+	class ItemSodaCokeEmpty : ItemSodaEmpty_KR {
 		model = "\dayz_equip\models\soda_coke_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
-	class ItemSodaPepsiEmpty : ItemSodaEmpty{
+	class ItemSodaPepsiEmpty : ItemSodaEmpty_KR {
 		model = "\dayz_equip\models\soda_pepsi_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
-	class ItemSodaMdewEmpty : ItemSodaEmpty{
+	class ItemSodaMdewEmpty : ItemSodaEmpty_KR {
 		model = "\dayz_equip\models\soda_mdew_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
@@ -53,7 +48,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_mtngreen_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mtngreen_clean_full_ca.paa";
 	};
-	class ItemSodaMtngreenEmpty : ItemSodaEmpty{
+	class ItemSodaMtngreenEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_mtngreen_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mtngreen_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -64,7 +59,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_r4z0r_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_r4z0r_clean_full_ca.paa";
 	};
-	class ItemSodaR4z0rEmpty : ItemSodaEmpty{
+	class ItemSodaR4z0rEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_r4z0r_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_r4z0r_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -75,7 +70,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_clays_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_clays_clean_full_ca.paa";
 	};
-	class ItemSodaClaysEmpty : ItemSodaEmpty{
+	class ItemSodaClaysEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_clays_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_clays_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -86,7 +81,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_smasht_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_smasht_clean_full_ca.paa";
 	};
-	class ItemSodaSmashtEmpty : ItemSodaEmpty{
+	class ItemSodaSmashtEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_smasht_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_smasht_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -97,7 +92,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_drwaste_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_drwaste_clean_full_ca.paa";
 	};
-	class ItemSodaDrwasteEmpty : ItemSodaEmpty{
+	class ItemSodaDrwasteEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_drwaste_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_drwaste_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -108,7 +103,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_franka_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_franka_clean_full_ca.paa";
 	};
-	class ItemSodaFrankaEmpty : ItemSodaEmpty{
+	class ItemSodaFrankaEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_franka_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_franka_clean_empty_ca";
 		//ammo = "SodaCanMtngreen";
@@ -119,7 +114,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_lemonade_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lemonade_clean_full_ca.paa";
 	};
-	class ItemSodaLemonadeEmpty : ItemSodaEmpty{
+	class ItemSodaLemonadeEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_lemonade_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lemonade_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -130,7 +125,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_lirik_clean_full.p3d";
 		//picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lirik_clean_full_ca.paa";
 	};
-	class ItemSodaLirikEmpty : ItemSodaEmpty{
+	class ItemSodaLirikEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_lirik_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lirik_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -141,7 +136,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_lvg_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lvg_clean_full_ca.paa";
 	};
-	class ItemSodaLvgEmpty : ItemSodaEmpty{
+	class ItemSodaLvgEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_lvg_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_lvg_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -153,7 +148,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_mzly_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mzly_clean_full_ca.paa";
 	};
-	class ItemSodaMzlyEmpty : ItemSodaEmpty{
+	class ItemSodaMzlyEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_mzly_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_mzly_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -164,7 +159,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_peppsy_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_peppsy_clean_full_ca.paa";
 	};
-	class ItemSodaPeppsyEmpty : ItemSodaEmpty{
+	class ItemSodaPeppsyEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_peppsy_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_peppsy_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -175,7 +170,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_rabbit_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_rabbit_clean_full_ca.paa";
 	};
-	class ItemSodaRabbitEmpty : ItemSodaEmpty{
+	class ItemSodaRabbitEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_rabbit_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_rabbit_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -187,7 +182,7 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\soda_sacrite_clean_full.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_sacrite_clean_full_ca.paa";
 	};
-	class ItemSodaSacriteEmpty : ItemSodaEmpty{
+	class ItemSodaSacriteEmpty : ItemSodaEmpty_KR {
 		model = "z\addons\dayz_communityassets\models\soda_sacrite_clean_empty.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_soda_sacrite_clean_empty_ca.paa";
 		//ammo = "SodaCanMtngreen";
@@ -208,19 +203,16 @@ class CfgMagazines {
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_1;
 		bloodRegen = 100;
 	};
-	
 	class FoodchickenRaw : FoodmeatRaw {
 		displayName = $STR_FOOD_EQIP_CODE_NAME_2;
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_2;
 		bloodRegen = 100;
 	};
-	
 	class FoodrabbitRaw : FoodmeatRaw {
 		displayName = $STR_FOOD_EQIP_CODE_NAME_3;
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_3;
 		bloodRegen = 400;
 	};
-	
 	class FoodbaconRaw : FoodmeatRaw {
 		displayName = $STR_FOOD_EQIP_CODE_NAME_4;
 		model = "z\addons\dayz_communityassets\models\bacon_raw.p3d";
@@ -232,8 +224,7 @@ class CfgMagazines {
 		displayName = $STR_FOOD_EQIP_CODE_NAME_6;
 		descriptionShort = $STR_FOOD_EQUIP_CODE_DESC_6;
 		bloodRegen = 100;
-			};
-	
+	};
 	class FoodmeatCooked : FoodEdible {
 		scope = public;
 		count = 1;
@@ -254,7 +245,6 @@ class CfgMagazines {
 		descriptionShort = $STR_FOODCOOKED_EQUIP_CODE_DESC_2;
 		bloodRegen = 400;
 	};
-	
 	class FoodbaconCooked : FoodmeatCooked {
 		displayName = $STR_FOODCOOKED_EQIP_CODE_NAME_4;
 		model = "z\addons\dayz_communityassets\models\bacon_fried.p3d";
@@ -292,7 +282,6 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\mre.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_mre_CA.paa";
 	};
-	
 	class FoodPistachio : FoodEdible {
 		scope = public;
 		count = 1;
@@ -311,7 +300,6 @@ class CfgMagazines {
 		model = "z\addons\dayz_communityassets\models\nutmix.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_nutmix_CA.paa";
 	};
-	
 	class FoodCanGriff : FoodEdible {
 		scope = public;
 		count = 1;
@@ -421,8 +409,8 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_unlabeled_clean_full_ca.paa";
 	};
 	// placeholder
-	class TrashTinCan;
-	class FoodCanGriffEmpty : TrashTinCan {
+	class TrashTinCan_KR;
+	class FoodCanGriffEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		model = "z\addons\dayz_communityassets\models\can_griff_clean_empty.p3d";
@@ -431,7 +419,7 @@ class CfgMagazines {
 		descriptionShort = $STR_FOOD_DESC_CAN_GRIFF_EMPTY;
 		ammo = "TinCan";
 	};
-	class FoodCanBadguyEmpty : TrashTinCan {
+	class FoodCanBadguyEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_BADGUY_EMPTY;
@@ -440,7 +428,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_badguy_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanBoneboyEmpty : TrashTinCan {
+	class FoodCanBoneboyEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_BONEBOY_EMPTY;
@@ -449,7 +437,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_boneboy_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanCornEmpty : TrashTinCan {
+	class FoodCanCornEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_CORN_EMPTY;
@@ -458,7 +446,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_corn_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanCurgonEmpty : TrashTinCan {
+	class FoodCanCurgonEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_CURGON_EMPTY;
@@ -467,7 +455,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_curgon_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanDemonEmpty : TrashTinCan {
+	class FoodCanDemonEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_DEMON_EMPTY;
@@ -476,7 +464,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_demon_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanFraggleosEmpty : TrashTinCan {
+	class FoodCanFraggleosEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_FRAGGLEOS_EMPTY;
@@ -485,7 +473,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_fraggleos_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanHerpyEmpty : TrashTinCan {
+	class FoodCanHerpyEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_HERPY_EMPTY;
@@ -494,7 +482,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_herpy_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanOrlokEmpty : TrashTinCan {
+	class FoodCanOrlokEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_ORLOK_EMPTY;
@@ -503,7 +491,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_orlok_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanPowellEmpty : TrashTinCan {
+	class FoodCanPowellEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_POWELL_EMPTY;
@@ -512,7 +500,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_powell_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanTylersEmpty : TrashTinCan {
+	class FoodCanTylersEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_TYLERS_EMPTY;
@@ -521,7 +509,7 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_tylers_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	class FoodCanUnlabeledEmpty : TrashTinCan {
+	class FoodCanUnlabeledEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
 		displayName = $STR_FOOD_NAME_CAN_UNLABELED_EMPTY;
@@ -530,7 +518,6 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_can_unlabeled_clean_empty_ca.paa";
 		ammo = "TinCan";
 	};
-	
 	class ItemWaterbottle;
 	class ItemWaterbottleBoiled : ItemWaterbottle {
 		displayName = $STR_ITEMWATERBOTTLEBOILED_CODE_NAME;
@@ -550,7 +537,6 @@ class CfgMagazines {
 		shortNameMagazine = "Dummy";
 		ammo = "Dummy_Swing_Ammo";
 	};
-	
 	class ItemTrashToiletpaper : CA_Magazine {
 		scope = public;
 		count = 1;
@@ -569,59 +555,47 @@ class CfgMagazines {
 		picture = "\z\addons\dayz_communityassets\pictures\equip_razor_CA.paa";
 		type = 256;
 	};
-	
 	class 8Rnd_B_Beneli_74Slug;
 	class 8Rnd_B_Beneli_Pellets;
-	
-	class 2Rnd_shotgun_74Slug: 8Rnd_B_Beneli_74Slug
-	{
+	class 2Rnd_shotgun_74Slug: 8Rnd_B_Beneli_74Slug {
 		displayName="2Rnd. Slug";
 		count=2;
 		descriptionShort="Caliber: 12 gauge <br/>Rounds: 2 <br/>Used in: M1014";
 		model = "\z\addons\dayz_communityassets\models\2shells_slugshot.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_2shells_slugshot_CA.paa";
-		class ItemActions
-		{
-			class ReloadMag
-			{
+		class ItemActions {
+			class ReloadMag {
 				text="Combine to 8 rounds";
 				script="spawn player_reloadMag;";
-				use[]=
-				{
+				use[]= {
 					"2Rnd_shotgun_74Slug",
 					"2Rnd_shotgun_74Slug",
 					"2Rnd_shotgun_74Slug",
 					"2Rnd_shotgun_74Slug"
 				};
-				output[]=
-				{
+				output[]= {
 					"8Rnd_B_Beneli_74Slug"
 				};
 			};
 		};
 	};
-	class 2Rnd_shotgun_74Pellets: 8Rnd_B_Beneli_Pellets
-	{
+	class 2Rnd_shotgun_74Pellets: 8Rnd_B_Beneli_Pellets {
 		displayName="2Rnd. Pellets";
 		count=2;
 		descriptionShort="Caliber: 12 gauge <br/>Rounds: 2 Pellets<br/>Used in: M1014";
 		model = "\z\addons\dayz_communityassets\models\2shells_pellet.p3d";
 		picture = "\z\addons\dayz_communityassets\pictures\equip_2shells_pellet_CA.paa";
-		class ItemActions
-		{
-			class ReloadMag
-			{
+		class ItemActions {
+			class ReloadMag {
 				text="Combine to 8 rounds";
 				script="spawn player_reloadMag;";
-				use[]=
-				{
+				use[]= {
 					"2Rnd_shotgun_74Pellets",
 					"2Rnd_shotgun_74Pellets",
 					"2Rnd_shotgun_74Pellets",
 					"2Rnd_shotgun_74Pellets"
 				};
-				output[]=
-				{
+				output[]= {
 					"8Rnd_B_Beneli_Pellets"
 				};
 			};

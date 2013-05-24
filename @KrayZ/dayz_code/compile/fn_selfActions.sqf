@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- Function
 	- [] call fnc_usec_selfActions;
 ************************************************************/
-private ["_isPZombie","_vehicle","_inVehicle","_bag","_classbag","_isWater","_hasAntiB","_hasFuelE","_hasRawMeat","_hasKnife","_hasToolbox","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_canmove","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip"];
+private ["_isPZombie","_vehicle","_inVehicle","_bag","_classbag","_isWater","_hasAntiB","_hasFuelE","_hasRawMeat","_hasKnife","_hasToolbox","_onLadder","_nearLight","_canPickLight","_canDo","_text","_isHarvested","_isVehicle","_isVehicletype","_isMan","_traderType","_ownerID","_isAnimal","_isDog","_isZombie","_isDestructable","_isTent","_isFuel","_isAlive","_canmove","_Unlock","_lock","_buy","_dogHandle","_lieDown","_warn","_hastinitem","_allowedDistance","_menu","_menu1","_humanity_logic","_low_high","_cancel","_metals_trader","_traderMenu","_isWreck","_isRemovable","_isDisallowRepair","_rawmeat","_humanity","_speed","_dog","_hasbottleitem","_isAir","_isShip","_combi","_gatecombi"];
 
 _vehicle = vehicle player;
 _isPZombie = player isKindOf "PZombie_VB";
@@ -26,7 +26,7 @@ _hastinitem = false;
 
 
 _hasKnife = 	"ItemKnife" in items player;
-_hasToolbox = 	"ItemToolbox" in items player;
+_hasToolbox = 	"ItemToolbox_KR" in items player;
 //_hasTent = 		"ItemTent" in items player;
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _nearLight = 	nearestObject [player,"LitObject"];
@@ -116,7 +116,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	_ownerID = cursorTarget getVariable ["characterID","0"];
 	_isAnimal = cursorTarget isKindOf "Animal";
 	_isDog =  (cursorTarget isKindOf "DZ_Pastor" || cursorTarget isKindOf "DZ_Fin");
-	_isZombie = cursorTarget isKindOf "zZombie_base";
+	_isZombie = cursorTarget isKindOf "zZombie_base_KR";
 	_isDestructable = cursorTarget isKindOf "BuiltItems";
 	_isWreck = typeOf cursorTarget in ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1","Rubbish2"];
 	_isRemovable = typeOf cursorTarget in ["Fence_corrugated_DZ","ParkBench_DZ"];
@@ -291,22 +291,38 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
     };
 
 	//Allow owner to unlock vault
-	if(cursorTarget isKindOf "VaultStorageLocked" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and !UnlockInprogress) then {
+	if((cursorTarget isKindOf "VaultStorageLocked" or cursorTarget isKindOf "VaultStorage") and _canDo and _ownerID != "0") then {
 		if (s_player_unlockvault < 0  and (player distance cursorTarget < 3)) then {
-			s_player_unlockvault = player addAction ["Unlock Safe", "\z\addons\dayz_code\actions\vault_unlock.sqf",cursorTarget, 0, false, true, "",""];
+			if(typeOf cursorTarget == "VaultStorageLocked") then {
+				if(_ownerID == dayz_combination or _ownerID == dayz_playerUID) then {
+					_combi = player addAction ["Open Safe", "\z\addons\dayz_code\actions\vault_unlock.sqf",cursorTarget, 0, false, true, "",""];
+				} else {
+					_combi = player addAction ["Unlock Safe", "\z\addons\dayz_code\actionsadd\vault_combination_1.sqf",cursorTarget, 0, false, true, "",""];
+				};
+				s_player_combi set [count s_player_combi,_combi];
+				s_player_unlockvault = 1;
+			} else {
+				if(_ownerID != dayz_combination and _ownerID != dayz_playerUID) then {
+					_combi = player addAction ["Enter Combo", "\z\addons\dayz_code\actionsadd\vault_combination_1.sqf",cursorTarget, 0, false, true, "",""];
+					s_player_combi set [count s_player_combi,_combi];
+					s_player_unlockvault = 1;
+				};
+			};
 		};
 	} else {
-		player removeAction s_player_unlockvault;
+		{player removeAction _x} forEach s_player_combi;s_player_combi = [];
 		s_player_unlockvault = -1;
 	};
 
 	//Allow owner to pack vault
-	if(cursorTarget isKindOf "VaultStorage" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and (player distance cursorTarget < 3)) then {
+	if(cursorTarget isKindOf "VaultStorage" and _canDo and _ownerID != "0" and (player distance cursorTarget < 3)) then {
 
 		if (s_player_lockvault < 0) then {
-			s_player_lockvault = player addAction ["Lock Safe", "\z\addons\dayz_code\actions\vault_lock.sqf",cursorTarget, 0, false, true, "",""];
+			if(_ownerID == dayz_combination or _ownerID == dayz_playerUID) then {
+				s_player_lockvault = player addAction ["Lock Safe", "\z\addons\dayz_code\actions\vault_lock.sqf",cursorTarget, 0, false, true, "",""];
+			};
 		};
-		if (s_player_packvault < 0) then {
+		if (s_player_packvault < 0 and (_ownerID == dayz_combination or _ownerID == dayz_playerUID)) then {
 			s_player_packvault = player addAction ["<t color='#ff0000'>Pack Safe</t>", "\z\addons\dayz_code\actions\vault_pack.sqf",cursorTarget, 0, false, true, "",""];
 		};
 	} else {
@@ -316,7 +332,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_lockvault = -1;
 	};
 
-	//Allow owner to de-construct/pack buildings (hbarrier only)
+	//Allow owner to de-construct/pack buildings - FAST (hbarrier only)
 	if(cursorTarget isKindOf "HBarrier" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and (player distance cursorTarget < 3)) then {
 
 		if (s_player_rmvhbarrier < 0) then {
@@ -350,6 +366,50 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_lockgate = -1;
 		player removeAction s_player_deleteGate;
 		s_player_deleteGate = -1;
+	};
+	
+	//Allow to unlock gate2
+	if((cursorTarget isKindOf "Gate2_Locked_DZ" or cursorTarget isKindOf "Gate2_DZ") and _canDo and _ownerID != "0") then {
+		if (s_player_unlockgate2 < 0  and (player distance cursorTarget < 3)) then {
+			if(_ownerID == dayz_combination) then {
+				_gatecombi = player addAction ["Unlock Gate", "\z\addons\dayz_code\actionsadd\gate2_unlock.sqf",cursorTarget, 0, false, true, "",""];
+			} else {
+				_gatecombi = player addAction ["Unlock Gate (enter code)", "\z\addons\dayz_code\actionsadd\gate_combination_1.sqf",cursorTarget, 0, false, true, "",""];
+			};
+			s_player_gatecombi set [count s_player_gatecombi,_gatecombi];
+			s_player_unlockgate2 = 1;
+		};
+	} else {
+		{player removeAction _x} forEach s_player_gatecombi;s_player_gatecombi = [];
+		s_player_unlockgate2 = -1;
+	};
+
+	//Allow to lock/remove gate2
+	if(cursorTarget isKindOf "Gate2_DZ" and _canDo and _ownerID != "0" and (player distance cursorTarget < 3)) then {
+
+		if (s_player_lockgate2 < 0) then {
+			if(_ownerID == dayz_combination or _ownerID == dayz_playerUID) then {
+				s_player_lockgate2 = player addAction ["Lock Gate", "\z\addons\dayz_code\actionsadd\gate2_lock.sqf",cursorTarget, 0, false, true, "",""];
+			};
+		};
+		if (s_player_deleteGate2 < 0 and (_ownerID == dayz_combination)) then {
+			s_player_deleteGate2 = player addAction ["<t color='#ff0000'>Remove Gate</t>", "\z\addons\dayz_code\actions\remove.sqf",cursorTarget, 0, false, true, "",""];
+		};
+	} else {
+		player removeAction s_player_deleteGate2;
+		s_player_deleteGate2 = -1;
+		player removeAction s_player_lockgate2;
+		s_player_lockgate2 = -1;
+	};
+	
+	//Allow owner to de-construct Constuctables
+	if(cursorTarget isKindOf "Constuctables" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and (player distance cursorTarget < 5)) then {
+		if (s_player_deleteConstuctables < 0) then {
+			s_player_deleteConstuctables = player addAction [format[localize "str_actions_delete",_text], "\z\addons\dayz_code\actions\remove.sqf",cursorTarget, 1, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_deleteConstuctables;
+		s_player_deleteConstuctables = -1;
 	};
 
     //Player Deaths
@@ -569,20 +629,22 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	//Engineering
 	{dayz_myCursorTarget removeAction _x} forEach s_player_repairActions;s_player_repairActions = [];
 	s_player_repair_crtl = -1;
+	
+	{player removeAction _x} forEach s_player_combi;s_player_combi = [];
+	{player removeAction _x} forEach s_player_gatecombi;s_player_gatecombi = [];
 		
 	dayz_myCursorTarget = objNull;
 
 	{player removeAction _x} forEach s_player_parts;s_player_parts = [];
 
 	{player removeAction _x} forEach s_player_lockunlock;s_player_lockunlock = [];
+	// lock unlock vehicles
+	s_player_lockUnlock_crtl = -1;
 
 	player removeAction s_player_checkGear;
 	s_player_checkGear = -1;
 
 	s_player_parts_crtl = -1;
-
-	// lock unlock vehicles
-	s_player_lockUnlock_crtl = -1;
 
 
 	//Others
@@ -597,6 +659,10 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_deleteBuild = -1;
 	player removeAction s_player_deleteGate;
 	s_player_deleteGate = -1;
+	player removeAction s_player_deleteGate2;
+	s_player_deleteGate2 = -1;
+	player removeAction s_player_deleteConstuctables;
+	s_player_deleteConstuctables = -1;
 	
 	player removeAction s_player_butcher;
 	s_player_butcher = -1;
@@ -637,6 +703,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_packvault = -1;
 	player removeAction s_player_lockvault;
 	s_player_lockvault = -1;
+	
 	player removeAction s_player_information;
 	s_player_information = -1;
 	player removeAction s_player_fillgen;
@@ -646,11 +713,16 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	player removeAction s_player_rmvhbarrier;
 	s_player_rmvhbarrier = -1;
 	
-    //unlock & lock gate
+   //unlock & lock gate
 	player removeAction s_player_unlockgate;
 	s_player_unlockgate = -1;
 	player removeAction s_player_lockgate;
 	s_player_lockgate = -1;
+    //unlock & lock gate2
+	player removeAction s_player_unlockgate2;
+	s_player_unlockgate2 = -1;
+	player removeAction s_player_lockgate2;
+	s_player_lockgate2 = -1;
 };
 
 

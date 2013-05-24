@@ -1,9 +1,9 @@
 class CfgLoot {
 	trash[] = {
 		{
-			"TrashTinCan",
+			"TrashTinCan_KR",
 			"TrashJackDaniels",
-			"ItemSodaEmpty",
+			"ItemSodaEmpty_KR",
 			"ItemTrashToiletpaper",
 			"ItemTrashRazor"
 		},
@@ -17,9 +17,10 @@ class CfgLoot {
 	};
 	civilian[] = {
 		{
-			"TrashTinCan",
+			"TrashTinCan_KR",
 			"TrashJackDaniels",
-			"ItemSodaEmpty",
+			"ItemSodaEmpty_KR",
+			"ItemLightBulb",
 			"ItemSodaCoke",
 			"ItemSodaPepsi",
 			"FoodCanBakedBeans",
@@ -38,6 +39,7 @@ class CfgLoot {
 			0.09,
 			0.09,
 			0.09,
+			0.05,
 			0.12,
 			0.09,
 			0.05,
@@ -56,9 +58,9 @@ class CfgLoot {
 	food[] = {
 		{
 			//trash
-			"TrashTinCan",
+			"TrashTinCan_KR",
 			"TrashJackDaniels",
-			"ItemSodaEmpty",
+			"ItemSodaEmpty_KR",
 			"ItemSodaCoke",
 			"ItemSodaPepsi",
 			"FoodCanBakedBeans",
@@ -143,8 +145,8 @@ class CfgLoot {
 	};
 	generic[] = {
 		{
-			"TrashTinCan",
-			"ItemSodaEmpty",
+			"TrashTinCan_KR",
+			"ItemSodaEmpty_KR",
 			"ItemSodaCoke",
 			"ItemSodaPepsi",
 			"TrashJackDaniels",
@@ -170,7 +172,13 @@ class CfgLoot {
 			"HandChemBlue",
 			"HandChemRed",
 			"ItemHeatPack",
-			"des_paint_kit"
+			"des_paint_kit",
+			"RedDot_DZ",
+			"ACOG_DZ",
+			"Holo_DZ",
+			"Sniper_DZ",
+			"Launcher_DZ",
+			"Suppressor_DZ"
 		},
 		{
 			0.06,
@@ -200,7 +208,13 @@ class CfgLoot {
 			0.03,
 			0.03,
 			0.04,
-			0.02
+			0.01,
+			0.01,
+			0.01,
+			0.01,
+			0.005,
+			0.005,
+			0.005
 		}
 	};
 	medical[] = {
@@ -260,8 +274,8 @@ class CfgLoot {
 
 			"des_paint_kit",
 
-			"TrashTinCan",
-			"ItemSodaEmpty",
+			"TrashTinCan_KR",
+			"ItemSodaEmpty_KR",
 			"ItemSodaCoke",
 			"ItemSodaPepsi",
 			"ItemBandage",
@@ -403,9 +417,9 @@ class CfgLoot {
 
 	worker[] = {
 		{
-			"TrashTinCan",
+			"TrashTinCan_KR",
 			"TrashJackDaniels",
-			"ItemSodaEmpty",
+			"ItemSodaEmpty_KR",
 			"ItemSodaCoke",
 			"ItemSodaPepsi",
 			"FoodCanBakedBeans",
@@ -414,8 +428,8 @@ class CfgLoot {
 			"FoodCanPasta",
 			"ItemBandage",
 			"ItemPainkiller",
-			"ItemWire",
-			"ItemTankTrap",
+			"ItemWire_KR",
+			"ItemTankTrap_KR",
 		},
 		{
 			0.09,

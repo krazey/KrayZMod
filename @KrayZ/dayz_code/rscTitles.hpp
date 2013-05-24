@@ -137,7 +137,7 @@ class RscDisplayMain : RscStandardDisplay
 		class DAYZ_Version : CA_Version
 		{
 			idc = -1;
-			text = "KrayZ 2.122 (based on DayZ, DayZ Epoch, DayZ+)";
+			text = "KrayZ 2.123 (based on DayZ, DayZ Epoch, DayZ+)";
 			y = "(SafeZoneH + SafeZoneY) - (1.06 - 0.95)";
 		};
 		delete CA_TitleMainMenu;
@@ -241,7 +241,7 @@ class RscDisplayGenderSelect
 			h = 0.542373 * safezoneH;
 			color[] = { 0.5, 0.5, 0.5, 1 };
 			colorActive[] = { 1, 1, 1, 1 };
-			action = "closeDialog 0;dayz_selectGender = 'SurvivorW2_DZ';";
+			action = "closeDialog 0;dayz_selectGender = 'SurvivorW2_KR';";
 		};
 		class Gender_Title: RscStructuredText
 		{

@@ -10,208 +10,127 @@ class CfgWeapons {
 			libtextdesc = "Debug Map - Admin use only";
 		};
 	};
-	
 	class ItemCompass: ItemCore {
 		model="z\addons\dayz_communityassets\models\compass.p3d";
 	};
-	
 	class Crossbow;
 	class Crossbow_DZ : Crossbow {
-		magazines[] =
-		{
-			"Quiver",
-			"WoodenArrow"
-		};
+		magazines[] = { "Quiver", "WoodenArrow" };
 	};
 	class MeleeWeapon;
-	class MeleeHatchet: MeleeWeapon
-	{
+	class MeleeHatchet: MeleeWeapon {
 		scope=2;
 		autoreload=1;
 		magazineReloadTime=0;
 		model="\dayz_weapons\models\Hatchet_weaponized";
 		picture="\dayz_equip\textures\equip_hatchet_CA.paa";
 		displayName="$STR_EQUIP_NAME_41";
-		magazines[]=
-		{
-			"Hatchet_Swing"
-		};
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"\dayz_weapons\anim\melee_hatchet_holding.rtm"
-		};
-		class ItemActions
-		{
-			class Use
-			{
+		magazines[]= { "Hatchet_Swing" };
+		handAnim[]= { "OFP2_ManSkeleton", "\dayz_weapons\anim\melee_hatchet_holding.rtm" };
+		class ItemActions {
+			class Use {
 				text="$STR_ACTIONS_CHOPWOOD";
 				script="spawn player_chopWood;";
 			};
-			class Toolbelt
-			{
+			class Toolbelt {
 				text="Add to Toolbelt";
 				script="spawn player_addToolbelt;";
-				use[]=
-				{
-					"MeleeHatchet"
-				};
-				output[]=
-				{
-					"ItemHatchet"
-				};
+				use[]= { "MeleeHatchet" };
+				output[]= { "ItemHatchet" };
 			};
-			class Drop
-			{
+			class Drop {
 				text="Drop Hatchet";
 				script="spawn player_dropWeapon;";
-				use[]=
-				{
-					"Hatchet_Swing"
-				};
+				use[]= { "Hatchet_Swing" };
 			};
 		};
-		class Library
-		{
+		class Library {
 			libTextDesc="$STR_EQUIP_DESC_41";
 		};
 		descriptionShort="$STR_EQUIP_DESC_41";
 	};	
-	class MeleeCrowbar: MeleeHatchet
-	{
+	class MeleeCrowbar: MeleeHatchet {
 		scope=2;
 		autoreload=1;
 		magazineReloadTime=0;
 		model="\dayz_weapons\models\crowbar_weaponized";
 		picture="\dayz_weapons\textures\equip_crowbar_CA.paa";
 		displayName="Crowbar";
-		magazines[]=
-		{
-			"Crowbar_Swing"
-		};
-		class ItemActions
-		{
-			class Toolbelt
-			{
+		magazines[]= { "Crowbar_Swing" };
+		class ItemActions {
+			class Toolbelt {
 				text="Add to Toolbelt";
 				script="spawn player_addToolbelt;";
-				use[]=
-				{
-					"MeleeCrowbar"
-				};
-				output[]=
-				{
-					"ItemCrowbar"
-				};
+				use[]= { "MeleeCrowbar_KR" };
+				output[]= { "ItemCrowbar" };
 			};
-			class Drop
-			{
+			class Drop {
 				text="Drop Crowbar";
 				script="spawn player_dropWeapon;";
-				use[]=
-				{
-					"Crowbar_Swing"
-				};
+				use[]= { "Crowbar_Swing" };
 			};
 		};
-		class Library
-		{
+		class Library {
 			libTextDesc="A tool consisting of a metal bar with a single curved end and flattened points, often with a small fissure on one or both ends for removing nails.";
 		};
 		descriptionShort="A tool consisting of a metal bar with a single curved end and flattened points, often with a small fissure on one or both ends for removing nails.";
 	};	
-	class ItemCrowbar: ItemCore
-	{
+	class ItemCrowbar: ItemCore {
 		scope=2;
 		displayName="Crowbar";
 		model="\dayz_equip\models\crowbar.p3d";
 		picture="\dayz_weapons\textures\equip_crowbar_CA.paa";
 		descriptionShort="A tool consisting of a metal bar with a single curved end and flattened points, often with a small fissure on one or both ends for removing nails.";
-		class ItemActions
-		{
-			class Toolbelt
-			{
+		class ItemActions {
+			class Toolbelt {
 				text="Remove from Toolbelt";
 				script="spawn player_addToolbelt;";
-				use[]=
-				{
-					"ItemCrowbar"
-				};
-				output[]=
-				{
-					"MeleeCrowbar"
-				};
+				use[]= { "ItemCrowbar" };
+				output[]= { "MeleeCrowbar_KR" };
 			};
 		};
 	};
-	class MeleeMachete: MeleeHatchet
-	{
+	class MeleeMachete: MeleeHatchet {
 		scope=2;
 		autoreload=1;
 		magazineReloadTime=0;
 		model="\z\addons\dayz_communityassets\models\machete_weaponized.p3d";
 		picture="\z\addons\dayz_communityassets\pictures\equip_machete_CA.paa";
 		displayName="Machete";
-		magazines[]=
-		{
-			"Machete_Swing"
-		};
-		class ItemActions
-		{
-			class Toolbelt
-			{
+		magazines[]= { "Machete_Swing" };
+		class ItemActions {
+			class Toolbelt {
 				text="Add to Toolbelt";
 				script="spawn player_addToolbelt;";
-				use[]=
-				{
-					"MeleeMachete"
-				};
-				output[]=
-				{
-					"ItemMachete"
-				};
+				use[]= { "MeleeMachete" };
+				output[]= { "ItemMachete" };
 			};
-			class Drop
-			{
+			class Drop {
 				text="Drop Machete";
 				script="spawn player_dropWeapon;";
-				use[]=
-				{
-					"Machete_Swing"
-				};
+				use[]= { "Machete_Swing" };
 			};
 		};
-		class Library
-		{
+		class Library {
 			libTextDesc="";
 		};
 		descriptionShort="An agricultural tool turned into a weapon, the Machete may be less versatile than the common hatchet, but it packs a punch.";
 	};	
-	class ItemMachete: ItemCore
-	{
+	class ItemMachete: ItemCore {
 		scope=2;
 		displayName="Machete";
 		model="\z\addons\dayz_communityassets\models\machete.p3d";
 		picture="\z\addons\dayz_communityassets\pictures\equip_machete_CA.paa";
 		descriptionShort="An agricultural tool turned into a weapon, the Machete may be less versatile than the common hatchet, but it packs a punch.";
-		class ItemActions
-		{
-			class Toolbelt
-			{
+		class ItemActions {
+			class Toolbelt {
 				text="Remove from Toolbelt";
 				script="spawn player_addToolbelt;";
-				use[]=
-				{
-					"ItemMachete"
-				};
-				output[]=
-				{
-					"MeleeMachete"
-				};
+				use[]= { "ItemMachete" };
+				output[]= { "MeleeMachete" };
 			};
 		};
 	};
-	
 	class GrenadeLauncher;  // External class reference
 	class Flare : GrenadeLauncher {
 		class ThrowMuzzle;
@@ -219,8 +138,8 @@ class CfgWeapons {
 			displayName = "$STR_ACTION_THROW";
 			magazines[] = {
 				"TrashJackDaniels", 
-				"ItemSodaEmpty", 
-				"TrashTinCan",
+				"ItemSodaEmpty_KR", 
+				"TrashTinCan_KR",
 				"FoodCanGriffEmpty",
 				"FoodCanBadguyEmpty",
 				"FoodCanBoneboyEmpty",

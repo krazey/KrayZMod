@@ -1,16 +1,14 @@
 class cfgNonAIVehicles {
 	/*extern*/ class ProxyGoggles;
 	/*extern*/ class ProxyBysta;
-
 	class ProxyPVS15_Rabinex: ProxyGoggles {
 		scope = 2;
 		model = "\SBE_SOTG\PVS15_Rabinex.p3d";
 	};
 };
-
 class CfgVehicles {
-class Citizen1;	// External class reference
-	class zZombie_Base : Citizen1 {
+	class Citizen1;	// External class reference
+	class zZombie_Base_KR : Citizen1 {
 		scope = public;
 		glassesEnabled = 0;
 		vehicleClass = "Zombie";
@@ -24,15 +22,13 @@ class Citizen1;	// External class reference
 		magazines[] = {};
 		sensitivity = 4;	// sensor sensitivity
 		sensitivityEar = 2;
-		identityTypes[] = {"zombie1", "zombie2"};
+		identityTypes[] = {"Zombie1_KR","Zombie2_KR","Zombie3_KR"};
 		class TalkTopics {};
 		languages[] = {};
-		
 		class Eventhandlers {
 			init = "_this call zombie_initialize;";
 			local = "if(_this select 1) then {[(position (_this select 0)),(_this select 0),true] execFSM '\z\AddOns\dayz_code\system\zombie_agent.fsm'};";
 		};
-		
 		class HitPoints {
 			class HitHead {
 				armor = 0.3;
@@ -41,76 +37,62 @@ class Citizen1;	// External class reference
 				passThrough = true;
 				memoryPoint = "pilot";
 			};
-			
 			class HitBody : HitHead {
 				armor = 2;
 				name = "body";
 				memoryPoint = "aimPoint";
 			};
-			
 			class HitSpine : HitHead {
 				armor = 2;
 				name = "Spine2";
 				memoryPoint = "aimPoint";
 			};
-			
 			class HitHands : HitHead {
 				armor = 0.5;
 				material = -1;
 				name = "hands";
 				passThrough = true;
 			};
-			
 			class HitLArm : HitHands {
 				name = "LeftArm";
 				memoryPoint = "lelbow";
 			};
-			
 			class HitRArm : HitHands {
 				name = "RightArm";
 				memoryPoint = "relbow";
 			};
-			
 			class HitLForeArm : HitHands {
 				name = "LeftForeArm";
 				memoryPoint = "lwrist";
 			};
-			
 			class HitRForeArm : HitHands {
 				name = "RightForeArm";
 				memoryPoint = "rwrist";
 			};
-			
 			class HitLHand : HitHands {
 				name = "LeftHand";
 				memoryPoint = "LeftHandMiddle1";
 			};
-			
 			class HitRHand : HitHands {
 				name = "RightHand";
 				memoryPoint = "RightHandMiddle1";
 			};
-			
 			class HitLegs : HitHands {
 				name = "legs";
 				memoryPoint = "pelvis";
 			};
-			
 			class HitLLeg : HitHands {
 				name = "LeftLeg";
 				memoryPoint = "lknee";
 			};
-			
 			class HitLLegUp : HitHands {
 				name = "LeftUpLeg";
 				memoryPoint = "lfemur";
 			};
-			
 			class HitRLeg : HitHands {
 				name = "RightLeg";
 				memoryPoint = "rknee";
 			};
-			
 			class HitRLegUp : HitHands {
 				name = "RightUpLeg";
 				memoryPoint = "rfemur";
@@ -118,39 +100,30 @@ class Citizen1;	// External class reference
 		};
 	};
 	class AllVehicles;
-	class Air : AllVehicles 
-	{
-	class NewTurret;
-	class ViewPilot;
-	class AnimationSources;
+	class Air : AllVehicles {
+		class NewTurret;
+		class ViewPilot;
+		class AnimationSources;
 	};
-	class Helicopter : Air 
-	{
+	class Helicopter : Air {
 		class HitPoints; 
-		class Turrets
-        {
-            class MainTurret: NewTurret
-            {
+		class Turrets {
+            class MainTurret: NewTurret {
                 class Turrets;
 				class ViewOptics;
             };
         };
 	};
-	
 	/*extern*/ class StaticSEARCHLight;
-
 	class SearchLight: StaticSEARCHLight {
 		/*extern*/ class Reflectors;
 	};
-
 	class pzn_NoSearchLight: SearchLight {
 		access = 2;
 		scope = 2;
-		model = "\dayz_weapons\models\searchlight_manual.p3d";
+		model = "\dayz_krayz\models\searchlight_manual.p3d";
 		simulation = "flagcarrier";
-
 		class Reflectors {
-
 			class main_reflector {
 				color[] = {0.800000, 0.800000, 0.900000, 1.000000};
 				ambient[] = {0.100000, 0.100000, 0.100000, 1.000000};
@@ -164,12 +137,9 @@ class Citizen1;	// External class reference
 			};
 		};
 	};
-
 	class pzn_NoSearchLight_t: pzn_NoSearchLight {
 		scope = 2;
-
 		class Reflectors {
-
 			class main_reflector {
 				color[] = {0.900000, 0.000000, 0.000000, 0.900000};
 				ambient[] = {0.100000, 0.000000, 0.000000, 1};
@@ -183,26 +153,19 @@ class Citizen1;	// External class reference
 			};
 		};
 	};
-
-
-	class Mi17_base: Helicopter 
-	{
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
+	class Mi17_base: Helicopter {
+		class Turrets: Turrets {
+			class MainTurret: MainTurret {
 				class ViewOptics: ViewOptics {};
 				class Turrets: Turrets {};
 			};
-			class BackTurret: MainTurret
-			{
+			class BackTurret: MainTurret {
 				class Turrets: Turrets {};
 			};
 		};
 	};
 	
-	class Mi17_DZ: Mi17_base	
-	{
+	class Mi17_DZ: Mi17_base {
 		displayname = "Mi-17";
 		displaynameshort = "Mi17_DZ";
 		scope = 2;
@@ -218,22 +181,17 @@ class Citizen1;	// External class reference
 		transportMaxWeapons = 10;
 		transportMaxMagazines = 50;
         transportmaxbackpacks = 10;
-		
-		class Turrets : Turrets 
-		{
-			class MainTurret : MainTurret 
-			{
+		class Turrets : Turrets {
+			class MainTurret : MainTurret {
 				magazines[] = {"100Rnd_762x54_PK"};
 			};
-			class BackTurret : BackTurret
-			{
+			class BackTurret : BackTurret {
 				magazines[] = {"100Rnd_762x54_PK"};
 			};
 		};
 	};
 	class Mi17_Civilian;
-	class Mi17_Civilian_DZ: Mi17_Civilian	
-	{
+	class Mi17_Civilian_DZ: Mi17_Civilian {
 		displayname = "Mi-17 (Civilian)";
 		displaynameshort = "Mi-17 (Civ)";
 		scope = 2;
@@ -249,27 +207,19 @@ class Citizen1;	// External class reference
 		transportMaxMagazines = 50;
         transportmaxbackpacks = 10;
 	};
-
-
-
-	class UH1H_base: Helicopter 
-	{
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
+	class UH1H_base: Helicopter {
+		class Turrets: Turrets {
+			class MainTurret: MainTurret {
 				class ViewOptics: ViewOptics {};
 				class Turrets: Turrets {};
 			};
-			class LeftDoorGun: MainTurret
-			{
+			class LeftDoorGun: MainTurret {
 				class Turrets: Turrets {};
 			};
 		};
 	};
 	
-	class UH1H_DZ: UH1H_base
-	{
+	class UH1H_DZ: UH1H_base {
 		scope = 2;
 		side = 2;
 		crew = "";
@@ -284,14 +234,11 @@ class Citizen1;	// External class reference
 		transportMaxMagazines = 25;
         transportmaxbackpacks = 4;
 		
-		class Turrets : Turrets 
-		{
-			class MainTurret : MainTurret 
-			{
+		class Turrets : Turrets {
+			class MainTurret : MainTurret {
 				magazines[] = {"100Rnd_762x51_M240"};
 			};
-			class LeftDoorGun : LeftDoorGun
-			{
+			class LeftDoorGun : LeftDoorGun {
 				magazines[] = {"100Rnd_762x51_M240"};
 			};
 		};
@@ -609,8 +556,7 @@ class Citizen1;	// External class reference
 		side = 1;
 		typicalcargo[] = {};
 	};	
-	class MH6J_DZ: AH6_Base_EP1
-	{
+	class MH6J_DZ: AH6_Base_EP1 {
 		scope = 2;
 		side = 2;
 		crew = "";
@@ -640,8 +586,7 @@ class Citizen1;	// External class reference
 	class Animal;
 	class Pastor;
 	class Fin;
-	class DZAnimal: Animal
-	{
+	class DZAnimal: Animal {
 		scope = 0;
 		side = 1;
 		accuracy = 0.25;
@@ -699,7 +644,6 @@ class Citizen1;	// External class reference
 		class VariablesScalar {};
 		class VariablesString {};
 	};
-	
 	class DZ_Fin : Fin {
 		scope = 2;
 		model = "\ca\animals2\Dogs\Fin\Fin";
@@ -709,13 +653,12 @@ class Citizen1;	// External class reference
 		fsmDanger = "";
 		fsmFormation = "";
 	};
-
 	class Soldier_Crew_PMC;
 	class Bandit1_DZ : Soldier_Crew_PMC {
 		displayName = "$STR_CHAR_2";
 		side = 1;
 		weapons[] = {"Throw","Put"};
-		model = "\dayz\characters\man_bandit";
+		model = "\ksk_mod\GER_rifleman_des";
 		portrait = "\Ca\characters_E\data\portraits\ger_soldier_CA";
 		magazines[] = {};
 		backpack = "";
@@ -724,7 +667,6 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-
 	class Bandit2_DZ : Bandit1_DZ {
 		displayName = "Bandit";
 		side = 1;
@@ -738,7 +680,6 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-
 	class FR_TL;
 	class SOTG_DZ : FR_TL {
 		displayName = "SOTG";
@@ -752,41 +693,35 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 		hiddenSelections[] = {"_middlearm", "_lowerroll", "_middleroll"};
-
 		class HitHead {
 			armor = 1.600000;
 			material = -1;
 			name = "head_hit";
 			passThrough = 1;
 		};
-
 		class HitBody {
 			armor = 3.200000;
 			material = -1;
 			name = "body";
 			passThrough = 1;
 		};
-
 		class HitHands {
 			armor = 1.200000;
 			material = -1;
 			name = "hands";
 			passThrough = 1;
 		};
-
 		class HitLegs {
 			armor = 1.200000;
 			material = -1;
 			name = "legs";
 			passThrough = 1;
 		};
-
 		class Wounds {
 			tex[] = {};
 			mat[] = {"SBE_SOTG\data\body.rvmat", "SBE_SOTG\data\body_wound1.rvmat", "SBE_SOTG\data\body_wound2.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_white.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_white_wounds.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_white_wounds2.rvmat", "ca\characters\heads\male\defaulthead\data\hhl.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_wounds.rvmat", "ca\characters\heads\male\defaulthead\data\hhl_wounds2.rvmat"};
 		};
 	};
-
 	class BAF_Soldier_Officer_W;
 	class Rocket_DZ: BAF_Soldier_Officer_W {
 		displayName = "Officer";
@@ -890,7 +825,6 @@ class Citizen1;	// External class reference
 		canHideBodies = 1;
 		canCarryBackPack = 1;
 	};
-
 	class TK_INS_Warlord_EP1;
 	class TK_INS_Warlord_EP1_DZ: TK_INS_Warlord_EP1 {
 		displayName = "Takistani Warlord";
@@ -903,7 +837,6 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-	
 	class TK_INS_Soldier_EP1;
 	class TK_INS_Soldier_EP1_DZ: TK_INS_Soldier_EP1 {
 		displayName = "Takistani Soldier";
@@ -916,7 +849,6 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-		
 	class CZ_Special_Forces_GL_DES_EP1;
 	class CZ_Special_Forces_GL_DES_EP1_DZ: CZ_Special_Forces_GL_DES_EP1 {
 		displayName = "Special Forces";
@@ -929,7 +861,6 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-		
 	class Drake_Light;
 	class Drake_Light_DZ: Drake_Light {
 		displayName = "Desert Camo";
@@ -978,8 +909,6 @@ class Citizen1;	// External class reference
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-
-
 	class BAF_Soldier_W;
 	class Soldier1_DZ: BAF_Soldier_W {
 		displayName = "Soldier";
@@ -995,7 +924,7 @@ class Citizen1;	// External class reference
 	class BAF_Soldier_SniperH_W;
 	class Sniper1_DZ: BAF_Soldier_SniperH_W {
 		displayName = "Sniper";
-		hiddenSelectionsTextures[] = {"\dayz\textures\add\ghillie.paa"};
+		hiddenSelectionsTextures[] = {"\dayz_krayz\character\ghillie\Sniper1.paa"};
 		side = 1;
 		weapons[] = {"Throw","Put"};
 		backpack = "";
@@ -1008,7 +937,7 @@ class Citizen1;	// External class reference
 	class TK_Soldier_Sniper_EP1;
 	class Sniper2_DZ: TK_Soldier_Sniper_EP1 {
 		displayName = "Sniper";
-		hiddenSelectionsTextures[] = {"\dayz\textures\add\ghillie_top_desert_co.paa"};
+		hiddenSelectionsTextures[] = {"\dayz_krayz\character\ghillie\Sniper2.paa"};
 		side = 1;
 		weapons[] = {"Throw","Put"};
 		canCarryBackPack = 1;
@@ -1020,7 +949,7 @@ class Citizen1;	// External class reference
 		canHideBodies = 1;
 	};
 	class BAF_Soldier_L_W;
-	class Camo1_DZ: BAF_Soldier_L_W {
+	class Camo1_KR: BAF_Soldier_L_W {
 		displayName = "Survivor";
 		side = 1;
 		weapons[] = {"Throw","Put"};
@@ -1090,7 +1019,7 @@ class Citizen1;	// External class reference
 	{
 		scope = 2;
 		displayName = "Vest (SOTG)";
-		picture = "\dayz_equip\texturesadd\vest.paa";
+		picture = "\dayz_krayz\textures\icons\vest.paa";
 		//icon = "";
 		mapsize = 2;
 		//model = "";
@@ -1104,7 +1033,7 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_US_ASSAULT_COYOTE_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model = "\dayz_equip\backpacks\backpack_us_assault_Coyote.p3d";
+		model = "\dayz_krayz\textures\backpacks\backpack_us_assault_Coyote.p3d";
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 8;
 	};
@@ -1145,13 +1074,24 @@ class Citizen1;	// External class reference
 	class DZ_ALICE_Pack_EP1: Bag_Base_EP1
 	{
 		scope = 2;
-		displayName = "ALICE Pack";
+		displayName = "ALICE Pack (kitty)";
 		picture = "\ca\weapons_e\data\icons\backpack_TK_ALICE_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model = "\dayz_equip\backpacks\backpack_tk_alice.p3d";
+		model = "\dayz_krayz\textures\backpacks\backpack_tk_alice.p3d";
 		transportMaxWeapons = 2;
-		transportMaxMagazines = 20;
+		transportMaxMagazines = 22;
+	};
+	class DZ_ALICE_Pack2_EP1: Bag_Base_EP1
+	{
+		scope = 2;
+		displayName = "ALICE Pack (ranger)";
+		picture = "\ca\weapons_e\data\icons\backpack_TK_ALICE_CA.paa";
+		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
+		mapsize = 2;
+		model = "\dayz_krayz\textures\backpacks\backpack_kt_alice.p3d";
+		transportMaxWeapons = 2;
+		transportMaxMagazines = 22;
 	};
 	class DZ_TK_Assault_Pack_EP1 : Bag_Base_BAF
 	{
@@ -1160,7 +1100,7 @@ class Citizen1;	// External class reference
 		mapSize = 2;
 		picture = "\ca\weapons_e\data\icons\backpack_CIVIL_ASSAULT_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
-		model = "\dayz_equip\backpacks\backpack_civil_assault.p3d";
+		model = "\dayz_krayz\textures\backpacks\backpack_civil_assault.p3d";
 		transportMaxWeapons = 2;
 		transportMaxMagazines = 16;
 	};
@@ -1183,14 +1123,14 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_ACR_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model = "\dayz_equip\backpacks\backpack_acr.p3d";
+		model = "\dayz_krayz\textures\backpacks\backpack_acr.p3d";
 		transportMaxWeapons = 4;
 		transportMaxMagazines = 24;
 	};
 	class DZ_Backpack_EP1: Bag_Base_EP1
 	{
 		scope = 2;
-		displayName = "Backpack (coyote)";
+		displayName = "Camo Backpack (coyote)";
 		picture = "\ca\weapons_e\data\icons\backpack_US_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
@@ -1205,7 +1145,7 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_US_CA.paa";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
-		model= "\dayz_equip\backpacks\backpack_us.p3d";
+		model= "\dayz_krayz\textures\backpacks\backpack_us.p3d";
 		transportMaxWeapons = 5;
 		transportMaxMagazines = 28;
 	};
@@ -1213,7 +1153,7 @@ class Citizen1;	// External class reference
 	{
 		scope = 2;
 		displayName = "Large Gunbag";
-		model = "\dayz_equip\backpacks\StaticX.p3d"; 
+		model = "\dayz_krayz\textures\backpacks\StaticX.p3d"; 
 		picture = "\ca\weapons_e\data\icons\staticX_CA.paa"; 
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa"; 
 		mapsize = 2;
@@ -1238,7 +1178,7 @@ class Citizen1;	// External class reference
 		picture = "\ca\weapons_e\data\icons\backpack_RPG_CA.paa"; 
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa"; 
 		mapsize = 2; 
-		model = "\dayz_equip\backpacks\backpack_rpg.p3d"; 
+		model = "\dayz_krayz\textures\backpacks\backpack_rpg.p3d"; 
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 18;
 	};
