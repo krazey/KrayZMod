@@ -10,6 +10,8 @@ dayZ_instance =	1;					//The instance
 dayzHiveRequest = [];
 initialized = false;
 dayz_previousID = 0;
+setViewDistance 1600;
+setTerrainGrid 20; 
 
 //disable greeting menu 
 player setVariable ["BIS_noCoreConversations", true];
@@ -67,17 +69,18 @@ if (!isDedicated) then {
 	
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
-	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
-	_void = [] execVM "R3F_Realism\R3F_Realism_Init.sqf";
+	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
+	//_playerMonitor = 	[] execVM "krazey\etc\player_monitor.sqf";	
+	_void = [] execVM "\dayz_krayz\addons\R3F_Realism\R3F_Realism_Init.sqf";
 	[] execVM "krazey\refuel\fuelactions.sqf";
 };
 
 
 // UPSMON
-call compile preprocessFileLineNumbers "addons\UPSMON\scripts\Init_UPSMON.sqf";
+call compile preprocessFileLineNumbers "\dayz_krayz\addons\UPSMON\scripts\Init_UPSMON.sqf";
 
 // SHK 
-call compile preprocessfile "addons\SHK_pos\shk_pos_init.sqf";
+call compile preprocessfile "\dayz_krayz\addons\SHK_pos\shk_pos_init.sqf";
 
 // run SAR_AI
-[] execVM "addons\SARGE\SAR_AI_init.sqf";
+[] execVM "\dayz_krayz\addons\SARGE\SAR_AI_init.sqf";
