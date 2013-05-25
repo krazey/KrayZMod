@@ -10,6 +10,8 @@ dayZ_instance =	1;					//The instance
 dayzHiveRequest = [];
 initialized = false;
 dayz_previousID = 0;
+setViewDistance 2500;
+setTerrainGrid 20;
 
 //disable greeting menu 
 player setVariable ["BIS_noCoreConversations", true];
