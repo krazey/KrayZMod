@@ -10,7 +10,7 @@ _weaponAss = false;
 _wwHolo = ["SCAR_L_STD_HOLO","M4A1_HWS_GL_camo","R3F_Famas_F1_EOT","R3F_Famas_F1_EOT_DES","R3F_Famas_G2_EOT","R3F_Famas_G2_EOT_DES","R3F_Famas_F1_EOT","R3F_Famas_F1_EOT_DES","R3F_Famas_G2_EOT","R3F_Famas_G2_EOT_DES","R3F_Famas_surb_EOT_SD","R3F_Famas_surb_EOT_SD_DES","R3F_HK417S_EOT_HG","R3F_HK417S_EOT_HG_DES"];
 _wwdHolo = ["SCAR_L_CQC","M4A1_HWS_GL","R3F_Famas_F1","R3F_Famas_F1_DES","R3F_Famas_G2","R3F_Famas_G2_DES","R3F_Famas_F1_AIM","R3F_Famas_F1_AIM_DES","R3F_Famas_G2_AIM","R3F_Famas_G2_AIM_DES","R3F_Famas_surb_AIM_SD","R3F_Famas_surb_AIM_SD_DES","R3F_HK417M_AIM","R3F_HK417M_AIM_DES"];
 
-if (!("ItemToolbox" in items player)) exitWith {
+if (!("ItemToolbox_KR" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a holo scope to your weapon.", "PLAIN DOWN"];
 };
 

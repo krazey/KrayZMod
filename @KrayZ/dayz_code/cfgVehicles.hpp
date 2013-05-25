@@ -7,9 +7,9 @@ class cfgNonAIVehicles {
 	};
 };
 class CfgVehicles {
-	class Citizen1;	// External class reference
-	class zZombie_Base_KR : Citizen1 {
-		scope = public;
+	/*class zZombie_Base;	// External class reference
+	class zZombie_Base_KR : zZombie_Base {
+		scope = 2;
 		glassesEnabled = 0;
 		vehicleClass = "Zombie";
 		displayName = "Zombie";
@@ -98,7 +98,7 @@ class CfgVehicles {
 				memoryPoint = "rfemur";
 			};
 		};
-	};
+	};*/
 	class AllVehicles;
 	class Air : AllVehicles {
 		class NewTurret;

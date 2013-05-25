@@ -78,7 +78,7 @@ if(_isPZombie) then {
 	
 	if (!isNull cursorTarget and (player distance cursorTarget < 3)) then {	//Has some kind of target
 		_isAnimal = cursorTarget isKindOf "Animal";
-		_isZombie = cursorTarget isKindOf "zZombie_base";
+		_isZombie = cursorTarget isKindOf "zZombie_base_KR";
 		_isHarvested = cursorTarget getVariable["meatHarvested",false];
 		_isMan = cursorTarget isKindOf "Man";
 

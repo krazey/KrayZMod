@@ -5,7 +5,7 @@
 if (!isDedicated) then {
 	_config = 	configFile >> "CfgLoot";
 	_config1 = 	configFile >> "CfgMagazines" >> "FoodEdible";
-	_config2 = 	configFile >> "CfgWeapons" >> "Loot";
+	_config2 = 	configFile >> "CfgWeapons" >> "Loot_KR";
 
 	"filmic" setToneMappingParams [0.07, 0.31, 0.23, 0.37, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
 
@@ -352,8 +352,8 @@ if (!isDedicated) then {
 		_killsH = (player getVariable['humanKills', 0]);
 		_killsB = (player getVariable['banditKills', 0]);
 		_humanity = (player getVariable['humanity', 0]);
-		_zombies = count (getPos player nearEntities [["zZombie_Base"], 11000]);
-		_zombiesA = {alive _x} count (getPos player nearEntities [["zZombie_Base"], 11000]);
+		_zombies = count (getPos player nearEntities [["zZombie_Base_KR"], 11000]);
+		_zombiesA = {alive _x} count (getPos player nearEntities [["zZombie_Base_KR"], 11000]);
 		_server_name 	= "kraZey.de";
 		_server_name_info 	= "toggle debug on/off:<br/>right ctrl";
 		

@@ -14,7 +14,7 @@ _isOK = false;
 _brokenPart = false;
 
 //
-_hasToolbox = 	"ItemToolbox" in items player;
+_hasToolbox = 	"ItemToolbox_KR" in items player;
 
 // moving this here because we need to know which part needed if we don't have it
 _nameType = 		getText(configFile >> "cfgVehicles" >> _type >> "displayName");

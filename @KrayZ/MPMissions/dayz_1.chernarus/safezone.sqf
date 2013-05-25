@@ -4,6 +4,7 @@ Private ["_Basis","_EH_Fired"];
 ZombieDistance = 50;
 
 _Basis = _this select 0; //Basisname
+_isPZombie = player isKindOf "PZombie_VB";
 
 while {true} do {
 	//--------------------------------------------------------------------------------------
@@ -18,7 +19,17 @@ while {true} do {
 	_object allowDamage false;
 	hint "Entering Safezone!";
 	cutText ["Entering Safezone!", "PLAIN DOWN"];
-
+	//------------------------
+	r_player_unconscious = false;
+	disableUserInput false;
+	r_player_cardiac = false;
+	r_player_handler1 = false;
+	//------------------------
+	if(_isPZombie) then {
+		r_player_blood = 0;
+		[] spawn player_death;
+	};
+	//------------------------
 	//deleting zombies
 	while {vehicle player in list _Basis} do {
 		_pos = getPos player;

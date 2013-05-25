@@ -46,7 +46,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.123";
+		version = "2.124";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -355,9 +355,9 @@ class CfgSurvival {
 			sex = "male";
 			playerModel = "Bandit1_DZ";
 		};
-		class Skin_Admin_DZ: Default {
+		class Skin_Bandit2_DZ: Default {
 			sex = "male";
-			playerModel = "Admin_DZ";
+			playerModel = "Bandit2_DZ";
 		};
 		class Skin_SOTG_DZ: Default {
 			sex = "male";
@@ -404,7 +404,6 @@ class CfgSurvival {
 			sex = "male";
 			playerModel = "Soldier_Sniper_PMC_DZ";
 		};
-		
 		class Skin_Soldier_Bodyguard_AA12_PMC_DZ: Default {
 			sex = "male";
 			playerModel = "Soldier_Bodyguard_AA12_PMC_DZ";
@@ -414,7 +413,6 @@ class CfgSurvival {
 			sex = "male";
 			playerModel = "Drake_Light_DZ";
 		};
-		
 		class Skin_CZ_Special_Forces_GL_DES_EP1_DZ: Default {
 			sex = "male";
 			playerModel = "CZ_Special_Forces_GL_DES_EP1_DZ";
@@ -431,7 +429,6 @@ class CfgSurvival {
 		};
 	};
 };
-
 class CfgBuildingLoot {
 	class Default {
 		zombieChance = 0.2;
@@ -451,7 +448,7 @@ class CfgBuildingLoot {
 			"Javelin",
 			"G36C",
 			"Stinger"
-	};
+		};
 	};
 	class Residential: Default {
 		zombieChance = 0.3;
@@ -554,7 +551,7 @@ class CfgBuildingLoot {
 			{ "WeaponHolder_ItemHatchet","object" },
 			{ "WeaponHolder_MeleeCrowbar_KR","object" },
 			{ "ItemKnife","military" },
-			{ "ItemToolbox","weapon" },
+			{ "ItemToolbox_KR","weapon" },
 			{ "ItemWire_KR","magazine" },
 			{"ItemTankTrap_KR","magazine"},
 			{"Skin_Net_DZ","magazine"},
@@ -697,7 +694,7 @@ class CfgBuildingLoot {
 			0.05, //binocular
 			0.02, //woodpile
 			0.01 //mr43
-	};
+		};
 	};
 	class HeliCrash: Default {
 		zombieChance = 0.4;
@@ -746,7 +743,7 @@ class CfgBuildingLoot {
 			//{"G36A_camo","weapon"},
 			//{"G36K_camo","weapon"},
 			{"100Rnd_762x54_PK","magazine"}
-};
+	};
 		itemChance[] =	{
 			//r3f weaponary armes
 			0.02, //"R3F_HK417L_NF_DES",
@@ -788,9 +785,9 @@ class CfgBuildingLoot {
 			//0.02,	//G36A_camo
 			//0.02,	//G36K_camo
 			0.01	//("100Rnd_762x54_PK","magazine"}
+		};
 	};
-	};
-class HeliCrash_No50s: Default {
+	class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		maxRoaming = 2;
 		zombieClass[] = {"z_soldier_pilot_KR"};
@@ -1625,8 +1622,6 @@ class HeliCrash_No50s: Default {
 		maxRoaming = 4;
 	};
 
-
-	
 	// DAYZ AMP More buildings
 	class Land_Shed_W02_EP1: FarmRoaming{};
 	class Land_MBG_ApartmentsOne_W: HouseRoaming{};
@@ -1860,8 +1855,8 @@ class HeliCrash_No50s: Default {
 			{ "Colt1911","weapon" },
 			{ "ItemFlashlight_KR","generic" },
 			{ "ItemKnife","generic" },
-			{ "ItemMatchbox","generic" },
-			{ "ItemToolbox","weapon" },
+			{ "Itembox","generic" },
+			{ "ItemToolbox_KR","weapon" },
 			{ "","generic" },
 			{ "","food" },
 			{ "","communityfood" },

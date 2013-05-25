@@ -26,7 +26,7 @@ private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_isDead"];
 					_btnAbort ctrlEnable false;
 					cutText [format[localize "str_abort_playerclose",_text], "PLAIN DOWN"];
 				};
-				case (_timeOut < _timeMax && count (player nearEntities ["zZombie_Base", 35]) > 0) : {
+				case (_timeOut < _timeMax && count (player nearEntities ["zZombie_Base_KR", 35]) > 0) : {
 					_btnAbort ctrlEnable false;
 					cutText [format ["Can Abort in %1", (_timeMax - _timeOut)], "PLAIN DOWN"];
 					//cutText [format[localize "str_abort_zedsclose",_text, "PLAIN DOWN"];

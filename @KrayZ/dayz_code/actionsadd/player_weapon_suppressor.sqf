@@ -10,7 +10,7 @@ _weaponAss = false;
 _wwSuppress = ["M4A1_AIM_SD_camo","M4A1_HWS_GL_SD_Camo"];
 _wwdSuppress= ["M4A1_Aim_camo","M4A1_HWS_GL_camo"];
 
-if (!("ItemToolbox" in items player)) exitWith {
+if (!("ItemToolbox_KR" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a surpressor to your weapon.", "PLAIN DOWN"];
 };
 

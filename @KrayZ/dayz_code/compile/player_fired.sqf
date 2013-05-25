@@ -24,7 +24,7 @@ if (_ammo isKindOf "SmokeShell") then {
 	//Alert Zed's to smoke
 	_i = 0;
 	_projectile = nearestObject [_unit, _ammo];
-	_listTalk = (getPosATL _projectile) nearEntities ["zZombie_Base",50];
+	_listTalk = (getPosATL _projectile) nearEntities ["zZombie_Base_KR",50];
 	{
 		_group = group _x;
 		if (isNull group _x) then {

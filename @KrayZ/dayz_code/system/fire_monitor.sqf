@@ -17,7 +17,7 @@ while {alive _firePlace} do {
 			_qty = _qty - 1;
 			_ok = true;
 			if (_qty > 0) then {
-				_firePlace addMagazineCargoGlobal ["PartWoodPile",_qty];
+				_firePlace addMagazineCargoGlobal ["PartWoodPile_KR",_qty];
 			};
 		};
 		if (_ok) then {

@@ -9,7 +9,7 @@ _hasWood = 		"PartWoodPile" in magazines player;
 
 if (_hasWood) then {
 	if (_isOk) then {	
-		player removeMagazine "PartWoodPile";
+		player removeMagazine "PartWoodPile_KR";
 		_dir = getDir player;
 		_classname = "Land_Fire_DZ";
 		player playActionNow "Medic";

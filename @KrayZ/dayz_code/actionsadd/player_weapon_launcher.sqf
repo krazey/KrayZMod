@@ -10,7 +10,7 @@ _weaponAss = false;
 _wwLauncher = ["M4A1_HWS_GL_SD_Camo","M16A4_GL","AK_107_GL_kobra","AK_107_GL_pso"];
 _wwdLauncher = ["M4A1_AIM_SD_camo","M16A2","AK_107_kobra","AK_107_pso"];
 
-if (!("ItemToolbox" in items player)) exitWith {
+if (!("ItemToolbox_KR" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a grenade launcher to your weapon.", "PLAIN DOWN"];
 };
 

@@ -133,6 +133,7 @@ class CfgWeapons {
 	};
 	class GrenadeLauncher;  // External class reference
 	class Flare : GrenadeLauncher {
+		scope=2;
 		class ThrowMuzzle;
 		class MolotovCocktailMuzzle : ThrowMuzzle {
 			displayName = "$STR_ACTION_THROW";

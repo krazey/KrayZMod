@@ -10,7 +10,7 @@ _weaponAss = false;
 _wwSniper = ["DMR_DZ","AKS_74_pso"];
 _wwdSniper = ["M14_EP1","AKS_74"];
 
-if (!("ItemToolbox" in items player)) exitWith {
+if (!("ItemToolbox_KR" in items player)) exitWith {
 	cutText ["Toolbox required to assemble a scope to your weapon.", "PLAIN DOWN"];
 };
 

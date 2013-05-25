@@ -628,6 +628,7 @@ class CfgVehicles
 	//PLAYER SOURCES ---------------------------------------------------------------------------------
 	class Soldier_Bodyguard_M4_PMC;
 	class SurvivorW2_KR : Soldier_Bodyguard_M4_PMC {
+		scope = 2;
 		displayName = "$STR_CHAR_1";
 		side = 1;
 		weapons[] = {"Throw","Put"};
@@ -847,6 +848,7 @@ class CfgVehicles
 	//PLAYER ZOMBIES
 	class Citizen1;
 	class PZombie_VB: Citizen1 {
+		scope = 2;
 		side = 1;
 		glassesEnabled = 0;
 		//moves = "CfgMovesPlayerZombie";
@@ -943,7 +945,8 @@ class CfgVehicles
 		};
 	};
 	//AI ZOMBIES
-	class zZombie_Base_KR: Citizen1 {
+	class zZombie_Base;
+	class zZombie_Base_KR: zZombie_Base {
 		scope = 2;
 		glassesEnabled = 0;
 		vehicleClass = "Zombie";
