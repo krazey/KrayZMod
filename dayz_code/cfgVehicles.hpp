@@ -949,7 +949,7 @@ class CfgVehicles {
 		canHideBodies = 1;
 	};
 	class BAF_Soldier_L_W;
-	class Camo1_KR: BAF_Soldier_L_W {
+	class Camo1_DZ: BAF_Soldier_L_W {
 		displayName = "Survivor";
 		side = 1;
 		weapons[] = {"Throw","Put"};

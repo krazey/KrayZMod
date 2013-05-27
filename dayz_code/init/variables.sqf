@@ -10,7 +10,7 @@ SurvivorW2_KR = "SurvivorW2_KR";
 SurvivorW3_DZ = "SurvivorW3_DZ";
 Sniper1_DZ = 	"Sniper1_DZ";
 Sniper2_DZ =	"Sniper2_DZ";
-Camo1_KR = 		"Camo1_KR";
+Camo1_DZ = 		"Camo1_DZ";
 Soldier1_DZ = 	"Soldier1_DZ";
 Rocket_DZ = 	"Rocket_DZ";
 
@@ -45,8 +45,8 @@ Net_DZ =		"Net_DZ";
 SOTG_DZ = "SOTG_DZ";
 
 
-AllPlayers = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_KR","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ"];
-AllPlayersVehicles = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_KR","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","AllVehicles"];
+AllPlayers = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_DZ","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ"];
+AllPlayersVehicles = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_DZ","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","AllVehicles"];
   
 PZombie_VB =	"PZombie_VB";
 
@@ -83,7 +83,7 @@ meatcooked = [
     "FoodbaconCooked"
 ];
 //Eating
-no_output_food = ["FoodMRE", "FoodPistachio", "FoodNutmix","FoodBioMeat"]+meatcooked+meatraw;
+no_output_food = ["FoodMRE","FoodPistachio","FoodNutmix","FoodBioMeat"]+meatcooked+meatraw;
 
 
 badfood = ["FoodBioMeat","FoodCanUnlabeled"]; 

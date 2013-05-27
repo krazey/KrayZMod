@@ -13,7 +13,7 @@ _hitpoints = _vehicle call vehicle_getHitpoints;
 
 {			
 	_damage = [_vehicle,_x] call object_getHit;
-	_part = "PartGeneric";
+	_part = "PartGeneric_KR";
 
 	//change "HitPart" to " - Part" rather than complicated string replace
 	_cmpt = toArray (_x);
