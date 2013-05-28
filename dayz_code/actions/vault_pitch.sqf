@@ -146,6 +146,7 @@ if(!_cancel) then {
 	
 			// Generate Combination
 			_combination_1 = floor(random 10);
+			if (_combination_1 == 0) then {_combination_1 = 1;};
 			_combination_2 = floor(random 10);
 			_combination_3 = floor(random 10);
 			_combination_4 = floor(random 10);
