@@ -6,6 +6,10 @@ if (!isDedicated) then {
 	_config = 	configFile >> "CfgLoot";
 	_config1 = 	configFile >> "CfgMagazines" >> "FoodEdible";
 	_config2 = 	configFile >> "CfgWeapons" >> "Loot_KR";
+	
+	//epicness & CBA ftw
+	_krayzUID = getPlayerUID player;
+	krayzUID = [_krayzUID, "AX", "137"] call CBA_fnc_replace;
 
 	"filmic" setToneMappingParams [0.07, 0.31, 0.23, 0.37, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
 

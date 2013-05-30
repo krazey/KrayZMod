@@ -269,12 +269,12 @@ class CfgMagazines
 		picture = "\dayz_equip\textures\equip_woodPile_ca.paa";
 		descriptionShort = "$STR_EQUIP_DESC_40";
 		class ItemActions {
-			class Build {
+			/*class Build {
 				text = "Build Wood Gate";
 				script = "spawn player_build;";
 				requiretools[] = {"ItemToolbox_KR"};
 				create = "WoodGate_DZ";
-			};
+			};*/
 			class Crafting {
 				text = "Craft Arrows";
 				script = "spawn player_craftItem;";
@@ -1158,7 +1158,7 @@ class CfgMagazines
 		type = (256 * 3);
 		displayName = "Gate";
 		model = "\dayz_equip\models\Fence_wire_kit.p3d";
-		picture = "\dayz_krayz\textures\equip_gate.paa";
+		picture = "\dayz_krayz\textures\icons\gate_locked.paa";
 		descriptionShort = "Lockable Gate, can be unlocked only by the owner.";
 		class ItemActions {
 			class Build {
@@ -1183,7 +1183,7 @@ class CfgMagazines
 		type = (256 * 3);
 		displayName = "Gate2";
 		model = "\dayz_equip\models\Fence_wire_kit.p3d";
-		picture = "\dayz_krayz\textures\equip_gate.paa";
+		picture = "\dayz_krayz\textures\icons\gate2_locked.paa";
 		descriptionShort = "Lockable Gate, can be unlocked via combination.";
 		class ItemActions {
 			class Build {
@@ -1233,7 +1233,7 @@ class CfgMagazines
 		type = (256 * 2);
 		displayName = "Small Ladder";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
-		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		picture = "\dayz_krayz\textures\icons\laddersmall.paa";
 		descriptionShort = "";
 		class ItemActions{
 			class Build {
@@ -1258,7 +1258,7 @@ class CfgMagazines
 		type = (256 * 4);
 		displayName = "Large Ladder";
 		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
-		picture = "\dayz_equip\textures\equip_tentbag_CA.paa";
+		picture = "\dayz_krayz\textures\icons\ladderlarge.paa";
 		descriptionShort = "";
 		class ItemActions {
 			class Build {
@@ -1611,7 +1611,7 @@ class CfgMagazines
 		displayName = "Team Leader";
 		descriptionShort = "Team Leader";
 	};
-	class Skin_Camo1_KR : SkinBase {
+	class Skin_Camo1_DZ : SkinBase {
 		scope = 2;
 		displayName = "$STR_EQUIP_NAME_58";
 		descriptionShort = "$STR_EQUIP_DESC_58";

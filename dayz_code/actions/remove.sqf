@@ -127,7 +127,7 @@ if (_proceed) then {
 		_selectedRemoveOutput = [];
 		if(_isWreck) then {
 			// Find one random part to give back
-			_refundpart = ["PartEngine","PartGeneric","PartFueltank","PartWheel","PartGlass","ItemJerrycan"] call BIS_fnc_selectRandom;
+			_refundpart = ["PartEngine","PartGeneric_KR","PartFueltank","PartWheel","PartGlass","ItemJerrycan"] call BIS_fnc_selectRandom;
 			_selectedRemoveOutput set [count _selectedRemoveOutput,[_refundpart,1]];
 		} else {
 			_selectedRemoveOutput = getArray (configFile >> "CfgVehicles" >> _objType >> "removeoutput");

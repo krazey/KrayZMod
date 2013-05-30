@@ -160,7 +160,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		if (s_player_lockUnlock_crtl < 0) then {
 
 			if(locked cursorTarget) then {
-				if(_ownerID == dayz_playerUID) then {
+				if(_ownerID == krayzUID) then {
 					_Unlock = player addAction [format["Unlock %1",_text], "\z\addons\dayz_code\actions\unlock_veh.sqf",cursorTarget, 2, true, true, "", ""];
 					s_player_lockunlock set [count s_player_lockunlock,_Unlock];
 					s_player_lockUnlock_crtl = 1;
@@ -170,7 +170,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 					s_player_lockUnlock_crtl = 1;
 				};
 			} else {
-				if(_ownerID == dayz_playerUID) then {
+				if(_ownerID == krayzUID) then {
 					_lock = player addAction [format["Lock %1",_text], "\z\addons\dayz_code\actions\lock_veh.sqf",cursorTarget, 1, true, true, "", ""];
 					s_player_lockunlock set [count s_player_lockunlock,_lock];
 					s_player_lockUnlock_crtl = 1;
@@ -294,7 +294,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	if((cursorTarget isKindOf "VaultStorageLocked" or cursorTarget isKindOf "VaultStorage") and _canDo and _ownerID != "0") then {
 		if (s_player_unlockvault < 0  and (player distance cursorTarget < 3)) then {
 			if(typeOf cursorTarget == "VaultStorageLocked") then {
-				if(_ownerID == dayz_combination or _ownerID == dayz_playerUID) then {
+				if(_ownerID == dayz_combination or _ownerID == krayzUID) then {
 					_combi = player addAction ["Open Safe", "\z\addons\dayz_code\actions\vault_unlock.sqf",cursorTarget, 0, false, true, "",""];
 				} else {
 					_combi = player addAction ["Unlock Safe", "\z\addons\dayz_code\actionsadd\vault_combination_1.sqf",cursorTarget, 0, false, true, "",""];
@@ -302,7 +302,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 				s_player_combi set [count s_player_combi,_combi];
 				s_player_unlockvault = 1;
 			} else {
-				if(_ownerID != dayz_combination and _ownerID != dayz_playerUID) then {
+				if(_ownerID != dayz_combination and _ownerID != krayzUID) then {
 					_combi = player addAction ["Enter Combo", "\z\addons\dayz_code\actionsadd\vault_combination_1.sqf",cursorTarget, 0, false, true, "",""];
 					s_player_combi set [count s_player_combi,_combi];
 					s_player_unlockvault = 1;
@@ -318,11 +318,11 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	if(cursorTarget isKindOf "VaultStorage" and _canDo and _ownerID != "0" and (player distance cursorTarget < 3)) then {
 
 		if (s_player_lockvault < 0) then {
-			if(_ownerID == dayz_combination or _ownerID == dayz_playerUID) then {
+			if(_ownerID == dayz_combination or _ownerID == krayzUID) then {
 				s_player_lockvault = player addAction ["Lock Safe", "\z\addons\dayz_code\actions\vault_lock.sqf",cursorTarget, 0, false, true, "",""];
 			};
 		};
-		if (s_player_packvault < 0 and (_ownerID == dayz_combination or _ownerID == dayz_playerUID)) then {
+		if (s_player_packvault < 0 and (_ownerID == dayz_combination or _ownerID == krayzUID)) then {
 			s_player_packvault = player addAction ["<t color='#ff0000'>Pack Safe</t>", "\z\addons\dayz_code\actions\vault_pack.sqf",cursorTarget, 0, false, true, "",""];
 		};
 	} else {
@@ -333,7 +333,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	};
 
 	//Allow owner to de-construct/pack buildings - FAST (hbarrier only)
-	if(cursorTarget isKindOf "HBarrier" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and (player distance cursorTarget < 3)) then {
+	if(cursorTarget isKindOf "HBarrier" and _canDo and _ownerID != "0" and _ownerID == krayzUID and (player distance cursorTarget < 3)) then {
 
 		if (s_player_rmvhbarrier < 0) then {
 			s_player_rmvhbarrier = player addAction ["<t color='#fff000'>Remove Hesco Barrier</t>", "\z\addons\dayz_code\actionsadd\hbarrier_remove.sqf",cursorTarget, 0, false, true, "",""];
@@ -344,7 +344,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	};
 	
 	//Allow owner to unlock gate
-	if(cursorTarget isKindOf "Gate_Locked_DZ" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and !UnlockInprogress) then {
+	if(cursorTarget isKindOf "Gate_Locked_DZ" and _canDo and _ownerID != "0" and _ownerID == krayzUID and !UnlockInprogress) then {
 		if (s_player_unlockgate < 0  and (player distance cursorTarget < 3)) then {
 			s_player_unlockgate = player addAction ["Unlock Gate", "\z\addons\dayz_code\actionsadd\gate_unlock.sqf",cursorTarget, 0, false, true, "",""];
 		};
@@ -354,7 +354,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	};
 	
 	//Allow owner to lock gate
-	if(cursorTarget isKindOf "Gate_DZ" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and !UnlockInprogress) then {
+	if(cursorTarget isKindOf "Gate_DZ" and _canDo and _ownerID != "0" and _ownerID == krayzUID and !UnlockInprogress) then {
 		if (s_player_lockgate < 0) then {
 			s_player_lockgate = player addAction ["Lock Gate", "\z\addons\dayz_code\actionsadd\gate_lock.sqf",cursorTarget, 0, false, true, "",""];
 		};
@@ -388,7 +388,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	if(cursorTarget isKindOf "Gate2_DZ" and _canDo and _ownerID != "0" and (player distance cursorTarget < 3)) then {
 
 		if (s_player_lockgate2 < 0) then {
-			if(_ownerID == dayz_combination or _ownerID == dayz_playerUID) then {
+			if(_ownerID == dayz_combination or _ownerID == krayzUID) then {
 				s_player_lockgate2 = player addAction ["Lock Gate", "\z\addons\dayz_code\actionsadd\gate2_lock.sqf",cursorTarget, 0, false, true, "",""];
 			};
 		};
@@ -403,7 +403,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	};
 	
 	//Allow owner to de-construct Constuctables
-	if(cursorTarget isKindOf "Constuctables" and _canDo and _ownerID != "0" and _ownerID == dayz_playerUID and (player distance cursorTarget < 5)) then {
+	if(cursorTarget isKindOf "Constuctables" and _canDo and _ownerID != "0" and _ownerID == krayzUID and (player distance cursorTarget < 5)) then {
 		if (s_player_deleteConstuctables < 0) then {
 			s_player_deleteConstuctables = player addAction [format[localize "str_actions_delete",_text], "\z\addons\dayz_code\actions\remove.sqf",cursorTarget, 1, true, true, "", ""];
 		};

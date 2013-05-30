@@ -107,8 +107,8 @@ if (_qty >= _qty_in) then {
 
 					_location = (getPosATL _veh);
 
-					//["dayzPublishVeh",[_veh,[_dir,_location],_part_out,false,dayz_playerUID]] call callRpcProcedure;
-					dayzPublishVeh2 = [_veh,[_dir,_location],_part_out,false,dayz_playerUID];
+					//["dayzPublishVeh",[_veh,[_dir,_location],_part_out,false,krayzUID]] call callRpcProcedure;
+					dayzPublishVeh2 = [_veh,[_dir,_location],_part_out,false,krayzUID];
 					publicVariableServer  "dayzPublishVeh2";
 
 					player reveal _veh;
