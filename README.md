@@ -3,16 +3,24 @@ KrayZMod
 http://krazey.de
 
 
-DayZ: http://dayzmod.com
+[R3F] Realism Script & [R3F] Armes Weaponary - team-r3f.org
 
 DayZEpoch: http://dayzepoch.com
 
 DayZ+: http://dayzplus.com (down)
 
-Retexured KSK-Units: http://www.arma2base.de/include.php?path=download&contentid=2275
+Retexured KSK-Units: arma2base.de/include.php?path=download&contentid=2275
 
---> for new Bandit1_DZ and Camo1_DZ =)
+ziellos2k - Tag Friendly code: github.com/R4Z0R49/DayZMod/pull/232
 
-JSRS Soundmod: http://www.armaholic.com/page.php?id=11549
+SOTG-Commandos: forums.bistudio.com/showthread.php?15322…-SOTG-Commandos
 
-Community Based Addons: https://dev-heaven.net/projects/cca
+JSRS Soundmod: armaholic.com/page.php?id=11549
+
+Community Based Addons: dev-heaven.net/projects/cca
+
+SMK's Competitive Gaming Animation Pack: forums.bistudio.com/showthread.php?11588…nhancement-pack
+
+SAR_AI: github.com/Swiss-Sarge/SAR_AI
+
+ASC EU Lights Mod: http://www.armaholic.com/page.php?id=12076
