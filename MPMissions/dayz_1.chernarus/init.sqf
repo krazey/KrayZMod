@@ -77,10 +77,13 @@ if (!isDedicated) then {
 
 
 // UPSMON
-call compile preprocessFileLineNumbers "\dayz_krayz\addons\UPSMON\scripts\Init_UPSMON.sqf";
+//call compile preprocessFileLineNumbers "\dayz_krayz\addons\UPSMON\scripts\Init_UPSMON.sqf";
 
 // SHK 
-call compile preprocessfile "\dayz_krayz\addons\SHK_pos\shk_pos_init.sqf";
+//call compile preprocessfile "\dayz_krayz\addons\SHK_pos\shk_pos_init.sqf";
 
 // run SAR_AI
-[] execVM "\dayz_krayz\addons\SARGE\SAR_AI_init.sqf";
+//[] execVM "\dayz_krayz\addons\SARGE\SAR_AI_init.sqf";
+
+//getting player UID - krayzUID
+call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\krayzUID.sqf";

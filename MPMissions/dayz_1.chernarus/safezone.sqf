@@ -17,8 +17,8 @@ while {true} do {
 	fnc_usec_damageHandler = {};
 	fnc_usec_unconscious  = {};
 	_object allowDamage false;
-	hint "Entering Safezone!";
-	cutText ["Entering Safezone!", "PLAIN DOWN"];
+	//hint "Entering Safezone!";
+	//cutText ["Entering Safezone!", "PLAIN DOWN"];
 	//------------------------
 	r_player_unconscious = false;
 	disableUserInput false;
@@ -49,6 +49,6 @@ while {true} do {
 	fnc_usec_damageHandler = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_damageHandler.sqf";
 	fnc_usec_unconscious = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_unconscious.sqf";
 	player allowDamage true;
-	hint "Leaving Safezone!";
-	cutText ["Leaving Safezone!", "PLAIN DOWN"];
+	//hint "Leaving Safezone!";
+	//cutText ["Leaving Safezone!", "PLAIN DOWN"];
 } 

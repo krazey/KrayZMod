@@ -54,5 +54,5 @@ if (_ownerID == dayz_combination) then {
 	cutText ["Combination incorrect, Gate is still locked.", "PLAIN DOWN"];
 };
 
-s_player_unlockgate22 = -1;
+s_player_unlockgate2 = -1;
 UnlockInprogress = false;

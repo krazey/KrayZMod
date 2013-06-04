@@ -875,7 +875,7 @@ class CfgMagazines
 				text = $STR_ACTIONS_BUILD;
 				script = "spawn player_build;";
 				requiretools[] = {"ItemEtool"};
-				create = "Hedgehog_DZ";
+				create = "Hedgehog_KR";
 			};
 			class Crafting {
 				text = "Camo Net";
@@ -924,7 +924,7 @@ class CfgMagazines
 				text = "$STR_ACTIONS_BUILD";
 				script = "spawn player_build;";
 				requiretools[] = {"ItemEtool"};
-				create = "Wire_cat1";
+				create = "Wire_cat1_KR";
 			};
 			class Crafting {
 				text = "Wire (CAT2)";

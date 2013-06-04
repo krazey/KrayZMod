@@ -13,7 +13,7 @@ s_player_unlockgate = 1;
 
 UnlockInprogress = true;
 
-if (_ownerID == dayz_playerUID) then {
+if (_ownerID == krayzUID) then {
 	_alreadyPacking = _obj getVariable["packing",0];
 
 	if (_alreadyPacking == 1) exitWith {cutText ["That Gate is already being unlocked." , "PLAIN DOWN"]};
@@ -49,7 +49,7 @@ if (_ownerID == dayz_playerUID) then {
 	[player,"repair",0,false] call dayz_zombieSpeak;
 	null = [player,25,true,(getPosATL player)] spawn player_alertZombies;
 	sleep 5;
-	cutText ["Combination incorrect, Gate is still locked.", "PLAIN DOWN"];
+	cutText ["This is not your Gate.", "PLAIN DOWN"];
 };
 
 s_player_unlockgate = -1;
