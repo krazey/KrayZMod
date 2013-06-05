@@ -16,7 +16,7 @@ setTerrainGrid 20;
 //disable greeting menu 
 player setVariable ["BIS_noCoreConversations", true];
 //disable radio messages to be heard and shown in the left lower corner of the screen
-enableRadio false;
+//enableRadio false;
 
 // DayZ Epoch config
 spawnShoremode = 1; // Default = 1 (on shore)

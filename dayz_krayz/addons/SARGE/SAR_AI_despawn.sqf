@@ -1,10 +1,10 @@
 // =========================================================================================================
 //  SAR_AI - DayZ AI library
-//  Version: 1.1.0 
+//  Version: 1.5.0 
 //  Author: Sarge (sarge@krumeich.ch) 
 //
 //		Wiki: to come
-//		Forum: http://opendayz.net/index.php?threads/sarge-ai-framework-public-release.8391/
+//		Forum: http://opendayz.net/#sarge-ai.131
 //		
 // ---------------------------------------------------------------------------------------------------------
 //  Required:
@@ -13,7 +13,7 @@
 //  
 // ---------------------------------------------------------------------------------------------------------
 //  SAR_AI_despawn.sqf - handle the logic of despawning  AI groups via the defined trigger array
-//  last modified: 1.4.2013
+//  last modified: 28.5.2013
 // ---------------------------------------------------------------------------------------------------------
 
 

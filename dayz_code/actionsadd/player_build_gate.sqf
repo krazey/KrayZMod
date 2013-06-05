@@ -1,5 +1,6 @@
 private ["_location","_dir","_classname","_item","_hasrequireditem","_missing","_hastoolweapon","_cancel","_reason","_isBuilding","_started","_finished","_animState","_isMedic","_dis","_sfx","_hasbuilditem","_tmpbuilt","_buildings","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_limit","_proceed","_num_removed","_position","_object","_combination_1","_combination_2","_combination_3","_combination_4","_combination"];
 
+if(safezonebuild) exitWith { cutText ["You can not build in a safezone." , "PLAIN DOWN"]; };
 if(TradeInprogress) exitWith { cutText ["Building already in progress." , "PLAIN DOWN"]; };
 TradeInprogress = true;
 
@@ -46,10 +47,10 @@ if(_IsNearPlot == 0) then {
 	// Find owner 
 	_ownerID = _nearestPole getVariable["CharacterID","0"];
 
-	diag_log format["DEBUG BUILDING: %1 = %2", dayz_playerUID, _ownerID];
+	diag_log format["DEBUG BUILDING: %1 = %2", krayzUID, _ownerID];
 
 	// check if friendly to owner
-	if(dayz_playerUID == _ownerID) then {
+	if(krayzUID == _ownerID) then {
 		// owner can build anything within his plot except other plots witin
 		if(_classname != "Plastic_Pole_EP1_DZ") then {
 			_canBuildOnPlot = true;

@@ -191,6 +191,7 @@ dayz_combatLog = "";
 canRoll = true;
 
 placevault = true;
+safezonebuild = false; 
 
 //Hunting Variables
 dayZ_partClasses = [

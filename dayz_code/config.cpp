@@ -13,7 +13,7 @@
 
 #define EAST 0 // (Russian)
 
-#include "basicdefines.hpp"
+#include "config\basicdefines.hpp"
 
 class CfgPatches {
 	class dayz_code {
@@ -46,7 +46,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.129b";
+		version = "2.130";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -197,14 +197,14 @@ class RscStructuredTextGUI: RscStructuredText {
 	};
 };
 //#include "CfgWorlds.hpp"
-#include "cfgMoves.hpp"
-#include "rscTitles.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgMagazines.hpp"
-#include "cfgLoot.hpp"
-#include "CfgMarkers.hpp"
-#include "CfgAmmo.hpp"
+#include "config\cfgMoves.hpp"
+#include "config\rscTitles.hpp"
+#include "config\CfgVehicles.hpp"
+#include "config\CfgWeapons.hpp"
+#include "config\CfgMagazines.hpp"
+#include "config\cfgLoot.hpp"
+#include "config\CfgMarkers.hpp"
+#include "config\CfgAmmo.hpp"
 
 class RscObject;
 class RscCompass : RscObject {

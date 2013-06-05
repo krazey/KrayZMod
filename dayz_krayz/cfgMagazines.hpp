@@ -1,6 +1,40 @@
 class CfgMagazines
 {
 	class CA_Magazine;
+	// BASIC DAYZ ITEMS ----------------------------------------------------------------------------------------------
+	class ItemTent: CA_Magazine {
+		scope = 2;
+		count = 1;
+		type = 256;
+		displayName = "$STR_EQUIP_NAME_20";
+		model = "\dayz_equip\models\tentbag_gear.p3d";
+		picture = "\dayz_equip\textures\equip_tentbag_ca.paa";
+		descriptionShort = "$STR_EQUIP_DESC_20";
+		class ItemActions {
+			class Pitch {
+				text = "$STR_PITCH_TENT";
+				script = "spawn player_tentPitch;";
+				create = "TentStorage";
+			};
+		};
+	};
+	class ItemGenerator: CA_Magazine {
+		scope = 2;
+		count = 1;
+		type = "(256 * 6)";
+		displayName = "$STR_EQUIP_NAME_31";
+		model = "\dayz_equip\models\generator_gear.p3d";
+		picture = "\dayz_equip\textures\equip_generator_ca.paa";
+		descriptionShort = "$STR_EQUIP_DESC_31";
+		class ItemActions {
+			class Build {
+				text = "$STR_ACTIONS_BUILD";
+				script = "spawn player_build;";
+				requiretools[] = {"ItemToolbox_KR"};
+				create = "Generator_DZ";
+			};
+		}; 
+	};
 	// WEAPON KITS ----------------------------------------------------------------------------------------------
 	class des_paint_kit : CA_Magazine {
 		scope = 2;
@@ -600,7 +634,7 @@ class CfgMagazines
 		displayName = "Nice Wooden Shed";
 		descriptionShort = "Nice Wooden Shed";
 		model = "\dayz_krayz\models\supply_crate.p3d";
-		picture = "\dayz_krayz\textures\equip_wooden_crate_ca.paa";
+		picture = "\dayz_krayz\textures\icons\wooden_shed.paa";
 		class ItemActions {
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
@@ -712,39 +746,6 @@ class CfgMagazines
 			};
 		};
 	};
-	class ItemGenerator: CA_Magazine {
-		scope = 2;
-		count = 1;
-		type = "(256 * 6)";
-		displayName = "$STR_EQUIP_NAME_31";
-		model = "\dayz_equip\models\generator_gear.p3d";
-		picture = "\dayz_equip\textures\equip_generator_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_31";
-		class ItemActions {
-			class Build {
-				text = "$STR_ACTIONS_BUILD";
-				script = "spawn player_build;";
-				requiretools[] = {"ItemToolbox_KR"};
-				create = "Generator_DZ";
-			};
-		}; 
-	};
-	class ItemTent: CA_Magazine {
-		scope = 2;
-		count = 1;
-		type = "(256 * 2)";
-		displayName = "$STR_EQUIP_NAME_20";
-		model = "\dayz_equip\models\tentbag_gear.p3d";
-		picture = "\dayz_equip\textures\equip_tentbag_ca.paa";
-		descriptionShort = "$STR_EQUIP_DESC_20";
-		class ItemActions {
-			class Pitch {
-				text = "$STR_PITCH_TENT";
-				script = "spawn player_tentPitch;";
-				create = "TentStorage";
-			};
-		};
-	};
 	//Custom player vault
 	class ItemVault: CA_Magazine {
 		scope = 2;
@@ -809,7 +810,7 @@ class CfgMagazines
 		type = (256 * 2);
 		displayName = "Round Bag Fence";
 		model = "\dayz_equip\models\sandbags.p3d";
-		picture = "\dayz_equip\textures\equip_sandbag_ca.paa";
+		picture = "\dayz_krayz\textures\icons\bagfence_round.paa";
 		descriptionShort = "";
 		class ItemActions {
 			class Build {
@@ -843,7 +844,7 @@ class CfgMagazines
 		type = (256 * 6);
 		displayName = "Fortified Round Bag Fence";
 		model = "\dayz_equip\models\sandbags.p3d";
-		picture = "\dayz_krayz\textures\equip_fortsandbaground.paa";
+		picture = "\dayz_krayz\textures\icons\fort_bagfance_round.paa";
 		descriptionShort = "";
 		class ItemActions {
 			class Build {
@@ -990,7 +991,7 @@ class CfgMagazines
 		count = 1;
 		type = (256 * 3);
 		displayName = "$STR_EQUIP_NAME_119";
-		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		model = "\dayz_equip\models\tentbag_gear.p3d";
 		picture = "\dayz_krayz\textures\icons\camonet.paa";
 		descriptionShort = "$STR_EQUIP_DESC_119";
 		class ItemActions {
@@ -1015,7 +1016,7 @@ class CfgMagazines
 		count = 1;
 		type = (256 * 6);
 		displayName = "$STR_EQUIP_NAME_120";
-		model = "\dayz_equip\models\tentbag_gearcamo.p3d";
+		model = "\dayz_equip\models\tentbag_gear.p3d";
 		picture = "\dayz_krayz\textures\icons\sandbagnest.paa";
 		descriptionShort = "$STR_EQUIP_DESC_120";
 		class ItemActions {
@@ -1049,7 +1050,7 @@ class CfgMagazines
 		count = 1;
 		type = (256 * 8);
 		displayName = "Deer Stand";
-		model = "\dayz_krayz\models\tentbag_gearcamo.p3d";
+		model = "\dayz_equip\models\tentbag_gear.p3d";
 		picture = "\dayz_krayz\textures\icons\deerstand.paa";
 		descriptionShort = "";
 		class ItemActions {
@@ -1107,7 +1108,7 @@ class CfgMagazines
 		count = 1;
 		type = (256 * 3);
 		displayName = "$STR_EQUIP_NAME_123";
-		model = "\dayz_krayz\models\tentbag_gearcamo.p3d";
+		model = "\dayz_equip\models\tentbag_gear.p3d";
 		picture = "\dayz_krayz\textures\icons\hbarrier.paa";
 		descriptionShort = "$STR_EQUIP_DESC_123";
 		class ItemActions {

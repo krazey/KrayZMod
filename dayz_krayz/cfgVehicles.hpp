@@ -579,8 +579,7 @@ class CfgVehicles
 			init = "[(_this select 0),'cfgMagazines','ItemFuelBarrel'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 		};
 	};
-	class WeaponHolder_MeleeCrowbar_KR: WeaponHolderBase
-	{
+	class WeaponHolder_MeleeCrowbar_KR: WeaponHolderBase {
 		scope = 2;
 		displayName = "Crowbar";
 		model = "\dayz_equip\models\crowbar.p3d";
@@ -588,13 +587,20 @@ class CfgVehicles
 			init = "[(_this select 0),'cfgWeapons','ItemCrowbar'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 		};
 	};
-	class WeaponHolder_PartGeneric_KR: WeaponHolderBase
-	{
+	class WeaponHolder_PartGeneric_KR: WeaponHolderBase {
 		scope = 2;
 		displayName = "$STR_EQUIP_NAME_10";
 		model = "\dayz_equip\proxy\genericparts.p3d";
 		class eventHandlers {
 			init = "[(_this select 0),'cfgMagazines','PartGeneric_KR'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
+		};
+	};
+	class WeaponHolder_ItemTent : WeaponHolderBase {
+		scope = 2;
+		displayName = "$STR_EQUIP_NAME_20";
+		model = "\dayz_equip\proxy\tentbag.p3d";
+		class eventHandlers {
+			init = "[(_this select 0),'cfgMagazines','ItemTent'] execVM '\z\addons\dayz_code\init\object_pickupAction.sqf';";
 		};
 	};
 	class Land_A_tent;

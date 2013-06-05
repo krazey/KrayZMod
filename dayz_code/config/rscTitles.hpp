@@ -93,7 +93,67 @@ class RscDisplayGameOptions {
 		};	
 	};
 };
-class RscShortcutButton;
+class RscShortcutButton {
+	idc = -1;
+	style = 0;
+	default = 0;
+	shadow = 2;
+	w = 0.183825;
+	h = 0.104575;
+	color[] = {0.8784, 0.8471, 0.651, 1.0};
+	//color[] = {0.8, 0.8, 0.8, 1.0};
+	color2[] = {0.95, 0.95, 0.95, 1};
+	colorBackground[] = {1, 1, 1, 1};
+	colorbackground2[] = {1, 1, 1, 0.4};
+	colorDisabled[] = {1, 1, 1, 0.25};
+	periodFocus = 1.2;
+	periodOver = 0.8;
+	class HitZone {
+		left = 0.004;
+		top = 0.029;
+		right = 0.004;
+		bottom = 0.029;
+	};
+	class ShortcutPos {
+		left = 0.0145;
+		top = 0.026;
+		w = 0.0392157;
+		h = 0.0522876;
+	};
+	class TextPos {
+		left = 0.05;
+		top = 0.034;
+		right = 0.005;
+		bottom = 0.005;
+	};
+	animTextureNormal = "\ca\ui\data\ui_button_normal_ca.paa";
+	animTextureDisabled = "\ca\ui\data\ui_button_disabled_ca.paa";
+	animTextureOver = "\ca\ui\data\ui_button_over_ca.paa";
+	animTextureFocused = "\ca\ui\data\ui_button_focus_ca.paa";
+	animTexturePressed = "\ca\ui\data\ui_button_down_ca.paa";
+	animTextureDefault = "\ca\ui\data\ui_button_default_ca.paa";
+	period = 0.4;
+	font = "Zeppelin32";
+	size = 0.03921;
+	sizeEx = 0.03921;
+	text = "";
+	soundEnter[] = {"\ca\ui\data\sound\onover", 0.09, 1};
+	soundPush[] = {"\ca\ui\data\sound\new1", 0.0, 0};
+	soundClick[] = {"\ca\ui\data\sound\onclick", 0.07, 1};
+	soundEscape[] = {"\ca\ui\data\sound\onescape", 0.09, 1};
+	action = "";
+	class Attributes {
+		font = "Zeppelin32";
+		color = "#E5E5E5";
+		align = "left";
+		shadow = "true";
+	};
+	class AttributesImage {
+		font = "Zeppelin32";
+		color = "#E5E5E5";
+		align = "left";
+	};
+};
 class RscShortcutButtonMain;
 class RscDisplayMain : RscStandardDisplay {
 	class controlsBackground  {
@@ -114,7 +174,7 @@ class RscDisplayMain : RscStandardDisplay {
 		class CA_Version;
 		class DAYZ_Version : CA_Version {
 			idc = -1;
-			text = "KrayZ 2.129b (based on DayZ, DayZ Epoch, DayZ+)";
+			text = "KrayZ 2.130 (based on DayZ, DayZ Epoch, DayZ+)";
 			y = "(SafeZoneH + SafeZoneY) - (1.06 - 0.95)";
 		};
 		delete CA_TitleMainMenu;
@@ -832,27 +892,32 @@ class RscDisplayGear {
 		class All {
 			name = "All";
 			mask = -1;
-			image = "\ca\ui\data\igui_gear_filter_1_ca.paa";
+			//image = "\ca\ui\data\igui_gear_filter_1_ca.paa";
+			image = "\z\addons\dayz_code\ui\igui_gear_filter_1_ca.paa";
 		};
 		class Primary {
 			name = "Primary";
 			mask = 769;
-			image = "\ca\ui\data\igui_gear_filter_2_ca.paa";
+			//image = "\ca\ui\data\igui_gear_filter_2_ca.paa";
+			image = "\z\addons\dayz_code\ui\igui_gear_filter_2_ca.paa";
 		};
 		class Secondary {
 			name = "Secondary";
 			mask = 516;
-			image = "\ca\ui\data\igui_gear_filter_3_ca.paa";
+			//image = "\ca\ui\data\igui_gear_filter_3_ca.paa";
+			image = "\z\addons\dayz_code\ui\igui_gear_filter_3_ca.paa";
 		};
 		class HandGun {
 			name = "HandGun";
 			mask = 18;
-			image = "\ca\ui\data\igui_gear_filter_4_ca.paa";
+			//image = "\ca\ui\data\igui_gear_filter_4_ca.paa";
+			image = "\z\addons\dayz_code\ui\igui_gear_filter_4_ca.paa";
 		};
 		class Items {
 			name = "Items";
 			mask = 135168;
-			image = "\ca\ui\data\igui_gear_filter_5_ca.paa";
+			//image = "\ca\ui\data\igui_gear_filter_5_ca.paa";
+			image = "\z\addons\dayz_code\ui\igui_gear_filter_5_ca.paa";
 		};
 	};
 	movingEnable = 1;
@@ -872,7 +937,8 @@ class RscDisplayGear {
 			w = 1.2549;
 			h = 1.6732;
 			moving = 1;
-			text = "\ca\ui\data\igui_background_gear_ca.paa";
+			//text = "\ca\ui\data\igui_background_gear_ca.paa";
+			text = "\z\addons\dayz_code\ui\igui_background_gear_ca.paa";
 		};
 	};
 };

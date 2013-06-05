@@ -1,7 +1,7 @@
 /*
 [_obj] spawn player_packTent;
 */
-private["_objectID","_objectUID","_obj","_ownerID","_dir","_pos","_object","_holder","_weapons","_magazines","_backpacks","_objWpnTypes","_objWpnQty","_countr"];
+private["_objectID","_objectUID","_obj","_ownerID","_dir","_pos","_holder","_weapons","_magazines","_backpacks","_objWpnTypes","_objWpnQty","_countr","_bag"];
 
 if(TradeInprogress) exitWith { cutText ["Pack tent already in progress." , "PLAIN DOWN"]; };
 TradeInprogress = true;
@@ -38,10 +38,11 @@ _classname = 	getText (configFile >> "CfgVehicles" >> (typeOf _obj) >> "create")
 _location = _pos;
 
 //place tent (local)
-//_bag = createVehicle ["WeaponHolder_ItemTent",_pos,[], 0, "CAN_COLLIDE"];
-_object = createVehicle [_classname, _location, [], 0, "CAN_COLLIDE"];
-_object setdir _dir;
-player reveal _object;
+_bag = createVehicle ["WeaponHolder_ItemTent",_pos,[], 0, "CAN_COLLIDE"];
+player reveal _bag;
+//_object = createVehicle [_classname, _location, [], 0, "CAN_COLLIDE"];
+//_object setdir _dir;
+//player reveal _object;
 	
 _holder = "WeaponHolder" createVehicle _pos; 
 	
