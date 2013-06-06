@@ -42,6 +42,18 @@ class CfgMagazines {
 		model = "\dayz_equip\models\soda_mdew_e.p3d";
 		picture = "\dayz_equip\textures\equip_soda_empty_ca.paa";
 	};
+	class ItemSodaTaiwendo : ItemSodaCoke {
+		displayName = "Soda Taiwendo";
+		descriptionShort = "A clean, unopened can of Taiwendo soda. They stopped selling these years ago in Japan because of cat urine!";
+		model = "\dayz_krayz\models\taiwendo.p3d";
+		picture = "\dayz_krayz\textures\food\equip_taiwendo_CA.paa";
+	};
+	/* maybe later
+	class ItemSodaTaiwendoEmpty : ItemSodaEmpty_KR {
+		model = "";
+		picture = "";
+	};
+	*/
 	class ItemSodaMtngreen : ItemSodaCoke {
 		displayName = $STR_ITEMSODA_FULL_CLEAN_CODE_NAME_0;
 		descriptionShort = $STR_ITEMSODA_FULL_CLEAN_CODE_DESC_0;
@@ -273,6 +285,24 @@ class CfgMagazines {
 		bloodRegen = 100;
 	};
 	*/
+	class FoodKrazey : FoodEdible {
+		scope = public;
+		count = 1;
+		bloodRegen = 1200;
+		displayName = "KraZey Cookies";
+		descriptionShort = "Smart & KraZey Cookies - Epic and horny in taste.";
+		model = "\dayz_krayz\models\kraZey.p3d";
+		picture = "\dayz_krayz\textures\food\equip_kraZey_CA.paa";
+	};
+	class FoodCanFletcher : FoodEdible {
+		scope = public;
+		count = 1;
+		bloodRegen = 400;
+		displayName = "Fletcher Fab Balls";
+		descriptionShort = "The best way to eat since 1832 - Lama is the best in the world, also in the apocalypse.";
+		model = "\dayz_krayz\models\can_fletcher_clean_full.p3d";
+		picture = "\dayz_krayz\textures\food\equip_can_fletcher_clean_full_ca.paa";
+	};
 	class FoodMRE : FoodEdible {
 		scope = public;
 		count = 1;
@@ -410,6 +440,15 @@ class CfgMagazines {
 	};
 	// placeholder
 	class TrashTinCan_KR;
+	class FoodCanFletcherEmpty : TrashTinCan_KR {
+		scope = public;
+		count = 1;
+		model = "\dayz_krayz\models\models\can_fletcher_clean_empty.p3d";
+		picture = "\dayz_krayz\textures\food\equip_can_fletcher_clean_empty_ca.paa";
+		displayName = "Tin Can";
+		descriptionShort = "An empty can of Fletcher's Fab Balls.";
+		ammo = "TinCan";
+	};
 	class FoodCanGriffEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;

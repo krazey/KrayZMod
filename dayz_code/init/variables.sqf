@@ -83,7 +83,7 @@ meatcooked = [
     "FoodbaconCooked"
 ];
 //Eating
-no_output_food = ["FoodMRE","FoodPistachio","FoodNutmix","FoodBioMeat"]+meatcooked+meatraw;
+no_output_food = ["FoodMRE","FoodKrazey","FoodPistachio","FoodNutmix","FoodBioMeat"]+meatcooked+meatraw;
 
 
 badfood = ["FoodBioMeat","FoodCanUnlabeled"]; 
@@ -104,7 +104,8 @@ food_with_output=[
 	"FoodCanOrlok",
 	"FoodCanPowell",
 	"FoodCanTylers",
-	"FoodCanUnlabeled"
+	"FoodCanUnlabeled",
+	"FoodCanFletcher"
 ];
 
 food_output = [
@@ -123,10 +124,11 @@ food_output = [
 	"FoodCanOrlokEmpty",
 	"FoodCanPowellEmpty",
 	"FoodCanTylersEmpty",
-	"FoodCanUnlabeledEmpty"
+	"FoodCanUnlabeledEmpty",
+	"FoodCanFletcherEmpty"
 ];
 //Drinking
-no_output_drink = ["ItemWaterbottle", "ItemWaterbottleBoiled"];
+no_output_drink = ["ItemWaterbottle", "ItemWaterbottleBoiled", "ItemSodaTaiwendo"];
 drink_with_output = [
     "ItemSoda",  //just to define item for ItemSodaEmpty
     "ItemSodaCoke",
@@ -191,7 +193,8 @@ dayz_combatLog = "";
 canRoll = true;
 
 placevault = true;
-safezonebuild = false; 
+safezonebuild = false;
+citybuild = false;
 
 //Hunting Variables
 dayZ_partClasses = [

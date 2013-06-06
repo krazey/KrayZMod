@@ -7,6 +7,10 @@ class CfgVehicles
 	class HouseBase;				
 	class Constuctables: HouseBase {class DestructionEffects;};
 	class Constuctables2: HouseBase {class DestructionEffects;};
+	class LandVehicle;
+	class StaticWeapon: LandVehicle {class Turrets;};
+	class StaticMGWeapon: StaticWeapon {class AnimationSources; class Turrets: Turrets {class MainTurret;};};
+	class WarfareBMGNest_M240_base: StaticMGWeapon {class Turrets: Turrets {class MainTurret: MainTurret {};};};
 
 	class CamoNet: Constuctables {
 		scope = 2;
@@ -438,8 +442,7 @@ class CfgVehicles
 		displayName = "30m Plot Pole";
 		vehicleClass = "Fortifications";
 	};
-	class USMC_WarfareBMGNest_M240;
-	class M240Nest_DZ: USMC_WarfareBMGNest_M240 {
+	class M240Nest_DZ: WarfareBMGNest_M240_base {
 		scope = 2;
 		offset[] = {0,3.5,0};
 		displayName = "M240 Nest";
@@ -451,6 +454,11 @@ class CfgVehicles
 		destrType = "DestructBuilding"; 
 		armor = 500;
 		removeoutput[] = {{"m240_nest_kit",1}};
+		class Turrets: Turrets {
+			class MainTurret: MainTurret {
+				magazines[] = {};
+			};
+		};
 	};
 	class Land_covering_hut_EP1;
 	class CanvasHut_DZ: Land_covering_hut_EP1 {

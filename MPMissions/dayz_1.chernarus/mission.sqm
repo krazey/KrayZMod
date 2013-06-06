@@ -6,9 +6,11 @@ class Mission
 		"chernarus",
 		"ca_modules_animals",
 		"dayz_code",
+		"dayz_krayz",
 		"dayz_weapons",
 		"dayz_equip",
 		"dayz_vehicles",
+		"cba_main",
 		"cacharacters_pmc",
 		"ca_modules_functions"
 	};
@@ -22,7 +24,7 @@ class Mission
 	class Intel
 	{
 		briefingName="KrayZ";
-		briefingDescription="KrayZ based on DayZ, DayZ Epoch & DayZ+";
+		briefingDescription="KrayZ based on DayZ, DayZ Epoch and DayZ+";
 		startWeather=0.067362607;
 		forecastWeather=0.52341133;
 		year=2008;
@@ -1641,7 +1643,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=6;
+		items=60;
 		class Item0
 		{
 			position[]={4053.8501,364.76645,11668.645};
@@ -1734,6 +1736,876 @@ class Mission
 			text="Basis_South";
 			name="Basis_South";
 			expActiv="if (playerSide == WEST) then {[Basis_South] execVM ""safezone.sqf""};";
+			class Effects
+			{
+			};
+		};
+		class Item6
+		{
+			activationBy="WEST";
+			position[]={6678.4844, -6, 2656.249};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityChernogorsk";
+			text="CityChernogorsk";
+			expCond="(player distance CityChernogorsk) < 750;";
+			expActiv="TitleText[""Entering Chernogorsk"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Chernogorsk"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item7
+		{
+			activationBy="WEST";
+			position[]={10304.565, -5.5474386, 2155.8721};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityElektrozavodsk";
+			text="CityElektrozavodsk";
+			expCond="(player distance CityElektrozavodsk) < 750;";
+			expActiv="TitleText[""Entering Elektrozavodsk"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Elektrozavodsk"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item8
+		{
+			activationBy="WEST";
+			position[]={12074.228, -6.2955608, 3552.7212};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKamyshovo";
+			text="CityKamyshovo";
+			expCond="(player distance CityKamyshovo) < 200;";
+			expActiv="TitleText[""Entering Kamyshovo"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Kamyshovo"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item9
+		{
+			activationBy="WEST";
+			position[]={13444.053,0, 6240.4561};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CitySolnichniy";
+			text="CitySolnichniy";
+			expCond="(player distance CitySolnichniy) < 250;";
+			expActiv="TitleText[""Entering Solnichniy"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Solnichniy"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item10
+		{
+			activationBy="WEST";
+			position[]={13057.979, -6, 7067.9707};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CitySolnichniy2";
+			text="CitySolnichniy2";
+			expCond="(player distance CitySolnichniy2) < 200;";
+			expActiv="TitleText[""Entering Solnichniy (factory)"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Solnichniy (factory)"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item11
+		{
+			activationBy="WEST";
+			position[]={12943.759, -5.5873337, 8188.9941};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityNizhnoye";
+			text="CityNizhnoye";
+			expCond="(player distance CityNizhnoye) < 200;";
+			expActiv="TitleText[""Entering Nizhnoye"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Nizhnoye"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item12
+		{
+			activationBy="WEST";
+			position[]={12088.257, -41.465069, 9360.2695};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityBerezino";
+			text="CityBerezino";
+			expCond="(player distance CityBerezino) < 450;";
+			expActiv="TitleText[""Entering Berezino"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Berezino"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item13
+		{
+			activationBy="WEST";
+			position[]={12949.456, -6.0127869, 10006.326};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityBerezino2";
+			text="CityBerezino2";
+			expCond="(player distance CityBerezino2) < 450;";
+			expActiv="TitleText[""Entering Berezino (lumber mill)"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Berezino (lumber mill)"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item14
+		{
+			activationBy="WEST";
+			position[]={12324.898, -98.877319, 10806.514};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKhelm";
+			text="CityKhelm";
+			expCond="(player distance CityKhelm) < 200;";
+			expActiv="TitleText[""Entering Khelm"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Khelm"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item15
+		{
+			activationBy="WEST";
+			position[]={11105.891, -202.71458, 12293.556};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKrasnostav";
+			text="CityKrasnostav";
+			expCond="(player distance CityKrasnostav) < 450;";
+			expActiv="TitleText[""Entering Krasnostav"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Krasnostav"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item16
+		{
+			activationBy="WEST";
+			position[]={12148.893, -159, 12756.605};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityNEAirstrip";
+			text="CityNEAirstrip";
+			expCond="(player distance CityNEAirstrip) < 500;";
+			expActiv="TitleText[""Entering North East Airstrip"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving North East Airstrip"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item17
+		{
+			activationBy="WEST";
+			position[]={8457.4893,0, 11770.187};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityGvozdno";
+			text="CityGvozdno";
+			expCond="(player distance CityGvozdno) < 500;";
+			expActiv="TitleText[""Entering Gvozdno"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Gvozdno"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item18
+		{
+			activationBy="WEST";
+			position[]={5018.2803,0, 12509.972};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPetrovka";
+			text="CityPetrovka";
+			expCond="(player distance CityPetrovka) < 200;";
+			expActiv="TitleText[""Entering Petrovka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Petrovka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item19
+		{
+			activationBy="WEST";
+			position[]={4660.7144,0, 10320.381};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityNWAirfield";
+			text="CityNWAirfield";
+			expCond="(player distance CityNWAirfield) < 900;";
+			expActiv="TitleText[""Entering North West Airfield"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving North West Airfield"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item20
+		{
+			activationBy="WEST";
+			position[]={6024.7168, 5.8270569, 10314.691};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityGrishino";
+			text="CityGrishino";
+			expCond="(player distance CityGrishino) < 350;";
+			expActiv="TitleText[""Entering Grishino"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Grishino"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item21
+		{
+			activationBy="WEST";
+			position[]={2701.6885,0, 9847.376};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityLopatino";
+			text="CityLopatino";
+			expCond="(player distance CityLopatino) < 350;";
+			expActiv="TitleText[""Entering Lopatino"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Lopatino"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item22
+		{
+			activationBy="WEST";
+			position[]={3878.6614,0, 8872.3018};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityVybor";
+			text="CityVybor";
+			expCond="(player distance CityVybor) < 450;";
+			expActiv="TitleText[""Entering Vybor"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Vybor"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item23
+		{
+			activationBy="WEST";
+			position[]={5398.1631,0, 8603.2451};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKabanino";
+			text="CityKabanino";
+			expCond="(player distance CityKabanino) < 250;";
+			expActiv="TitleText[""Entering Kabanino"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Kabanino"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item24
+		{
+			activationBy="WEST";
+			position[]={6180.4634, 5.4234924, 7779.4917};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityStarySobor";
+			text="CityStarySobor";
+			expCond="(player distance CityStarySobor) < 350;";
+			expActiv="TitleText[""Entering Stary Sobor"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Stary Sobor"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item25
+		{
+			activationBy="WEST";
+			position[]={7127.8975,0, 7714.6782};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityNovySobor";
+			text="CityNovySobor";
+			expCond="(player distance CityNovySobor) < 350;";
+			expActiv="TitleText[""Entering Novy Sobor"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Novy Sobor"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item26
+		{
+			activationBy="WEST";
+			position[]={8502.3418,0, 6679.314};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityGuglovo";
+			text="CityGuglovo";
+			expCond="(player distance CityGuglovo) < 150;";
+			expActiv="TitleText[""Entering Guglovo"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Guglovo"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item27
+		{
+			activationBy="WEST";
+			position[]={9637.6436,0, 6554.5469};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityShakhovka";
+			text="CityShakhovka";
+			expCond="(player distance CityShakhovka) < 150;";
+			expActiv="TitleText[""Entering Shakhovka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Shakhovka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item28
+		{
+			activationBy="WEST";
+			position[]={10121.887, 0, 5538.5908};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityStaroye";
+			text="CityStaroye";
+			expCond="(player distance CityStaroye) < 350;";
+			expActiv="TitleText[""Entering Staroye"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Staroye"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item29
+		{
+			activationBy="WEST";
+			position[]={11323.593,0, 5473.7769};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityMsta";
+			text="CityMsta";
+			expCond="(player distance CityMsta) < 250;";
+			expActiv="TitleText[""Entering Msta"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Msta"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item30
+		{
+			activationBy="WEST";
+			position[]={11232.895,0, 6578.853};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityDolina";
+			text="CityDolina";
+			expCond="(player distance CityDolina) < 150;";
+			expActiv="TitleText[""Entering Dolina"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Dolina"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item31
+		{
+			activationBy="WEST";
+			position[]={12150.255, 0, 7264.3506};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityOrlovets";
+			text="CityOrlovets";
+			expCond="(player distance CityOrlovets) < 250;";
+			expActiv="TitleText[""Entering Orlovets"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Orlovets"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item32
+		{
+			activationBy="WEST";
+			position[]={10693.081, 0, 8044.4492};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPolana";
+			text="CityPolana";
+			expCond="(player distance CityPolana) < 250;";
+			expActiv="TitleText[""Entering Polana"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Polana"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item33
+		{
+			activationBy="WEST";
+			position[]={10275.729,0, 10003.552};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityDubrovka";
+			text="CityDubrovka";
+			expCond="(player distance CityDubrovka) < 550;";
+			expActiv="TitleText[""Entering Dubrovka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Dubrovka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item34
+		{
+			activationBy="WEST";
+			position[]={9589.999,0, 8897.6563};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityGorka";
+			text="CityGorka";
+			expCond="(player distance CityGorka) < 350;";
+			expActiv="TitleText[""Entering Gorka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Gorka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item35
+		{
+			activationBy="WEST";
+			position[]={4740.4341,0, 6794.7236};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityRogovo";
+			text="CityRogovo";
+			expCond="(player distance CityRogovo) < 150;";
+			expActiv="TitleText[""Entering Rogovo"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Rogovo"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item36
+		{
+			activationBy="WEST";
+			position[]={4490.7334,0, 6417.4404};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPogorevka";
+			text="CityPogorevka";
+			expCond="(player distance CityPogorevka) < 150;";
+			expActiv="TitleText[""Entering Pogorevka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Pogorevka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item37
+		{
+			activationBy="WEST";
+			position[]={2593.5156,0, 5326.2422};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityZelenogorsk";
+			text="CityZelenogorsk";
+			expCond="(player distance CityZelenogorsk) < 450;";
+			expActiv="TitleText[""Entering Zelenogorsk"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Zelenogorsk"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item38
+		{
+			activationBy="WEST";
+			position[]={2531.9744,0, 6358.4053};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CitySosnovka";
+			text="CitySosnovka";
+			expCond="(player distance CitySosnovka) < 150;";
+			expActiv="TitleText[""Entering Sosnovka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Sosnovka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item39
+		{
+			activationBy="WEST";
+			position[]={2018.4851,0, 7331.856};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityMyshkino";
+			text="CityMyshkino";
+			expCond="(player distance CityMyshkino) < 150;";
+			expActiv="TitleText[""Entering Myshkino"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Myshkino"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item40
+		{
+			activationBy="WEST";
+			position[]={3092.2446,0, 7921.6606};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPustoshka";
+			text="CityPustoshka";
+			expCond="(player distance CityPustoshka) < 300;";
+			expActiv="TitleText[""Entering Pustoshka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Pustoshka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item41
+		{
+			activationBy="WEST";
+			position[]={4948.2827, 0, 5616.5879};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPulkovo";
+			text="CityPulkovo";
+			expCond="(player distance CityPulkovo) < 150;";
+			expActiv="TitleText[""Entering Pulkovo"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Pulkovo"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item42
+		{
+			activationBy="WEST";
+			position[]={3719.1064, 34.046875, 5989.6426};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityGreenMountain";
+			text="CityGreenMountain";
+			expCond="(player distance CityGreenMountain) < 100;";
+			expActiv="TitleText[""Entering Green Mountain"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Green Mountain"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item43
+		{
+			activationBy="WEST";
+			position[]={6556.8623, 8.1923523, 6110.5029};
+
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityVyshnoye";
+			text="CityVyshnoye";
+			expCond="(player distance CityVyshnoye) < 200;";
+			expActiv="TitleText[""Entering Vyshnoye"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Vyshnoye"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item44
+		{
+			activationBy="WEST";
+			position[]={7568.1118,0, 5154.2354};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityMogilevka";
+			text="CityMogilevka";
+			expCond="(player distance CityMogilevka) < 250;";
+			expActiv="TitleText[""Entering Mogilevka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Mogilevka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item45
+		{
+			activationBy="WEST";
+			position[]={9165.1807, 0, 3903.5889};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPusta";
+			text="CityPusta";
+			expCond="(player distance CityPusta) < 250;";
+			expActiv="TitleText[""Entering Pusta"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Pusta"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item46
+		{
+			activationBy="WEST";
+			position[]={8001.5806,0, 3395.928};
+
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPrigorodki";
+			text="CityPrigorodki";
+			expCond="(player distance CityPrigorodki) < 350;";
+			expActiv="TitleText[""Entering Prigorodki"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Prigorodki"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item47
+		{
+			activationBy="WEST";
+			position[]={5899.8101,0, 4777.2715};
+
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityNadezhdino";
+			text="CityNadezhdino";
+			expCond="(player distance CityNadezhdino) < 300;";
+			expActiv="TitleText[""Entering Nadezhdino"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Nadezhdino"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item48
+		{
+			activationBy="WEST";
+			position[]={4420.4326, 7.2188511, 2362.293};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityBalota";
+			text="CityBalota";
+			expCond="(player distance CityBalota) < 250;";
+			expActiv="TitleText[""Entering Balota"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Balota"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item49
+		{
+			activationBy="WEST";
+			position[]={4997.8691,0, 2582.1716};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CitySWAirstrip";
+			text="CitySWAirstrip";
+			expCond="(player distance CitySWAirstrip) < 350;";
+			expActiv="TitleText[""Entering South West Airstrip"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving South West Airstrip"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item50
+		{
+			activationBy="WEST";
+			position[]={3635.427,0, 2397.8367};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKomarovo";
+			text="CityKomarovo";
+			expCond="(player distance CityKomarovo) < 350;";
+			expActiv="TitleText[""Entering Komarovo"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Komarovo"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item51
+		{
+			activationBy="WEST";
+			position[]={1867.3086, 6.0855393, 2222.8374};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKamenka";
+			text="CityKamenka";
+			expCond="(player distance CityKamenka) < 250;";
+			expActiv="TitleText[""Entering Kamenka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Kamenka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item52
+		{
+			activationBy="WEST";
+			position[]={1708.2268,0, 3821.7883};
+
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityPavlovo";
+			text="CityPavlovo";
+			expCond="(player distance CityPavlovo) < 250;";
+			expActiv="TitleText[""Entering Pavlovo"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Pavlovo"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item53
+		{
+			activationBy="WEST";
+			position[]={3376.0239,0, 3916.0803};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityBor";
+			text="CityBor";
+			expCond="(player distance CityBor) < 150;";
+			expActiv="TitleText[""Entering Bor"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Bor"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item54
+		{
+			activationBy="WEST";
+			position[]={4421.3657,0, 4656.0317};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKozlovka";
+			text="CityKozlovka";
+			expCond="(player distance CityKozlovka) < 250;";
+			expActiv="TitleText[""Entering Kozlovka"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Kozlovka"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item55
+		{
+			activationBy="WEST";
+			position[]={3392.4988,0, 4928.9688};
+			a=150;
+			b=150;
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityDrozhino";
+			text="CityDrozhino";
+			expCond="(player distance CityDrozhino) < 150;";
+			expActiv="TitleText[""Entering Drozhino"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Drozhino"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item56
+		{
+			activationBy="WEST";
+			position[]={12692.257,0, 4421.8423};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityTulga";
+			text="CityTulga";
+			expCond="(player distance CityTulga) < 250;";
+			expActiv="TitleText[""Entering Tulga"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Tulga"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item57
+		{
+			activationBy="WEST";
+			position[]={11475.057, 0.48332214, 7502.5605};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityOrlovets2";
+			text="CityOrlovets2";
+			expCond="(player distance CityOrlovets2) < 150;";
+			expActiv="TitleText[""Entering Orlovets (factory)"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Orlovets (factory)"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item58
+		{
+			activationBy="WEST";
+			position[]={13369.92,0, 12885.35};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityOlsha";
+			text="CityOlsha";
+			expCond="(player distance CityOlsha) < 150;";
+			expActiv="TitleText[""Entering Olsha"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Olsha"",""PLAIN DOWN""]; citybuild = false;";
+			class Effects
+			{
+			};
+		};
+		class Item59
+		{
+			activationBy="WEST";
+			position[]={8328.9668,0, 5990.2163};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CityKumyrna";
+			text="CityKumyrna";
+			expCond="(player distance CityKumyrna) < 100;";
+			expActiv="TitleText[""Entering Kumyrna"",""PLAIN DOWN""]; citybuild = true;";
+			expDesactiv="TitleText[""Leaving Kumyrna"",""PLAIN DOWN""]; citybuild = false;";
 			class Effects
 			{
 			};

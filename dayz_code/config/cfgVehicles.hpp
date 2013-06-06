@@ -164,7 +164,6 @@ class CfgVehicles {
 			};
 		};
 	};
-	
 	class Mi17_DZ: Mi17_base {
 		displayname = "Mi-17";
 		displaynameshort = "Mi17_DZ";
@@ -218,7 +217,6 @@ class CfgVehicles {
 			};
 		};
 	};
-	
 	class UH1H_DZ: UH1H_base {
 		scope = 2;
 		side = 2;
@@ -234,7 +232,6 @@ class CfgVehicles {
 		transportMaxWeapons = 5;
 		transportMaxMagazines = 25;
         transportmaxbackpacks = 4;
-		
 		class Turrets : Turrets {
 			class MainTurret : MainTurret {
 				magazines[] = {"100Rnd_762x51_M240"};
@@ -246,8 +243,7 @@ class CfgVehicles {
 	};
 	class AH6_Base_EP1;
 	//class AH6X_EP1: AH6_Base_EP1 {};
-	class AH6X_DZ: AH6_Base_EP1
-	{
+	class AH6X_DZ: AH6_Base_EP1 {
 		displayname = "AH6X Little Bird";
 		displaynameshort = "AH6X_DZ";
 		audible = 6;
@@ -290,7 +286,6 @@ class CfgVehicles {
 		transportMaxMagazines = 200;
         transportmaxbackpacks = 5;
 	};
-
 	class ArmoredSUV_PMC;
 	class ArmoredSUV_PMC_DZ : ArmoredSUV_PMC { 
 		scope = 2; 
@@ -1016,8 +1011,7 @@ class CfgVehicles {
 	};	
 	class Bag_Base_EP1;	
 	class Bag_Base_BAF;
-	class DZ_Vest_EP1: Bag_Base_EP1
-	{
+	class DZ_Vest_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Vest (SOTG)";
 		picture = "\dayz_krayz\textures\icons\vest.paa";
@@ -1027,8 +1021,7 @@ class CfgVehicles {
 		transportMaxWeapons = 0;
 		transportMaxMagazines = 12;
 	};
-	class DZ_Patrol_Pack_EP1: Bag_Base_EP1
-	{
+	class DZ_Patrol_Pack_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Patrol Pack (coyote)";
 		picture = "\ca\weapons_e\data\icons\backpack_US_ASSAULT_COYOTE_CA.paa";
@@ -1050,8 +1043,7 @@ class CfgVehicles {
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 1;
 	};
-	class DZ_Assault_Pack_EP1: Bag_Base_EP1
-	{
+	class DZ_Assault_Pack_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Assault Pack (ACU)";
 		picture = "\ca\weapons_e\data\icons\backpack_US_ASSAULT_CA.paa";
@@ -1061,8 +1053,7 @@ class CfgVehicles {
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 12;
 	};
-	class DZ_Czech_Vest_Puch: Bag_Base_EP1
-	{
+	class DZ_Czech_Vest_Puch: Bag_Base_EP1 {
 		displayname = "Czech Vest Pouch";
 		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa";
 		mapsize = 2;
@@ -1072,8 +1063,7 @@ class CfgVehicles {
 		transportmaxmagazines = 12;
 		transportmaxweapons = 0;
 	};
-	class DZ_ALICE_Pack_EP1: Bag_Base_EP1
-	{
+	class DZ_ALICE_Pack_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "ALICE Pack (kitty)";
 		picture = "\ca\weapons_e\data\icons\backpack_TK_ALICE_CA.paa";
@@ -1083,8 +1073,7 @@ class CfgVehicles {
 		transportMaxWeapons = 2;
 		transportMaxMagazines = 22;
 	};
-	class DZ_ALICE_Pack2_EP1: Bag_Base_EP1
-	{
+	class DZ_ALICE_Pack2_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "ALICE Pack (ranger)";
 		picture = "\ca\weapons_e\data\icons\backpack_TK_ALICE_CA.paa";
@@ -1094,8 +1083,7 @@ class CfgVehicles {
 		transportMaxWeapons = 2;
 		transportMaxMagazines = 22;
 	};
-	class DZ_TK_Assault_Pack_EP1 : Bag_Base_BAF
-	{
+	class DZ_TK_Assault_Pack_EP1 : Bag_Base_BAF {
 		scope = 2;
 		displayName = "Survival ACU";
 		mapSize = 2;
@@ -1105,9 +1093,7 @@ class CfgVehicles {
 		transportMaxWeapons = 2;
 		transportMaxMagazines = 16;
 	};
-
-	class DZ_British_ACU : Bag_Base_BAF
-	{
+	class DZ_British_ACU : Bag_Base_BAF {
 		scope = 2;
 		displayName = "British Assault Pack";
 		mapSize = 2;
@@ -1117,8 +1103,7 @@ class CfgVehicles {
 		transportMaxWeapons = 4;
 		transportMaxMagazines = 24;
 	};
-	class DZ_CivilBackpack_EP1: Bag_Base_EP1    
-	{
+	class DZ_CivilBackpack_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Czech Backpack";
 		picture = "\ca\weapons_e\data\icons\backpack_ACR_CA.paa";
@@ -1128,8 +1113,7 @@ class CfgVehicles {
 		transportMaxWeapons = 4;
 		transportMaxMagazines = 24;
 	};
-	class DZ_Backpack_EP1: Bag_Base_EP1
-	{
+	class DZ_Backpack_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Camo Backpack (coyote)";
 		picture = "\ca\weapons_e\data\icons\backpack_US_CA.paa";
@@ -1139,8 +1123,7 @@ class CfgVehicles {
 		transportMaxWeapons = 6;
 		transportMaxMagazines = 32;
 	};
-	class DZ_Backpack2_EP1: Bag_Base_EP1
-	{
+	class DZ_Backpack2_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Backpack (coyote)";
 		picture = "\ca\weapons_e\data\icons\backpack_US_CA.paa";
@@ -1150,8 +1133,7 @@ class CfgVehicles {
 		transportMaxWeapons = 5;
 		transportMaxMagazines = 28;
 	};
-	class DZ_LargeGunBag_EP1: Bag_Base_EP1
-	{
+	class DZ_LargeGunBag_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Large Gunbag";
 		model = "\dayz_krayz\textures\backpacks\StaticX.p3d"; 
@@ -1161,19 +1143,7 @@ class CfgVehicles {
 		transportMaxWeapons = 10;
 		transportMaxMagazines = 45;
 	};
-	class DZ_GunBag_EP1: Bag_Base_EP1
-	{
-		scope = 2;
-		displayName = "Gunbag";
-		model = "\ca\weapons_e\AmmoBoxes\StaticY.p3d"; 
-		picture = "\ca\weapons_e\data\icons\staticY_CA.paa"; 
-		icon = "\ca\weapons_e\data\icons\mapIcon_backpack_CA.paa"; 
-		mapsize = 2;
-		transportMaxWeapons = 6;
-		transportMaxMagazines = 8;
-	};
-	class DZ_CompactPack_EP1: Bag_Base_EP1
-	{
+	class DZ_CompactPack_EP1: Bag_Base_EP1 {
 		scope = 2;
 		displayName = "Compact Pack"; 
 		picture = "\ca\weapons_e\data\icons\backpack_RPG_CA.paa"; 
@@ -1183,8 +1153,7 @@ class CfgVehicles {
 		transportMaxWeapons = 1;
 		transportMaxMagazines = 18;
 	};
-	class DZ_TerminalPack_EP1: Bag_Base_EP1
-	{
+	class DZ_TerminalPack_EP1: Bag_Base_EP1 {
 		scope = 2;
 	    displayName = "Terminal Pack"; 
 		picture = "\ca\weapons_e\data\icons\backpack_US_ASSAULT_CA.paa"; 
@@ -1196,8 +1165,7 @@ class CfgVehicles {
 	};
 	//An2_TK_EP1
 	class An2_Base_EP1;
-	class AN2_DZ: An2_Base_EP1
-	{
+	class AN2_DZ: An2_Base_EP1 {
 		displayname = "AN2 Cargo Plane";
 		displaynameshort = "AN2_DZ";
 		scope = 2;
@@ -1220,20 +1188,16 @@ class CfgVehicles {
 	class House {
 		class DestructionEffects;
 	};
-	
 	// This parent class is made to make referring to these objects easier later with allMissionObjects
 	class SpawnableWreck : House {};
-
-	class UH1Wreck_DZ: SpawnableWreck
-	{
+	class UH1Wreck_DZ: SpawnableWreck {
 		model = "\ca\air2\UH1Y\UH1Y_Crashed.p3d";
 		icon = "\ca\air2\data\UI\icon_UH1Y_CA.paa";
 		mapSize = 15;
 		displayName = "Crashed UH-1Y";
 		vehicleClass = "Wrecks";
 	};
-	class UH60Wreck_DZ: SpawnableWreck
-	{
+	class UH60Wreck_DZ: SpawnableWreck {
 		model = "\Ca\Misc_E\Wreck_UH60_EP1.p3d";
 		icon = "ca\Misc_E\data\Icons\Icon_uh60_wreck_CA";
 		mapSize = 15;
@@ -1242,21 +1206,16 @@ class CfgVehicles {
 	};
 	class Strategic;
 	class NonStrategic;
-
-	class Land_A_FuelStation_Feed: Strategic
-	{
+	class Land_A_FuelStation_Feed: Strategic {
 		model = "\ca\structures\House\A_FuelStation\A_FuelStation_Feed";
 		transportFuel = 0; //50000;
 		nameSound = "fuelstation";
 	};
-
-	class Land_Ind_FuelStation_Feed_EP1: Strategic
-	{
+	class Land_Ind_FuelStation_Feed_EP1: Strategic {
 		model = "\ca\Structures_E\Ind\Ind_FuelStation\Ind_FuelStation_Feed_ep1.p3d"; 
 		transportFuel = 0; 
 		nameSound = "fuelstation";
 	};
-
 	class FuelStation : Strategic { 
 	  icon = "\Ca\buildings\Icons\i_fuel_CA.paa"; 
 	  scope = 0; 
@@ -1266,69 +1225,57 @@ class CfgVehicles {
 	  accuracy = 0.5; 
 	  transportFuel = 0; 
 	};
-
 	class Land_FuelStation_Feed_PMC : Strategic { 
 	  model = "\ca\Structures_PMC\Ind\FuelStation\FuelStation_Feed_PMC.p3d"; 
 	  transportFuel = 0; 
 	  nameSound = "fuelstation"; 
 	};
-	
-	class Ship: AllVehicles 
-	{
+	class Ship: AllVehicles {
         displayName = "Ship";
         transportMaxMagazines = 2000;
         transportMaxWeapons = 200;
         transportMaxBackpacks = 40;
 	};
-    class SmallShip: Ship 
-	{
+    class SmallShip: Ship {
         displayName = "Small Ship";
         transportMaxMagazines = 100;
         transportMaxWeapons = 20;
 	};
-    class BigShip: Ship 
-	{
+    class BigShip: Ship {
         displayName = "Big Ship";
         transportMaxMagazines = 500;
         transportMaxWeapons = 200;
 	};
-    class Fishing_Boat: Ship 
-	{
+    class Fishing_Boat: Ship {
         displayName = "Fishing boat";
 		maxSpeed = 40;
         transportMaxMagazines = 400;
         transportMaxWeapons = 40;
         transportMaxBackpacks = 8;
 	};
-    class Smallboat_1: Ship 
-	{
+    class Smallboat_1: Ship {
         displayName = "Small boat";
 		maxSpeed = 30;    
 		transportMaxMagazines = 200;
         transportMaxWeapons = 20;
         transportMaxBackpacks = 4;
 	};
-    class smallboat_2: Smallboat_1 
-	{
+    class smallboat_2: Smallboat_1 {
         displayName = "Small boat II";
 	};
-    class Boat: Ship 
-	{
+    class Boat: Ship {
         transportMaxMagazines = 100;
         transportMaxWeapons = 10;
         transportMaxBackpacks = 2;
 	};
-    class RHIB: Boat 
-	{
+    class RHIB: Boat {
         displayName = "RHIB";
 	};
-    class RHIB2Turret: RHIB 
-	{
+    class RHIB2Turret: RHIB {
         displayName = "RHIB (Mk19)";
 	};
 	class M113Ambul_UN_EP1;
-	class M113Ambul_UN_EP1_DZ: M113Ambul_UN_EP1
-	{
+	class M113Ambul_UN_EP1_DZ: M113Ambul_UN_EP1 {
 		scope = 2;
 		side = 2;
 		crew = "";
@@ -1344,8 +1291,7 @@ class CfgVehicles {
         transportmaxbackpacks = 4;
 	};
 	class M113Ambul_TK_EP1;
-	class M113Ambul_TK_EP1_DZ: M113Ambul_TK_EP1
-	{
+	class M113Ambul_TK_EP1_DZ: M113Ambul_TK_EP1 {
 		scope = 2;
 		side = 2;
 		crew = "";
@@ -1361,8 +1307,7 @@ class CfgVehicles {
         transportmaxbackpacks = 4;
 	};
 	class KamazRefuel;
-	class KamazRefuel_DZ: KamazRefuel
-	{
+	class KamazRefuel_DZ: KamazRefuel {
 		scope = 2;
 		side = 2;
 		crew = "";
@@ -1374,8 +1319,7 @@ class CfgVehicles {
 		fuelCapacity = 10000;
 	};
 	class UralRefuel_TK_EP1;
-	class UralRefuel_TK_EP1_DZ: UralRefuel_TK_EP1
-	{
+	class UralRefuel_TK_EP1_DZ: UralRefuel_TK_EP1 {
 		scope = 2;
 		side = 2;
 		crew = "";
@@ -1387,8 +1331,7 @@ class CfgVehicles {
 		fuelCapacity = 10000;
 	};
 	class MtvrRefuel_DES_EP1;
-	class MtvrRefuel_DES_EP1_DZ: MtvrRefuel_DES_EP1
-	{
+	class MtvrRefuel_DES_EP1_DZ: MtvrRefuel_DES_EP1 {
 		scope = 2;
 		side = 2;
 		crew = "";
@@ -1400,8 +1343,7 @@ class CfgVehicles {
 		fuelCapacity = 10000;
 	};
 	class V3S_Refuel_TK_GUE_EP1;
-	class V3S_Refuel_TK_GUE_EP1_DZ: V3S_Refuel_TK_GUE_EP1
-	{
+	class V3S_Refuel_TK_GUE_EP1_DZ: V3S_Refuel_TK_GUE_EP1 {
 		scope = 2;
 		side = 2;
 		crew = "";

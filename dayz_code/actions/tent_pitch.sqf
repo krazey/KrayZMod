@@ -1,6 +1,7 @@
 private["_position","_tent","_location","_isOk","_backpack","_tentType","_trg","_key"];
 //check if can pitch here
-if(safezonebuild) exitWith { cutText ["You can not place Tent in a safezone." , "PLAIN DOWN"]; };
+if(safezonebuild) exitWith { cutText ["You can not place Tents in a safezone." , "PLAIN DOWN"]; };
+if(citybuild) exitWith { cutText ["You can not place Tents in a Village or City." , "PLAIN DOWN"]; };
 call gear_ui_init;
 _playerPos = 	getPosATL player;
 _item = _this;

@@ -13,6 +13,7 @@ _inVehicle = (_vehicle != player);
 _isClose = ((player distance _menClose) < ((sizeOf typeOf _menClose) / 2));
 _bag = unitBackpack player;
 _classbag = typeOf _bag;
+_isPZombie = cursorTarget isKindOf "PZombie_VB";
 
 if (_inVehicle) then {
 	r_player_lastVehicle = _vehicle;
@@ -39,7 +40,7 @@ if (_inVehicle) then {
 	r_player_lastSeat = [];
 };
 
-if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unconscious and _isClose) then {
+if (_hasPatient and !_isPZombie and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unconscious and _isClose) then {
 	_unit = 		cursorTarget;
 	_isDisallowRefuel = typeOf _unit in ["M240Nest_DZ"];
 	player reveal _unit;
@@ -174,6 +175,7 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 		};
 		
 	};
+	/*
 	if ((_unit isKindOf "Building")) then {
 		_type = TypeOf(_unit);
 		_typeVeh = getText(configFile >> "cfgVehicles" >> _type >> "displayName");
@@ -200,6 +202,7 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 			r_player_actions set [count r_player_actions,_action];
 		};
 	};
+	*/
 	if (r_action) then {
 		r_action_targets = r_action_targets + [_unit];
 	};
@@ -253,7 +256,7 @@ if ((!_isClose or !_hasPatient) and r_action) then {
 };
 
 //Pain Effects
-//if (r_player_inpain and !r_player_unconscious) then {
-//	playSound "breath_1";
-//	addCamShake [2, 1, 25];
-//};
+if (r_player_inpain and !r_player_unconscious) then {
+	playSound "breath_1";
+	addCamShake [2, 1, 25];
+};

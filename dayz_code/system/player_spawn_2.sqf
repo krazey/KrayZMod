@@ -4,6 +4,7 @@ _timeOut = 	0;
 _messTimer = 0;
 _lastSave = 0;
 _lastTemp = dayz_temperatur;
+_mylastPos = getPosATL player;
 _debug = getMarkerpos "respawn_west";
 //_isBandit = false;
 //_isHero = false;

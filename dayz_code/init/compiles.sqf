@@ -355,7 +355,7 @@ if (!isDedicated) then {
 		_zombies = count (getPos player nearEntities [["zZombie_Base_KR"], 11000]);
 		_zombiesA = {alive _x} count (getPos player nearEntities [["zZombie_Base_KR"], 11000]);
 		_server_name 	= "kraZey.de";
-		_server_name_info 	= "toggle debug on/off:<br/>right ctrl";
+		_server_debug_info 	= "toggle debug on/off:<br/>right ctrl";
 		
 		hintSilent parseText format ["
 		<t size='1.25'font='Zeppelin33'align='center'>
@@ -385,7 +385,7 @@ if (!isDedicated) then {
 		<t size='1.1' font='Bitstream'align='right'color='#D4D4D4'>
 		%12</t><br/>
 
-		<br/><br/>
+		<br/>
 
 		<t size='1.1'font='Zeppelin33'align='left'color='#6BC85B'>
 		Murders:</t>
@@ -404,6 +404,12 @@ if (!isDedicated) then {
 
 		<t size='1.1'font='Bitstream'align='right'color='#D4D4D4'>
 		%7</t><br/>
+		
+		<t size='1.1'font='Zeppelin33'align='left'color='#6BC85B'>
+		Zombies Alive:</t>
+
+		<t size='1.1'font='Bitstream'align='right'color='#D4D4D4'>
+		%8%</t><br/>
 
 		<t size='1.1'font='Zeppelin33'align='center'color='#6BC85B'>
 		<br/>%10</t><br/>
@@ -420,8 +426,7 @@ if (!isDedicated) then {
 		_zombiesA, //8
 		_zombies, //9
 		_server_name, //10
-		_server_name_info, //11
-		(dayz_skilllevel)];
+		_server_debug_info]; //11
 			sleep 1;
 		};
 	};

@@ -25,7 +25,7 @@ MaxHeliCrashes = 5; // Default = 5
 MaxVehicleLimit = 300; // Default = 50
 MaxDynamicDebris = 500; // Default = 100
 dayz_MapArea = 14000; // Default = 10000
-dayz_maxLocalZombies = 40; // Default = 40 
+dayz_maxLocalZombies = 28; // Default = 40 
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)

@@ -118,6 +118,8 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	_isDog =  (cursorTarget isKindOf "DZ_Pastor" || cursorTarget isKindOf "DZ_Fin");
 	_isZombie = cursorTarget isKindOf "zZombie_base_KR";
 	_isDestructable = cursorTarget isKindOf "BuiltItems";
+	_MGNest_M240_base = cursorTarget isKindOf "WarfareBMGNest_M240_base";
+	_isConstuctables = (cursorTarget isKindOf "Constuctables" || cursorTarget isKindOf "WarfareBMGNest_M240_base");
 	_isWreck = typeOf cursorTarget in ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1","Rubbish2"];
 	_isRemovable = typeOf cursorTarget in ["Fence_corrugated_DZ","ParkBench_DZ"];
 	_isDisallowRepair = typeOf cursorTarget in ["M240Nest_DZ"];
@@ -155,7 +157,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	
 
 	// Allow Owner to lock and unlock vehicle  
-	if(_isVehicle and !_isMan and _canDo and _ownerID != "0") then {
+	if(_isVehicle and !_MGNest_M240_base and !_isMan and _canDo and _ownerID != "0") then {
 			
 		if (s_player_lockUnlock_crtl < 0) then {
 
@@ -403,7 +405,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	};
 	
 	//Allow owner to de-construct Constuctables
-	if(cursorTarget isKindOf "Constuctables" and _canDo and _ownerID != "0" and _ownerID == krayzUID and (player distance cursorTarget < 5)) then {
+	if(_isConstuctables and _canDo and _ownerID != "0" and _ownerID == krayzUID and (player distance cursorTarget < 5)) then {
 		if (s_player_deleteConstuctables < 0) then {
 			s_player_deleteConstuctables = player addAction [format[localize "str_actions_delete",_text], "\z\addons\dayz_code\actions\remove.sqf",cursorTarget, 1, true, true, "", ""];
 		};

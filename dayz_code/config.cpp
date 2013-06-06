@@ -20,7 +20,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"smk_anims","r3f_armes","asc_eu_lights","ksk_mod","dayz_krayz","dayz_equip","dayz_weapons","dayz_sfx","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
+		requiredAddons[] = {"smk_anims","r3f_armes","asc_eu_lights","ksk_mod","cba_main","dayz_krayz","dayz_equip","dayz_weapons","dayz_sfx","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
 	};
 	class DZ_DebriefingRemoved
 	{
@@ -46,7 +46,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.130";
+		version = "2.131a";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -108,7 +108,7 @@ class CfgInGameUI {
     class PeripheralVision  {
         cueColor[] = {0,0,0,0};
     };
-	class MPTable {
+	/*class MPTable {
 		color[] = {0,0,0,0}; //{0.7,0.7,0.7,1};
 		colorTitleBg[] = {0,0,0,0}; //{0.1,0.15,0.15,1};
 		colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.9};
@@ -167,7 +167,7 @@ class CfgInGameUI {
 				picture = ""; //"\ca\ui\data\stats_total_ca.paa";
 			};
 		};
-	};
+	};*/
 };
 class RscPictureGUI {
 	access = 0;
@@ -470,6 +470,7 @@ class CfgBuildingLoot {
 			{ "ItemKnife","generic" },
 			{ "ItemMatchbox","generic" },
 			{ "","generic" },
+			{ "","krayzfood" },
 			{ "LeeEnfield","weapon" },
 			{ "revolver_EP1","weapon" },
 
@@ -505,6 +506,7 @@ class CfgBuildingLoot {
 			0.08, //knife
 			0.06, //matchbox
 			1, //generic
+			0.5, //krayzfood
 			0.06, //enfield
 			0.04, //revolver
 			0.05, //assaultpack (12)
