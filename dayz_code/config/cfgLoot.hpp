@@ -143,6 +143,18 @@ class CfgLoot {
 			0.10 //cantylers
 		}
 	};
+	krayzfood[] = {
+		{
+			"ItemSodaTaiwendo",
+			"FoodCanFletcher",
+			"FoodKrazey"
+		},
+		{
+			0.10, //sodataiwendo
+			0.10, //canflecther
+			0.10 //krazeycookies
+		}
+	};
 	generic[] = {
 		{
 			"TrashTinCan_KR",
@@ -467,7 +479,7 @@ class CfgLoot {
 			0.02,
 			0.05,
 			0.02,
-			0.01,
+			0.01
 		}
 	};
 	militaryclothes[] = {
@@ -499,7 +511,7 @@ class CfgLoot {
 			0.02, //Skin_Soldier_TL
 			0.02, //Skin_Soldier_Sniper
 			0.02, //Skin_Soldier_Bodyguard_AA12
-			0.02, //Skin_CZ_Special_Forces_GL_DES
+			0.02 //Skin_CZ_Special_Forces_GL_DES
 		}
 	};
 	specialclothes[] = {
@@ -523,7 +535,7 @@ class CfgLoot {
 			0.01, //Skin_TK_INS_Soldier
 			0.01, //Skin_TK_INS_Warlord
 			0.01, //Skin_SurvivorWcombat
-			0.03, //Skin_SurvivorWdesert
+			0.03 //Skin_SurvivorWdesert
 		}
 	};
 };

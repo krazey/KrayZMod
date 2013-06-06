@@ -290,7 +290,7 @@ class CfgMagazines {
 		count = 1;
 		bloodRegen = 1200;
 		displayName = "KraZey Cookies";
-		descriptionShort = "Smart & KraZey Cookies - Epic and horny in taste.";
+		descriptionShort = "Smart and KraZey Cookies - Epic and horny in taste.";
 		model = "\dayz_krayz\models\kraZey.p3d";
 		picture = "\dayz_krayz\textures\food\equip_kraZey_CA.paa";
 	};
