@@ -443,7 +443,7 @@ class CfgMagazines {
 	class FoodCanFletcherEmpty : TrashTinCan_KR {
 		scope = public;
 		count = 1;
-		model = "\dayz_krayz\models\models\can_fletcher_clean_empty.p3d";
+		model = "\dayz_krayz\models\can_fletcher_clean_empty.p3d";
 		picture = "\dayz_krayz\textures\food\equip_can_fletcher_clean_empty_ca.paa";
 		displayName = "Tin Can";
 		descriptionShort = "An empty can of Fletcher's Fab Balls.";

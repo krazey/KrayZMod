@@ -8,6 +8,8 @@ _caller removeAction _action;
 _callerID = _caller getVariable "characterID";
 _targetID = _target getVariable "characterID";
 
+diag_log format["Tag as Friendly, Caller/Target: %1 / %2", _callerID, _targetID];
+
 _friendlies = _caller getVariable ["friendlies", []];
 _friendlies set [count _friendlies, _targetID];
 _caller setVariable ["friendlies", _friendlies, true];

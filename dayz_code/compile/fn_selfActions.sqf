@@ -120,6 +120,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	_isDestructable = cursorTarget isKindOf "BuiltItems";
 	_MGNest_M240_base = cursorTarget isKindOf "WarfareBMGNest_M240_base";
 	_isConstuctables = (cursorTarget isKindOf "Constuctables" || cursorTarget isKindOf "WarfareBMGNest_M240_base");
+	_isKit = (cursorTarget isKindOf "CanvasHut_DZ" || cursorTarget isKindOf "ParkBench_DZ" || cursorTarget isKindOf "OutHouse_DZ" || cursorTarget isKindOf "StorageShed_DZ" || cursorTarget isKindOf "WoodShack_DZ" || cursorTarget isKindOf "Wooden_shed_DZ" || cursorTarget isKindOf "LightPole_DZ");
 	_isWreck = typeOf cursorTarget in ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1","Rubbish2"];
 	_isRemovable = typeOf cursorTarget in ["Fence_corrugated_DZ","ParkBench_DZ"];
 	_isDisallowRepair = typeOf cursorTarget in ["M240Nest_DZ"];
@@ -334,15 +335,15 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_lockvault = -1;
 	};
 
-	//Allow owner to de-construct/pack buildings - FAST (hbarrier only)
-	if(cursorTarget isKindOf "HBarrier" and _canDo and _ownerID != "0" and _ownerID == krayzUID and (player distance cursorTarget < 3)) then {
+	//Allow owner to remove building kits
+	if(_isKit and _canDo and _ownerID != "0" and _ownerID == krayzUID and (player distance cursorTarget < 3)) then {
 
-		if (s_player_rmvhbarrier < 0) then {
-			s_player_rmvhbarrier = player addAction ["<t color='#fff000'>Remove Hesco Barrier</t>", "\z\addons\dayz_code\actionsadd\hbarrier_remove.sqf",cursorTarget, 0, false, true, "",""];
+		if (s_player_rmvkit < 0) then {
+			s_player_rmvkit = player addAction ["<t color='#fff000'>Remove Kit</t>", "\z\addons\dayz_code\actionsadd\kit_remove.sqf",cursorTarget, 0, false, true, "",""];
 		};
 	} else {
-		player removeAction s_player_rmvhbarrier;
-		s_player_rmvhbarrier = -1;
+		player removeAction s_player_rmvkit;
+		s_player_rmvkit = -1;
 	};
 	
 	//Allow owner to unlock gate
@@ -712,8 +713,8 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_fillgen = -1; 
 	
 	//hbarrier
-	player removeAction s_player_rmvhbarrier;
-	s_player_rmvhbarrier = -1;
+	player removeAction s_player_rmvkit;
+	s_player_rmvkit = -1;
 	
    //unlock & lock gate
 	player removeAction s_player_unlockgate;

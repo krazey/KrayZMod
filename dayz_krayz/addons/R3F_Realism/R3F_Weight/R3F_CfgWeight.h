@@ -1188,11 +1188,11 @@ class CfgWeight
 		{
 			weight = 0.25;
 		};
-		class ItemFlashlight 
+		class ItemFlashlight_KR 
 		{
 			weight = 0.1;
 		};
-		class ItemFlashlightRed 
+		class ItemFlashlightRed_KR 
 		{
 			weight = 0.1;
 		};
@@ -1227,7 +1227,7 @@ class CfgWeight
 		{
 			weight = 0.005;
 		};
-		class ItemToolbox   
+		class ItemToolbox_KR   
 		{
 			weight = 1;
 		};
@@ -1295,6 +1295,10 @@ class CfgWeight
 			weight = 1;
 		};
 		class Skin_Bandit1_DZ   
+		{
+			weight = 1;
+		};
+		class Skin_Bandit2_DZ   
 		{
 			weight = 1;
 		};
@@ -1401,7 +1405,7 @@ class CfgWeight
 		{
 			weight = 100; 
 		};
-		class PartWoodPile 
+		class PartWoodPile_KR 
 		{
 			weight = 0.5;
 		};
@@ -1425,7 +1429,7 @@ class CfgWeight
 		{
 			weight = 30;
 		};
-		class PartGeneric 
+		class PartGeneric_KR 
 		{
 			weight = 5;
 		};
@@ -1441,6 +1445,14 @@ class CfgWeight
 		{
 			weight = 1;
 		};
+		class ItemFuelBarrel
+		{
+			weight = 100;
+		};
+		class ItemFuelBarrelEmpty
+		{
+			weight = 2;
+		};
 		class ItemTent 
 		{
 			weight = 5;
@@ -1449,11 +1461,11 @@ class CfgWeight
 		{
 			weight = 1;
 		};
-		class ItemTankTrap 
+		class ItemTankTrap_KR 
 		{
 			weight = 5;
 		};
-		class ItemWire 
+		class ItemWire_KR 
 		{
 			weight = 2.5;
 		};
@@ -1529,7 +1541,6 @@ class CfgWeight
 		{
 			weight = 0.001;
 		};
-		
 		class 7Rnd_45ACP_1911 
 		{
 			weight = 0.02;
@@ -1541,7 +1552,7 @@ class CfgWeight
 
 
 
-		class ItemSandbag 
+		class ItemSandbag_KR 
 		{
 			weight = 10;
 		};
@@ -1604,10 +1615,6 @@ class CfgWeight
 		class m240_nest_kit
 		{
 			weight = 45;
-		};
-		class rusty_gate_kit
-		{
-			weight = 25;
 		};
 		class outhouse_kit
 		{

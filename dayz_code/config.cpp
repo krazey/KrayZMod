@@ -46,7 +46,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.131b";
+		version = "2.132";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -355,9 +355,9 @@ class CfgSurvival {
 			sex = "male";
 			playerModel = "Bandit1_DZ";
 		};
-		class Skin_Admin_DZ: Default {
+		class Skin_Bandit2_DZ: Default {
 			sex = "male";
-			playerModel = "Admin_DZ";
+			playerModel = "Bandit2_DZ";
 		};
 		class Skin_SOTG_DZ: Default {
 			sex = "male";
@@ -506,7 +506,7 @@ class CfgBuildingLoot {
 			0.08, //knife
 			0.06, //matchbox
 			1, //generic
-			0.5, //krayzfood
+			0.02, //krayzfood
 			0.06, //enfield
 			0.04, //revolver
 			0.05, //assaultpack (12)

@@ -125,8 +125,8 @@ if (!isDedicated) then {
 	//paint weapons
 	player_weapon_desert =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actionsadd\player_weapon_desert.sqf";
 	
-	//remove hbbarrier (owner only)
-	player_rmvhbarrier =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_rmvhbarrier.sqf";
+	//remove kits (owner only)
+	player_rmvkit =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_rmvkit.sqf";
 	
 	//lock & unlock gate1
 	player_unlockGate =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compileadd\player_unlockGate.sqf";
@@ -380,7 +380,7 @@ if (!isDedicated) then {
 		%4</t><br/>
 		
 		<t size='1.1'font='Bitstream'align='left'color='#6BC85B'>
-		Days Survived:</t>
+		In Village/City:</t>
 
 		<t size='1.1' font='Bitstream'align='right'color='#D4D4D4'>
 		%12</t><br/>
@@ -426,7 +426,9 @@ if (!isDedicated) then {
 		_zombiesA, //8
 		_zombies, //9
 		_server_name, //10
-		_server_debug_info]; //11
+		_server_debug_info, //11
+		(citybuild) //12
+		];
 			sleep 1;
 		};
 	};

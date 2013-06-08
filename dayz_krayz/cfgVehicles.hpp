@@ -6,7 +6,6 @@ class CfgVehicles
 	class BuiltItems2: NonStrategic{};
 	class HouseBase;				
 	class Constuctables: HouseBase {class DestructionEffects;};
-	class Constuctables2: HouseBase {class DestructionEffects;};
 	class LandVehicle;
 	class StaticWeapon: LandVehicle {class Turrets;};
 	class StaticMGWeapon: StaticWeapon {class AnimationSources; class Turrets: Turrets {class MainTurret;};};
@@ -94,7 +93,7 @@ class CfgVehicles
 		picture = "\CA\ui\data\icon_wf_barriers_ca.paa";
 		removeoutput[] = {{"ItemHBarrierCube",1}};
 	};
-	class HBarrier : Constuctables2 {
+	class HBarrier : Constuctables {
 		scope = 2;
 		destrType = "DestructBuilding";
 		animated = 0;
@@ -108,7 +107,7 @@ class CfgVehicles
 		mapSize = 7;
 		armor = 500;
 		displayName = "Hesco Barrier";
-		constructioncount = 5;
+		constructioncount = 10;
 		accuracy = 0.3;	// accuracy needed to recognize type of this target
 		transportAmmo = 0;
 		transportRepair = 0;

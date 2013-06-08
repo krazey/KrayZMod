@@ -152,7 +152,7 @@ class CfgLoot {
 		{
 			0.10, //sodataiwendo
 			0.10, //canflecther
-			0.10 //krazeycookies
+			0.05 //krazeycookies
 		}
 	};
 	generic[] = {

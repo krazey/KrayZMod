@@ -37,7 +37,7 @@ if(_IsNearPlot >= 1) then {
 	_ownerID = _nearestPole getVariable["CharacterID","0"];
 
 	// check if friendly to owner
-	if(dayz_playerUID != _ownerID) then {
+	if(krayzUID != _ownerID) then {
 		
 		_friendlies		= player getVariable ["friendlyTo",[]];
 		// check if friendly to owner
