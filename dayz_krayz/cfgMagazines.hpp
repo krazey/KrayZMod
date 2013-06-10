@@ -921,12 +921,14 @@ class CfgMagazines
 		picture = "\dayz_equip\textures\equip_fencewire_kit_CA.paa";
 		descriptionShort = "$STR_EQUIP_DESC_23";
 		class ItemActions {
+			/*
 			class Build {
 				text = "$STR_ACTIONS_BUILD";
 				script = "spawn player_build;";
 				requiretools[] = {"ItemEtool"};
 				create = "Wire_cat1_KR";
 			};
+			*/
 			class Crafting {
 				text = "Wire (CAT2)";
 				script = "spawn player_craftItem;";

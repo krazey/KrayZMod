@@ -309,7 +309,6 @@ class CfgLoot {
 			"FlareGreen_M203",
 			"1Rnd_Smoke_M203",		
 			"200Rnd_556x45_M249",
-			"HandGrenade_west",
 			"SmokeShell",
 			"SmokeShellRed",
 			"SmokeShellGreen",
@@ -367,7 +366,6 @@ class CfgLoot {
 			0.01, //flaregreen m203
 			0.01, //1rnd smoke m203
 			0.01, //200rnd m249
-			0.01, //grenade
 			0.04, //smoke
 			0.02, //smokered
 			0.02, //smokegreen
@@ -441,7 +439,7 @@ class CfgLoot {
 			"ItemBandage",
 			"ItemPainkiller",
 			"ItemWire_KR",
-			"ItemTankTrap_KR",
+			"ItemTankTrap_KR"
 		},
 		{
 			0.09,
@@ -469,7 +467,7 @@ class CfgLoot {
 			"Skin_Rocker2_DZ",
 			"Skin_SurvivorW3_DZ",
 			"Skin_SurvivorWpink_DZ",
-			"Skin_SurvivorWurban_DZ",
+			"Skin_SurvivorWurban_DZ"
 		},
 		{
 			0.01,
@@ -496,7 +494,7 @@ class CfgLoot {
 			"Skin_Soldier_TL_PMC_DZ",
 			"Skin_Soldier_Sniper_PMC_DZ",
 			"Skin_Soldier_Bodyguard_AA12_PMC_DZ",
-			"Skin_CZ_Special_Forces_GL_DES_EP1_DZ",
+			"Skin_CZ_Special_Forces_GL_DES_EP1_DZ"
 		},
 		{
 			0.03, //Skin_Camo1
@@ -524,7 +522,7 @@ class CfgLoot {
 			"Skin_TK_INS_Soldier_EP1_DZ",
 			"Skin_TK_INS_Warlord_EP1_DZ",
 			"Skin_SurvivorWcombat_DZ",
-			"Skin_SurvivorWdesert_DZ",
+			"Skin_SurvivorWdesert_DZ"
 		},
 		{
 			0.01, //Skin_Ins_Soldier

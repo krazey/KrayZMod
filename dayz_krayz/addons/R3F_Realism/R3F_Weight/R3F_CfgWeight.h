@@ -701,6 +701,18 @@ class CfgWeight
 		{
 			weight = 0.5;
 		};
+		class R3F_25Rnd_556x45_FAMAS
+		{
+			weight = 0.5;
+		};
+		class R3F_25Rnd_556x45_TRACER_FAMAS
+		{
+			weight = 0.5;
+		};
+		class R3F_30Rnd_556x45_SD_FAMAS
+		{
+			weight = 0.5;
+		};
 		class 30Rnd_556x45_G36
 		{
 			weight = 0.5;
@@ -805,6 +817,14 @@ class CfgWeight
 		{
 			weight = 0.5;
 		};
+		class R3F_7Rnd_127x99_PGM
+		{
+			weight = 0.5;
+		};
+		class R3F_7Rnd_127x99_PEI_PGM
+		{
+			weight = 0.5;
+		};
 		class 5Rnd_762x51_M24
 		{
 			weight =  0.2;
@@ -812,7 +832,27 @@ class CfgWeight
 		class 20Rnd_762x51_DMR
 		{
 			weight = 0.5;
-		};		
+		};
+		class R3F_20Rnd_762x51_KH417
+		{
+			weight = 0.5;
+		};
+		class R3F_20Rnd_762x51_TRACER_HK417
+		{
+			weight = 0.5;
+		};
+		class R3F_20Rnd_762x51_SD_HK417
+		{
+			weight = 0.5;
+		};
+		class R3F_10Rnd_762x51_FRF2
+		{
+			weight = 0.5;
+		};
+		class R3F_10Rnd_762x51_SD_FRF2
+		{
+			weight = 0.5;
+		};
 		class 8Rnd_B_Beneli_Pellets
 		{
 			weight = 0.3;
@@ -825,7 +865,16 @@ class CfgWeight
 		{
 			weight = 10;
 		};
+		class R3F_200Rnd_556x45_MINIMI
+		{
+			weight = 10;
+		};
+		cl
 		class 100Rnd_762x51_M240
+		{
+			weight = 8;
+		};
+		class R3F_100Rnd_762x51_MINIMI
 		{
 			weight = 8;
 		};
@@ -1564,7 +1613,7 @@ class CfgWeight
 		{
 			weight = 25;
 		};
-		class ItemHBarrier_Cube 
+		class ItemHBarrierCube 
 		{
 			weight = 25;
 		};
