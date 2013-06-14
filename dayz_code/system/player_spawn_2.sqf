@@ -69,7 +69,7 @@ while {true} do {
 	if (_timeOut > 150) then {
 		_timeOut = 0;
 		if (_humanity < 2500) then {
-			_humanity = _humanity + 25;
+			_humanity = _humanity + 50;
 			_humanity = _humanity min 2500;
 			player setVariable ["humanity",_humanity,true];
 		};
@@ -80,24 +80,24 @@ while {true} do {
 		if (_model == "Survivor2_DZ" || _model == "Survivor3_DZ") then {
 			[dayz_playerUID,dayz_characterID,"Bandit1_DZ"] spawn player_humanityMorph;
 		};
-		if (_model == "SurvivorW2_DZ") then {
+		if (_model == "SurvivorW2_KR") then {
 			[dayz_playerUID,dayz_characterID,"BanditW1_DZ"] spawn player_humanityMorph;
 		};
 	};
 	
 	if (_humanity > 0 and (_isBandit || ( _humanity < 5000 and _isHero))) then {
 		_model = typeOf player;
-		if (_model == "Bandit1_DZ" || _model == "Survivor3_DZ") then {
+		if (_model == "Bandit1_DZ" || _model == "Bandit2_DZ" || _model == "Survivor3_DZ") then {
 			[dayz_playerUID,dayz_characterID,"Survivor2_DZ"] spawn player_humanityMorph;
 		};
-		if (_model == "BanditW1_DZ") then {
-			[dayz_playerUID,dayz_characterID,"SurvivorW2_DZ"] spawn player_humanityMorph;
+		if (_model == "BanditW1_DZ" || _model == "BanditW2_DZ") then {
+			[dayz_playerUID,dayz_characterID,"SurvivorW2_KR"] spawn player_humanityMorph;
 		};
 	};
 	
 	if (_humanity > 5000 and !_isHero) then {
 		_model = typeOf player;
-		if (_model == "Survivor2_DZ" || _model == "Bandit1_DZ") then {
+		if (_model == "Survivor2_DZ" || _model == "Bandit1_DZ" || _model == "Bandit2_DZ") then {
 			[dayz_playerUID,dayz_characterID,"Survivor3_DZ"] spawn player_humanityMorph;
 		};
 	};
@@ -144,7 +144,7 @@ while {true} do {
 	
 	//can get nearby infection
 	if (!r_player_infected) then {
-		//					Infectionriskstart
+		//	Infectionriskstart
 		if (dayz_temperatur < ((80 / 100) * (dayz_temperaturnormal - dayz_temperaturmin) + dayz_temperaturmin)) then {	//TeeChange
 			_listTalk = _mylastPos nearEntities ["CAManBase",8];
 			{
@@ -290,7 +290,7 @@ while {true} do {
 	if (!_isokay) then {
 		canPickup = false;
 		pickupInit = true;
-	;
+	};
 
 	//Attach Trigger Current Object
 	//dayz_playerTrigger attachTo [_refObj,[0,0,0]];
@@ -300,7 +300,7 @@ while {true} do {
 	_startcombattimer      = player getVariable["startcombattimer",0];
 	if (_startcombattimer == 1) then {
 		player setVariable["combattimeout", time + 30, true];
-		player setVariable["startcombattimer", 0, true];
+		player setVariable["startcombattimer", 0];
 		dayz_combat = 1;
 	};
 

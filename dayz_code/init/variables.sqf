@@ -47,7 +47,14 @@ SOTG_DZ = "SOTG_DZ";
 
 AllPlayers = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_DZ","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ"];
 AllPlayersVehicles = ["Survivor2_DZ","Survivor3_DZ","Bandit2_DZ","SOTG_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_KR","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Sniper2_DZ","Camo1_DZ","Camo2_DZ","Camo3_DZ","Camo4_DZ","Camo5_DZ","Soldier1_DZ","Rocket_DZ","Rocker2_DZ","Priest_DZ","Functionary1_EP1_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","AllVehicles"];
-  
+
+DayZ_NewZeds = ["z_villager1_KR","z_villager2_KR","z_villager3_KR","z_worker1_KR","z_worker2_KR","z_worker3_KR"];
+MeleeWeapons = ["MeleeHatchet","MeleeCrowbar","MeleeMachete","MeleeBaseball","MeleeBaseBallBat","MeleeBaseBallBatBarbed","MeleeBaseBallBatNails"];
+MeleeMagazines = ["hatchet_swing","crowbar_swing","Machete_swing","Bat_Swing","BatBarbed_Swing","BatNails_Swing"];
+DayZ_Backpacks = ["DZ_Patrol_Pack_EP1","DZ_Assault_Pack_EP1","DZ_Czech_Vest_Puch","DZ_ALICE_Pack_EP1","DZ_TK_Assault_Pack_EP1","DZ_British_ACU","DZ_CivilBackpack_EP1","DZ_Backpack_EP1"];
+
+SafeObjects = ["Land_Fire_DZ", "TentStorage", "Sandbag1_KR", "Sandbag2_KR", "Sandbag3_KR", "Hedgehog_DZ"];
+ 
 PZombie_VB =	"PZombie_VB";
 
 pz_policeman = "pz_policeman";
@@ -191,6 +198,8 @@ boil_tin_cans = [
 dayz_combination = ""; 
 dayz_combatLog = "";
 canRoll = true;
+canPickup = false;
+pickupInit = false;
 
 placevault = true;
 safezonebuild = false;
@@ -423,6 +432,16 @@ if(isNil "dayz_maxAnimals") then {
 DAYZ_agentnumber = 0;
 dayz_animalDistance = 800;
 dayz_zSpawnDistance = 1000;
+
+dayz_maxMaxModels = 80; // max quantity of Man models (player or Z, dead or alive) around players. Below this limit we can spawn Z
+dayz_maxMaxWeaponHolders = 80; // max quantity of loot piles around players. Below this limit we can spawn some loot
+dayz_spawnArea =  200; // radius around player where we can spawn loot & Z 
+dayz_safeDistPlr = 50; // Any loot & Z won't be spawned closer than this distance from any player
+dayz_cantseeDist = 150; // distance from which we can spawn a Z in front of any player without ray-tracing and angle checks
+dayz_cantseefov = 70; // half player field-of-view. Visible Z won't be spawned in front of any near players 
+dayz_canDelete = 300; // Z, further than this distance from its "owner", will be deleted
+dayz_lootSpawnBias = 67; // between 50 and 100. The lower it is, the lower chance some of the lootpiles will spawn
+dayz_localswarmSpawned = 10;  // how many zeds will spawn around you during a combat scenario. 
 
 if(isNil "dayz_maxLocalZombies") then {
 	dayz_maxLocalZombies = 40;

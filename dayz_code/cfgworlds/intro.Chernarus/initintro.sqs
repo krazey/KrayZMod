@@ -112,4 +112,3 @@ player cameraEffect ["terminate","back"]
 _this switchMove ""
 camDestroy _camera
 exit
-

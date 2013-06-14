@@ -1,4 +1,4 @@
-private["_unit","_targets","_move","_damage","_wound","_index","_cnt","_sound","_local","_dir","_hpList","_hp","_strH","_dam","_total","_vehicle","_tPos","_zPos","_cantSee","_inAngle"];
+private ["_unit","_targets","_move","_damage","_wound","_index","_cnt","_dir","_hpList","_hp","_strH","_dam","_total","_vehicle","_tPos","_zPos","_cantSee","_inAngle","_rnd","_openVehicles","_chance","_attackanimations","_type"];
 _unit = _this select 0;
 _type = _this select 1;
 _vehicle = (vehicle player);
@@ -8,11 +8,11 @@ _targets = _unit getVariable ["targets",[]];
 
 //Do the attack
 if (r_player_unconscious && _vehicle == player && _type == "zombie") then {
-	_rnd = round(random 4) + 1;
+	_rnd = (round(random 4)) + 1; 
 	_move = "ZombieFeed" + str(_rnd);
 } else {
 	if (_type == "zombie") then {
-		_rnd = round(random 9) + 1;
+		_rnd = (round(random 9)) + 1; 
 		_move = "ZombieStandingAttack" + str(_rnd);
 	} else {
 		_move = "Dog_Attack";

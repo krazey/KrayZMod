@@ -10,9 +10,9 @@ This returns a randomly selected element from the passed array.
 Example: [1,2,3] call BIS_fnc_selectRandom
 Returns: 1, 2, or 3
 ************************************************************/
+private["_ret"];
 
-private "_ret";
-
+_ret = nil;
 if(count _this > 0) then
 {
 	_ret = (count _this) - 1;           //number of elements in the array

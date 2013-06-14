@@ -5,7 +5,7 @@ scriptName "Functions\misc\fn_damageActions.sqf";
 	- [] call fnc_usec_damageActions;
 ************************************************************/
 
-private ["_weaponName","_action","_turret","_weapons","_assignedRole","_action1","_action2","_x","_vehicle","_unit","_vehType","_displayName","_ammoQty","_ammoSerial","_weapon","_magTypes","_type","_typeVeh","_index","_inventory","_unitTo","_isEngineer","_vehClose","_hasVehicle","_unconscious","_lowBlood","_injured","_inPain","_legsBroke","_armsBroke","_charID","_friendlies","_playerMagazines","_hasBandage","_hasEpi","_hasMorphine","_hasBlood","_hasToolbox","_hasJerry","_hasJerryE","_hasEtool","_hasWire","_hasPainkillers","_unconscious_crew","_patients","_crew","_menClose","_hasPatient","_inVehicle","_isClose","_bag","_classbag","_isDisallowRefuel","_hasBarrel","_hasBarrelE"];
+private ["_weaponName","_action","_turret","_weapons","_assignedRole","_action1","_action2","_x","_vehicle","_unit","_vehType","_displayName","_ammoQty","_ammoSerial","_weapon","_magTypes","_type","_typeVeh","_index","_inventory","_unitTo","_isEngineer","_vehClose","_hasVehicle","_unconscious","_lowBlood","_injured","_inPain","_legsBroke","_armsBroke","_charID","_friendlies","_playerMagazines","_hasBandage","_hasEpi","_hasMorphine","_hasBlood","_hasToolbox","_hasJerry","_hasJerryE","_hasWire","_hasPainkillers","_unconscious_crew","_patients","_crew","_menClose","_hasPatient","_inVehicle","_isClose","_bag","_classbag","_isDisallowRefuel","_hasBarrel","_hasBarrelE"];
 _menClose = cursorTarget;
 _hasPatient = alive _menClose;
 _vehicle = vehicle player;
@@ -63,8 +63,8 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 	_hasBarrel = 	"ItemFuelBarrel" in _playerMagazines;
 	_hasJerryE = 	"ItemJerrycanEmpty" in _playerMagazines;
 	_hasBarrelE = 	"ItemFuelBarrelEmpty" in _playerMagazines;
-	_hasEtool = 	"ItemEtool" in weapons player;
-	_hasWire = 		"ItemWire" in _playerMagazines;
+	//_hasEtool = 	"ItemEtool" in weapons player;
+	_hasWire = 		"ItemWire_KR" in _playerMagazines;
 	_hasPainkillers = 	"ItemPainkiller" in _playerMagazines;
 
 	//Allow player to drag

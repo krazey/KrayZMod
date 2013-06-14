@@ -1,539 +1,245 @@
 class CfgLoot {
 	trash[] = {
-		{
-			"TrashTinCan_KR",
-			"TrashJackDaniels",
-			"ItemSodaEmpty_KR",
-			"ItemTrashToiletpaper",
-			"ItemTrashRazor"
-		},
-		{
-			1,
-			0.1,
-			0.5,
-			0.4,
-			0.2
-		}
+			{"TrashTinCan_KR",1},
+			{"TrashJackDaniels",0.1},
+			{"ItemSodaEmpty_KR",0.5},
+			{"ItemTrashToiletpaper",0.4},
+			{"ItemTrashRazor",0.2}
 	};
 	civilian[] = {
-		{
-			"TrashTinCan_KR",
-			"TrashJackDaniels",
-			"ItemSodaEmpty_KR",
-			"ItemLightBulb",
-			"ItemSodaCoke",
-			"ItemSodaPepsi",
-			"FoodCanBakedBeans",
-			"FoodCanSardines",
-			"FoodCanFrankBeans",
-			"FoodCanPasta",
-			"8Rnd_9x18_Makarov",
-			"7Rnd_45ACP_1911",
-			"2Rnd_shotgun_74Slug",
-			"2Rnd_shotgun_74Pellets",
-			"ItemBandage",
-			"ItemPainkiller",
-			"FoodBioMeat"
-		},
-		{
-			0.09,
-			0.09,
-			0.09,
-			0.05,
-			0.12,
-			0.09,
-			0.05,
-			0.05,
-			0.05,
-			0.05,
-			0.07,
-			0.05,
-			0.05,
-			0.05,
-			0.06,
-			0.06,
-			0.01
-		}
+			{"TrashTinCan_KR",0.09},
+			{"TrashJackDaniels",0.09},
+			{"ItemSodaEmpty_KR",0.09},
+			{"ItemLightBulb",0.05},
+			{"ItemSodaCoke",0.12},
+			{"ItemSodaPepsi",0.09},
+			{"FoodCanBakedBeans",0.05},
+			{"FoodCanSardines",0.05},
+			{"FoodCanFrankBeans",0.05},
+			{"FoodCanPasta",0.05},
+			{"8Rnd_9x18_Makarov",0.07},
+			{"7Rnd_45ACP_1911",0.05},
+			{"2Rnd_shotgun_74Slug",0.05},
+			{"2Rnd_shotgun_74Pellets",0.05},
+			{"ItemBandage",0.06},
+			{"ItemPainkiller",0.06},
+			{"FoodBioMeat",0.01}
 	};
 	food[] = {
-		{
-			//trash
-			"TrashTinCan_KR",
-			"TrashJackDaniels",
-			"ItemSodaEmpty_KR",
-			"ItemSodaCoke",
-			"ItemSodaPepsi",
-			"FoodCanBakedBeans",
-			"FoodCanSardines",
-			"FoodCanFrankBeans",
-			"FoodCanPasta",
-			"FoodCanUnlabeled",
-			//Bags
-			"FoodPistachio",
-			"FoodNutmix"
-		},
-		{
-			//trash
-			0.13, //tincan
-			0.13, //jackdaniels
-			0.13, //sodaempty
-			0.09, //sodacoke
-			0.13, //sodapepsi
-			0.09, //canbakedbeans
-			0.09, //cansardines
-			0.09, //canfrankbeans
-			0.09, //canpasta
-			0.06, //canunlabeled
-			//Bags
-			0.05, //pistachio
-			0.04 //nutmix
-		}
+			{"TrashTinCan_KR",0.13},
+			{"TrashJackDaniels",0.13},
+			{"ItemSodaEmpty_KR",0.13},
+			{"ItemSodaCoke",0.09},
+			{"ItemSodaPepsi",0.13},
+			{"FoodCanBakedBeans",0.09},
+			{"FoodCanSardines",0.09},
+			{"FoodCanFrankBeans",0.09},
+			{"FoodCanPasta",0.09},
+			{"FoodCanUnlabeled",0.06},
+			{"FoodPistachio",0.05},
+			{"FoodNutmix",0.04}
 	};
 	communityfood[] = {
-		{
-			"ItemSodaMtngreen",
-			"ItemSodaR4z0r",
-			"ItemSodaClays",
-			"ItemSodaSmasht",
-			"ItemSodaDrwaste",
-			"ItemSodaFranka",
-			"ItemSodaLemonade",
-			"ItemSodaLirik",
-			"ItemSodaLvg",
-			"ItemSodaMzly",
-			"ItemSodaPeppsy",
-			"ItemSodaRabbit",
-			"ItemSodaSacrite",
-			"FoodCanGriff",
-			"FoodCanBadguy",
-			"FoodCanBoneboy",
-			"FoodCanCorn",
-			"FoodCanCurgon",
-			"FoodCanDemon",
-			"FoodCanFraggleos",
-			"FoodCanHerpy",
-			"FoodCanOrlok",
-			"FoodCanPowell",
-			"FoodCanTylers"
-		},
-		{
-			0.13, //sodamtngreen
-			0.13, //sodar4zor
-			0.13, //sodaclays
-			0.13, //sodasmasht
-			0.13, //sodadrwaste
-			0.13, //sodafranka
-			0.10, //sodalemonade
-			0.13, //sodalirik
-			0.13, //sodalvg
-			0.13, //sodamzly
-			0.13, //sodapeppsy
-			0.13, //sodarabbit
-			0.13, //sodasacrite
-			0.10, //cangriff
-			0.10, //canbadguy
-			0.10, //canboneboy
-			0.10, //cancorn
-			0.10, //cancurgon
-			0.10, //candemon
-			0.10, //canfraggleos
-			0.10, //canherpy
-			0.10, //canorlok
-			0.10, //canpowell
-			0.10 //cantylers
-		}
+			{"ItemSodaMtngreen",0.13},
+			{"ItemSodaR4z0r",0.13},
+			{"ItemSodaClays",0.13},
+			{"ItemSodaSmasht",0.13},
+			{"ItemSodaDrwaste",0.13},
+			{"ItemSodaFranka",0.13},
+			{"ItemSodaLemonade",0.1},
+			{"ItemSodaLirik",0.13},
+			{"ItemSodaLvg",0.13},
+			{"ItemSodaMzly",0.13},
+			{"ItemSodaPeppsy",0.13},
+			{"ItemSodaRabbit",0.13},
+			{"ItemSodaSacrite",0.13},
+			{"FoodCanGriff",0.1},
+			{"FoodCanBadguy",0.1},
+			{"FoodCanBoneboy",0.1},
+			{"FoodCanCorn",0.1},
+			{"FoodCanCurgon",0.1},
+			{"FoodCanDemon",0.1},
+			{"FoodCanFraggleos",0.1},
+			{"FoodCanHerpy",0.1},
+			{"FoodCanOrlok",0.1},
+			{"FoodCanPowell",0.1},
+			{"FoodCanTylers",0.1}
 	};
 	krayzfood[] = {
-		{
-			"ItemSodaTaiwendo",
-			"FoodCanFletcher",
-			"FoodKrazey"
-		},
-		{
-			0.10, //sodataiwendo
-			0.10, //canflecther
-			0.05 //krazeycookies
-		}
+			{"ItemSodaTaiwendo",0.1},
+			{"FoodCanFletcher",0.1},
+			{"FoodKrazey",0.05}
 	};
 	generic[] = {
-		{
-			"TrashTinCan_KR",
-			"ItemSodaEmpty_KR",
-			"ItemSodaCoke",
-			"ItemSodaPepsi",
-			"TrashJackDaniels",
-			"FoodCanBakedBeans",
-			"FoodCanSardines",
-			"FoodCanFrankBeans",
-			"FoodCanPasta",
-			"ItemWaterbottleUnfilled",
-			"ItemWaterbottle",
-			"ItemBandage",
-			"7Rnd_45ACP_1911",
-			"5x_22_LR_17_HMR",
-			"10x_303",
-			"6Rnd_45ACP",
-			"2Rnd_shotgun_74Slug",
-			"2Rnd_shotgun_74Pellets",
-			"8Rnd_9x18_Makarov",
-			"15Rnd_W1866_Slug",
-			"WoodenArrow",
-			"HandRoadFlare",
-			"ItemPainkiller",
-			"HandChemGreen",
-			"HandChemBlue",
-			"HandChemRed",
-			"ItemHeatPack",
-			"des_paint_kit",
-			"RedDot_DZ",
-			"ACOG_DZ",
-			"Holo_DZ",
-			"Sniper_DZ",
-			"Launcher_DZ",
-			"Suppressor_DZ"
-		},
-		{
-			0.06,
-			0.06,
-			0.06,
-			0.04,
-			0.04,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.11,
-			0.03,
-			0.01,
-			0.04,
-			0.04,
-			0.05,
-			0.05,
-			0.09,
-			0.02,
-			0.04,
-			0.07,
-			0.02,
-			0.01,
-			0.03,
-			0.03,
-			0.04,
-			0.01,
-			0.01,
-			0.01,
-			0.01,
-			0.005,
-			0.005,
-			0.005
-		}
+			{"TrashTinCan_KR",0.06},
+			{"ItemSodaEmpty_KR",0.06},
+			{"ItemSodaCoke",0.06},
+			{"ItemSodaPepsi",0.04},
+			{"TrashJackDaniels",0.04},
+			{"FoodCanBakedBeans",0.01},
+			{"FoodCanSardines",0.01},
+			{"FoodCanFrankBeans",0.01},
+			{"FoodCanPasta",0.01},
+			{"ItemWaterbottleUnfilled",0.01},
+			{"ItemWaterbottle",0.01},
+			{"ItemBandage",0.11},
+			{"7Rnd_45ACP_1911",0.03},
+			{"5x_22_LR_17_HMR",0.01},
+			{"10x_303",0.04},
+			{"6Rnd_45ACP",0.04},
+			{"2Rnd_shotgun_74Slug",0.05},
+			{"2Rnd_shotgun_74Pellets",0.05},
+			{"8Rnd_9x18_Makarov",0.09},
+			{"15Rnd_W1866_Slug",0.02},
+			{"WoodenArrow",0.04},
+			{"HandRoadFlare",0.07},
+			{"ItemPainkiller",0.02},
+			{"HandChemGreen",0.01},
+			{"HandChemBlue",0.03},
+			{"HandChemRed",0.03},
+			{"ItemHeatPack",0.04},
+			{"des_paint_kit",0.01},
+			{"RedDot_DZ",0.01},
+			{"ACOG_DZ",0.01},
+			{"Holo_DZ",0.01},
+			{"Sniper_DZ",0.005},
+			{"Launcher_DZ",0.005},
+			{"Suppressor_DZ",0.005}
 	};
 	medical[] = {
-		{
-			"ItemBandage",
-			"ItemPainkiller",
-			"ItemMorphine",
-			"ItemEpinephrine",
-			"ItemAntibiotic",
-			"ItemHeatPack"
-		},
-		{
-			0.8,
-			0.5,
-			0.5,
-			0.2,
-			0.3,
-			0.1
-		}
+			{"ItemBandage",0.8},
+			{"ItemPainkiller",0.5},
+			{"ItemMorphine",0.5},
+			{"ItemEpinephrine",0.2},
+			{"ItemAntibiotic",0.3},
+			{"ItemHeatPack",0.1}
 	};
 	hospital[] = {
-		{
-			"ItemBandage",
-			"ItemPainkiller",
-			"ItemMorphine",
-			"ItemEpinephrine",
-			"ItemBloodbag",
-			"ItemAntibiotic"
-		},
-		{
-			0.33,
-			0.17,
-			0.13,
-			0.09,
-			0.17,
-			0.12
-		}
+			{"ItemBandage",0.33},
+			{"ItemPainkiller",0.17},
+			{"ItemMorphine",0.13},
+			{"ItemEpinephrine",0.09},
+			{"ItemBloodbag",0.17},
+			{"ItemAntibiotic",0.12}
 	};
 	military[] = {
-		{
-			//r3f armes
-			"R3F_25Rnd_556x45_FAMAS",
-			"R3F_25Rnd_556x45_TRACER_FAMAS",
-			"R3F_25Rnd_556x45_SD_FAMAS",
-			"R3F_30Rnd_556x45_SD_FAMAS",
-			"R3F_30Rnd_556x45_FAMAS",
-			"R3F_30Rnd_556x45_TRACER_FAMAS",
-			"R3F_10Rnd_762x51_FRF2",
-			"R3F_10Rnd_762x51_SD_FRF2",
-			"R3F_7Rnd_127x99_PGM",
-			"R3F_7Rnd_127x99_PEI_PGM",
-			"R3F_200Rnd_556x45_MINIMI",
-			"R3F_20Rnd_762x51_HK417",
-			"R3F_20Rnd_762x51_TRACER_HK417",
-			"R3F_20Rnd_762x51_SD_HK417",
-			//end of r3f armes
-
-			"des_paint_kit",
-
-			"TrashTinCan_KR",
-			"ItemSodaEmpty_KR",
-			"ItemSodaCoke",
-			"ItemSodaPepsi",
-			"ItemBandage",
-			"ItemAntibiotic",
-			"ItemPainkiller",
-			"ItemMorphine",
-			"30Rnd_556x45_Stanag",
-			"20Rnd_762x51_DMR",
-			"17Rnd_9x19_glock17",
-			"15Rnd_9x19_M9SD",
-			"15Rnd_9x19_M9",
-			"30Rnd_762x39_AK47",
-			"30Rnd_545x39_AK",
-			"5Rnd_762x51_M24",
-			//"10Rnd_127x99_m107",
-			"8Rnd_B_Beneli_74Slug",
-			"1Rnd_HE_M203",
-			"FlareWhite_M203",
-			"FlareGreen_M203",
-			"1Rnd_Smoke_M203",		
-			"200Rnd_556x45_M249",
-			"SmokeShell",
-			"SmokeShellRed",
-			"SmokeShellGreen",
-			"8Rnd_B_Beneli_Pellets",
-			"30Rnd_556x45_StanagSD",
-			//"30Rnd_9x19_MP5",
-			//"30Rnd_9x19_MP5SD",
-			"100Rnd_762x51_M240",
-			"HandChemGreen",
-			"HandChemBlue",
-			"HandChemRed",
-			"ItemHeatPack",
-			"FoodMRE"
-		},
-		{
-			//r3f armes
-			0.04, //"R3F_25Rnd_556x45_FAMAS",
-			0.04, //"R3F_25Rnd_556x45_TRACER_FAMAS",
-			0.01, //"R3F_25Rnd_556x45_SD_FAMAS",
-			0.01, //"R3F_30Rnd_556x45_SD_FAMAS",
-			0.04, //"R3F_30Rnd_556x45_FAMAS",
-			0.04, //"R3F_30Rnd_556x45_TRACER_FAMAS",
-			0.01, //"R3F_10Rnd_762x51_FRF2",
-			0.01, //"R3F_10Rnd_762x51_SD_FRF2",
-			0.01, //"R3F_7Rnd_127x99_PGM",
-			0.001, //"R3F_7Rnd_127x99_PEI_PGM",
-			0.01, //"R3F_200Rnd_556x45_MINIMI",
-			0.04, //"R3F_20Rnd_762x51_HK417",
-			0.04, //"R3F_20Rnd_762x51_TRACER_HK417",
-			0.01, //"R3F_20Rnd_762x51_SD_HK417",
-			//end of r3f armes
-
-			0.10, //des_paint_kit
-
-			0.12, //trashtincan
-			0.09, //sodaempty
-			0.01, //sodacoke
-			0.01, //sodapepsi
-			0.04, //bandage
-			0.04, //antibiotic
-			0.04, //painkiller
-			0.01, //morphine
-			0.04, //30rnd stanag
-			0.04, //20rnd dmr
-			0.05, //17rnd glock17
-			0.01, //15rnd m9sd
-			0.02, //15rnd m9
-			0.04, //30rnd ak47
-			0.04, //30rnd ak
-			0.01, //5rnd m24
-			//0.01, //10rnd m107
-			0.04, //8rnd slug
-			0.01, //1rnd he m203
-			0.01, //flarewhite m203
-			0.01, //flaregreen m203
-			0.01, //1rnd smoke m203
-			0.01, //200rnd m249
-			0.04, //smoke
-			0.02, //smokered
-			0.02, //smokegreen
-			0.04, //8rnd pellets
-			0.01, //30rnd stanagSD
-			//0.02, //30rnd mp5
-			//0.01, //30rnd mp5sd
-			0.01, //100rnd m240
-			0.02, //chemgreen
-			0.02, //chemblue
-			0.02, //chemred
-			0.04, //heatpack
-			0.03 //foodMRE
-		}
+			{"R3F_25Rnd_556x45_FAMAS",0.04},
+			{"R3F_25Rnd_556x45_TRACER_FAMAS",0.04},
+			{"R3F_25Rnd_556x45_SD_FAMAS",0.01},
+			{"R3F_30Rnd_556x45_SD_FAMAS",0.01},
+			{"R3F_30Rnd_556x45_FAMAS",0.04},
+			{"R3F_30Rnd_556x45_TRACER_FAMAS",0.04},
+			{"R3F_10Rnd_762x51_FRF2",0.01},
+			{"R3F_10Rnd_762x51_SD_FRF2",0.01},
+			{"R3F_7Rnd_127x99_PGM",0.01},
+			{"R3F_7Rnd_127x99_PEI_PGM",0.001},
+			{"R3F_200Rnd_556x45_MINIMI",0.01},
+			{"R3F_20Rnd_762x51_HK417",0.04},
+			{"R3F_20Rnd_762x51_TRACER_HK417",0.04},
+			{"R3F_20Rnd_762x51_SD_HK417",0.01},
+			{"des_paint_kit",0.1},
+			{"TrashTinCan_KR",0.12},
+			{"ItemSodaEmpty_KR",0.9},
+			{"ItemSodaCoke",0.01},
+			{"ItemSodaPepsi",0.01},
+			{"ItemBandage",0.04},
+			{"ItemAntibiotic",0.04},
+			{"ItemPainkiller",0.04},
+			{"ItemMorphine",0.01},
+			{"30Rnd_556x45_Stanag",0.04},
+			{"20Rnd_762x51_DMR",0.04},
+			{"17Rnd_9x19_glock17",0.05},
+			{"15Rnd_9x19_M9SD",0.01},
+			{"15Rnd_9x19_M9",0.02},
+			{"30Rnd_762x39_AK47",0.04},
+			{"30Rnd_545x39_AK",0.04},
+			{"5Rnd_762x51_M24",0.04},
+			{"8Rnd_B_Beneli_74Slug",0.01},
+			{"1Rnd_HE_M203",0.04},
+			{"FlareWhite_M203",0.01},
+			{"FlareGreen_M203",0.01},
+			{"1Rnd_Smoke_M203",0.01},
+			{"200Rnd_556x45_M249",0.01},
+			{"SmokeShell",0.04},
+			{"SmokeShellRed",0.02},
+			{"SmokeShellGreen",0.02},
+			{"8Rnd_B_Beneli_Pellets",0.04},
+			{"30Rnd_556x45_StanagSD",0.01},
+			{"100Rnd_762x51_M240",0.01},
+			{"HandChemGreen",0.02},
+			{"HandChemBlue",0.02},
+			{"HandChemRed",0.02},
+			{"ItemHeatPack",0.04},
+			{"FoodMRE",0.03}
 	};
 	policeman[] = {
-		{
-			"ItemBandage",
-			"7Rnd_45ACP_1911",
-			"6Rnd_45ACP",
-			"15Rnd_W1866_Slug",
-			"8Rnd_B_Beneli_74Slug",
-			"HandRoadFlare"
-		},
-		{
-			1,
-			0.8,
-			0.3,
-			0.3,
-			0.5,
-			0.3
-		}
+			{"ItemBandage",1},
+			{"7Rnd_45ACP_1911",0.8},
+			{"6Rnd_45ACP",0.3},
+			{"15Rnd_W1866_Slug",0.3},
+			{"8Rnd_B_Beneli_74Slug",0.5},
+			{"HandRoadFlare",0.5}
 	};
 	hunter[] = {
-		{
-			"ItemBandage",
-			"5x_22_LR_17_HMR",
-			"7Rnd_45ACP_1911",
-			"10x_303",
-			"ItemWaterbottleUnfilled",
-			"WoodenArrow",
-			"ItemHeatPack",
-			"FoodMRE",
-			"FoodNutmix"
-		},
-		{
-			1,
-			0.5,
-			0.2,
-			0.5,
-			0.2,
-			1,
-			0.2,
-			0.04,
-			0.1
-			
-		}
+			{"ItemBandage",1},
+			{"5x_22_LR_17_HMR",0.5},
+			{"7Rnd_45ACP_1911",0.2},
+			{"10x_303",0.5},
+			{"ItemWaterbottleUnfilled",0.2},
+			{"WoodenArrow",1},
+			{"ItemHeatPack",0.2},
+			{"FoodMRE",0.04},
+			{"FoodNutmix",0.1}
 	};
-
 	worker[] = {
-		{
-			"TrashTinCan_KR",
-			"TrashJackDaniels",
-			"ItemSodaEmpty_KR",
-			"ItemSodaCoke",
-			"ItemSodaPepsi",
-			"FoodCanBakedBeans",
-			"FoodCanSardines",
-			"FoodCanFrankBeans",
-			"FoodCanPasta",
-			"ItemBandage",
-			"ItemPainkiller",
-			"ItemWire_KR",
-			"ItemTankTrap_KR"
-		},
-		{
-			0.09,
-			0.09,
-			0.09,
-			0.12,
-			0.09,
-			0.05,
-			0.05,
-			0.05,
-			0.05,
-			0.06,
-			0.06,
-			0.01,
-			0.01
-		}
+			{"TrashTinCan_KR",0.09},
+			{"TrashJackDaniels",0.09},
+			{"ItemSodaEmpty_KR",0.09},
+			{"ItemSodaCoke",0.12},
+			{"ItemSodaPepsi",0.09},
+			{"FoodCanBakedBeans",0.05},
+			{"FoodCanSardines",0.05},
+			{"FoodCanFrankBeans",0.05},
+			{"FoodCanPasta",0.05},
+			{"ItemBandage",0.06},
+			{"ItemPainkiller",0.06},
+			{"ItemWire_KR",0.03},
+			{"ItemTankTrap_KR",0.03}
 	};
-
 	clothes[] = {
-		{
-			"Skin_RU_Policeman_DZ",
-			"Skin_Pilot_EP1_DZ",
-			"Skin_Functionary1_EP1_DZ",
-			"Skin_Priest_DZ",
-			"Skin_Rocker2_DZ",
-			"Skin_SurvivorW3_DZ",
-			"Skin_SurvivorWpink_DZ",
-			"Skin_SurvivorWurban_DZ"
-		},
-		{
-			0.01,
-			0.02,
-			0.03,
-			0.02,
-			0.02,
-			0.05,
-			0.02,
-			0.01
-		}
+			{"Skin_RU_Policeman_DZ",0.01},
+			{"Skin_Pilot_EP1_DZ",0.02},
+			{"Skin_Functionary1_EP1_DZ",0.03},
+			{"Skin_Priest_DZ",0.02},
+			{"Skin_Rocker2_DZ",0.02},
+			{"Skin_SurvivorW3_DZ",0.05},
+			{"Skin_SurvivorWpink_DZ",0.02},
+			{"Skin_SurvivorWurban_DZ",0.01}
 	};
 	militaryclothes[] = {
-		{
-			"Skin_Camo1_DZ",
-			"Skin_Camo2_DZ",
-			"Skin_Camo3_DZ",
-			"Skin_Camo4_DZ",
-			"Skin_Camo5_DZ",
-			"Skin_Sniper1_DZ",
-			"Skin_Rocket_DZ",
-			"Skin_Soldier1_DZ",
-			"Skin_Drake_Light_DZ",
-			"Skin_Soldier_TL_PMC_DZ",
-			"Skin_Soldier_Sniper_PMC_DZ",
-			"Skin_Soldier_Bodyguard_AA12_PMC_DZ",
-			"Skin_CZ_Special_Forces_GL_DES_EP1_DZ"
-		},
-		{
-			0.03, //Skin_Camo1
-			0.03, //Skin_Camo2
-			0.03, //Skin_Camo3
-			0.03, //Skin_Camo4
-			0.03, //Skin_Camo5
-			0.02, //Skin_Sniper1
-			0.03, //Skin_Rocket
-			0.05, //Skin_Soldier1
-			0.01, //Skin_Drake_Light
-			0.02, //Skin_Soldier_TL
-			0.02, //Skin_Soldier_Sniper
-			0.02, //Skin_Soldier_Bodyguard_AA12
-			0.02 //Skin_CZ_Special_Forces_GL_DES
-		}
+			{"Skin_Camo1_DZ",0.03},
+			{"Skin_Camo2_DZ",0.03},
+			{"Skin_Camo3_DZ",0.03},
+			{"Skin_Camo4_DZ",0.03},
+			{"Skin_Camo5_DZ",0.03},
+			{"Skin_Sniper1_DZ",0.02},
+			{"Skin_Rocket_DZ",0.03},
+			{"Skin_Soldier1_DZ",0.05},
+			{"Skin_Drake_Light_DZ",0.01},
+			{"Skin_Soldier_TL_PMC_DZ",0.02},
+			{"Skin_Soldier_Sniper_PMC_DZ",0.02},
+			{"Skin_Soldier_Bodyguard_AA12_PMC_DZ",0.02},
+			{"Skin_CZ_Special_Forces_GL_DES_EP1_DZ",0.02}
 	};
 	specialclothes[] = {
-		{
-			"Skin_Ins_Soldier_GL_DZ",
-			"Skin_Bandit1_DZ",
-			"Skin_Bandit2_DZ",
-			"Skin_BanditW1_DZ",
-			"Skin_BanditW2_DZ",
-			"Skin_TK_INS_Soldier_EP1_DZ",
-			"Skin_TK_INS_Warlord_EP1_DZ",
-			"Skin_SurvivorWcombat_DZ",
-			"Skin_SurvivorWdesert_DZ"
-		},
-		{
-			0.01, //Skin_Ins_Soldier
-			0.05, //Skin_Bandit1
-			0.01, //Skin_Bandit2
-			0.05, //Skin_BanditW1
-			0.03, //Skin_BanditW2
-			0.01, //Skin_TK_INS_Soldier
-			0.01, //Skin_TK_INS_Warlord
-			0.01, //Skin_SurvivorWcombat
-			0.03 //Skin_SurvivorWdesert
-		}
+			{"Skin_Ins_Soldier_GL_DZ",0.01},
+			{"Skin_Bandit1_DZ",0.05},
+			{"Skin_Bandit2_DZ",0.01},
+			{"Skin_BanditW1_DZ",0.05},
+			{"Skin_BanditW2_DZ",0.03},
+			{"Skin_TK_INS_Soldier_EP1_DZ",0.01},
+			{"Skin_TK_INS_Warlord_EP1_DZ",0.01},
+			{"Skin_SurvivorWcombat_DZ",0.01},
+			{"Skin_SurvivorWdesert_DZ",0.03}
 	};
 };

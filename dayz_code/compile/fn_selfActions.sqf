@@ -119,6 +119,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	_isZombie = cursorTarget isKindOf "zZombie_base_KR";
 	_isDestructable = cursorTarget isKindOf "BuiltItems";
 	_MGNest_M240_base = cursorTarget isKindOf "WarfareBMGNest_M240_base";
+	_isSearchLight = cursorTarget isKindOf "SearchLight";
 	_isConstuctables = (cursorTarget isKindOf "Constuctables" || cursorTarget isKindOf "WarfareBMGNest_M240_base");
 	_isKit = (cursorTarget isKindOf "CanvasHut_DZ" || cursorTarget isKindOf "ParkBench_DZ" || cursorTarget isKindOf "OutHouse_DZ" || cursorTarget isKindOf "StorageShed_DZ" || cursorTarget isKindOf "WoodShack_DZ" || cursorTarget isKindOf "Wooden_shed_DZ" || cursorTarget isKindOf "LightPole_DZ");
 	_isWreck = typeOf cursorTarget in ["SKODAWreck","HMMWVWreck","UralWreck","datsun01Wreck","hiluxWreck","datsun02Wreck","UAZWreck","Land_Misc_Garb_Heap_EP1","Fort_Barricade_EP1","Rubbish2"];
@@ -199,7 +200,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	};
 	*/
 
-	if((_isVehicle or _isTent or (cursorTarget isKindOf "VaultStorage") or _isnewstorage) and _isAlive and _canDo and !_isMan) then { 
+	if((_isVehicle or _isTent or (cursorTarget isKindOf "VaultStorage") or _isnewstorage) and _isAlive and _canDo and !_isMan and !_isSearchLight) then { 
 		if (s_player_checkGear < 0) then {
 			s_player_checkGear = player addAction ["Cargo Check", "\z\addons\dayz_code\actions\cargocheck.sqf",cursorTarget, 1, true, true, "", ""];
 		};
@@ -447,7 +448,6 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_fillgen = -1;
 	};
 	
-
     //Sleep
 	if(cursorTarget isKindOf "TentStorage" and _canDo and _ownerID == dayz_characterID) then {
 		if ((s_player_sleep < 0) and (player distance cursorTarget < 3)) then {
@@ -458,11 +458,6 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		s_player_sleep = -1;
 	};
 	
-
-
-
-
-
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != cursorTarget) and _isVehicle and !_isMan and _hasToolbox and (damage cursorTarget < 1) and !_isDisallowRepair) then { 
 		
@@ -485,14 +480,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 		};
 	};
 
-
-
-
-	
 	_humanity = player getVariable ["humanity",0];
-	
-	
-
 
 	// All Traders
 	if (_isMan and !_isPZombie and _traderType in serverTraders) then {
@@ -547,22 +535,13 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 				// Add static metals trader options under sub menu
 				_metals_trader = player addAction ["Trade Metals", "\z\addons\dayz_code\actions\trade_metals.sqf",["na"], 0, true, false, "",""];
 				s_player_parts set [count s_player_parts,_metals_trader];
-
 			};
-
-
-
 			s_player_parts_crtl = 1;
-			
 		};
 	} else {
 		{player removeAction _x} forEach s_player_parts;s_player_parts = [];
 		s_player_parts_crtl = -1;
 	};
-
-
-
-
 
 	if (_isMan and !_isAlive and !_isZombie) then {
 		if (s_player_studybody < 0) then {
