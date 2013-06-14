@@ -34,7 +34,7 @@ External Code & Mods
  * [DayZ Plus](http://dayzplus.com)
  * [R3F Realism Script](http://www.team-r3f.org)
  * [R3F Armes Weaponary](http://www.team-r3f.org)
- * [Retexured KSK-Units]]http://www.arma2base.de/include.php?path=download&contentid=2275)
+ * [Retexured KSK-Units](http://www.arma2base.de/include.php?path=download&contentid=2275)
  * [ziellos2k - Tag Friendly code](https://github.com/R4Z0R49/DayZMod/pull/232)
  * [SOTG-Commandos](http://forums.bistudio.com/showthread.php?153228-Australian-SOTG-Commandos)
  * [JSRS Soundmod](http://www.armaholic.com/page.php?id=11549)
@@ -142,8 +142,3 @@ Special thanks.
  * Special thanks to David Foltyn for the support during the community build with his constent moaning and presure to do everything different :-).
  * Special thanks to Matt Lightfoot for his incredible logic we all love to hate :-).
  * Special thanks to shinkicker who has listened to all of the ideas and who has always been there to bounce ideas back and forth Thanks.
-
-Contributing
-------------
-Want to contribute? Or have we missed your name?
-Please contact R4Z0R49 on [http://dayzmod.com/forums/.](http://dayzmod.com/forum/)
