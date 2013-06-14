@@ -23,6 +23,7 @@ _location = player modeltoworld [_offset_x,_offset_y,_offset_z];
 _isOk = true;
  
 //diag_log ("Pitch Tent: " + str(_isok) );
+_dir = getDir player; 
 
 _config = configFile >> "CfgMagazines" >> _item;
 _text = getText (_config >> "displayName");

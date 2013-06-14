@@ -15,7 +15,7 @@ player playActionNow "Medic";
 player removeAction s_player_packtent;
 s_player_packtent = 1;
 
-if(_ownerID != dayz_characterID) exitWith {TradeInprogress = false; s_player_packtent = -1; cutText [localize "str_fail_tent_pack", "PLAIN DOWN"];};
+if(_ownerID != krayzUID) exitWith {TradeInprogress = false; s_player_packtent = -1; cutText [localize "str_fail_tent_pack", "PLAIN DOWN"];};
 
 _alreadyPacking = _obj getVariable["packing",0];
 

@@ -1,10 +1,10 @@
-private["_iItem","_iClass","_iPos","_radius","_itemTypes","_index","_item","_qty","_max","_tQty","_canType","_weights","_cntWeights","_dateNow","_iPosZ"];
+private ["_iItem","_iClass","_iPos","_radius","_itemTypes","_index","_item","_qty","_max","_tQty","_canType","_weights","_cntWeights","_dateNow","_mags"];
 _iItem = 	_this select 0;
 _iClass = 	_this select 1;
 _iPos =		_this select 2;
 _radius =	_this select 3;
-// _iPosZ = _iPos select 2;
-// if( _iPosZ < 0 ) then { _iPos = [_iPos select 0,_iPos select 1,0]; };
+_iPosZ = _iPos select 2;
+if( _iPosZ < 0 ) then { _iPos = [_iPos select 0,_iPos select 1,0]; };
 
 switch (_iClass) do {
 	default {
@@ -16,16 +16,16 @@ switch (_iClass) do {
 		_weights = dayz_CLChances select _index;
 		_cntWeights = count _weights;
 		_qty = 0;
-		
+
 		// If clothing just spawn one bag of clothes
 		if(_iClass == "clothes" or _iClass == "militaryclothes" or _iClass == "specialclothes") then {
 			_max = 1;
 		} else {
-			_max = ceil(random 2) + 1;
+            _max = (ceil(random 2)) + 1;
 		};
 		
 		while {_qty < _max} do {
-			_tQty = round(random 1) + 1;
+            _tQty = (round(random 1)) + 1;
 			_index = floor(random _cntWeights);
 			_index = _weights select _index;
 			_canType = _itemTypes select _index;

@@ -1,5 +1,6 @@
 // bleed.sqf
 _unit = (_this select 3) select 0;
+_blood =		_unit getVariable ["USEC_BloodQty", 0];
 _lowBlood = 	_unit getVariable ["USEC_lowBlood", false];
 _injured = 		_unit getVariable ["USEC_injured", false];
 _inPain = 		_unit getVariable ["USEC_inPain", false];

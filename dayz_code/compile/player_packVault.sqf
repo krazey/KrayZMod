@@ -18,7 +18,7 @@ _objectUID	= _obj getVariable["ObjectUID","0"];
 player removeAction s_player_packvault;
 s_player_packvault = 1;
 
-if((_ownerID != dayz_combination) and (_ownerID != dayz_playerUID)) exitWith { TradeInprogress = false; s_player_packvault = -1; cutText ["You cannot pack this Safe, you do not know the combination.", "PLAIN DOWN"];};
+if((_ownerID != dayz_combination) and (_ownerID != krayzUID)) exitWith { TradeInprogress = false; s_player_packvault = -1; cutText ["You cannot pack this Safe, you do not know the combination.", "PLAIN DOWN"];};
 
 _alreadyPacking = _obj getVariable["packing",0];
 

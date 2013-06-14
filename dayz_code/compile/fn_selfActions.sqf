@@ -272,7 +272,7 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	};
 	
 	//Packing my tent
-	if(cursorTarget isKindOf "TentStorage" and _canDo and _ownerID == dayz_characterID) then {
+	if(cursorTarget isKindOf "TentStorage" and _canDo and _ownerID == krayzUID) then {
 		if ((s_player_packtent < 0) and (player distance cursorTarget < 3)) then {
 			s_player_packtent = player addAction [localize "str_actions_self_07", "\z\addons\dayz_code\actions\tent_pack.sqf",cursorTarget, 0, false, true, "",""];
 		};

@@ -308,6 +308,17 @@ r_fracture_legs =		false;
 r_fracture_arms =		false;
 r_player_vehicle =		player;
 r_player_blood = 		12000;
+//Blood Regen
+r_player_bloodregen = 0;
+//Blood Gain Per Sec
+r_player_bloodgainpersec = 0;
+//Blood Loss Per Sec
+r_player_bloodlosspersec = 0;
+//Blood Per Sec (gain - loss)
+r_player_bloodpersec = 0;
+//Food Stack
+r_player_foodstack = 1; 
+//player skill
 r_player_lowblood = 	false;
 r_player_timeout =		0;
 r_player_bloodTotal = 	r_player_blood;
@@ -525,7 +536,8 @@ if(!isDedicated) then {
 	dayz_sourceBleeding =	objNull;
 	dayz_clientPreload = 	false;
 	dayz_panicCooldown = 	0;
-	dayz_areaAffect =		2;
+	dayz_areaAffect =		3.5;
+	dayz_monitorPeriod = 0.6; // number of seconds between each player_zombieCheck calls
 	dayz_heartBeat = 		false;
 	dayzClickTime =			0;
 	dayz_spawnDelay =		120;

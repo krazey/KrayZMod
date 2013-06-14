@@ -1,4 +1,4 @@
-titleCut ["","BLACK FADED",10e10];
+private ["_target","_position","_camera"]; 
 
 setViewDistance 3000;
 setTerrainGrid 3.125;

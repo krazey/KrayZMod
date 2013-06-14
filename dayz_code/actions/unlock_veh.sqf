@@ -7,5 +7,3 @@ s_player_lockUnlock_crtl = -1;
 _vehicle setVehicleInit "this lock false; this lockCargo false;";
 
 processInitCommands;
-
-

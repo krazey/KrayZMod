@@ -422,7 +422,7 @@ class FSM
     class Request
     {
       name = "Request";
-      init = /*%FSM<STATEINIT""">*/"startLoadingScreen ["""",""DayZ_loadingScreen""];" \n
+      init = /*%FSM<STATEINIT""">*/"//startLoadingScreen ["""",""DayZ_loadingScreen""];" \n
        "" \n
        "diag_log (""PLOGIN: Requesting Authentication... ("" + _playerUID + "")"");" \n
        "dayz_loadScreenMsg = (localize ""str_player_15"");" \n

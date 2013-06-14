@@ -1,13 +1,10 @@
-private["_refObj","_size","_vel","_speed","_hunger","_thirst","_array","_unsaved","_timeOut","_result","_lastSave"];
+private["_refObj","_size","_vel","_speed","_hunger","_thirst","_array","_unsaved","_timeOut","_result","_lastSave","_wpnType","_isokay"];
 disableSerialization;
 _timeOut = 	0;
 _messTimer = 0;
 _lastSave = 0;
 _lastTemp = dayz_temperatur;
-_mylastPos = getPosATL player;
 _debug = getMarkerpos "respawn_west";
-//_isBandit = false;
-//_isHero = false;
 
 player setVariable ["temperature",dayz_temperatur,true];
 
@@ -23,6 +20,8 @@ while {true} do {
 	_vel = 		velocity player;
 	_speed = 	round((_vel distance [0,0,0]) * 3.5);
 	_saveTime = (playersNumber west * 2) + 10;
+	_isBandit = typeOf player == "Bandit1_DZ" || typeOf player == "BanditW1_DZ" || typeOf player == "Bandit2_DZ" || typeOf player == "BanditW2_DZ"; 
+	_isHero = typeOf player == "Survivor3_DZ";
 		
 	//reset position
 	_randomSpot = true;
@@ -35,16 +34,19 @@ while {true} do {
 	if (_distance < 500) then {
 		_randomSpot = false;
 	};
-	_distance = _mylastPos distance _tempPos;
-	if (_distance > 400) then {
-		_randomSpot = false;
-	};
-	
+	if (!isNil "_mylastPos") then {
+		_distance = _mylastPos distance _tempPos;
+		if (_distance > 400) then {
+			_randomSpot = false;
+		};
+	};	
 	if (_randomSpot) then {
 		_mylastPos = _tempPos;
 	};
 	
-	dayz_mylastPos = _mylastPos;
+	if (!isNil "_mylastPos") then {
+		dayz_mylastPos = _mylastPos;
+	};
 	dayz_areaAffect = _size;
 	
 	//CheckVehicle
@@ -73,39 +75,29 @@ while {true} do {
 		};
 	};
 	
-	if (_humanity < -2000) then {
+	if (_humanity < -2000 and !_isBandit) then {
 		_model = typeOf player;
-		if (_model == "Survivor2_DZ") then {
+		if (_model == "Survivor2_DZ" || _model == "Survivor3_DZ") then {
 			[dayz_playerUID,dayz_characterID,"Bandit1_DZ"] spawn player_humanityMorph;
 		};
-		if (_model == "Survivor3_DZ") then {
-			[dayz_playerUID,dayz_characterID,"Bandit1_DZ"] spawn player_humanityMorph;
-		};
-		if (_model == "SurvivorW1_DZ") then {
-			[dayz_playerUID,dayz_characterID,"BanditW2_DZ"] spawn player_humanityMorph;
-		};
-		if (_model == "SurvivorW2_KR") then {
-			[dayz_playerUID,dayz_characterID,"BanditW2_DZ"] spawn player_humanityMorph;
+		if (_model == "SurvivorW2_DZ") then {
+			[dayz_playerUID,dayz_characterID,"BanditW1_DZ"] spawn player_humanityMorph;
 		};
 	};
-	if (_humanity > 0) then {
+	
+	if (_humanity > 0 and (_isBandit || ( _humanity < 5000 and _isHero))) then {
 		_model = typeOf player;
-		if (_model == "Bandit1_DZ") then {
+		if (_model == "Bandit1_DZ" || _model == "Survivor3_DZ") then {
 			[dayz_playerUID,dayz_characterID,"Survivor2_DZ"] spawn player_humanityMorph;
 		};
 		if (_model == "BanditW1_DZ") then {
-			[dayz_playerUID,dayz_characterID,"SurvivorW2_KR"] spawn player_humanityMorph;
-		};
-		if (_model == "BanditW2_DZ") then {
-			[dayz_playerUID,dayz_characterID,"SurvivorW2_KR"] spawn player_humanityMorph;
+			[dayz_playerUID,dayz_characterID,"SurvivorW2_DZ"] spawn player_humanityMorph;
 		};
 	};
-	if (_humanity > 5000) then {
+	
+	if (_humanity > 5000 and !_isHero) then {
 		_model = typeOf player;
-		if (_model == "Survivor2_DZ") then {
-			[dayz_playerUID,dayz_characterID,"Survivor3_DZ"] spawn player_humanityMorph;
-		};
-		if (_model == "Bandit1_DZ") then {
+		if (_model == "Survivor2_DZ" || _model == "Bandit1_DZ") then {
 			[dayz_playerUID,dayz_characterID,"Survivor3_DZ"] spawn player_humanityMorph;
 		};
 	};
@@ -186,15 +178,24 @@ while {true} do {
 			player setVariable["USEC_infected",true,true];  
 		};
 		
-		_rnd = ceil (random 8);
-		[player,"cough",_rnd,false,9] call dayz_zombieSpeak;
-		
-		if (_rnd < 3) then {
-			addCamShake [2, 1, 25];
+		if (!r_player_unconscious) then {
+			_rnd = 10; //_rnd = ceil (random 8);
+			[player,"cough",_rnd,false,9] call dayz_zombieSpeak;
+			
+			if (_rnd < 3) then {
+				addCamShake [2, 1, 25];
+			};
 		};
-		if (r_player_blood > 3000) then {
-			r_player_blood = r_player_blood - 3;
-			player setVariable["USEC_BloodQty",r_player_blood];
+		//if (r_player_blood > 100) then {
+		//	r_player_blood = r_player_blood - 3;
+		//	player setVariable["USEC_BloodQty",r_player_blood];
+		//};
+		_result = r_player_blood - 3;
+		if (_result < 0) then {
+			_id = [player,"sick"] spawn player_death;
+		} else {
+			//r_player_blood = _result;
+			//player setVariable["USEC_BloodQty",r_player_blood];
 		};
 	};
 	
@@ -257,13 +258,13 @@ while {true} do {
 	//Save Checker
 	if (dayz_unsaved) then {
 		if ((time - dayz_lastSave) > _saveTime) then {
-			//["dayzPlayerSave",[player,dayz_Magazines,false]] call callRpcProcedure;
+			//["PVDZ_plr_Save",[player,dayz_Magazines,false]] call callRpcProcedure;
 			
-			dayzPlayerSave = [player,dayz_Magazines,false];
-			publicVariableServer "dayzPlayerSave";
+			PVDZ_plr_Save = [player,dayz_Magazines,false];
+			publicVariableServer "PVDZ_plr_Save";
 			
 			if (isServer) then {
-				dayzPlayerSave call server_playerSync;
+				PVDZ_plr_Save call server_playerSync;
 			};
 						
 			dayz_lastSave = time;
@@ -278,6 +279,18 @@ while {true} do {
 	if (!dayz_unsaved) then {
 		dayz_lastSave = time;
 	};
+
+	//Pause for pickup actions
+	_isokay = pickupInit AND !canPickup || !pickupInit AND canPickup; 
+	if (pickupInit AND !canPickup) then {
+		canPickup = true;
+		pickupInit = false;
+	};
+	//Reset if stuck...
+	if (!_isokay) then {
+		canPickup = false;
+		pickupInit = true;
+	;
 
 	//Attach Trigger Current Object
 	//dayz_playerTrigger attachTo [_refObj,[0,0,0]];
@@ -326,18 +339,30 @@ while {true} do {
 		player setVariable["lastPos",[]];
 	};
 	
-	_lastPos = getPosATL player;	
-	if (player == vehicle player) then {
-		if (_mylastPos distance _lastPos > 200) then {
-			if (alive player) then {
-				player setPosATL _mylastPos;
+	_lastPos = getPosATL player;
+	if (!isNil "_mylastPos") then {
+		if (player == vehicle player) then {
+			if (_mylastPos distance _lastPos > 200) then {
+				if (alive player) then {
+					player setPosATL _mylastPos;
+				};
+			};
+		} else {
+			if (_mylastPos distance _lastPos > 800) then {
+				if (alive player) then {
+					player setPosATL _mylastPos;
+				};
 			};
 		};
-	} else {
-		if (_mylastPos distance _lastPos > 800) then {
-			if (alive player) then {
-				player setPosATL _mylastPos;
-			};
+	};
+	
+	//Melee Weapons ammo fix
+	if(isNil {login_ammochecked}) then {
+		login_ammochecked = true;
+		 _wpnType = primaryWeapon player;
+		_ismelee =  (gettext (configFile >> "CfgWeapons" >> _wpnType >> "melee"));
+		if (_ismelee == "true") then {
+			call dayz_meleeMagazineCheck;
 		};
 	};
 	

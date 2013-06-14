@@ -1,4 +1,4 @@
-private ["_location","_dir","_classname","_item","_hasrequireditem","_missing","_hastoolweapon","_cancel","_reason","_isBuilding","_started","_finished","_animState","_isMedic","_dis","_sfx","_hasbuilditem","_tmpbuilt","_buildings","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_limit","_proceed","_num_removed","_position","_object"];
+private ["_location","_dir","_classname","_item","_hasrequireditem","_missing","_hastoolweapon","_cancel","_reason","_isBuilding","_started","_finished","_animState","_isMedic","_dis","_sfx","_hasbuilditem","_tmpbuilt","_buildings","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_limit","_proceed","_num_removed","_position","_object","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_findNearestPoles","_findNearestPole"];
 
 if(safezonebuild) exitWith { cutText ["You can not build in a safezone." , "PLAIN DOWN"]; };
 if(citybuild) exitWith { cutText ["You can not build in a Village or City." , "PLAIN DOWN"]; };
@@ -88,7 +88,7 @@ _hasrequireditem = true;
 	if(!_hastoolweapon) exitWith { _hasrequireditem = false; _missing = _x; }
 } forEach _require;
 
-_hasbuilditem = _this in magazines playwer;
+_hasbuilditem = _this in magazines player;
 if (!_hasbuilditem) exitWith {TradeInprogress = false; cutText [format[(localize "str_player_31"),_text,"build"] , "PLAIN DOWN"]; };
 
 if (!_hasrequireditem) exitWith {TradeInprogress = false; cutText [format["Missing tool %1",_missing] , "PLAIN DOWN"]; };

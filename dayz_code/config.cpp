@@ -46,7 +46,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.krazey.de";
-		version = "2.132a";
+		version = "2.133pre1";
 		hiveVersion = 0.96; //0.93
 	};
 	class DZ_InitWorld
@@ -493,7 +493,7 @@ class CfgBuildingLoot {
 			{ "","specialclothes" }, 
 			{ "WeaponHolder_MeleeCrowbar_KR","object" },
 			{"MR43","weapon"},
-			{"MP5A5","weapon"}
+			//{"MP5A5","weapon"}
 	};
 		itemChance[] =	{
 			0.01, //Soda Mdew
@@ -526,8 +526,8 @@ class CfgBuildingLoot {
 			0.01, //clothes
 			0.03, //specialclothes
 			0.08, //crowbar
-			0.03, //mr43
-			0.01 //mp5
+			0.03 //mr43
+			//0.01 //mp5
 		};		
 	};
 	class Office: Residential {

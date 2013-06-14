@@ -1,4 +1,4 @@
-private["_display","_ctrlBlood","_ctrlBleed","_bloodVal","_ctrlFood","_ctrlThirst","_thirstVal","_foodVal","_ctrlTemp","_tempVal","_combatVal","_array","_ctrlEar","_ctrlEye"/*,"_ctrlHumanity"*/,"_ctrlCombat","_ctrlFracture","_visualText","_visual","_audibleText","_audible"];
+private["_display","_ctrlBlood","_ctrlBleed","_bloodVal","_ctrlFood","_ctrlThirst","_thirstVal","_foodVal","_ctrlTemp","_tempVal","_combatVal","_array","_ctrlEar","_ctrlEye"/*,"_ctrlHumanity"*/,"_ctrlCombat","_ctrlFracture","_visualText","_visual","_audibleText","_audible","_uiNumber"];
 disableSerialization;
 
 _foodVal = 		1 - (dayz_hunger / SleepFood);
@@ -12,6 +12,8 @@ if (uiNamespace getVariable ['DZ_displayUI', 0] == 1) exitWith {
 };
 
 _display = uiNamespace getVariable 'DAYZ_GUI_display';
+
+_ctrlBloodOuter = 	_display displayCtrl 1200;
 
 _ctrlBlood = 	_display displayCtrl 1300;
 _ctrlBleed = 	_display displayCtrl 1303;
@@ -30,7 +32,7 @@ _ctrlBlood ctrlSetTextColor 	[(Dayz_GUI_R + (0.3 * (1-_bloodVal))),(Dayz_GUI_G *
 _ctrlFood ctrlSetTextColor 		[(Dayz_GUI_R + (0.3 * (1-_foodVal))),(Dayz_GUI_G * _foodVal),(Dayz_GUI_B * _foodVal), 0.5];
 _ctrlThirst ctrlSetTextColor 	[(Dayz_GUI_R + (0.3 * (1-_thirstVal))),(Dayz_GUI_G * _thirstVal),(Dayz_GUI_B * _thirstVal), 0.5];
 _ctrlTemp ctrlSetTextColor 		[(Dayz_GUI_R + (0.3 * (1-_tempVal))), (Dayz_GUI_G * _tempVal), _tempVal, 0.5];	// Color ranges from iceblue (cold) to red (hot)
-_ctrlCombat ctrlSetTextColor		[(Dayz_GUI_R + (0.3 * (1-_combatVal))),(Dayz_GUI_G * _combatVal),(Dayz_GUI_B * _combatVal), 0.5];
+_ctrlCombat ctrlSetTextColor	[(Dayz_GUI_R + (0.3 * (1-_combatVal))),(Dayz_GUI_G * _combatVal),(Dayz_GUI_B * _combatVal), 0.5];
 
 /*
 	Blood: round((r_player_blood / 2) / 1000) = _bloodLvl (6 = full, 1 = empty)
@@ -56,11 +58,44 @@ diag_log format["DEBUG: foodlvl: %1 dayz_hunger: %2 foodval: %3",_foodLvl, dayz_
 diag_log format["DEBUG: templvl: %1 dayz_temperatur: %2 tempval: %3",_tempLvl, dayz_temperatur, _tempVal];
 */
 
+/*
+	Blood Regen & BloodLoss:
+*/
+
+switch true do {
+	case (r_player_bloodpersec <= -50): { _uiNumber = -3 };										// -3
+	case ((r_player_bloodpersec <= -25) and (r_player_bloodpersec > -50)): { _uiNumber = -2 };	// -2
+	case ((r_player_bloodpersec < 0) and (r_player_bloodpersec > -25)): { _uiNumber = -1 };		// -1
+	case (r_player_bloodpersec == 0): { _uiNumber = 0 };										//  0
+	case ((r_player_bloodpersec > 0) and (r_player_bloodpersec < 25)): { _uiNumber = 1 };		//  1
+	case ((r_player_bloodpersec >= 25) and (r_player_bloodpersec < 50)): { _uiNumber = 2 };		//  2
+	case (r_player_bloodpersec >= 50): { _uiNumber = 3 };										//  3
+	default { _uiNumber = 0 };
+};
+
+_bloodText = "\z\addons\dayz_code\gui\status_blood_border";
+
+if (r_player_infected) then {
+	switch true do {
+		case (_uiNumber < 0): { _bloodText = _bloodText + "_down" + str(_uiNumber * -1) + "_sick_ca.paa" };
+		case (_uiNumber > 0): { _bloodText = _bloodText + "_up" + str(_uiNumber) + "_sick_ca.paa" };
+		default { _bloodText = _bloodText + "_sick_ca.paa" };
+	};
+} else {
+	switch true do {
+		case (_uiNumber < 0): { _bloodText = _bloodText + "_down" + str(_uiNumber * -1) + "_ca.paa" };
+		case (_uiNumber > 0): { _bloodText = _bloodText + "_up" + str(_uiNumber) + "_ca.paa" };
+		default { _bloodText = _bloodText + "_ca.paa" };
+	};
+};
+
+_ctrlBloodOuter ctrlSetText _bloodText;
+
 if (_bloodLvl <= 0) then { 
 	_blood = "\z\addons\dayz_code\gui\status_blood_inside_1_ca.paa";
-	} else {
+} else {
 	_blood = "\z\addons\dayz_code\gui\status_blood_inside_" + str(_bloodLvl) + "_ca.paa";
-	};
+};
 
 if (_thirstLvl < 0) then { _thirstLvl = 0 };
 _thirst = "\z\addons\dayz_code\gui\status_thirst_inside_" + str(_thirstLvl) + "_ca.paa";
